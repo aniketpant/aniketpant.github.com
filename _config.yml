@@ -1,3 +1,13 @@
 permalink: /posts/:title
-exclude: sass, config.rb, CNAME, Rakefile, contact.haml, _layout/dedault.haml
+exclude: ["assets/styles/sass/", "config.rb", "CNAME"]
 auto: true
+markdown: kramdown
+
+title: "Aniket Pant"
+tagline: "Rawrrr"
+author:
+ name: "Aniket Pant"
+ email: "me@aniketpant.com"
+ github: "aniketpant"
+ twitter: "aniket_pant"
+ facebook: "aniket.pant"
