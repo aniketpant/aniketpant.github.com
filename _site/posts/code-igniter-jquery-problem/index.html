@@ -1,0 +1,19 @@
+<p>Yesterday, I was trying to run a jquery in my Code Igniter view and there was some problem.</p>
+
+<p>It wasn’t working. I couldn’t figure out why. So I asked some friends of mine and they had no idea why it wasn’t working.</p>
+
+<p>So, I posted on the CI forum. Here is the <a href='http://codeigniter.com/forums/viewthread/194701/' title='My Post'>link</a>to my post.</p>
+
+<p>Today, I was seeing a sample code and then I was something and everything was clear.</p>
+
+<p>I had made the most idiotic error.</p>
+
+<p>It should have been</p>
+
+<pre><code>&lt;script src=&quot;&lt;?php echo base_url(); ?&gt;public/js/jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
+
+<p>rather than</p>
+
+<pre><code>&lt;script href=&quot;&lt;?php echo base_url(); ?&gt;public/js/jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
+
+<p>I ended up wasting quite sometime because of this. After this, I realised that my Netbeans code template was written wrong :|</p>

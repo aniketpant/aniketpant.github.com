@@ -1,0 +1,95 @@
+<p>You would have seen this at a number of places. There is a blockquote to one side and the content is flowing around it.</p>
+
+<p>Go through the post if you have no idea about how to do it.</p>
+
+<p>The HTML</p>
+
+<pre><code>&lt;p&gt;It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.&lt;/p&gt;
+
+            &lt;blockquote&gt;
+                &lt;p&gt;This is our blockquote floated to left with a fixed width&lt;br/&gt;Done using :nth-of-type property&lt;/p&gt;
+            &lt;/blockquote&gt;
+
+            &lt;p&gt;One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover &lt;strong&gt;strong&lt;/strong&gt; it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, &lt;a class=&quot;external ext&quot; href=&quot;#&quot;&gt;link&lt;/a&gt; waved about helplessly as he looked. &quot;What&#39;s happened to me? &quot; he thought. It wasn&#39;t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.&lt;/p&gt;
+
+            &lt;p&gt;It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.&lt;/p&gt;
+
+            &lt;p&gt;It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.&lt;/p&gt;
+
+            &lt;blockquote&gt;
+                &lt;p&gt;This is our blockquote floated to left with a fixed width&lt;br/&gt;Done using :nth-of-type property&lt;/p&gt;
+            &lt;/blockquote&gt;
+
+            &lt;p&gt;One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover &lt;strong&gt;strong&lt;/strong&gt; it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, &lt;a class=&quot;external ext&quot; href=&quot;#&quot;&gt;link&lt;/a&gt; waved about helplessly as he looked. &quot;What&#39;s happened to me? &quot; he thought. It wasn&#39;t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.&lt;/p&gt;</code></pre>
+
+<p>The CSS</p>
+
+<pre><code>body {
+                margin: 0 auto;
+                padding: 0;
+                font-family: Calibri, sans-serif;
+            }
+
+            #header,
+            #footer {
+                text-align: center;
+            }
+
+            #header h3:before {
+                content: &quot;/*-- &quot;;
+            }
+
+            #header h3:after {
+                content: &quot; --*/&quot;;
+            }
+
+            #content {
+                margin: 1em;
+                padding: 0.5em;
+            }
+
+            #content p {
+                overflow: hidden;
+            }
+
+            blockquote {
+                width: 300px;
+                margin: 0 0.5em 0;
+                padding: 0;
+                border-top: 5px solid orangered;
+                border-bottom: 5px solid orangered;
+            }
+
+            blockquote:nth-of-type(2n+1) {
+                float: left;
+            }
+
+            blockquote:nth-of-type(2n) {
+                float: right;
+            }
+
+            blockquote p {
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 24px;
+            }
+
+            ::-webkit-selection {
+                background: #fff;
+                color: orangered;
+                text-shadow : none;
+            }
+            /* Firefox */
+            ::-moz-selection {
+                background: #fff;
+                color: orangered;
+                text-shadow : none;
+            }
+            /* The Rest of em */
+            ::selection {
+                background: #fff;
+                color: orangered;
+                text-shadow : none;
+            }</code></pre>
+
+<p><a href='http://www.aniketpant.com/example/floating-blockquotes'>View Demo</a></p>

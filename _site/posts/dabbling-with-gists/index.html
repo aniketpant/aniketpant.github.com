@@ -1,0 +1,151 @@
+<p>For the last 3-4 days I have made a couple of gists using dabblet and to my surprise I have learnt a lot of things. Even though the things I have worked on are very basic but have helped me understand a couple of techniques.</p>
+
+<h2 id='background_patterns'>Background Patterns</h2>
+
+<p>The first thing I tried my hand at was CSS background patterns and I have been quite successful with working with them. Here’s are a few samples of what all I tried. I know they are not that impressive but are decent attempts.</p>
+
+<p><a href='http://dabblet.com/gist/1614813' title='Very basic CSS pattern'><img src='http://dabblet.com/gist/1614813' alt='Repeating background gradient - very basic ✿ dabblet.com' /></a>What you see above was my first attempt and it turned out to be pretty decent. The code for it is really easy. Take a look at it.</p>
+
+<pre><code>background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,4,80,.5) 10px, rgba(255,4,80,.5) 20px),
+repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255,4,80,.5) 10px, rgba(255,4,80,.5) 20px) #000;</code></pre>
+
+<p>Here is the <a href='http://dabblet.com/gist/1614813' title='Very basic CSS pattern'>dabblet</a>.</p>
+
+<p><a href='http://dabblet.com/gist/1615419' title='Checked CSS pattern'><img src='http://dabblet.com/gist/1615419' alt='Repeating background gradient - checked pattern ✿ dabblet.com' /></a>This one is a little more intricate than the previous one, but easy to understand.</p>
+
+<pre><code>background-color: #000;
+background-image: repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
+repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
+repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px),
+repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);</code></pre>
+
+<p><a href='http://dabblet.com/gist/1615419' title='Checked CSS pattern'>Link</a>to the dabblet.</p>
+
+<h3 id='the_trick_to_understand_background_patterns'>The trick to understand background patterns</h3>
+
+<p>According to my understanding of background patterns from what I made and how I did it, it is an easy task. You start with repeating linear gradient and then you mention the angle of the gradient. After that you writing your gradients, whatever way you want to make them. In the checked pattern above I start with a blank strip (basically transparent) with a width of 50px. Then I give another color starting from 50px and end it at 56px. So, actually it’s a strip with width 6px. Then again a transparent strip and so on. This way we create multiple lines and then we replicate this in another direction.</p>
+
+<h2 id='smashing_magazine_like_menu'>Smashing Magazine like menu</h2>
+
+<p><a href='http://dabblet.com/gist/1614434' title='Smashing Magazine like menu'><img src='http://dabblet.com/gist/1614434' alt='Smashing Magazine like side menu ✿ dabblet' /></a>Checkout this <a href='http://dabblet.com/gist/1614434' title='Smashing Magazine like menu'>demo</a> I made replicating the new Smashing Magazine’s side menu.</p>
+
+<p>The HTML goes like this.</p>
+
+<pre><code>&lt;ul class=&quot;mainlist&quot;&gt;
+    &lt;li class=&quot;list&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;title&quot;&gt;Title 1&lt;/a&gt;
+        &lt;ul class=&quot;sublist&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+        &lt;!--&lt;span class=&quot;hiddenSpellError&quot; pre=&quot;&quot;--&gt;ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;list&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;title&quot;&gt;Title 2&lt;/a&gt;
+        &lt;ul class=&quot;sublist&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;list&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;title&quot;&gt;Title 3&lt;/a&gt;
+        &lt;ul class=&quot;sublist&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<p>And the CSS for it.</p>
+
+<pre><code>@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+a {
+    display: block;
+    text-decoration: none;
+}
+ul.mainlist {
+width: 300px;
+margin: 0 auto;
+    font-family: &#39;Open Sans&#39;, sans-serif;
+    list-style: none;
+}
+ul.mainlist li.list {
+margin: 0 0 20px;
+}
+ul.mainlist li a {
+    margin: 0 30px 0;
+    padding: 5px 50px;
+    transition: all 250ms ease-in-out;
+}
+ul.mainlist li a:hover {
+    background: rgba(255,255,102,1);
+}
+ul.mainlist li:hover a.title {
+border-color: rgba(229, 59, 44, 1);
+}
+ul.mainlist li a.title {
+    color: #0af;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: all 250ms linear;
+}
+ul.mainlist li a.title:hover {
+color: #222;
+}
+ul.mainlist li ul.sublist {
+    list-style: none;
+    display: block;
+    padding: 0;
+}
+ul.mainlist li ul.sublist li a {
+    color: #666;
+    display: block;
+    transition: all 250ms ease-in-out;
+}
+ul.mainlist li ul.sublist li a:hover {
+color: #222;
+}</code></pre>
+
+<p>I am very pleased with the result of these menus and there are very high chances of me going for a similar design in some new project of mine.</p>
+
+<h2 id='buttons_with_3_states'>Buttons with 3 states</h2>
+
+<p>2 days back I made these <a href='http://dabblet.com/gist/1651486' title='Buttons with 3 states'>buttons</a>. The palletes are from <a href='http://design-seeds.com/' title='Design Seeds'>design-seeds.com</a>. I love the palletes over there and the colors are inspired from their website.</p>
+
+<p>Along with making the buttons and adding a little animation to them, I incorporated another background pattern to the demo.<br />Now, I plan to learn a little bit about radial patterns.</p>
+
+<p><a href='http://dabblet.com/gist/1653014' title='Animation with Chrome Icon'><img src='http://dabblet.com/gist/1653014' alt='Buttons with 3 states ✿ dabblet' /></a></p>
+
+<h2 id='animation_with_chrome_icon'>Animation with Chrome Icon</h2>
+
+<p>And the last thing I tried yesterday was a little <a href='http://dabblet.com/gist/1653014' title='Animation with Chrome Icon'>animation</a> with the chrome icon inspired by <a href='http://html5-demos.appspot.com/static/html5-therealbleedingedge/template/index.html' title='HTML5 - The Real Bleeding Edge'>HTML5 – The Real Bleeding Edge</a>.</p>
+
+<p><span><span>Testing rotating animation with Chrome icon ✿ dabblet</span></span> The HTML markup for it.</p>
+
+<pre><code>&lt;img class=&quot;chrome&quot; src=&quot;http://www.wowpedia.org/images/8/89/Chrome.png&quot; /&gt;</code></pre>
+
+<p>And the simple animation.</p>
+
+<pre><code>@-moz-keyframes rotate {
+0% { transform: rotate(0deg) }
+100% { transform: rotate(360deg) }
+}
+img.chrome {
+width: 10%;
+-moz-animation: rotate infinite 1s linear;
+}
+img.chrome:hover {
+-moz-animation: rotate infinite 0.5s linear;
+}</code></pre>
+
+<p>Even you can try out these simple tricks and learn a great deal from them.<br />Keep dabbling like crazy.</p>
+
+<p><span />: http://i1.wp.com/www.aniketpant.com/wp-content/uploads/2012/01/Repeating-background-gradient-very-basic-✿-dabblet.com_.png?resize=500%2C300</p>

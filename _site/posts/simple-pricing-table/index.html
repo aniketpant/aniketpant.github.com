@@ -1,0 +1,152 @@
+<p>Yesterday I was browsing through <a href='http://designcurate.com' title='Design Curate'>Design Curate</a> and I found <a href='http://designcurate.com/resource/pricing-tables' title='Design Curate - Pricing Tables'>this</a>.</p>
+
+<p>It looked pretty nice, so I thought that I could replicate it and make a working demo. Here’s what I made (<a href='http://jsfiddle.net/aniketpant/FGct5/' title='jsFiddle - Pricing Tables'>the fiddle</a>).</p>
+
+<p>The markup is like this.</p>
+
+<h2 id='html'>HTML</h2>
+
+<pre><code>&lt;ul class=&quot;pricing-table&quot;&gt;
+    &lt;li class=&quot;plan&quot;&gt;
+        &lt;h1&gt;Basic&lt;/h1&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;ul class=&quot;features&quot;&gt;
+                &lt;li&gt;&lt;strong&gt;Full&lt;/strong&gt; Email Support&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;25GB&lt;/strong&gt; of Storage&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;5&lt;/strong&gt; Domains&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;10&lt;/strong&gt; Email Addresses&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;hr&gt;
+            &lt;p class=&quot;price&quot;&gt;25&lt;/p&gt;
+            &lt;p class=&quot;footnote&quot;&gt;per month&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Sign Up&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;plan&quot;&gt;
+        &lt;h1&gt;Pro&lt;/h1&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;ul class=&quot;features&quot;&gt;
+                &lt;li&gt;&lt;strong&gt;Full&lt;/strong&gt; Email Support&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;50GB&lt;/strong&gt; of Storage&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;10&lt;/strong&gt; Domains&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;20&lt;/strong&gt; Email Addresses&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;hr&gt;
+            &lt;p class=&quot;price&quot;&gt;49&lt;/p&gt;
+            &lt;p class=&quot;footnote&quot;&gt;per month&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Sign Up&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;plan&quot;&gt;
+        &lt;h1&gt;Premium&lt;/h1&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;ul class=&quot;features&quot;&gt;
+                &lt;li&gt;&lt;strong&gt;Full&lt;/strong&gt; Email Support&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;Unlimited&lt;/strong&gt; Storage&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;Unlimited&lt;/strong&gt; Domains&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;50&lt;/strong&gt; Email Addresses&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;hr&gt;
+            &lt;p class=&quot;price&quot;&gt;79&lt;/p&gt;
+            &lt;p class=&quot;footnote&quot;&gt;per month&lt;/p&gt;
+            &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Sign Up&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<h2 id='css'>CSS</h2>
+
+<pre><code>@import url(http://fonts.googleapis.com/css?family=Rokkitt:400,700);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+body {
+    min-height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 5px, rgba(0, 0, 0, 0.25) 5px, rgba(0, 0, 0, 0.25) 10px);
+}
+ul.pricing-table {
+    width: 800px;
+    margin: 50px auto;
+}
+ ul.pricing-table li.plan {
+     box-shadow: 0 0 10px #999;
+     transition: all 250ms linear;
+     border-radius: 10px 10px 0 0;
+     width: 33%;
+     float: left;
+ }
+ ul.pricing-table li.plan:nth-of-type(2n) { transform: scale(1.1) }
+  ul.pricing-table li.plan:nth-of-type(2n) h1:after {
+      background: #9EB550;
+      line-height: 1em;
+      text-transform: uppercase;
+      top: 7px;
+      width: 60px;
+      right: -5px;
+      content: &quot;Best Value!&quot;;
+      padding: 2px 0;
+      position: absolute;
+      font-size: 0.65em;
+  }
+ ul.pricing-table li.plan div.content {
+     background: #fff;
+     font-family: &#39;Droid Sans&#39;, sans-serif;
+     color: #222;
+     padding: 10px 20px;
+ }
+  ul.pricing-table li.plan div.content ul.features {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+   ul.pricing-table li.plan div.content ul.features li {
+       margin: 5px 0;
+       padding: 0;
+   }
+  ul.pricing-table li.plan div.content p.footnote {
+      text-align: center;
+      color: #999;
+      font-size: 0.75em;
+  }
+  ul.pricing-table li.plan div.content a.button {
+      background: linear-gradient(90deg, #A0B853, #A0CC53);
+      text-align: center;
+      box-shadow: 0 0 2px #666;
+      transition: all 250ms linear;
+      font-family: &#39;Rokkitt&#39;, serif;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25), 0 -1px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      width: 100px;
+      color: #fff;
+      margin: 20px auto;
+      display: block;
+      padding: 5px 10px;
+  }
+  ul.pricing-table li.plan div.content a.button:hover { background: linear-gradient(90deg, #A0CC53, #A0B853) }
+  ul.pricing-table li.plan div.content p.price {
+      text-align: center;
+      font-weight: 700;
+      font-size: 3em;
+  }
+  ul.pricing-table li.plan div.content p.price:before {
+      top: -10px;
+      left: -5px;
+      content: &quot;$&quot;;
+      position: relative;
+      font-size: 0.75em;
+  }
+  ul.pricing-table li.plan div.content strong { font-weight: 700 }
+  ul.pricing-table li.plan div.content hr { color: #eee }
+ ul.pricing-table li.plan h1 {
+     text-align: center;
+     background: #222;
+     font-family: &#39;Rokkitt&#39;, serif;
+     text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;
+     font-weight: 700;
+     border-radius: 10px 10px 0 0;
+     color: #fff;
+     padding: 10px 0;
+     font-size: 1.25rem;
+ }</code></pre>

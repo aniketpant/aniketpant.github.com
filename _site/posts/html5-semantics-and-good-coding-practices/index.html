@@ -1,0 +1,362 @@
+<h2 id='introduction'>Introduction</h2>
+
+<p>Evil people put ids to nearly every element on their pages and make <em>everything</em> <strong>rigid</strong>and** ugly<strong>. Moroever there was hardly any semantic structure around the front-end code.</strong></p>
+
+<p>Thankfully HTML5 puts and end to much of this evilery. Well at least it tries to. Let’s talk about what’s new with HTML5 and how it makes more sense.</p>
+
+<h2 id='doctype'>Doctype</h2>
+
+<p>Let’s start with starting of comment<br />&lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN”<br />“http://www.w3.org/TR/html4/loose.dtd”&gt;</p>
+
+<p>DOCTYPEs can’t get simpler than this!<br /><strong>&lt;!DOCTYPE html&gt;</strong></p>
+
+<h2 id='the_changes_in_the_sections'>The Changes in the Sections</h2>
+
+<p>Read this brilliant post on Smashing Magazine Coding on <a href='http://coding.smashingmagazine.com/2011/08/16/html5-and-the-document-outlining-algorithm/' title='The Document Outlining Algorithm'>The Document Outlining Algorithm</a></p>
+
+<p>It will help you understand the importance of using headings and the hgroup element.and enclose the post with a class like “post”</p>
+
+<p>You can later use the hgroup to club your headings and create an outline which is actually related to the way you write it and show it.<br />hgroup is like a wrapper for your headings ranging from h1-h6. You can make a list of these inside a hgroup according to title, subtitle and the rest.</p>
+
+<p>The use of hgroup is to create an effective document outline.</p>
+
+<p>Almost every (sane) front-end developer was using similar ids and classes with same logic.</p>
+
+<pre><code>&lt;div class=&quot;header&quot;&gt;
+&lt;div class=&quot;navigation&quot;&gt;
+&lt;div class=&quot;footer&quot;&gt;</code></pre>
+
+<p>and so on.</p>
+
+<p>We have tags like header, footer, nav, article, section and aside, which bring clarity to your code and make it  more sane.<br />Isn’t it simple to have more meaningful tags like these to structure your content.</p>
+
+<h3 id='header'>Header</h3>
+
+<p>You can use <a href='http://html5doctor.com/the-header-element/' title='The Header Element'>header</a> as many times as you want to anywhere on your page. Usually it is used to enclose an hgroup or some headings or relevant content like a table of contents or something like these things.</p>
+
+<p>You must be used to seeing things like</p>
+
+<pre><code>&lt;div id=&quot;header&quot;&gt;</code></pre>
+
+<p>header is a substitute to this.</p>
+
+<h3 id='footer'>Footer</h3>
+
+<p>The <a href='http://html5doctor.com/the-footer-element-update/' title='The Footer Element'>footer</a> is similar to header.</p>
+
+<p>Replace your</p>
+
+<pre><code>&lt;div id=&quot;footer&quot;&gt;</code></pre>
+
+<p>with a simple footer tag. You can use it as many times as you want to!</p>
+
+<h3 id='nav'>Nav</h3>
+
+<p>You can group together your links in the <a href='http://html5doctor.com/nav-element/' title='The Nav Element'>nav</a> element.</p>
+
+<p>This is the way we code as of now —</p>
+
+<pre><code>&lt;div id=&quot;main-nav&quot; class=&quot;navigation&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/about/&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/blog/&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Change your primitive code to this —</p>
+
+<pre><code>&lt;nav&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href=&quot;/about/&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href=&quot;/blog/&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/nav&gt;</code></pre>
+
+<h3 id='article_and_section'>Article and Section</h3>
+
+<p>The spec defines <a href='http://html5doctor.com/the-section-element/' title='The Section Element'>section</a> as —</p>
+
+<blockquote>
+<p>The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.</p>
+
+<p>Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the element.</p>
+</blockquote>
+
+<p>The next line makes the use of section clear.</p>
+
+<blockquote>
+<p>Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.</p>
+</blockquote>
+
+<p>Not: The section element should not be used for styling. A div should be preferred.</p>
+
+<p>A great post by Louis Lazaris (<a href='http://www.impressivewebs.com' title='Impressive Webs'>Impressive Webs</a>) on <a href='http://www.impressivewebs.com/html5-section/' title='HTML5 Section'>When to Use the HTML5 “section” element</a>.</p>
+
+<p>You can read about the <a href='http://html5doctor.com/the-article-element/' title='The Article Element'>article</a> element from HTML5 Doctor.</p>
+
+<h3 id='aside'>Aside</h3>
+
+<p>From what I have read and understood about <a href='http://html5doctor.com/aside-revisited/' title='Aside'>aside</a> is that it can be used to relate content to the element it is enclosed inside.</p>
+
+<p>For example, if an aside is contained inside an article, it means that the content of the aside is related to the article but not to the page.<br />Whereas, if the aside is outside the article, then it means that it is not as closely related to the article but related to the page.</p>
+
+<h3 id='address'>Address</h3>
+
+<p>Another addition to the new elements is an <a href='http://html5doctor.com/the-address-element/' title='The Address Element'>address</a> tag! Yes, we have an address tag.<br />Imagine that you can actually get the address from a webpage more easily now, by just looking for this simple tag.</p>
+
+<h3 id='example'>Example</h3>
+
+<p>Here is an example.</p>
+
+<ul>
+<li>A simple blog post of yours. Put the title of the post and the post information in the header.</li>
+
+<li>Move on to the actual post and place in an article. Put the tags and maybe a “tweet my post” link in the footer.</li>
+
+<li>These simple tags make things more logical unlike the earlier method to use ids like “header” and “footer” to do the job.</li>
+</ul>
+
+<h2 id='groupings'>Groupings</h2>
+
+<p>A figure tag has been introduced for your images and other illustrations.<br />As of now we to do this by making divs or my associating different classes, but soon we will begin to enclose them with the figure element.</p>
+
+<pre><code>&lt;figure&gt;
+&lt;!-- Your image here --&gt;
+&lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+<p>See this <a href='http://jsfiddle.net/aniketpant/hUWhD/embedded/result/' title='Fiddle - Figure'>fiddle</a>, I made to demonstrate the use!</p>
+
+<h2 id='forms'>Forms</h2>
+
+<p>Form elements were changed the most in HTML5.</p>
+
+<p>We have placeholders! Yes, placeholders are there which we used by javascripts.<br />Now, how to use placeholders. Well, it’s as easy as eating cheese!</p>
+
+<p>Just include placeholders and the text you need inside you input elements.</p>
+
+<pre><code>&lt;input name=&quot;user-name&quot; type=&quot;email&quot; placeholder=&quot;Your username is your email address&quot;&gt;</code></pre>
+
+<p>Apart from this, we have keygen.</p>
+
+<p>The <a href='http://dev.w3.org/html5/spec/Overview.html#the-keygen-element' title='Draft - The Keygen Element'>draft</a> says —</p>
+
+<blockquote>
+<p>The keygen element represents a key pair generator control. When the control’s form is submitted, the private key is stored in the local keystore, and the public key is packaged and sent to the server.</p>
+</blockquote>
+
+<p>It will help in improving security by verification, I think. Need to study more about it!<br />According to the <a href='http://dev.w3.org/html5/spec/Overview.html#the-output-element' title='Draft - The Output Element'>draft</a>, the output element represents the result of a calculation.</p>
+
+<p>See the following code —</p>
+
+<pre><code>&lt;form name=&quot;main&quot;&gt;
+Result: &lt;output name=&quot;result&quot;&gt;&lt;/output&gt;
+&lt;script&gt;
+document.forms.main.elements.result.value = &#39;Hello World&#39;;
+&lt;/script&gt;
+&lt;/form&gt;</code></pre>
+
+<p>I guess, now you understand the logic of this element. You can manipulate this to change things accordingly and display results in a more orderly fashion.</p>
+
+<p>Other than the above mentioned elements, we have progress and meter.</p>
+
+<p>The progress element can be used to create a progress bar. The value can be easily changed and updated using javascript and can be used to have progress bars in forms &amp; other step based processes.</p>
+
+<p>Meter element is nothing big in terms of what it does, but it brings logic to your code.</p>
+
+<h3 id='bad_code'>BAD CODE</h3>
+
+<pre><code>&lt;section&gt;
+My height is 5 feet and 10 inches.
+&lt;/section&gt;</code></pre>
+
+<h3 id='good_code'>GOOD CODE</h3>
+
+<pre><code>&lt;section&gt;
+My height is
+&lt;dl&gt;
+&lt;dt&gt;Feet: &lt;dd&gt; &lt;meter min=0 max=7 value=5&gt;5ft&lt;/meter&gt;
+&lt;dt&gt;Inches: &lt;dd&gt; &lt;meter min=0 max=12 value=11&gt;11in&lt;/meter&gt;
+&lt;/dl&gt;
+&lt;/section&gt;</code></pre>
+
+<p>You can easily understand what all this means. Better than before right?</p>
+
+<h2 id='the_interactive_elements'>The Interactive Elements</h2>
+
+<p>The elements under this category are … wait for it …</p>
+
+<ul>
+<li>Details</li>
+
+<li>Summary</li>
+
+<li>Command</li>
+
+<li>Menu</li>
+</ul>
+
+<p>To be frank, I did not use the details element but I saw an example a while back and it pretty cool!<br />It’s like a mini-accordion.</p>
+
+<p>As of now, you can use it in webkit browsers. Won’t work on Mozilla. And it will be soon available in Opera.<br />So, what details does is that you can easily collapsible elements.</p>
+
+<p>The code for it is like this -</p>
+
+<pre><code>&lt;details&gt;
+&lt;summary&gt;Show/Hide me&lt;/summary&gt;
+&lt;p&gt;Hello! I am a paragraph element inside a details tag.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+
+<p>It would look like this, a simple arrow before the summary text and when you click on the arrow, you will see the paragraph text.<br /><a href='http://jsbin.com/egefop#html,live' title='Demo for details element'>Demo</a> for details element.</p>
+
+<p>Another good <a href='http://jsbin.com/egefop/8#3' title='Example with a collapsible table of contents'>example</a>with a collapsible table of contents.</p>
+
+<p>The menu element seems very interesting.</p>
+
+<p>The context menu type allows the element to represent the commands of a context menu. The user will be only be able to interact with the commands if that context menu is activated.</p>
+
+<p>If the attribute is in the toolbar state, then the element will represent a list of active commands which the user can immediately interact with.</p>
+
+<p>In the case of the list state attribute, the element will represent an unordered list of items (each represented by an li element), each of which represents a command that the user can perform or activate.</p>
+
+<h2 id='embeddable_elements'>Embeddable Elements</h2>
+
+<p>Fresh out of the oven, we have these 6 things.<br />Canvas, area, map, audio, video and track.</p>
+
+<p>Everyone is very much aware of Canvas. Use canvas for anything and everything. Build games using it, render graphs or play with images.</p>
+
+<p>What all you can do with the nifty canvas?</p>
+
+<ul>
+<li>Draw shapes</li>
+
+<li>Fill colors</li>
+
+<li>Create pretty gradients and patterns</li>
+
+<li>Render text</li>
+
+<li>Get frames from other canvases</li>
+
+<li>Play with pixels</li>
+
+<li>Export your canvas to a file</li>
+</ul>
+
+<p>A lot of demos and other articles are already there on how to interact with the canvas. It is one of the very much loved introductions in HTML5.</p>
+
+<p>Moving onto the map and area elements. It can be used to relate pixel coordinates to another element on any image or media.</p>
+
+<p>A good example from HTML5 Doctor is this -</p>
+
+<pre><code>&lt;h1&gt;Clothing&lt;/h1&gt;
+ &lt;img src=&quot;/images/menu.gif&quot; alt=&quot;Select a department to go to its page.&quot; usemap=&quot;#nav&quot;&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+ &lt;map name=&quot;nav&quot;&gt;
+  &lt;p&gt;
+   &lt;a href=&quot;/women/&quot;&gt;Women&lt;/a&gt;
+   &lt;area alt=&quot;Women&quot; coords=&quot;0,0,100,50&quot; href=&quot;/women/&quot;&gt; |
+   &lt;a href=&quot;/men/&quot;&gt;Men&lt;/a&gt;
+   &lt;area ALT=&quot;Men&quot; coords=&quot;0,0,100,50&quot; href=&quot;/men/&quot;&gt; |
+   &lt;a HREF=&quot;/kids/&quot;&gt;Kids&lt;/a&gt;
+   &lt;area alt=&quot;Food&quot; coords=&quot;0,0,100,50&quot; href=&quot;/kids/&quot;&gt; |
+  &lt;/p&gt;
+ &lt;/map&gt;
+&lt;/footer&gt;</code></pre>
+
+<p>Seems useful!</p>
+
+<p>These ones are the best.</p>
+
+<p>Take a look at this ugly HTML code used for embedding a video from youtube!</p>
+
+<pre><code>&lt;object classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; width=&quot;425&quot; height=&quot;344&quot; codebase=&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0&quot;&gt;
+&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;
+&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;
+&lt;param name=&quot;src&quot; value=&quot;http://www.youtube.com/v/oHg5SJYRHA0&amp;hl=en&amp;fs=1&amp;&quot; /&gt;
+&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;
+&lt;embed type=&quot;application/x-shockwave-flash&quot; width=&quot;425&quot; height=&quot;344&quot; src=&quot;http://www.youtube.com/v/oHg5SJYRHA0&amp;hl=en&amp;fs=1&amp;&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot;&gt;
+&lt;/embed&gt;
+&lt;/object&gt;</code></pre>
+
+<p>Don’t even feel like reading what it says.</p>
+
+<p>Let’s do this the HTML5 way.</p>
+
+<pre><code>&lt;video width=&quot;640&quot;  height=&quot;360&quot; src=&quot;http://www.youtube.com/demo/google_main.mp4&quot;  controls autobuffer&gt;
+ &lt;p&gt; Try this page in Safari  4! Or you can &lt;a  href=&quot;http://www.youtube.com/demo/google_main.mp4&quot;&gt;download the  video&lt;/a&gt; instead.&lt;/p&gt;
+&lt;/video&gt;</code></pre>
+
+<p>Oh, this is so neat! (This is what you said, right?)<br />You can even add an autoplay to the video tag and you know what it means.</p>
+
+<p>The track element can be used with video and you will be able to link external files to your video.<br />Code for it is quite easy to understand.</p>
+
+<p>Example:</p>
+
+<pre><code>&lt;track kind=subtitles src=abc.vtt srclang=en label=&quot;English&quot;&gt;</code></pre>
+
+<p>There are other ‘kind’ for it like subtitles, captions, descriptions, chapters and metadata.</p>
+
+<p>Video done, time for some audio.</p>
+
+<p>The audio tag defines 5 attributes.</p>
+
+<ul>
+<li>src</li>
+
+<li>autoplay</li>
+
+<li>loop</li>
+
+<li>controls</li>
+
+<li>preload</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>&lt;audio controls preload=&quot;auto&quot; autobuffer&gt;
+ &lt;source src=&quot;track.mp3&quot; /&gt;
+ &lt;source src=&quot;track.ogg&quot; /&gt;
+&lt;/audio&gt;</code></pre>
+
+<p>This enables controls for the audio, enable auto buffering and loads the file beforehand.</p>
+
+<p>The support for the filetypes vary from browsers as of now.</p>
+
+<p><a href='http://html5doctor.com/native-audio-in-the-browser/' title='Native Audio in the browser'><img src='http://html5doctor.com/native-audio-in-the-browser/' alt='Native Audio in the browser - HTML5 Doctor' /></a> Native Audio in the browser - HTML5 Doctor</p>
+
+<p>Read more on HTML5 Doctor – <a href='http://html5doctor.com/native-audio-in-the-browser/' title='Native Audio in the browser'>Native Audio in the browser</a></p>
+
+<h2 id='the_final_say'>The Final Say</h2>
+
+<p>The new elements introduced are effective over what we had earlier. At least that’s what I feel as a guy who loves to code.</p>
+
+<p>For a front-end guy, some of the changes won’t make difference like map, area, address and others like these.</p>
+
+<p>The minor things don’t make that much of a difference in terms of the result. Code your pages the way you wish.<br />But if someone doesn’t see the result and checks your code, he will be able to make out the difference because of these minor things.</p>
+
+<h2 id='resources'>Resources</h2>
+
+<ol>
+<li><a href='http://html5demos.com/canvas-grad' title='Canvas Gradients'>Canvas Gradients</a></li>
+
+<li><a href='http://html5demos.com/canvas' title='Demo for Canvas'>The Loading Demo</a></li>
+
+<li>You can go through <a href='http://html5demos.com/' title='HTML5 Demos'>HTML5 Demos</a> for more demos with great technologies.</li>
+
+<li><a href='http://html5doctor.com/' title='HTML5 Doctor'>HTML5 Doctor</a> is great for definitions and good explanations of the various elements.</li>
+</ol>
+
+<h2 id='credits'>Credits</h2>
+
+<p>Some examples mentioned above are inspired and taken from the draft and <a href='http://html5doctor.com/' title='HTML5 Doctor'>HTML5 Doctor</a>.</p>
+
+<h2 id='brief_note'>Brief Note</h2>
+
+<p>I have included only those changes which I felt brought more clarity and made the code semantic.</p>
+
+<p>If you are on HN, please upvote. The <a href='http://news.ycombinator.com/item?id=3285210' title='HTML5 Semantics and Good Coding Practices on HN'>link</a> to the discussion.</p>
