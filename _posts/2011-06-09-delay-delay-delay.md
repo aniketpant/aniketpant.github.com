@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: Delay! Delay! Delay!
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - ASP
   - Online Test Management
-post_format: [ ]
 ---
 Sorry people. The product is nearly done but I couldn’t get the time today to put it up.
 

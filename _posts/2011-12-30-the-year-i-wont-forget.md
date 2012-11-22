@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: "The year I won't forget"
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - New Year
-post_format: [ ]
 ---
 The *most eventful* year is coming to an end and I don’t have many words to describe it perfectly.
 

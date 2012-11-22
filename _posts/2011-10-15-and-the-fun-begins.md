@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: And the fun begins...
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - WordCamp
-post_format: [ ]
 ---
 After nearly one full day of traveling, I have reached my hotel room.
 

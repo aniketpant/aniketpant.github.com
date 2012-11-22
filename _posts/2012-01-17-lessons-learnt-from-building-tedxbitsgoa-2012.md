@@ -3,13 +3,11 @@ author: Aniket
 title: >
   Lessons learnt from building TEDxBITSGoa
   2012
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - TEDxBITSGoa
-post_format: [ ]
 ---
 ## How it all began?
 

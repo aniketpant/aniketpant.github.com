@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: Update on Igniteplate
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Igniteplate
   - Update
-post_format: [ ]
 ---
 My latest self project is coming off really well. In the last 2 days, I have made quite a progress.
 
@@ -46,7 +44,9 @@ I have started documenting all my work on Igniteplate and created a simple help 
 
 ### A temporary logo
 
-[![Igniteplate Temporary Logo][4]][4]This is the temporary logo for Igniteplate.
+_image missing_
+
+This is the temporary logo for Igniteplate.
 
 I have just colored it. That’s all I did. The two parts are from [The Noun Project][4].
 
@@ -68,7 +68,6 @@ I am working on Social Auth at the moment. Should take me another week to get do
 
  [1]: http://twitter.github.com/bootstrap/ "Twitter Bootstrap 2.0"
  [2]: http://leaverou.github.com/prefixfree/ "Prefixfree"
- []: http://i0.wp.com/www.aniketpant.com/wp-content/uploads/2012/03/Logo.png?resize=167%2C122
  [4]: http://thenounproject.com/ "The Noun Project"
  [5]: http://thenounproject.com/noun/fire/#icon-No1571 "The Noun Project : Fire Logo"
  [6]: http://thenounproject.com/noun/plate/#icon-No1059 "The Noun Project : Plate Logo"

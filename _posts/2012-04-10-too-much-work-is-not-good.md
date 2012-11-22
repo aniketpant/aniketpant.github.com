@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Too Much Work Is Not Good
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - Habits
-post_format: [ ]
 ---
 ## A true story
 
@@ -32,7 +30,7 @@ On Sundays, I thought that I won’t work on any project and not even touch my c
 Join the [discussion][4] on Hacker News.This was my plan and somehow I haven’t been able to work on it so far.
 
   
-I am going to change it now and get back to the plan. I am pretty sure that it will be difficult to do, but worth giving a shot.**
+I am going to change it now and get back to the plan. I am pretty sure that it will be difficult to do, but worth giving a shot.
 
 *What if it might prove to be good?*
 

@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: The web and what people need to learn
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - Design
-post_format: [ ]
 ---
 Being in college I have learnt a few things, out of which the most important thing that I have realized is that there is a dire need to change your attitude about things. You can happily crib about the things that are happening. Yes, you can do that, but it doesn’t help in any way possible.
 

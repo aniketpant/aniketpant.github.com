@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Pure CSS Business Card
-excerpt:
 layout: post
 category:
   - Tutorial
@@ -9,16 +8,12 @@ tags:
   - business card
   - CSS
   - pure
-post_format: [ ]
 ---
 I remember it was 2-3 days back when I was talking to a friend, and he was making this design for his theme on tumblr.
 
 From what he had made, it was lots of things, like his desk and he had a business card sort of thing on it. So, I asked him that was he going to use CSS to recreate it. And to that, he said that he’ll be using it as an image.
 
 Because of what I saw, I got an idea to make something of this sort.
-
-[![Pure CSS Business Card][2]][2]
-Pure CSS Business Card
 
 So, I’ll move ahead and show you the code of how to make this nifty **Pure CSS Business Card**.
 
@@ -113,9 +108,3 @@ And here is the simple CSS.
     .business-card footer ul li {
     text-shadow: 0 1px 0 rgba(255,255,255,0.25), 0 -1px 0 rgba(0,0,0,0.25);
     }
-    
-
-[View Demo][2]
-
- []: http://i1.wp.com/www.aniketpant.com/wp-content/uploads/2011/10/business-card.png
- [2]: http://www.aniketpant.com/example/pure-css-business-card

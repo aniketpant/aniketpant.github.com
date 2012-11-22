@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Blabber against PHP
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - PHP
-post_format: [ ]
 ---
 I am damn tired of Jeff Attwood’s latest [take on PHP][1]. It’s damn pissing off to see the kind of points he puts in his posts.
 

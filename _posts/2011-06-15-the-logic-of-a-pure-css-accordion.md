@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: The Logic of a Pure CSS Accordion
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Accordion
   - CSS
-post_format: [ ]
 ---
 You may have seen [this][1], or you might not have.
 

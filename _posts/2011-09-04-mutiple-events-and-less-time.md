@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Mutiple Events and Less Time
-excerpt:
 layout: post
 category:
   - Weblog
@@ -10,7 +9,6 @@ tags:
   - TEDxBITSGoa
   - Theme
   - WordCamp
-post_format: [ ]
 ---
 This last week has been quite a time for me.
 

@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: My Good Days
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - happy
   - todo
-post_format: [ ]
 ---
 Exams just got over and the happy days have just begun.
 
@@ -25,4 +23,4 @@ In continuation to my [previous post][1]. Here is my todo list for the upcoming 
 
 Need to put in more time and come up with great things.
 
- [1]: http://www.aniketpant.com/weblog/dream-innovate "Dream, Innovate"
+ [1]: http://www.aniketpant.com/posts/dream-innovate "Dream, Innovate"

@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: "Why social sharing won't work for you?"
-excerpt:
 layout: post
 category:
   - Article

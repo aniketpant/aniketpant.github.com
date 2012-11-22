@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Pure CSS Accordion
-excerpt:
 layout: post
 category:
   - Weblog
@@ -9,7 +8,6 @@ tags:
   - Accordion
   - CSS
   - Tutorial
-post_format: [ ]
 ---
 This is a simple accordion made by using Pure CSS.
 

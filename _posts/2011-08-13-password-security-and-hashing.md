@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Password Security and Hashing
-excerpt:
 layout: post
 category:
   - Weblog
@@ -12,7 +11,6 @@ tags:
   - Password
   - PHPass
   - Problem
-post_format: [ ]
 ---
 My old problem was not solved by now, and I was going through a question on Stack Overflow.
 

@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Finally I Exist
-excerpt:
 layout: post
 category:
   - Weblog

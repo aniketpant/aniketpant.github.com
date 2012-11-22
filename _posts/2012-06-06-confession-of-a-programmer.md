@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: Confession of a programmer
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - Codeigniter
   - Igniteplate
-post_format: [ ]
 ---
 Having worked with Codeigniter for over a year, I was finally settling down.  
 It felt so great when I coded on Codeigniter, I could write simple PHP anywhere and never thought much about the whole concept.
@@ -53,5 +51,5 @@ If you liked my post, then it would be great if you [upvote it on HN][3].The rea
 3.  Moving to a new technology lets you learn and improve your methods.
 
  [1]: http://www.alistapart.com/articles/artistic-distance/ "Artistic Distance"
- [2]: http://www.aniketpant.com/article/a-shift-from-codeigniter-to-laravel "A Shift from Codeigniter to Laravel"
+ [2]: http://www.aniketpant.com/posts/a-shift-from-codeigniter-to-laravel "A Shift from Codeigniter to Laravel"
  [3]: http://news.ycombinator.com/item?id=4070202

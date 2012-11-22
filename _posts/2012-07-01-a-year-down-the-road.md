@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: A year down the road
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Self-Improvement
-post_format: [ ]
 ---
 ## The story so far
 
@@ -44,7 +42,7 @@ So, if you wish to make a difference, if you wish to shape the future of the web
 > — [Mark Twain][11]
 
  [1]: http://aniketpant.com "My Website"
- [2]: http://www.aniketpant.com/article/a-shift-from-codeigniter-to-laravel "A shift from Codeignitier to Laravel"
+ [2]: http://www.aniketpant.com/posts/a-shift-from-codeigniter-to-laravel "A shift from Codeignitier to Laravel"
  [3]: http://en.wikipedia.org/wiki/Eleanor_Roosevelt
  [4]: http://css-tricks.com/ "CSS-Tricks"
  [5]: http://smashingmagazine.com "Smashing Magazine"

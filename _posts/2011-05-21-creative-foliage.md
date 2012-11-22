@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: Creative Foliage
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Theme
   - Wordpress
-post_format: [ ]
 ---
 This is something I made just to learn how to make a WordPress theme.
 

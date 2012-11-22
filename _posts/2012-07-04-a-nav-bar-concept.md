@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: A Nav Bar Concept
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - Animation
   - CSS3
-post_format: [ ]
 ---
 I guess I saw this thing somewhere before but finally I am bringing it to life.
 

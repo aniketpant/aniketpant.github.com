@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: "Build the web, don't act like a wannabe"
-excerpt:
 layout: post
 category:
   - Article
@@ -9,7 +8,6 @@ tags:
   - Build
   - Wannabe
   - Web
-post_format: [ ]
 ---
 For quite sometime, I had planned to write this post.
 

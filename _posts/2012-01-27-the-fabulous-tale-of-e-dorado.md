@@ -1,18 +1,13 @@
 ---
 author: Aniket
 title: The Fabulous tale of E-Dorado
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - E-Dorado
-post_format: [ ]
 ---
 *This is a guest post by Akshay Vikas, a close friend of mine and core contributors of E-Dorado.*
-
-[![Poster for E-Dorado][2]][2]
-Poster for E-Dorado
 
 To gauge the success of Dorado in terms of the close to 1,050 odd registrations it received from within the country and abroad, would not only be immensely myopic, but also very unfair to the efforts of those 1,050 people, and to their stories.
 
@@ -29,5 +24,3 @@ If that wasn’t enough, the BITS Fat Cow database crashed one afternoon as clos
 Was it in fact exceptional social media marketing? The Stunning visual interface? The huge prize money? “The interest in questions- It’s like when u start reading up on the question, there’s so much to know, and when you get that urge to know more, it does the trick and keeps u going” is one amongst the many things that participants enumerated as a reason for their persistence in this 16 day long marathon.
 
 Perhaps the whole mantra for success is to keep things simple, and, occasionally, toss in a Washing Powder jingle reference.
-
- []: http://i1.wp.com/www.aniketpant.com/wp-content/uploads/2012/01/E-Dorado-Poster.jpg

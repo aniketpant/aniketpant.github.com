@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: How I started off
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - inspiration
-post_format: [ ]
 ---
 I don’t remember exactly when and how all this started off, but I am sure it was 6 years back.
 

@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Simple Pricing Table
-excerpt:
 layout: post
 category:
   - Tutorial
@@ -9,7 +8,6 @@ tags:
   - Demo
   - Pricing Tables
   - Tutorial
-post_format: [ ]
 ---
 Yesterday I was browsing through [Design Curate][1] and I found [this][2].
 

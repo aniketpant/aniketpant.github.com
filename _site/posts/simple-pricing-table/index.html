@@ -1,60 +1,101 @@
-<p>Yesterday I was browsing through <a href='http://designcurate.com' title='Design Curate'>Design Curate</a> and I found <a href='http://designcurate.com/resource/pricing-tables' title='Design Curate - Pricing Tables'>this</a>.</p>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Aniket Pant &mdash; Simple Pricing Table</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-<p>It looked pretty nice, so I thought that I could replicate it and make a working demo. Here’s what I made (<a href='http://jsfiddle.net/aniketpant/FGct5/' title='jsFiddle - Pricing Tables'>the fiddle</a>).</p>
+        <link rel="stylesheet" href="/assets/styles/css/style.css">
+        <link rel="stylesheet" href="/assets/styles/css/themes/github.css">
+
+        <script src="/assets/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div class="header-container gw">
+            <header class="g one-whole cf" role="banner">
+                <h1 class="title brand">Rawrrr</h1>
+                <nav>
+                    <ul class="nav nav--banner">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about-me">About Me</a></li>
+                        <li><a href="/speaking">Speaking</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container gw">
+            <div class="main g one-whole cf" role="main">
+
+                <div class="post ">
+  <h1>Simple Pricing Table</h1>
+  <p>Yesterday I was browsing through <a href="http://designcurate.com" title="Design Curate">Design Curate</a> and I found <a href="http://designcurate.com/resource/pricing-tables" title="Design Curate - Pricing Tables">this</a>.</p>
+
+<p>It looked pretty nice, so I thought that I could replicate it and make a working demo. Here’s what I made (<a href="http://jsfiddle.net/aniketpant/FGct5/" title="jsFiddle - Pricing Tables">the fiddle</a>).</p>
 
 <p>The markup is like this.</p>
 
-<h2 id='html'>HTML</h2>
+<h2 id="html">HTML</h2>
 
-<pre><code>&lt;ul class=&quot;pricing-table&quot;&gt;
-    &lt;li class=&quot;plan&quot;&gt;
+<pre><code>&lt;ul class="pricing-table"&gt;
+    &lt;li class="plan"&gt;
         &lt;h1&gt;Basic&lt;/h1&gt;
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;ul class=&quot;features&quot;&gt;
+        &lt;div class="content"&gt;
+            &lt;ul class="features"&gt;
                 &lt;li&gt;&lt;strong&gt;Full&lt;/strong&gt; Email Support&lt;/li&gt;
                 &lt;li&gt;&lt;strong&gt;25GB&lt;/strong&gt; of Storage&lt;/li&gt;
                 &lt;li&gt;&lt;strong&gt;5&lt;/strong&gt; Domains&lt;/li&gt;
                 &lt;li&gt;&lt;strong&gt;10&lt;/strong&gt; Email Addresses&lt;/li&gt;
             &lt;/ul&gt;
             &lt;hr&gt;
-            &lt;p class=&quot;price&quot;&gt;25&lt;/p&gt;
-            &lt;p class=&quot;footnote&quot;&gt;per month&lt;/p&gt;
-            &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Sign Up&lt;/a&gt;
+            &lt;p class="price"&gt;25&lt;/p&gt;
+            &lt;p class="footnote"&gt;per month&lt;/p&gt;
+            &lt;a href="#" class="button"&gt;Sign Up&lt;/a&gt;
         &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;plan&quot;&gt;
+    &lt;li class="plan"&gt;
         &lt;h1&gt;Pro&lt;/h1&gt;
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;ul class=&quot;features&quot;&gt;
+        &lt;div class="content"&gt;
+            &lt;ul class="features"&gt;
                 &lt;li&gt;&lt;strong&gt;Full&lt;/strong&gt; Email Support&lt;/li&gt;
                 &lt;li&gt;&lt;strong&gt;50GB&lt;/strong&gt; of Storage&lt;/li&gt;
                 &lt;li&gt;&lt;strong&gt;10&lt;/strong&gt; Domains&lt;/li&gt;
                 &lt;li&gt;&lt;strong&gt;20&lt;/strong&gt; Email Addresses&lt;/li&gt;
             &lt;/ul&gt;
             &lt;hr&gt;
-            &lt;p class=&quot;price&quot;&gt;49&lt;/p&gt;
-            &lt;p class=&quot;footnote&quot;&gt;per month&lt;/p&gt;
-            &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Sign Up&lt;/a&gt;
+            &lt;p class="price"&gt;49&lt;/p&gt;
+            &lt;p class="footnote"&gt;per month&lt;/p&gt;
+            &lt;a href="#" class="button"&gt;Sign Up&lt;/a&gt;
         &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;plan&quot;&gt;
+    &lt;li class="plan"&gt;
         &lt;h1&gt;Premium&lt;/h1&gt;
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;ul class=&quot;features&quot;&gt;
+        &lt;div class="content"&gt;
+            &lt;ul class="features"&gt;
                 &lt;li&gt;&lt;strong&gt;Full&lt;/strong&gt; Email Support&lt;/li&gt;
                 &lt;li&gt;&lt;strong&gt;Unlimited&lt;/strong&gt; Storage&lt;/li&gt;
                 &lt;li&gt;&lt;strong&gt;Unlimited&lt;/strong&gt; Domains&lt;/li&gt;
                 &lt;li&gt;&lt;strong&gt;50&lt;/strong&gt; Email Addresses&lt;/li&gt;
             &lt;/ul&gt;
             &lt;hr&gt;
-            &lt;p class=&quot;price&quot;&gt;79&lt;/p&gt;
-            &lt;p class=&quot;footnote&quot;&gt;per month&lt;/p&gt;
-            &lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Sign Up&lt;/a&gt;
+            &lt;p class="price"&gt;79&lt;/p&gt;
+            &lt;p class="footnote"&gt;per month&lt;/p&gt;
+            &lt;a href="#" class="button"&gt;Sign Up&lt;/a&gt;
         &lt;/div&gt;
     &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+</code></pre>
 
-<h2 id='css'>CSS</h2>
+<h2 id="css">CSS</h2>
 
 <pre><code>@import url(http://fonts.googleapis.com/css?family=Rokkitt:400,700);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
@@ -82,14 +123,14 @@ ul.pricing-table {
       top: 7px;
       width: 60px;
       right: -5px;
-      content: &quot;Best Value!&quot;;
+      content: "Best Value!";
       padding: 2px 0;
       position: absolute;
       font-size: 0.65em;
   }
  ul.pricing-table li.plan div.content {
      background: #fff;
-     font-family: &#39;Droid Sans&#39;, sans-serif;
+     font-family: 'Droid Sans', sans-serif;
      color: #222;
      padding: 10px 20px;
  }
@@ -112,7 +153,7 @@ ul.pricing-table {
       text-align: center;
       box-shadow: 0 0 2px #666;
       transition: all 250ms linear;
-      font-family: &#39;Rokkitt&#39;, serif;
+      font-family: 'Rokkitt', serif;
       text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25), 0 -1px 1px rgba(0, 0, 0, 0.25);
       border-radius: 5px;
       text-transform: uppercase;
@@ -133,7 +174,7 @@ ul.pricing-table {
   ul.pricing-table li.plan div.content p.price:before {
       top: -10px;
       left: -5px;
-      content: &quot;$&quot;;
+      content: "$";
       position: relative;
       font-size: 0.75em;
   }
@@ -142,11 +183,39 @@ ul.pricing-table {
  ul.pricing-table li.plan h1 {
      text-align: center;
      background: #222;
-     font-family: &#39;Rokkitt&#39;, serif;
+     font-family: 'Rokkitt', serif;
      text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;
      font-weight: 700;
      border-radius: 10px 10px 0 0;
      color: #fff;
      padding: 10px 0;
      font-size: 1.25rem;
- }</code></pre>
+ }
+</code></pre>
+
+  
+</div><!-- post -->
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container gw">
+            <footer class="g one-whole" role="contentinfo">
+                <p>By <a href="http://twitter.com/aniket_pant">@aniket_pant</a> | &copy; 2010 - 2012 | <a href="/colophon">Colophon</a></p>
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+        <script src="/assets/js/vendor/rainbow-custom.min.js"></script>
+        <script src="/assets/js/plugins.js"></script>
+        <script src="/assets/js/main.js"></script>
+
+        <!--
+        <script type="text/javascript" src="//use.typekit.net/rsd5dqz.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        -->
+
+    </body>
+</html>

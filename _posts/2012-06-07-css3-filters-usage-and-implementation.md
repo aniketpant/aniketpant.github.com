@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: 'CSS3 Filters : Usage and Implementation'
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - CSS3
   - Filters
-post_format: [ ]
 ---
 ## Presenting..
 

@@ -3,7 +3,6 @@ author: Aniket
 title: >
   HTML5 Semantics and Good Coding
   Practices
-excerpt:
 layout: post
 category:
   - Article
@@ -11,7 +10,6 @@ tags:
   - coding
   - html5
   - semantic
-post_format: [ ]
 ---
 ## Introduction
 
@@ -44,7 +42,7 @@ Almost every (sane) front-end developer was using similar ids and classes with s
     <div class="header">
     <div class="navigation">
     <div class="footer">
-    
+{:data-language="html"}
 
 and so on.
 
@@ -58,7 +56,7 @@ You can use [header][2] as many times as you want to anywhere on your page. Usua
 You must be used to seeing things like
 
     <div id="header">
-    
+{:data-language="html"}   
 
 header is a substitute to this.
 
@@ -69,7 +67,7 @@ The [footer][3] is similar to header.
 Replace your
 
     <div id="footer">
-    
+{:data-language="html"}    
 
 with a simple footer tag. You can use it as many times as you want to!
 
@@ -80,24 +78,24 @@ You can group together your links in the [nav][4] element.
 This is the way we code as of now —
 
     <div id="main-nav" class="navigation">
-    <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
     </div>
-    
+{:data-language="html"}    
 
 Change your primitive code to this —
 
     <nav>
-     <ul>
-     <li><a href="index.html">Home</a></li>
-     <li><a href="/about/">About</a></li>
-     <li><a href="/blog/">Blog</a></li>
-     </ul>
-     </nav>
-    
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+    </nav>
+{:data-language="html"}    
 
 ### Article and Section
 
@@ -146,7 +144,7 @@ As of now we to do this by making divs or my associating different classes, but 
     <!-- Your image here -->
     <figcaption></figcaption>
     </figure>
-    
+{:data-language="html"}    
 
 See this [fiddle][11], I made to demonstrate the use!
 
@@ -160,7 +158,7 @@ Now, how to use placeholders. Well, it’s as easy as eating cheese!
 Just include placeholders and the text you need inside you input elements.
 
     <input name="user-name" type="email" placeholder="Your username is your email address">
-    
+{:data-language="html"}    
 
 Apart from this, we have keygen.
 
@@ -179,7 +177,7 @@ See the following code —
     document.forms.main.elements.result.value = 'Hello World';
     </script>
     </form>
-    
+{:data-language="html"}
 
 I guess, now you understand the logic of this element. You can manipulate this to change things accordingly and display results in a more orderly fashion.
 
@@ -192,20 +190,20 @@ Meter element is nothing big in terms of what it does, but it brings logic to yo
 ### BAD CODE
 
     <section>
-    My height is 5 feet and 10 inches.
+        My height is 5 feet and 10 inches.
     </section>
-    
+{:data-language="html"}    
 
 ### GOOD CODE
 
     <section>
     My height is
     <dl>
-    <dt>Feet: <dd> <meter min=0 max=7 value=5>5ft</meter>
-    <dt>Inches: <dd> <meter min=0 max=12 value=11>11in</meter>
+        <dt>Feet: <dd> <meter min=0 max=7 value=5>5ft</meter>
+        <dt>Inches: <dd> <meter min=0 max=12 value=11>11in</meter>
     </dl>
     </section>
-    
+{:data-language="html"}    
 
 You can easily understand what all this means. Better than before right?
 
@@ -227,10 +225,10 @@ So, what details does is that you can easily collapsible elements.
 The code for it is like this -
 
     <details>
-    <summary>Show/Hide me</summary>
-    <p>Hello! I am a paragraph element inside a details tag.</p>
+        <summary>Show/Hide me</summary>
+        <p>Hello! I am a paragraph element inside a details tag.</p>
     </details>
-    
+{:data-language="html"}    
 
 It would look like this, a simple arrow before the summary text and when you click on the arrow, you will see the paragraph text.  
 [Demo][14] for details element.
@@ -268,22 +266,23 @@ Moving onto the map and area elements. It can be used to relate pixel coordinate
 
 A good example from HTML5 Doctor is this -
 
-    <h1>Clothing</h1>
-     <img src="/images/menu.gif" alt="Select a department to go to its page." usemap="#nav">
+    <section>
+        <h1>Clothing</h1>
+        <img src="/images/menu.gif" alt="Select a department to go to its page." usemap="#nav">
     </section>
     <footer>
-     <map name="nav">
-      <p>
-       <a href="/women/">Women</a>
-       <area alt="Women" coords="0,0,100,50" href="/women/"> |
-       <a href="/men/">Men</a>
-       <area ALT="Men" coords="0,0,100,50" href="/men/"> |
-       <a HREF="/kids/">Kids</a>
-       <area alt="Food" coords="0,0,100,50" href="/kids/"> |
-      </p>
-     </map>
+        <map name="nav">
+        <p>
+            <a href="/women/">Women</a>
+            <area alt="Women" coords="0,0,100,50" href="/women/"> |
+            <a href="/men/">Men</a>
+            <area ALT="Men" coords="0,0,100,50" href="/men/"> |
+            <a HREF="/kids/">Kids</a>
+            <area alt="Food" coords="0,0,100,50" href="/kids/"> |
+        </p>
+        </map>
     </footer>
-    
+{:data-language="html"}    
 
 Seems useful!
 
@@ -299,16 +298,16 @@ Take a look at this ugly HTML code used for embedding a video from youtube!
     <embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/oHg5SJYRHA0&hl=en&fs=1&" allowscriptaccess="always" allowfullscreen="true">
     </embed>
     </object>
-    
+{:data-language="html"}
 
 Don’t even feel like reading what it says.
 
 Let’s do this the HTML5 way.
 
     <video width="640"  height="360" src="http://www.youtube.com/demo/google_main.mp4"  controls autobuffer>
-     <p> Try this page in Safari  4! Or you can <a  href="http://www.youtube.com/demo/google_main.mp4">download the  video</a> instead.</p>
+    <p> Try this page in Safari  4! Or you can <a  href="http://www.youtube.com/demo/google_main.mp4">download the  video</a> instead.</p>
     </video>
-    
+{:data-language="html"}    
 
 Oh, this is so neat! (This is what you said, right?)  
 You can even add an autoplay to the video tag and you know what it means.
@@ -319,7 +318,7 @@ Code for it is quite easy to understand.
 Example:
 
     <track kind=subtitles src=abc.vtt srclang=en label="English">
-    
+{:data-language="html"}
 
 There are other ‘kind’ for it like subtitles, captions, descriptions, chapters and metadata.
 
@@ -336,10 +335,10 @@ The audio tag defines 5 attributes.
 Example:
 
     <audio controls preload="auto" autobuffer>
-     <source src="track.mp3" />
-     <source src="track.ogg" />
+        <source src="track.mp3" />
+        <source src="track.ogg" />
     </audio>
-    
+{:data-language="html"}    
 
 This enables controls for the audio, enable auto buffering and loads the file beforehand.
 

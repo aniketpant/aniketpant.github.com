@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: The Tale of E-Dorado
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Event
   - Quark 2012
-post_format: [ ]
 ---
 E-Dorado is going to start soon and I might not have mentioned this before but I have been working on the platform for it lately!
 
@@ -24,8 +22,7 @@ I started with the coding and the platform was ready for a three-day event in my
 
 Following the old tradition of having an interesting opening page, I created this.
 
-[![Figure This Out — Edorado][2]][2]
-Figure This Out
+_image missing_
 
 And this was it! The opening page and the players had to figure out a way to get through. The only thing I forgot that the link was in the source (my bad).
 
@@ -33,18 +30,8 @@ The way to solve this was that you had to move ahead and re-size the page. And a
 
 Moving onto the interface, I created a very simple UI using *Bootstrap, from Twitter* and a little styling myself (a three hour job it was in the end).
 
-## Some Screenshots
-
-[![Searock_v1][3]][3] 
-
-  
-
-
 ## The New Version
 
 After putting in a little time on the new version, I have included an administration interface for myself and my other team members. And for the users, we have some *analytics*, a new banner and some minor changes in the UI like a 960 grid unlike the 1140 earlier.
 
 I assure you that you’re going to love it a lot! Wait for it.
-
- []: http://i2.wp.com/www.aniketpant.com/wp-content/uploads/2011/12/Figure-This-Out-—-Edorado.jpg?resize=500%2C400
- []: http://i2.wp.com/www.aniketpant.com/wp-content/uploads/2012/06/Searock_v1.jpg "Searock_v1"

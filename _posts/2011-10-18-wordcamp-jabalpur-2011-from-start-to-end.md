@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: 'WordCamp Jabalpur 2011 : From Start To End'
-excerpt:
 layout: post
 category:
   - Weblog

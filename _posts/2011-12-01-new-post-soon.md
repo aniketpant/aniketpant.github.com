@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: New Post Soon
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Announcement
-post_format: [ ]
 ---
 My last post on [HTML5 Semantics and Good Coding Practices][1] received a great response and a total of **6.4k** hits so far!
 
@@ -26,5 +24,5 @@ But actually the post is going to be on how [Bones][2] (WordPress Framework) use
 
 Bones is my favorite framework and my current theme is based on it! So I plan to write on how it uses HTML5.
 
- [1]: http://www.aniketpant.com/article/html5-semantics-and-good-coding-practices "HTML5 Semantics and Good Coding Practices"
+ [1]: http://www.aniketpant.com/posts/html5-semantics-and-good-coding-practices "HTML5 Semantics and Good Coding Practices"
  [2]: http://themble.com/bones/ "Bones Framework"

@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Prima Facie
-excerpt:
 layout: post
 category:
   - Poem
 tags:
   - Poem
-post_format: [ ]
 ---
 Don’t just breathe  
 Feel life  

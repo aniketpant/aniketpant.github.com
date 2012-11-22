@@ -1,17 +1,13 @@
 ---
 author: Aniket
 title: WP Format Code
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - Code Formatting
   - Plugin
-post_format: [ ]
 ---
-[![WP Format Code][2]][2]
-
 Today I finished writing my first WordPress plugin. It’s damn simple and was really easy to build.
 
 I call it **Format Code**.
@@ -41,5 +37,3 @@ I included a live preview in the *plugin options* page. So, you can actually see
 Currently I am thinking of more ways in which I can improve and enhance my plugin, so that it becomes more usable by people.
 
 *Note: I will soon be uploading the plugin on my github and also on the WordPress plugin directory.*
-
- []: http://i0.wp.com/www.aniketpant.com/wp-content/uploads/2012/02/Format-Code.jpg?resize=461%2C346

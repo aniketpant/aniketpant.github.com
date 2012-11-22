@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: 'Online Test Management: Cosmetic Changes Left'
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - ASP
   - Online Test Management
-post_format: [ ]
 ---
 It’s been 11 days since I took on this project and it just needs the finishing touch now.
 

@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Dream, Innovate
-excerpt:
 layout: post
 category:
   - Weblog
@@ -9,7 +8,6 @@ tags:
   - Dream
   - Innovate
   - Work
-post_format: [ ]
 ---
 Today, while going through Hacker News. Well, I read it regularly (like checking it every half an hour), and I read [this][1] post.
 

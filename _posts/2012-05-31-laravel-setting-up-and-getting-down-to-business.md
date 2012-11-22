@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: 'Laravel : Setting up and getting down to business'
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - Codeigniter
   - Laravel
-post_format: [ ]
 ---
 After three days of tinkering with Laravel, I finally have it set up and ready to work.
 

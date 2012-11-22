@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: One Web, One World
-excerpt:
 layout: post
 category:
   - Article
@@ -9,7 +8,6 @@ tags:
   - Idea
   - Utopian
   - Vision
-post_format: [ ]
 ---
 It might be a little stupid of me as I haven’t searched on what I am currently writing about.
 

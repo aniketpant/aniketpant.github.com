@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Can people get weirder than this?
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Time Pass
-post_format: [ ]
 ---
 In the morning, I was reading the newspaper and I saw this article that Arindam Chaudhuri is suing Google. Read [this][1].
 

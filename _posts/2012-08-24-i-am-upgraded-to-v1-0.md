@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: I am upgraded to v1.0
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Self-Improvement
-post_format: [ ]
 ---
 After roughly three months of unexplainable inactivity and extreme learning experience, I feel that I can start working on core modules of many applications.
 

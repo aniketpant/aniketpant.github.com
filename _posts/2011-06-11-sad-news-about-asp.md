@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: Sad News about ASP
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - ASP
   - Problem
-post_format: [ ]
 ---
 I just learnt that I cannot host my ASP site on my current hosting as is it is Linux based.
 

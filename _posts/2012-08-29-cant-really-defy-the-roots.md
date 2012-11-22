@@ -1,12 +1,10 @@
 ---
 author: Aniket
 title: "Can't really Defy the roots"
-excerpt:
 layout: post
 category:
   - Weblog
 tags: [ ]
-post_format: [ ]
 ---
 Yesterday was a nightmare for me! I spent more than two hours trying to root my **Motorola Defy Plus**.
 

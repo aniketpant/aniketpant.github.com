@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Polar Bear Club
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - WordCamp
-post_format: [ ]
 ---
 The arbit post name is because as I am listening to this band called [Polar Bear Club][1] and I absolutely love their music.
 

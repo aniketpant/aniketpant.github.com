@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Hassle! msdb lost :(
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Problem
-post_format: [ ]
 ---
 Yesterday, because of some problem, the system database msdb went faulty and got corrupted.
 

@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Announcement for the Summer
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Announcement
-post_format: [ ]
 ---
 ### The summer break
 

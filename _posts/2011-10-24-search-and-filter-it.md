@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Search and Filter It
-excerpt:
 layout: post
 category:
   - Weblog
@@ -9,7 +8,6 @@ tags:
   - filter
   - help
   - search
-post_format: [ ]
 ---
 Exams are over (again), it’s quite boring and irritating when you have exams every now and then (that is like once every month).
 
@@ -28,7 +26,4 @@ Here is the [link][1]. (please do post some answers if you can help me out)
 
 Also, here is some work that I did in the last 2 days (made these for fun)
 
-[![Searock_v1][3]][3]
-
  [1]: http://stackoverflow.com/questions/7875492/create-search-with-filtering "The Question"
- []: http://i2.wp.com/www.aniketpant.com/wp-content/uploads/2012/06/Searock_v1.jpg "Searock_v1"

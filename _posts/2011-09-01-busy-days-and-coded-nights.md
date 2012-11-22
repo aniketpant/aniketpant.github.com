@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Busy Days and Coded Nights
-excerpt:
 layout: post
 category:
   - Weblog
@@ -9,7 +8,6 @@ tags:
   - Busy
   - Music
   - Progress
-post_format: [ ]
 ---
 It’s been hardly a month since college has started and I have already become so busy.
 

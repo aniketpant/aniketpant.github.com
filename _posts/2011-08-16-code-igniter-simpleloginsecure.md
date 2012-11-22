@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: 'Code Igniter - SimpleLoginSecure'
-excerpt:
 layout: post
 category:
   - Weblog
@@ -11,7 +10,6 @@ tags:
   - PHPass
   - Problem
   - Stack Overflow
-post_format: [ ]
 ---
 Yesterday, I made an attempt to use PasswordHash and tried to directly convert it into a CI Library. Failing at that, I went ahead and downloaded **SimpleLoginSecure**.
 

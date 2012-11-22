@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: 'Code Igniter: Jquery Problem'
-excerpt:
 layout: post
 category:
   - Weblog
@@ -9,7 +8,6 @@ tags:
   - Codeigniter
   - Jquery
   - Problem
-post_format: [ ]
 ---
 Yesterday, I was trying to run a jquery in my Code Igniter view and there was some problem.
 

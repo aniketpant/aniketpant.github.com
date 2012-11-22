@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Speaking at WordCamp Jabalpur 2011
-excerpt:
 layout: post
 category:
   - Weblog
@@ -9,7 +8,6 @@ tags:
   - Jabalpur
   - Speaker
   - WordCamp
-post_format: [ ]
 ---
 **![I’m Speaking WordCamp Jabalpur 2011][1]WordCamp Jabalpur** is from Oct 15-16, 2011 and you’ll be finding me there speaking on **Theme Development and Customizing**.
 

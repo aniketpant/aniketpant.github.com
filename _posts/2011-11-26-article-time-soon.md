@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: Article Time Soon
-excerpt:
 layout: post
 category:
   - Weblog

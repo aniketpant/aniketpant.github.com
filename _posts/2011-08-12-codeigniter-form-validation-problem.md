@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: CodeIgniter Form Validation Problem
-excerpt:
 layout: post
 category:
   - Weblog
@@ -9,7 +8,6 @@ tags:
   - Codeigniter
   - Form Validation
   - Problem
-post_format: [ ]
 ---
 It’s been around 4 days now and I wasn’t able to move any further, so I decided to just chuck the validation for the time being and move ahead with the other modules of my current project.
 

@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: The Bones of HTML5
-excerpt:
 layout: post
 category:
   - Article
@@ -9,11 +8,7 @@ tags:
   - Bones
   - html5
   - Wordpress
-post_format: [ ]
 ---
-[![Bones - The HTML5 WordPress Starter Theme][2]][2]
-Bones - The HTML5 WordPress Starter Theme
-
 ## Introduction
 
 The father and mother of wrongly named articles is this! For sure! Trust me on that.
@@ -239,12 +234,11 @@ So many features packed together into a small theme which can be extended as muc
 
 If you liked the post, please upvote on HN. Here’s the link to the [discussion][10].
 
-****If you are going to try it out then, like Eddie writes in the stylesheet.
+If you are going to try it out then, like Eddie writes in the stylesheet.
 
 **Happy Developing!**
 
- []: http://i1.wp.com/www.aniketpant.com/wp-content/uploads/2011/12/Bones-The-HTML5-Wordpress-Starter-Theme.png
- [2]: http://www.aniketpant.com/article/html5-semantics-and-good-coding-practices "HTML5 Semantics and Good Coding Practices"
+ [2]: http://www.aniketpant.com/posts/html5-semantics-and-good-coding-practices "HTML5 Semantics and Good Coding Practices"
  [3]: http://themble.com/bones/ "Bones Framework"
  [4]: http://themble.com/ "Eddie Machado"
  [5]: https://github.com/eddiemachado/bones "Eddie Machado - Bones"

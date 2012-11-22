@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: New things and some new ideas
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Announcement
-post_format: [ ]
 ---
 ## Good things which happened recently
 

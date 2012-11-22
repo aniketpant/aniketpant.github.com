@@ -1,7 +1,6 @@
 ---
 author: Aniket
 title: The Latent Ability Of Our Browsers
-excerpt:
 layout: post
 category:
   - Article
@@ -9,7 +8,6 @@ tags:
   - Browser
   - CSS
   - JavaScript
-post_format: [ ]
 ---
 Who would have thought that our Web Browsers can be capable of animations without the use of anything? When you see some beautiful color changes or some other wonderful motion animations, you might think that it is happening because of some script running in your browser or some external application being called. Well that might be possible. But if you didn’t think of CSS doing that, then you do not know about the latent ability of our Web Browsers.
 

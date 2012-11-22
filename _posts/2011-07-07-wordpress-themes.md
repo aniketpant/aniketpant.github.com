@@ -1,12 +1,10 @@
 ---
 author: Aniket
 title: Wordpress Themes
-excerpt:
 layout: post
 category:
   - Weblog
 tags: [ ]
-post_format: [ ]
 ---
 For quite sometime I was busy reading articles for design inspirations and finally I have found what I have been looking for.
 

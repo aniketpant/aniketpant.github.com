@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: The "Merry" New Year
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Random Thoughts
-post_format: [ ]
 ---
 This year has been going really great so far. I haven’t been able to write anything so far but will be regular now.
 

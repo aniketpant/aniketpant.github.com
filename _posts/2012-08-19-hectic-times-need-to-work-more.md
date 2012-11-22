@@ -1,12 +1,10 @@
 ---
 author: Aniket
 title: Hectic times. Need to work more.
-excerpt:
 layout: post
 category:
   - Weblog
 tags: [ ]
-post_format: [ ]
 ---
 Today I feel that I have reached my limit. And I am feeling great about it.
 
@@ -38,7 +36,6 @@ And because of the project I was able to understand so much more about applicati
 
 I even had the opportunity to work on some smaller projects for friends. One of them was the [Celestia][4] website.
 
-[![celestiaclub.org][6]][6] 
 Other than this project I did get some small projects too which were focused on WordPress feature development and not exactly the design.
 
 ## The following weeks
@@ -48,7 +45,6 @@ In the next week I need to wind up one project on which I am working with my fat
 **I like being on the edge.**
 
  [1]: http://markmyword.in "Mark My Word Conference"
- []: http://www.aniketpant.com/weblog/hectic-times-need-to-work-more/attachment/mmw-logo
+ []: http://www.aniketpant.com/posts/hectic-times-need-to-work-more/attachment/mmw-logo
  [3]: https://github.com/aniketpant/bits-inventory-app "BITS Inventory App"
  [4]: http://celestiaclub.org "Celestia Club"
- []: http://www.aniketpant.com/weblog/hectic-times-need-to-work-more/attachment/celestiaclub-org

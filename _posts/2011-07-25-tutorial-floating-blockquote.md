@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: 'Tutorial: Floating Blockquote'
-excerpt:
 layout: post
 category:
   - Tutorial
 tags:
   - blockquote
   - Tutorial
-post_format: [ ]
 ---
 You would have seen this at a number of places. There is a blockquote to one side and the content is flowing around it.
 
@@ -104,8 +102,3 @@ The CSS
                     color: orangered;
                     text-shadow : none;
                 }
-    
-
-[View Demo][1]
-
- [1]: http://www.aniketpant.com/example/floating-blockquotes

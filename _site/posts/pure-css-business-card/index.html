@@ -1,22 +1,60 @@
-<p>I remember it was 2-3 days back when I was talking to a friend, and he was making this design for his theme on tumblr.</p>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Aniket Pant &mdash; Pure CSS Business Card</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/assets/styles/css/style.css">
+        <link rel="stylesheet" href="/assets/styles/css/themes/github.css">
+
+        <script src="/assets/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div class="header-container gw">
+            <header class="g one-whole cf" role="banner">
+                <h1 class="title brand">Rawrrr</h1>
+                <nav>
+                    <ul class="nav nav--banner">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about-me">About Me</a></li>
+                        <li><a href="/speaking">Speaking</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container gw">
+            <div class="main g one-whole cf" role="main">
+
+                <div class="post ">
+  <h1>Pure CSS Business Card</h1>
+  <p>I remember it was 2-3 days back when I was talking to a friend, and he was making this design for his theme on tumblr.</p>
 
 <p>From what he had made, it was lots of things, like his desk and he had a business card sort of thing on it. So, I asked him that was he going to use CSS to recreate it. And to that, he said that he’ll be using it as an image.</p>
 
 <p>Because of what I saw, I got an idea to make something of this sort.</p>
 
-<p><a href='http://www.aniketpant.com/example/pure-css-business-card'><img src='http://www.aniketpant.com/example/pure-css-business-card' alt='Pure CSS Business Card' /></a> Pure CSS Business Card</p>
-
 <p>So, I’ll move ahead and show you the code of how to make this nifty <strong>Pure CSS Business Card</strong>.</p>
 
 <p>Here goes the HTML for it.</p>
 
-<pre><code>&lt;div class=&quot;business-card&quot;&gt;
+<pre><code>&lt;div class="business-card"&gt;
 &lt;header&gt;
 ☆
 › Your Name ‹
 &lt;/header&gt;
 &lt;footer&gt;
-&lt;span class=&quot;contact-title&quot;&gt;
+&lt;span class="contact-title"&gt;
 Contact Me
 &lt;/span&gt;
 &lt;ul&gt;
@@ -25,7 +63,8 @@ Contact Me
 &lt;li&gt;(+91) 987-654-3210&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/footer&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
 
 <p>And here is the simple CSS.</p>
 
@@ -74,7 +113,7 @@ text-align: center;
 position: relative;
 font-size: 3em;
 z-index: 999;
-font-family: &#39;Monoton&#39;;
+font-family: 'Monoton';
 color: #222;
 text-shadow: 0 1px 0 rgba(255,255,255,0.25), 0 -1px 0 rgba(0,0,0,0.25);
 }
@@ -82,7 +121,7 @@ text-shadow: 0 1px 0 rgba(255,255,255,0.25), 0 -1px 0 rgba(0,0,0,0.25);
 text-align: center;
 position: relative;
 bottom: -35px;
-font-family: &#39;Kreon&#39;;
+font-family: 'Kreon';
 letter-spacing: 1px;
 }
 .business-card footer span.contact-title {
@@ -97,8 +136,31 @@ padding: 0;
 }
 .business-card footer ul li {
 text-shadow: 0 1px 0 rgba(255,255,255,0.25), 0 -1px 0 rgba(0,0,0,0.25);
-}</code></pre>
+}
+</code></pre>
+  
+</div><!-- post -->
 
-<p><a href='http://www.aniketpant.com/example/pure-css-business-card'>View Demo</a></p>
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
 
-<p><span />: http://i1.wp.com/www.aniketpant.com/wp-content/uploads/2011/10/business-card.png</p>
+        <div class="footer-container gw">
+            <footer class="g one-whole" role="contentinfo">
+                <p>By <a href="http://twitter.com/aniket_pant">@aniket_pant</a> | &copy; 2010 - 2012 | <a href="/colophon">Colophon</a></p>
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+        <script src="/assets/js/vendor/rainbow-custom.min.js"></script>
+        <script src="/assets/js/plugins.js"></script>
+        <script src="/assets/js/main.js"></script>
+
+        <!--
+        <script type="text/javascript" src="//use.typekit.net/rsd5dqz.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        -->
+
+    </body>
+</html>

@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: Dabbling with gists
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - dabblet
   - patterns
-post_format: [ ]
 ---
 For the last 3-4 days I have made a couple of gists using dabblet and to my surprise I have learnt a lot of things. Even though the things I have worked on are very basic but have helped me understand a couple of techniques.
 
@@ -16,7 +14,9 @@ For the last 3-4 days I have made a couple of gists using dabblet and to my surp
 
 The first thing I tried my hand at was CSS background patterns and I have been quite successful with working with them. Here’s are a few samples of what all I tried. I know they are not that impressive but are decent attempts.
 
-[![Repeating background gradient - very basic ✿ dabblet.com][2]][2]What you see above was my first attempt and it turned out to be pretty decent. The code for it is really easy. Take a look at it.
+_image missing_
+
+What you see above was my first attempt and it turned out to be pretty decent. The code for it is really easy. Take a look at it.
 
     background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,4,80,.5) 10px, rgba(255,4,80,.5) 20px),
     repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255,4,80,.5) 10px, rgba(255,4,80,.5) 20px) #000;
@@ -24,7 +24,9 @@ The first thing I tried my hand at was CSS background patterns and I have been q
 
 Here is the [dabblet][2].
 
-[![Repeating background gradient - checked pattern ✿ dabblet.com][4]][4]This one is a little more intricate than the previous one, but easy to understand.
+_image missing_
+
+This one is a little more intricate than the previous one, but easy to understand.
 
     background-color: #000;
     background-image: repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
@@ -41,7 +43,9 @@ According to my understanding of background patterns from what I made and how I 
 
 ## Smashing Magazine like menu
 
-[![Smashing Magazine like side menu ✿ dabblet][6]][6]Checkout this [demo][6] I made replicating the new Smashing Magazine’s side menu.
+_image missing_
+
+Checkout this [demo][6] I made replicating the new Smashing Magazine’s side menu.
 
 The HTML goes like this.
 
@@ -139,12 +143,14 @@ I am very pleased with the result of these menus and there are very high chances
 Along with making the buttons and adding a little animation to them, I incorporated another background pattern to the demo.  
 Now, I plan to learn a little bit about radial patterns.
 
-[![Buttons with 3 states ✿ dabblet][10]][10] 
+_image missing_
+
 ## Animation with Chrome Icon
 
 And the last thing I tried yesterday was a little [animation][10] with the chrome icon inspired by [HTML5 – The Real Bleeding Edge][11].
 
-[![Testing rotating animation with Chrome icon ✿ dabblet][13]][13] 
+_image missing_
+
 The HTML markup for it.
 
     <img class="chrome" src="http://www.wowpedia.org/images/8/89/Chrome.png" />
@@ -168,15 +174,10 @@ And the simple animation.
 Even you can try out these simple tricks and learn a great deal from them.  
 Keep dabbling like crazy.
 
- []: http://i1.wp.com/www.aniketpant.com/wp-content/uploads/2012/01/Repeating-background-gradient-very-basic-✿-dabblet.com_.png?resize=500%2C300
  [2]: http://dabblet.com/gist/1614813 "Very basic CSS pattern"
- []: http://i2.wp.com/www.aniketpant.com/wp-content/uploads/2012/01/Repeating-background-gradient-checked-pattern-✿-dabblet.com_1.png?resize=500%2C300
  [4]: http://dabblet.com/gist/1615419 "Checked CSS pattern"
- []: http://i1.wp.com/www.aniketpant.com/wp-content/uploads/2012/01/Smashing-Magazine-like-side-menu-✿-dabblet.jpg?resize=500%2C300
  [6]: http://dabblet.com/gist/1614434 "Smashing Magazine like menu"
  [7]: http://dabblet.com/gist/1651486 "Buttons with 3 states"
  [8]: http://design-seeds.com/ "Design Seeds"
- []: http://i2.wp.com/www.aniketpant.com/wp-content/uploads/2012/01/Buttons-with-3-states-✿-dabblet.jpg?resize=500%2C300
  [10]: http://dabblet.com/gist/1653014 "Animation with Chrome Icon"
  [11]: http://html5-demos.appspot.com/static/html5-therealbleedingedge/template/index.html "HTML5 - The Real Bleeding Edge"
- []: http://i1.wp.com/www.aniketpant.com/wp-content/uploads/2012/01/Testing-rotating-animation-with-Chrome-icon-✿-dabblet.jpg?resize=500%2C300

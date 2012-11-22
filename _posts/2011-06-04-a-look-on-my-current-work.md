@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: A Look On My Current Work
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - ASP
   - Online Test Management
-post_format: [ ]
 ---
 It’s been a couple more than a week that I was introduced to ASP .NET and my current project has not only taken it’s shape but is nearly completed.
 

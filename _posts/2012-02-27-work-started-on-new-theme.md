@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Work started on new theme
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Theme
-post_format: [ ]
 ---
 I have lots of issues and I know it. I just can’t stick to one thing for a long time and it has again happened with me.  
 It’s not exactly a really big problem but I never feel content with what I have, so I have finally begun work on a new theme for my blog.

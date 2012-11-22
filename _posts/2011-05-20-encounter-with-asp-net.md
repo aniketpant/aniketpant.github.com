@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Encounter with ASP
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - ASP
-post_format: [ ]
 ---
 Today was my first encounter with ASP .NET
 

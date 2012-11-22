@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: I was forced to change my password
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Password
   - Security
-post_format: [ ]
 ---
 ![Locked Out][1] 
 2 days back, I was testing a feature for [igniteplate][2] and because of just one mail, I locked down my Google account for myself.

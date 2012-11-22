@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Work and Inspiration
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - inspiration
-post_format: [ ]
 ---
 Inspiring someone is awesome but it’s the other way round for me.
 

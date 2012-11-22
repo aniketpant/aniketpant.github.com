@@ -3,13 +3,11 @@ author: Aniket
 title: >
   Hassled by Codeigniter but ended up
   writing a cool new code
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Codeigniter
-post_format: [ ]
 ---
 After months I am working on Codeigniter and I just found a cool new method which I didn’t think of before.
 

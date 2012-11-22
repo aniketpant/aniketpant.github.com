@@ -1,13 +1,11 @@
 ---
 author: Aniket
 title: Nostalgic Web
-excerpt:
 layout: post
 category:
   - Weblog
 tags:
   - Random Thoughts
-post_format: [ ]
 ---
 It is all really very stupid but recently I have been remembering my old days on the web. There were so many sites I used to visit that time and play some text based MMORPGs.
 

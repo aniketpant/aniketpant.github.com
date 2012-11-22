@@ -1,14 +1,12 @@
 ---
 author: Aniket
 title: A shift from Codeigniter to Laravel
-excerpt:
 layout: post
 category:
   - Article
 tags:
   - Codeigniter
   - Laravel
-post_format: [ ]
 ---
 It has been a while that I have been working on igniteplate and I haven’t been able to put much time to it.  
 Two days back, I happened to read [this][1]. And then I thought of giving [Laravel][2] a try.
