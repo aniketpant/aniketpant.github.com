@@ -4,7 +4,7 @@
 \*------------------------------------*/
 /**
  * 
- * sass --watch your-project.scss:your-project.min.css --style compressed
+ * sass --watch rawrrr.scss:your-project.min.css --style compressed
  * 
  * Here we set up some variables, include the inuit.css framework, then add our
  * project-specific components afterwards.
@@ -21,3 +21,43 @@
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
+
+body {
+	width: 960px;
+	margin: 0 auto;
+}
+
+footer {
+	text-align: center;
+}
+
+/**
+ * $TYPOGRAPHY
+ */
+body {
+	font-family: "calluna", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "nimbus-sans", sans-serif;
+}
+
+/**
+ * $LINKS
+ */
+
+a {
+	color: #e72a59;
+}
+
+a:hover {
+	color: darken(#e72a59, 10%);
+}
+
+/**
+ * $NAV
+ */
+
+.nav a:hover {
+	text-decoration: none;
+}
