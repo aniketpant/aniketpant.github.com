@@ -2565,11 +2565,11 @@ label,
  * any element using a handy helper class.
  */
 .brand {
-  font-family: "nimbus-sans", Segoe, "Segoe UI", Optima, Arial, sans-serif!important;
+  font-family: "adelle", Segoe, "Segoe UI", Optima, Arial, sans-serif!important;
   color: #4d4d4d!important; }
 
 .brand-face {
-  font-family: "nimbus-sans", Segoe, "Segoe UI", Optima, Arial, sans-serif!important; }
+  font-family: "adelle", Segoe, "Segoe UI", Optima, Arial, sans-serif!important; }
 
 .brand-color,
 .brand-colour {
@@ -2670,10 +2670,10 @@ footer {
  * $TYPOGRAPHY
  */
 body {
-  font-family: "acuta", Palatino, "Palatino Linotype", Georgia, serif; }
+  font-family: "adobe-garamond-pro", Palatino, "Palatino Linotype", Georgia, serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "nimbus-sans", Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "adelle", Segoe, "Segoe UI", Optima, Arial, sans-serif;
   color: #3d3d3d; }
 
 /**

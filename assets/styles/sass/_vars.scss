@@ -17,8 +17,8 @@ $debug-mode:        false;
 /**
  * Fonts
  */
-$sans:				"nimbus-sans", Segoe, "Segoe UI", Optima, Arial, sans-serif;
-$serif:				"acuta", Palatino, "Palatino Linotype", Georgia, serif;
+$slab:				"adelle", Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$serif:				"adobe-garamond-pro", Palatino, "Palatino Linotype", Georgia, serif;
 
 /**
  * Base Colors
@@ -70,7 +70,7 @@ $micro-size:        10!default;
  * Brand stuff
  */
 $brand-color:       #4d4d4d!default;
-$brand-face:        $sans!default;
+$brand-face:        $slab!default;
 
 
 /**
