@@ -4,7 +4,7 @@ title: About Me
 slug: about-me
 ---
 
-_image missing_
+[![That's me][1]][1]
  
 Hey. I am Aniket Pant.  
 A second generation coder, a speaker and a poet.
@@ -62,6 +62,7 @@ Add me on [Google +][14] and ya, I am on [twitter][15] too.
 
 ### Bottomline: Coding is my thing!
 
+ [1]: ../assets/images/thats-me.jpg
  [2]: http://www.aniketpant.com/category/article "My Articles"
  [3]: http://aniketpant.com/speaking "My Speaking"
  [4]: https://github.com/aniketpant/igniteplate "Igniteplate"

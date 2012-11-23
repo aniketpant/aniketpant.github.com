@@ -2674,3 +2674,12 @@ a:hover {
  */
 .nav a:hover {
   text-decoration: none; }
+
+/**
+ * $SECTIONS
+ */
+.post--header {
+  margin-bottom: 1em; }
+
+.poetry {
+  font-style: italic; }

@@ -37,8 +37,12 @@
             <div class="main g one-whole cf" role="main">
 
                 <div class="post ">
-  <h1>Password Security and Hashing</h1>
-  <p>My old problem was not solved by now, and I was going through a question on Stack Overflow.</p>
+	<header class="post--header">
+  		<h1 class="post_title">Password Security and Hashing</h1>
+  		<div class="meta">Posted on: <span class="date">13 August 2011</span><br/>in <span class="category">Weblog</span></div>
+	</header><!-- post-header -->
+	<article class="post--content">
+  	<p>My old problem was not solved by now, and I was going through a question on Stack Overflow.</p>
 
 <p>I got to know that MD5 should not be used in anyway. Then I read about SHA1 vs bcrypt. After quite some discussion and thanks to <a href="http://about.me/dclawrence" title="Thanks :)">Lawrence</a>, I got a brilliant solution and really good lesson on password hashing.</p>
 
@@ -74,6 +78,8 @@ $check = $this-&gt;PasswordHash-&gt;CheckPassword($password, $actualPassword);
 <p>If you are not using CI, you can go through this <a href="http://dev.myunv.com/articles/secure-passwords-with-phpass/" title="Without CI">link</a>.</p>
 
   
+	</article><!-- post-content -->
+	<footer class="post--footer"></footer><!-- post-footer -->
 </div><!-- post -->
 
             </div> <!-- #main -->
