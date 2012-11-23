@@ -3,7 +3,7 @@ author: Aniket
 title: New CSS Trick
 layout: post
 category:
-  - Tutorial
+  - tutorial
 tags:
   - CSS
   - Trick

@@ -3,7 +3,7 @@ author: Aniket
 title: 'Laravel : Setting up and getting down to business'
 layout: post
 category:
-  - Article
+  - article
 tags:
   - Codeigniter
   - Laravel

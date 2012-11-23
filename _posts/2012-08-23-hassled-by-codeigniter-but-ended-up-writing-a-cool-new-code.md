@@ -5,7 +5,7 @@ title: >
   writing a cool new code
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Codeigniter
 ---

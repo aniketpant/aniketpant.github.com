@@ -3,7 +3,7 @@ author: Aniket
 title: The "Merry" New Year
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Random Thoughts
 ---

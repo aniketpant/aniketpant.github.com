@@ -3,7 +3,7 @@ author: Aniket
 title: The Logic of a Pure CSS Accordion
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Accordion
   - CSS

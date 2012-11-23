@@ -3,7 +3,7 @@ author: Aniket
 title: How I started off
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - inspiration
 ---

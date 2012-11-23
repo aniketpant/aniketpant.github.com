@@ -3,7 +3,7 @@ author: Aniket
 title: The Latent Ability Of Our Browsers
 layout: post
 category:
-  - Article
+  - article
 tags:
   - Browser
   - CSS

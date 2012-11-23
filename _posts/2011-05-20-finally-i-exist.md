@@ -3,7 +3,7 @@ author: Aniket
 title: Finally I Exist
 layout: post
 category:
-  - Weblog
+  - weblog
 tags: [ ]
 post_format: [ ]
 ---

@@ -1,5 +1,5 @@
-permalink: /posts/:title
-exclude: ["assets/styles/sass/", "config.rb", "CNAME"]
+permalink: /:categories/:title
+exclude: ["assets/styles/sass/", "CNAME"]
 auto: true
 markdown: kramdown
 

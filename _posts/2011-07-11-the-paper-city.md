@@ -1,11 +1,10 @@
 ---
 author: Aniket
 title: The Paper City
-layout: post
+layout: poetry
 category:
-  - Poem
-tags:
-  - Poem
+  - poetry
+tags: []
 ---
 My city drowned  
 Dreams grew like a tree  

@@ -3,7 +3,7 @@ author: Aniket
 title: Learning to hack
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Growth Hacking
 ---
