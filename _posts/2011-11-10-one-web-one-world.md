@@ -3,7 +3,7 @@ author: Aniket
 title: One Web, One World
 layout: post
 category:
-  - Article
+  - article
 tags:
   - Idea
   - Utopian

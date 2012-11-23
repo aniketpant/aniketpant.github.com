@@ -3,7 +3,7 @@ author: Aniket
 title: New things and some new ideas
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Announcement
 ---

@@ -3,7 +3,7 @@ author: Aniket
 title: A year down the road
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Self-Improvement
 ---

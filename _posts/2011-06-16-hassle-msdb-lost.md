@@ -3,7 +3,7 @@ author: Aniket
 title: Hassle! msdb lost :(
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Problem
 ---

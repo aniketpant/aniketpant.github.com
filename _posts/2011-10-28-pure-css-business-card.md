@@ -3,7 +3,7 @@ author: Aniket
 title: Pure CSS Business Card
 layout: post
 category:
-  - Tutorial
+  - tutorial
 tags:
   - business card
   - CSS

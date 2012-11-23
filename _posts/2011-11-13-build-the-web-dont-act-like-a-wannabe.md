@@ -3,7 +3,7 @@ author: Aniket
 title: "Build the web, don't act like a wannabe"
 layout: post
 category:
-  - Article
+  - article
 tags:
   - Build
   - Wannabe

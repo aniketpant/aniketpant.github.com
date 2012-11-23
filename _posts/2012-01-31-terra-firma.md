@@ -1,11 +1,10 @@
 ---
 author: Aniket
 title: Terra Firma
-layout: post
+layout: poetry
 category:
-  - Poem
-tags:
-  - Poem
+  - poetry
+tags: []
 ---
 This room is not what it seems like  
 Go see the painting on the wall  

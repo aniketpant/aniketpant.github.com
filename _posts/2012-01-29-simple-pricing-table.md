@@ -3,11 +3,11 @@ author: Aniket
 title: Simple Pricing Table
 layout: post
 category:
-  - Tutorial
+  - tutorial
 tags:
   - Demo
   - Pricing Tables
-  - Tutorial
+  - tutorial
 ---
 Yesterday I was browsing through [Design Curate][1] and I found [this][2].
 

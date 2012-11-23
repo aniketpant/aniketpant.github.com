@@ -3,7 +3,7 @@ author: Aniket
 title: Typographic Art
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Art
   - Photoshop
@@ -14,4 +14,4 @@ _image missing_
 Made this a couple of minutes back.  
 Here is the [link][1] to the tutorial from where I made this.
 
- [1]: http://abduzeedo.com/reader-tutorial-typography-wallpaper-photoshop "The Tutorial"
+ [1]: http://abduzeedo.com/reader-tutorial-typography-wallpaper-photoshop "The tutorial"

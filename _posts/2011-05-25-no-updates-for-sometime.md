@@ -3,7 +3,7 @@ author: Aniket
 title: No Updates for sometime
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Time Pass
 ---

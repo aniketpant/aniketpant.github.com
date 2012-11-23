@@ -1,9 +1,9 @@
 ---
 author: Aniket
-title: Article Time Soon
+title: article Time Soon
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Announcement
 post_format: [ ]
@@ -18,7 +18,7 @@ Having no idea on what to write on, he suggested to write on **HTML5 Semantics a
 
 One of my goals for this year was to get an article of mine, published in **A List Apart**. An attempt for that is the one I am working on!
 
-## The Article
+## The article
 
 So, the article is coming out fine. What I’ll do is, I’ll post the headings under which I am writing.
 

@@ -3,7 +3,7 @@ author: Aniket
 title: Nostalgic Web
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Random Thoughts
 ---

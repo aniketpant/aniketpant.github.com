@@ -1,12 +1,12 @@
 ---
 author: Aniket
-title: 'Tutorial: Floating Blockquote'
+title: 'tutorial: Floating Blockquote'
 layout: post
 category:
-  - Tutorial
+  - tutorial
 tags:
   - blockquote
-  - Tutorial
+  - tutorial
 ---
 You would have seen this at a number of places. There is a blockquote to one side and the content is flowing around it.
 

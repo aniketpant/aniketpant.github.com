@@ -3,7 +3,7 @@ author: Aniket
 title: Password Security and Hashing
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - bcrypt
   - Codeigniter

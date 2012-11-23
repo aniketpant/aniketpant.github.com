@@ -3,7 +3,7 @@ author: Aniket
 title: Treading New Territories
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Conference
   - Mark My Word

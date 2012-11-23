@@ -3,11 +3,11 @@ author: Aniket
 title: Pure CSS Accordion
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Accordion
   - CSS
-  - Tutorial
+  - tutorial
 ---
 This is a simple accordion made by using Pure CSS.
 

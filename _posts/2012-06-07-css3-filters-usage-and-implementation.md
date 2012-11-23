@@ -3,7 +3,7 @@ author: Aniket
 title: 'CSS3 Filters : Usage and Implementation'
 layout: post
 category:
-  - Article
+  - article
 tags:
   - CSS3
   - Filters

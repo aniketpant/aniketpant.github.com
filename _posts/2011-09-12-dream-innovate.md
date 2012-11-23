@@ -3,7 +3,7 @@ author: Aniket
 title: Dream, Innovate
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Dream
   - Innovate

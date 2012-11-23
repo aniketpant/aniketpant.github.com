@@ -3,7 +3,7 @@ author: Aniket
 title: And the fun begins...
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - WordCamp
 ---

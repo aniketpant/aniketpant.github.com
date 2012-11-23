@@ -3,7 +3,7 @@ author: Aniket
 title: 'Code Igniter - SimpleLoginSecure'
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - bcrypt
   - Codeigniter
