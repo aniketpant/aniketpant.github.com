@@ -3,7 +3,7 @@ author: Aniket
 title: Mutiple Events and Less Time
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Jabalpur
   - TEDxBITSGoa

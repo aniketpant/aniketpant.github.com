@@ -3,7 +3,7 @@ author: Aniket
 title: Polar Bear Club
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - WordCamp
 ---

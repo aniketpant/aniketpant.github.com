@@ -3,7 +3,7 @@ author: Aniket
 title: A Look On My Current Work
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - ASP
   - Online Test Management

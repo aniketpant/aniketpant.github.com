@@ -3,7 +3,7 @@ author: Aniket
 title: Announcement for the Summer
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Announcement
 ---

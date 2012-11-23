@@ -3,7 +3,7 @@ author: Aniket
 title: Busy Days and Coded Nights
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Busy
   - Music

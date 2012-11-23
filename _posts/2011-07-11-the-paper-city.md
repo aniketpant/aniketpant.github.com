@@ -3,7 +3,7 @@ author: Aniket
 title: The Paper City
 layout: poetry
 category:
-  - Poetry
+  - poetry
 tags: []
 ---
 My city drowned  

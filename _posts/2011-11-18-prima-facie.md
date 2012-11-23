@@ -3,7 +3,7 @@ author: Aniket
 title: Prima Facie
 layout: poetry
 category:
-  - Poetry
+  - poetry
 tags: []
 ---
 Don’t just breathe  

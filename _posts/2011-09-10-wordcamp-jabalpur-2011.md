@@ -3,7 +3,7 @@ author: Aniket
 title: WordCamp Jabalpur 2011
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - 2011
   - Jabalpur

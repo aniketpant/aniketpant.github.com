@@ -3,7 +3,7 @@ author: Aniket
 title: "Why social sharing won't work for you?"
 layout: post
 category:
-  - Article
+  - article
 tags:
   - Facebook
   - Memes

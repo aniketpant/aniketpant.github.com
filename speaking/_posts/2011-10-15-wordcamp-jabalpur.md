@@ -1,6 +1,6 @@
 ---
 layout: talk
 title: WordCamp Jabalpur 2011
-category:
-	- talk
+category: talk
+slug: worcamp-jabalpur-2011
 ---

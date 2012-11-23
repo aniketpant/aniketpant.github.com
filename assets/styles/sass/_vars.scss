@@ -14,6 +14,18 @@
  */
 $debug-mode:        false;
 
+/**
+ * Fonts
+ */
+$sans:				"nimbus-sans", Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$serif:				"calluna", Palatino, "Palatino Linotype", Georgia, serif;
+
+/**
+ * Base Colors
+ */
+$base-color:		#005eab;
+$red-color:			#b72727;
+
 
 /**
  * Base stuff
@@ -57,8 +69,8 @@ $micro-size:        10!default;
 /**
  * Brand stuff
  */
-$brand-color:       #4a8ec2!default;
-$brand-face:        "Helvetica Neue", sans-serif!default;
+$brand-color:       #4d4d4d!default;
+$brand-face:        $sans!default;
 
 
 /**

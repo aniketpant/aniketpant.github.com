@@ -3,7 +3,7 @@ author: Aniket
 title: I was forced to change my password
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Password
   - Security

@@ -3,7 +3,7 @@ author: Aniket
 title: Another Illustration
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - ASP
   - Wordpress

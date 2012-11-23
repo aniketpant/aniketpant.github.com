@@ -3,7 +3,7 @@ author: Aniket
 title: Terra Firma
 layout: poetry
 category:
-  - Poetry
+  - poetry
 tags: []
 ---
 This room is not what it seems like  

@@ -25,6 +25,12 @@
  * in the browser. Set to `true` or `false`.
  */
 /**
+ * Fonts
+ */
+/**
+ * Base Colors
+ */
+/**
  * Base stuff
  */
 /**
@@ -2559,15 +2565,15 @@ label,
  * any element using a handy helper class.
  */
 .brand {
-  font-family: "Helvetica Neue", sans-serif!important;
-  color: #4a8ec2!important; }
+  font-family: "nimbus-sans", Segoe, "Segoe UI", Optima, Arial, sans-serif!important;
+  color: #4d4d4d!important; }
 
 .brand-face {
-  font-family: "Helvetica Neue", sans-serif!important; }
+  font-family: "nimbus-sans", Segoe, "Segoe UI", Optima, Arial, sans-serif!important; }
 
 .brand-color,
 .brand-colour {
-  color: #4a8ec2!important; }
+  color: #4d4d4d!important; }
 
 /*------------------------------------*\
     $HELPER
@@ -2646,34 +2652,46 @@ label,
  */
 body {
   width: 960px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #f6f6f6; }
 
 footer {
   text-align: center; }
+  footer a {
+    color: #b72727; }
+    footer a:hover {
+      color: #8d1e1e; }
+
+.header-container, .main-container {
+  margin-bottom: 48px;
+  margin-bottom: 3rem; }
 
 /**
  * $TYPOGRAPHY
  */
 body {
-  font-family: "calluna", serif; }
+  font-family: "calluna", Palatino, "Palatino Linotype", Georgia, serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "nimbus-sans", sans-serif; }
+  font-family: "nimbus-sans", Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  color: #3d3d3d; }
 
 /**
  * $LINKS
  */
 a {
-  color: #e72a59; }
+  color: #005eab; }
 
 a:hover {
-  color: #c81643; }
+  color: #004278; }
 
 /**
  * $NAV
  */
-.nav a:hover {
-  text-decoration: none; }
+.nav a {
+  color: #b72727; }
+  .nav a:hover {
+    color: #8d1e1e; }
 
 /**
  * $SECTIONS
@@ -2683,3 +2701,19 @@ a:hover {
 
 .poetry {
   font-style: italic; }
+
+/**
+ * $POST
+ */
+.post_title {
+  color: #b72727; }
+
+.meta .date, .meta .category {
+  font-style: italic; }
+
+/**
+ * $MISC
+ */
+::selection, ::-moz-selection, ::-webkit-selection {
+  color: #f3f3f3;
+  background: #d53c3c; }

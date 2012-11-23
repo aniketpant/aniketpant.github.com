@@ -3,7 +3,7 @@ author: Aniket
 title: My Good Days
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - happy
   - todo

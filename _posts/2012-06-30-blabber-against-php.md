@@ -3,7 +3,7 @@ author: Aniket
 title: Blabber against PHP
 layout: post
 category:
-  - Article
+  - article
 tags:
   - PHP
 ---

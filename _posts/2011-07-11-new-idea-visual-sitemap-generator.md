@@ -3,7 +3,7 @@ author: Aniket
 title: 'New Idea - Visual Sitemap Generator'
 layout: post
 category:
-  - Weblog
+  - weblog
 ---
 Today has been quite a nice day.
 

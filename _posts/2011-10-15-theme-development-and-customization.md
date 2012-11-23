@@ -3,7 +3,7 @@ author: Aniket
 title: Theme Development and Customization
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Slides
   - themes

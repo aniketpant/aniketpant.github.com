@@ -3,7 +3,7 @@ author: Aniket
 title: "The year I won't forget"
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - New Year
 ---

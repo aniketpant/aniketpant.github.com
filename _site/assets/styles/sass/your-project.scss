@@ -25,21 +25,34 @@
 body {
 	width: 960px;
 	margin: 0 auto;
+	background: #f6f6f6;
 }
 
 footer {
 	text-align: center;
+	a {
+		color: $red-color;
+		&:hover {
+			color: darken($red-color, 10%);
+		}
+	}
+}
+
+.header-container, .main-container {
+	margin-bottom: 48px;
+  	margin-bottom: 3rem;
 }
 
 /**
  * $TYPOGRAPHY
  */
 body {
-	font-family: "calluna", serif;
+	font-family: $serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "nimbus-sans", sans-serif;
+	font-family: $sans;
+	color: #3d3d3d;
 }
 
 /**
@@ -47,19 +60,24 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 a {
-	color: #e72a59;
+	color: $base-color;
 }
 
 a:hover {
-	color: darken(#e72a59, 10%);
+	color: darken($base-color, 10%);
 }
 
 /**
  * $NAV
  */
 
-.nav a:hover {
-	text-decoration: none;
+.nav {
+	a {
+		color: $red-color;
+		&:hover {
+			color: darken($red-color, 10%);
+		}
+	}
 }
 
 /**
@@ -72,4 +90,30 @@ a:hover {
 
 .poetry {
 	font-style: italic;
+}
+
+.info-on-me {
+}
+
+/**
+ * $POST
+ */
+
+.post_title {
+	color: $red-color;
+}
+
+.meta {
+	.date, .category {
+		font-style: italic;
+	}
+}
+
+/**
+ * $MISC
+ */
+
+::selection, ::-moz-selection, ::-webkit-selection {
+	color: #f3f3f3;
+	background: lighten($red-color, 10%);
 }

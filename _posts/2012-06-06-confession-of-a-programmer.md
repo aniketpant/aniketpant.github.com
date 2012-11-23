@@ -3,7 +3,7 @@ author: Aniket
 title: Confession of a programmer
 layout: post
 category:
-  - Article
+  - article
 tags:
   - Codeigniter
   - Igniteplate

@@ -3,7 +3,7 @@ author: Aniket
 title: Delay! Delay! Delay!
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - ASP
   - Online Test Management

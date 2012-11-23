@@ -3,7 +3,7 @@ author: Aniket
 title: Update on Igniteplate
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Igniteplate
   - Update
