@@ -5,7 +5,7 @@ title: >
   2012
 layout: post
 category:
-  - Article
+  - article
 tags:
   - TEDxBITSGoa
 ---

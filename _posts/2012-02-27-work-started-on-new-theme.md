@@ -3,7 +3,7 @@ author: Aniket
 title: Work started on new theme
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Theme
 ---

@@ -3,7 +3,7 @@ author: Aniket
 title: Fallen Leaves
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Wordpress
 ---

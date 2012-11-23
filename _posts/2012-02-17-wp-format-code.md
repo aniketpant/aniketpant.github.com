@@ -3,7 +3,7 @@ author: Aniket
 title: WP Format Code
 layout: post
 category:
-  - Article
+  - article
 tags:
   - Code Formatting
   - Plugin

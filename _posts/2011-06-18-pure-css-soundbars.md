@@ -9,12 +9,12 @@ excerpt: |
   There's just one thing to it, they work only in "modern" browsers like FF5/Aurora, Webkit and Chrome.
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - CSS
   - CSS3
   - Pure CSS Sound Bars
-  - Tutorial
+  - tutorial
 post_format: [ ]
 ---
 Keep thinking and you will surely find a new way to have fun with CSS.

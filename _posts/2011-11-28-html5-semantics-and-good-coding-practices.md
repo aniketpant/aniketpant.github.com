@@ -5,7 +5,7 @@ title: >
   Practices
 layout: post
 category:
-  - Article
+  - article
 tags:
   - coding
   - html5
@@ -97,7 +97,7 @@ Change your primitive code to this —
     </nav>
 {:data-language="html"}    
 
-### Article and Section
+### article and Section
 
 The spec defines [section][5] as —
 
@@ -382,7 +382,7 @@ If you are on HN, please upvote. The [link][22] to the discussion.
  [5]: http://html5doctor.com/the-section-element/ "The Section Element"
  [6]: http://www.impressivewebs.com "Impressive Webs"
  [7]: http://www.impressivewebs.com/html5-section/ "HTML5 Section"
- [8]: http://html5doctor.com/the-article-element/ "The Article Element"
+ [8]: http://html5doctor.com/the-article-element/ "The article Element"
  [9]: http://html5doctor.com/aside-revisited/ "Aside"
  [10]: http://html5doctor.com/the-address-element/ "The Address Element"
  [11]: http://jsfiddle.net/aniketpant/hUWhD/embedded/result/ "Fiddle - Figure"

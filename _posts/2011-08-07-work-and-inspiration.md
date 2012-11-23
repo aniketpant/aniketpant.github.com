@@ -3,7 +3,7 @@ author: Aniket
 title: Work and Inspiration
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - inspiration
 ---

@@ -3,7 +3,7 @@ author: Aniket
 title: The web and what people need to learn
 layout: post
 category:
-  - Article
+  - article
 tags:
   - Design
 ---

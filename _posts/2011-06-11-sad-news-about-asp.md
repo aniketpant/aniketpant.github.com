@@ -3,7 +3,7 @@ author: Aniket
 title: Sad News about ASP
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - ASP
   - Problem

@@ -3,7 +3,7 @@ author: Aniket
 title: Return of Minimalistic Me
 layout: post
 category:
-  - Article
+  - article
 tags:
   - Minimalist
   - Redesign

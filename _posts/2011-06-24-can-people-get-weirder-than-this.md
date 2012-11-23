@@ -3,7 +3,7 @@ author: Aniket
 title: Can people get weirder than this?
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Time Pass
 ---
@@ -15,4 +15,4 @@ Even what I am writing here will show up on Google if you search for it. And Mr.
 
 I suggest you do your job and let the search engines get information for people to see.
 
- [1]: http://www.hindustantimes.com/Shooting-the-messenger-eh/Article1-712852.aspx
+ [1]: http://www.hindustantimes.com/Shooting-the-messenger-eh/article1-712852.aspx

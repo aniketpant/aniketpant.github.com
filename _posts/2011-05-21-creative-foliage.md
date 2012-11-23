@@ -3,7 +3,7 @@ author: Aniket
 title: Creative Foliage
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Theme
   - Wordpress

@@ -3,7 +3,7 @@ author: Aniket
 title: I am upgraded to v1.0
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Self-Improvement
 ---

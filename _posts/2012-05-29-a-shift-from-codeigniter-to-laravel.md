@@ -3,7 +3,7 @@ author: Aniket
 title: A shift from Codeigniter to Laravel
 layout: post
 category:
-  - Article
+  - article
 tags:
   - Codeigniter
   - Laravel

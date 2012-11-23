@@ -3,7 +3,7 @@ author: Aniket
 title: Search and Filter It
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - filter
   - help

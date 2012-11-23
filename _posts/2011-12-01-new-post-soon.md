@@ -3,7 +3,7 @@ author: Aniket
 title: New Post Soon
 layout: post
 category:
-  - Weblog
+  - weblog
 tags:
   - Announcement
 ---
