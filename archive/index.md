@@ -3,6 +3,9 @@ layout: page
 title: Archive
 slug: archive
 ---
+
+<div class="g one-whole cf" markdown="1">
+
 {% for post in site.posts %}
 {% unless post.next %}
 <h3>{{ post.date | date: '%Y' }}</h3>
@@ -19,3 +22,5 @@ slug: archive
 	<dd><em>{{ post.date | date:"%d %b" }}</em></dd>
 </dl>
 {% endfor %}
+
+</div>
