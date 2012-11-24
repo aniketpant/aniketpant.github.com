@@ -19,12 +19,16 @@ Thankfully HTML5 puts and end to much of this evilery. Well at least it tries to
 
 ## Doctype
 
-Let’s start with starting of comment  
-<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN”  
-“http://www.w3.org/TR/html4/loose.dtd”>
+Let’s start with starting of comment
 
-DOCTYPEs can’t get simpler than this!  
-**<!DOCTYPE html>**
+    <!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN”  
+“http://www.w3.org/TR/html4/loose.dtd”>
+{:data-language="html"}
+
+DOCTYPEs can’t get simpler than this!
+
+    <!DOCTYPE html>
+{:data-language="html"}
 
 ## The Changes in the Sections
 
@@ -344,9 +348,6 @@ This enables controls for the audio, enable auto buffering and loads the file be
 
 The support for the filetypes vary from browsers as of now.
 
-[![Native Audio in the browser - HTML5 Doctor][17]][17]
-Native Audio in the browser - HTML5 Doctor
-
 Read more on HTML5 Doctor – [Native Audio in the browser][17]
 
 ## The Final Say
@@ -390,7 +391,6 @@ If you are on HN, please upvote. The [link][22] to the discussion.
  [13]: http://dev.w3.org/html5/spec/Overview.html#the-output-element "Draft - The Output Element"
  [14]: http://jsbin.com/egefop#html,live "Demo for details element"
  [15]: http://jsbin.com/egefop/8#3 "Example with a collapsible table of contents"
- []: http://i2.wp.com/www.aniketpant.com/wp-content/uploads/2011/11/Native-Audio-in-the-browser-HTML5-Doctor.png
  [17]: http://html5doctor.com/native-audio-in-the-browser/ "Native Audio in the browser"
  [18]: http://html5demos.com/canvas-grad "Canvas Gradients"
  [19]: http://html5demos.com/canvas "Demo for Canvas"

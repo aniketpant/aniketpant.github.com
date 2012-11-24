@@ -2658,13 +2658,17 @@ body {
 footer {
   text-align: center; }
   footer a {
-    color: #b72727; }
+    color: #bf2c47; }
     footer a:hover {
-      color: #8d1e1e; }
+      color: #962238; }
 
 .header-container, .main-container {
   margin-bottom: 48px;
   margin-bottom: 3rem; }
+
+.navbar {
+  margin-top: 16px;
+  margin-top: 1rem; }
 
 /**
  * $TYPOGRAPHY
@@ -2680,18 +2684,17 @@ h1, h2, h3, h4, h5, h6 {
  * $LINKS
  */
 a {
-  color: #005eab; }
-
-a:hover {
-  color: #004278; }
+  color: #037f8c; }
+  a:hover {
+    color: #02525a; }
 
 /**
  * $NAV
  */
 .nav a {
-  color: #b72727; }
+  color: #bf2c47; }
   .nav a:hover {
-    color: #8d1e1e; }
+    color: #962238; }
 
 /**
  * $SECTIONS
@@ -2706,7 +2709,7 @@ a:hover {
  * $POST
  */
 .post_title {
-  color: #b72727; }
+  color: #f23535; }
 
 .meta .date, .meta .category {
   font-style: italic; }
@@ -2714,6 +2717,101 @@ a:hover {
 /**
  * $MISC
  */
+.wordcount {
+  color: #ee2b43; }
+
 ::selection, ::-moz-selection, ::-webkit-selection {
   color: #f3f3f3;
-  background: #d53c3c; }
+  background: #f25a6d; }
+
+/* ============================================================
+
+320 and Up by Andy Clarke
+Version: 3.0
+URL: http://stuffandnonsense.co.uk/projects/320andup/
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+============================================================ */
+/* Page =================================================== */
+html {
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  background-color: transparent; }
+
+@media print {
+  /* Print =================================================== */
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  h2, h3 {
+    orphans: 3;
+    widows: 3;
+    page-break-after: avoid; }
+
+  p {
+    orphans: 3;
+    widows: 3; }
+
+  pre, blockquote {
+    border: 1px solid #ccc;
+    page-break-inside: avoid; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  a, a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr {
+    page-break-inside: avoid; } }
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+  body {
+    max-width: 480px; } }
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+  body {
+    max-width: 600px; } }
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+  body {
+    max-width: 768px; } }
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+  body {
+    max-width: 960px; } }
+@media only screen and (min-width: 1382px) {
+  /* 1382 =================================================== */
+  body {
+    max-width: 1440px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 2x =================================================== */ }

@@ -13,11 +13,19 @@
         <link rel="stylesheet" href="{{ site.url }}/assets/styles/css/style.css">
         <link rel="stylesheet" href="{{ site.url }}/assets/styles/css/themes/github.css">
 
-        <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
-
         <!-- Typekit Fonts -->
         <script type="text/javascript" src="//use.typekit.net/rsd5dqz.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <!-- Facebook -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=465363156848461";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
     </head>
     <body>
@@ -25,10 +33,10 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <div class="header-container gw cf">
-            <header class="g one-whole" role="banner">
+        <div class="header-container gw">
+            <header class="g one-whole cf" role="banner">
                 <h1 class="g one-third title brand">Rawrrr!<br/>Aniket here</h1>
-                <nav class="g two-third">
+                <nav class="navbar g two-thirds cf">
                     <ul class="nav nav--block">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about-me">About Me</a></li>
@@ -39,26 +47,21 @@
             </header>
         </div>
 
-        <div class="main-container gw cf">
-            <div class="main g one-whole cf" role="main">
+        <div class="main-container gw">
+            <div role="main">
 
                 {{ content }}
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->
 
-        <div class="footer-container gw cf">
+        <div class="footer-container gw">
             <footer class="g one-whole" role="contentinfo">
-                <p>By <a href="http://twitter.com/{{ site.author.twitter }}">@aniket_pant</a> | &copy; 2010 - 2012 | <a href="/colophon">Colophon</a></p>
+                <p>by <a href="http://twitter.com/{{ site.author.twitter }}">@aniket_pant</a> | &copy; 2010 - {{ site.time || date: '%Y' }} | <a href="/colophon">Colophon</a></p>
             </footer>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-
-        <script src="{{ site.url }}/assets/js/vendor/rainbow-custom.min.js"></script>
-        <script src="{{ site.url }}/assets/js/plugins.js"></script>
-        <script src="{{ site.url }}/assets/js/main.js"></script>
+        <script src="{{ site.url }}/assets/js/rainbow-custom.min.js"></script>
 
     </body>
 </html>
