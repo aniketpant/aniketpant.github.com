@@ -1,0 +1,24 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Page =================================================== */
+
+html {
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: lighten($base-color, 75%);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	background-color: transparent;
+}
