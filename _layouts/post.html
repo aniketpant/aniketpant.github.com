@@ -4,7 +4,7 @@ layout: default
 <div class="g one-whole cf post {{page.slug}}">
 	<header class="g one-quarter post--header">
   		<h1 class="post_title">{{ page.title }}</h1>
-  		<div class="meta island">Posted on <span class="date">{{ page.date | date_to_long_string }}</span><br/>
+  		<div class="meta island">Posted on <date class="date">{{ page.date | date_to_long_string }}</date><br/>
   			in <span class="category">{{ page.category }}</a></span>{% if page.tags %}<br/>tagged <span class="tags">{{ page.tags | array_to_sentence_string }}</span>{% endif %}</div>
       <div class="share island">
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>
