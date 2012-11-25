@@ -23,7 +23,7 @@ If you wish to consult me for any project, or if you want me to [speak](/speakin
 
 <section class="g one-half cf">
 	<p class="lead"><strong>What am I doing nowadays?</strong></p>
-	<p markdown="1">At the moment I am working full time as the **Curator of [Mark My Word](http://markmyword.in)** which is India's First Content and Design Conference.</p>
+	<p>Nowadays I am working full time as the <span class="flyout informative">Curator of <span class="highlight">Mark My Word</span><span class="flyout__content"><a href="http://markmyword.in">Mark My Word</a> is India's First Content and Design Conference scheduled to happen on Feb 2, 2013.</span></span>.</p>
 </section>
 
 <section class="g one-whole cf recent-posts">

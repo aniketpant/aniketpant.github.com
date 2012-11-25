@@ -13,7 +13,7 @@ tags:
 ---
 ## Introduction
 
-Evil people put ids to nearly every element on their pages and make *everything* **rigid **and** ugly**. Moroever there was hardly any semantic structure around the front-end code.
+Evil people put ids to nearly every element on their pages and make *everything* **rigid and ugly**. Moroever there was hardly any semantic structure around the front-end code.
 
 Thankfully HTML5 puts and end to much of this evilery. Well at least it tries to. Let’s talk about what’s new with HTML5 and how it makes more sense.
 

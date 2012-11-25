@@ -24,7 +24,7 @@ This is the starting point. Let’s just put out the HTML markup we will use to 
       <!-- List of links end here -->
     </nav>
     <!-- End of the nav element -->
-    
+{:data-language="html"}    
 
 So, let’s begin with the CSS code.
 
@@ -43,7 +43,7 @@ And then we will create the basic look of the nav element.
       border-top: 20px solid #c33113;
       border-bottom: 20px solid #c33113;
     }
-    
+{:data-language="css"}    
 
 Then we will put together the styling for the list of links.
 
@@ -58,7 +58,7 @@ Then we will put together the styling for the list of links.
       display: inline-block;
       transform: skew(-10deg);
     }
-    
+{:data-language="css"}    
 
 And now it’s time to style the links.
 
@@ -88,24 +88,24 @@ And now it’s time to style the links.
       background: #222;
       transition: all 250ms linear; /* Increased the duration */
     }
-    
+{:data-language="css"}    
 
 And now we are going to put in the finish touches with the most important part. **The animation.**
 
 The keyframes look like this.
 
     @-keyframes flicker {
-    0% {
-    background: #e94220;
+      0% {
+        background: #e94220;
+      }
+      50% {
+        background: #b32d12;
+      }
+      100% {
+        background: #b32d12;
+      }
     }
-    50% {
-    background: #b32d12;
-    }
-    100% {
-    background: #b32d12;
-    }
-    }
-    
+{:data-language="css"}
 
 And let’s complete the whole act by fitting in the keyframes to the links.
 
@@ -133,7 +133,7 @@ And let’s complete the whole act by fitting in the keyframes to the links.
     .nav li:nth-of-type(4n) a {
       animation-delay: 2000ms;
     }
-    
+{:data-language="css"}
 
 If you liked my post, then it would be great if you [upvote it on HN][1].And we’re done. Our little demo is ready.
 

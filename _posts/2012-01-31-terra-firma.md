@@ -4,7 +4,6 @@ title: Terra Firma
 layout: poetry
 category:
   - poetry
-tags: []
 ---
 This room is not what it seems like  
 Go see the painting on the wall  

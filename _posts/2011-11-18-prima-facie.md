@@ -4,7 +4,6 @@ title: Prima Facie
 layout: poetry
 category:
   - poetry
-tags: []
 ---
 Don’t just breathe  
 Feel life  
