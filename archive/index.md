@@ -15,12 +15,13 @@ slug: archive
 {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
 {% if year != nyear %}
 </dl>
+<hr class="rule rule--dashed" />
 <h3>{{ post.date | date: '%Y' }}</h3>
 <dl class="split">
 {% endif %}
 {% endunless %}
 <dt class="split__title"><a href="{{ post.url }}">{{ post.title }}</a></dt>
-<dd><em>{{ post.date | date:"%d %b" }}</em></dd>
+<dd class="split__detail"><em>{{ post.date | date:"%d %b" }}</em></dd>
 {% endfor %}
 </dl>
 

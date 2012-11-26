@@ -4,6 +4,14 @@ title: About Me
 slug: about-me
 ---
 
+<div class="accessibility" itemscope itemtype="http://schema.org/Person">
+	<span itemprop="name">Aniket Pant</span>
+	<img src="assets/images/thats-me.jpg" itemprop="image" />
+	<a href="mailto:me@aniketpant.com" itemprop="email">
+    me@aniketpant.com</a>
+    <a href="http://www.aniketpant.com" itemprop="url">aniketpant.com</a>
+</div>
+
 <div class="g one-whole cf">
 
 <div class="g one-quarter">
@@ -38,7 +46,9 @@ I am also the _Curator of [Mark My Word](http://markmyword.in)_, which is India'
 	<h2>Initiate contact</h2>
 </div>
 
-<div class="g three-quarters this-or-this cf">
+<div class="g three-quarters cf">
+<p>I bet you wish to contact me now. Just look below.</p>
+<div class="this-or-this">
 <a href="http://twitter.com/aniket_pant" class="this-or-this__this  one-fifths">
 Twitter
 </a>
@@ -55,5 +65,5 @@ or
 Github
 </a>
 </div>
- 
+</div>
 </div>

@@ -31,7 +31,7 @@ If you wish to consult me for any project, or if you want me to [speak](/speakin
 	<dl class="split">
 		{% for post in site.posts limit:5 %}
 			<dt class="split__title"><a href="{{ post.url }}">{{ post.title }}</a></dt>
-			<dd><em>{{ post.date | date:"%d %b" }}</em></dd>
+			<dd class="split__detail"><em>{{ post.date | date:"%d %b" }}</em></dd>
 		{% endfor %}
 	</dl>
 </section>

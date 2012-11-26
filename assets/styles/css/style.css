@@ -2653,7 +2653,7 @@ label,
 body {
   width: 960px;
   margin: 0 auto;
-  background: #f6f6f6; }
+  background: #FAFAFA; }
 
 footer {
   text-align: center; }
@@ -2674,7 +2674,8 @@ footer {
  * $TYPOGRAPHY
  */
 body {
-  font-family: "calluna", Palatino, "Palatino Linotype", Georgia, serif; }
+  font-family: "calluna", Palatino, "Palatino Linotype", Georgia, serif;
+  color: #333; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "adelle", Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -2688,6 +2689,9 @@ a {
   color: #037f8c; }
   a:hover {
     color: #02525a; }
+
+.post_title a:hover {
+  text-decoration: none; }
 
 /**
  * $NAV
@@ -2723,6 +2727,9 @@ a {
 
 .flyout__content {
   font-style: italic; }
+
+.archive .split__detail, .home .split__detail {
+  color: #ee2b43; }
 
 ::selection, ::-moz-selection, ::-webkit-selection {
   color: #f3f3f3;

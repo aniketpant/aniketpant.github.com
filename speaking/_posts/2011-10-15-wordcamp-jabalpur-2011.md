@@ -2,9 +2,10 @@
 layout: talk
 title: WordCamp Jabalpur 2011
 category: talk
-slug: worcamp-jabalpur-2011
+slug: wordcamp-jabalpur-2011
 place: Jabalpur Engineering College
 topic: Theme Development & Customization
+link: http://2011.jabalpur.wordcamp.org
 ---
 
 ## The Talk
