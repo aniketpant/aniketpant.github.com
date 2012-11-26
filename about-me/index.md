@@ -4,14 +4,6 @@ title: About Me
 slug: about-me
 ---
 
-<div class="accessibility" itemscope itemtype="http://schema.org/Person">
-	<span itemprop="name">Aniket Pant</span>
-	<img src="assets/images/thats-me.jpg" itemprop="image" />
-	<a href="mailto:me@aniketpant.com" itemprop="email">
-    me@aniketpant.com</a>
-    <a href="http://www.aniketpant.com" itemprop="url">aniketpant.com</a>
-</div>
-
 <div class="g one-whole cf">
 
 <div class="g one-quarter">
