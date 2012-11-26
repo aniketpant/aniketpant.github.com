@@ -23,8 +23,9 @@
  */
 
 body {
-	width: 960px;
-	margin: 0 auto;
+	padding: 1.618rem;
+	margin: 0 auto; 
+	max-width: 60rem;
 	background: #FAFAFA;
 }
 
@@ -139,8 +140,14 @@ a {
 }
 
 ::selection, ::-moz-selection, ::-webkit-selection {
-	color: #f3f3f3;
+	color: #FAFAFA;
 	background: lighten($base-color, 10%);
 }
 
-@import "320andup/320andup-scss";
+/**
+ * $MEDIA_QUERIES
+ */
+
+@media screen and (min-width: 30rem) and (max-width: 63.236rem) {
+	body { width: 95%; }
+} 

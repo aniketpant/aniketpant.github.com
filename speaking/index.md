@@ -4,7 +4,7 @@ title: Speaking
 slug: speaking
 ---
 
-<div class="g one-whole cf" markdown="1">
+<div class="g one-whole" markdown="1">
 
 <p class="lead">You can take a look at my slides at <a href="https://speakerdeck.com/aniketpant">my Speaker Deck profile</a>. Also, you can <a href="https://github.com/aniketpant/presentations">fork my slides</a> here.</p>
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="g one-whole cf post {{page.slug}}">
+<div class="g one-whole post {{page.slug}}">
 	<header class="g one-quarter post--header">
   		<h1 class="post_title">{{ page.title }}</h1>
   		<div class="meta island">Posted on <date class="date">{{ page.date | date_to_long_string }}</date><br/>
@@ -17,16 +17,19 @@ layout: default
 	  	{{ content }}  
 		</article><!-- post-content -->
 		<footer class="post--footer"></footer><!-- post-footer -->
-	</div>
-
-	<div class="g three-quarters push--one-quarter">
-
-    <section class="meta--info island cf">
+    <section class="meta--info island">
       <p class="lead">
         Hey, you just went through <em><span class="highlight">{{ page.content | number_of_words }}</span></em> words written by Aniket.<br/><br/>If you liked them, then you should definitely follow him on twitter too. He would be so excited to know that you are going to follow him.
       </p>
-      <a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="false">Follow @aniket_pant</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div class="this-or-this">
+        <div class="this-or-this__this  two-fifths">
+          <a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="false">Follow @aniket_pant</a>
+        </div>
+        <span class="this-or-this__or  one-fifth">or</span>
+        <div class="this-or-this__this  two-fifths">
+          <div class="fb-subscribe" data-href="https://www.facebook.com/aniket.pant" data-layout="button_count" data-show-faces="true" data-width="450"></div>
+        </div>
+      </div>
     </section>
 
     <div id="disqus_thread"></div>

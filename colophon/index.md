@@ -4,14 +4,14 @@ title: Colophon
 slug: colophon
 ---
 
-<div class="g one-whole cf">
+<div class="g one-whole">
 	
 <div class="g one-quarter" markdown="1">
 ## Website
 <p>I love to write things down in markdown</p>
 </div>
 
-<div class="g three-quarters cf" markdown="1">
+<div class="g three-quarters" markdown="1">
  * Handcoded HTML written over the brilliant [Jekyll](https://github.com/mojombo/jekyll) platform
  * Served via the amazing [Github](https://github.com)
  * Only [inuit.css](https://github.com/csswizardry/inuit.css) inside. No crapware.
@@ -23,7 +23,7 @@ slug: colophon
 ## Website
 </div>
 
-<div class="g three-quarters cf" markdown="1">
+<div class="g three-quarters" markdown="1">
  * Inspired by [Ben Schwarz's site](http://germanforblack.com)
  * Fonts &ndash; [Adelle](https://typekit.com/fonts/adelle-web) &amp; [Calluna](https://typekit.com/fonts/calluna) served by Typekit
  * And the beautiful colors are &mdash;

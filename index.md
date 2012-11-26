@@ -14,7 +14,7 @@ If you wish to consult me for any project, or if you want me to [speak](/speakin
 </section>
 
 <section class="g one-half links">
-	<p class="lead"><strong>Where would you like to teleport to?</strong></p>
+	<h3>Where would you like to teleport to?</h3>
 	<ul class="block-list">
 		<li><a href="/archive" class="block-list__link">The Old Archives</a></li>
 		<li><a href="http://markmyword.in" class="block-list__link">Mark My Word Conference</a></li>
@@ -22,12 +22,12 @@ If you wish to consult me for any project, or if you want me to [speak](/speakin
 </section>
 
 <section class="g one-half cf">
-	<p class="lead"><strong>What am I doing nowadays?</strong></p>
+	<h3>What am I doing nowadays?</h3>
 	<p>Nowadays I am working full time as the <span class="flyout informative">Curator of <span class="highlight">Mark My Word</span><span class="flyout__content"><a href="http://markmyword.in">Mark My Word</a> is India's First Content and Design Conference scheduled to happen on Feb 2, 2013.</span></span>.</p>
 </section>
 
 <section class="g one-whole cf recent-posts">
-	<p class="lead"><strong>Take a look at my last few posts</strong></p>
+	<h3>Take a look at my last few posts</h3>
 	<dl class="split">
 		{% for post in site.posts limit:5 %}
 			<dt class="split__title"><a href="{{ post.url }}">{{ post.title }}</a></dt>

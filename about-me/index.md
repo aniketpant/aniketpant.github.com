@@ -4,13 +4,13 @@ title: About Me
 slug: about-me
 ---
 
-<div class="g one-whole cf">
+<div class="g one-whole">
 
 <div class="g one-quarter">
 	<h2>That's me</h2>
 </div>
 
-<div class="g three-quarters cf">
+<div class="g three-quarters">
 	<img class="media" src="../assets/images/thats-me.jpg" />
 </div>
 
@@ -18,7 +18,7 @@ slug: about-me
 	<h2>Howdy!</h2>
 </div>
 
-<div class="g three-quarters cf" markdown="1">
+<div class="g three-quarters" markdown="1">
 I am Aniket Pant and welcome to my little piece of the web that I started working on in 2010 and since then I have continued to write about all that I have done in the last few years.
 </div>
 
@@ -26,7 +26,7 @@ I am Aniket Pant and welcome to my little piece of the web that I started workin
 	<h2>So, what all do I do?</h2>
 </div>
 
-<div class="g three-quarters cf" markdown="1">
+<div class="g three-quarters" markdown="1">
 I love to code. I guess there is no doubt about it. And if you still are a bit skeptical, then checkout my [Github profile](https://github.com/aniketpant).
 
 I also [love to speak](/speaking). Though I haven't done this quite frequently but you might want to call me to your conference someday.
@@ -38,7 +38,7 @@ I am also the _Curator of [Mark My Word](http://markmyword.in)_, which is India'
 	<h2>Initiate contact</h2>
 </div>
 
-<div class="g three-quarters cf">
+<div class="g three-quarters">
 <p>I bet you wish to contact me now. Just look below.</p>
 <div class="this-or-this">
 <a href="http://twitter.com/aniket_pant" class="this-or-this__this  one-fifths">

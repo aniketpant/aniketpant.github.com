@@ -4,7 +4,7 @@ title: Archive
 slug: archive
 ---
 
-<div class="g one-whole cf">
+<div class="g one-whole">
 
 {% for post in site.posts %}
 {% unless post.next %}
