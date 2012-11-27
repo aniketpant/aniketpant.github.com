@@ -2739,6 +2739,25 @@ a {
 /**
  * $MEDIA_QUERIES
  */
-@media screen and (min-width: 30rem) and (max-width: 63.236rem) {
+@media only screen and (max-width: 760px) {
   body {
-    width: 95%; } }
+    width: 95% !important; }
+
+  .g {
+    width: 100% !important; }
+
+  .navbar ul {
+    text-align: center !important;
+    border: 0 solid #ccc;
+    list-style: none;
+    margin-left: 0;
+    border-top-width: 1px; }
+    .navbar ul li {
+      display: block !important;
+      border: 0 solid #ccc;
+      border-bottom-width: 1px;
+      padding: 12px; }
+      .navbar ul li a {
+        display: block !important;
+        padding: 12px;
+        margin: -12px; } }
