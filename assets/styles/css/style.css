@@ -2651,9 +2651,9 @@ label,
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
 body {
-  padding: 1.618rem;
-  margin: 0 auto;
   max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.618rem;
   background: #FAFAFA; }
 
 footer {
@@ -2663,13 +2663,18 @@ footer {
     footer a:hover {
       color: #962238; }
 
-.header-container, .main-container {
-  margin-bottom: 48px;
-  margin-bottom: 3rem; }
+.main-container {
+  margin-bottom: 1rem; }
 
 .navbar {
   margin-top: 16px;
   margin-top: 1rem; }
+
+.brand a {
+  color: #4d4d4d; }
+  .brand a:hover {
+    color: #1a1a1a;
+    text-decoration: none; }
 
 /**
  * $TYPOGRAPHY
@@ -2687,11 +2692,16 @@ h1, h2, h3, h4, h5, h6 {
  * $LINKS
  */
 a {
-  color: #037f8c; }
+  color: #037f8c;
+  -webkit-transition: color 250ms linear;
+  -moz-transition: color 250ms linear;
+  -ms-transition: color 250ms linear;
+  -o-transition: color 250ms linear;
+  transition: color 250ms linear; }
   a:hover {
     color: #02525a; }
 
-.post_title a:hover {
+.post_title a:hover, .page_title a:hover {
   text-decoration: none; }
 
 /**
@@ -2741,10 +2751,13 @@ a {
  */
 @media only screen and (max-width: 760px) {
   body {
-    width: 95% !important; }
+    width: 90% !important; }
 
   .g {
     width: 100% !important; }
+
+  .logo {
+    width: 50%; }
 
   .navbar ul {
     text-align: center !important;
@@ -2761,3 +2774,16 @@ a {
         display: block !important;
         padding: 12px;
         margin: -12px; } }
+/**
+ * $RESUME
+ */
+.resume {
+  max-width: 44rem; }
+  .resume .nav li:first-child:before {
+    content: none; }
+  .resume .nav li:before {
+    content: ' ♦ ';
+    color: #4d4d4d;
+    font-size: 10px;
+    font-size: 0.625rem;
+    line-height: 2.4; }

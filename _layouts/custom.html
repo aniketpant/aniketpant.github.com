@@ -10,8 +10,8 @@
         <meta name="description" content="{{ site.desc }}">
         <meta name="viewport" content="width=device-width">
 
+        <!-- stylesheets -->
         <link rel="stylesheet" href="{{ site.url }}/assets/styles/css/style.min.css">
-        <link rel="stylesheet" href="{{ site.url }}/assets/styles/css/themes/github.css">
 
         <!-- Typekit Fonts -->
         <script type="text/javascript">
@@ -24,52 +24,13 @@
           })();
         </script>
 
-        <!-- Facebook -->
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=465363156848461";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-
     </head>
-    <body>
+    <body class="{{ page.slug }}">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <div class="header-container gw">
-            <header class="g one-whole cf" role="banner">
-                <h1 class="g one-third title brand">Rawrrr!<br/>Aniket here</h1>
-                <nav class="navbar g two-thirds">
-                    <ul class="nav nav--block">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about-me">About Me</a></li>
-                        <li><a href="/speaking">Speaking</a></li>
-                        <li><a href="/archive">Archive</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-
-        <div class="main-container gw">
-            <div role="main">
-
-                {{ content }}
-
-            </div> <!-- #main -->
-        </div> <!-- #main-container -->
-
-        <div class="footer-container gw">
-            <footer class="g one-whole" role="contentinfo">
-                <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
-                <p>by <a href="http://twitter.com/{{ site.author.twitter }}">@aniket_pant</a> | &copy; 2010 - {{ site.time || date: '%Y' }} | <a href="/colophon">Colophon</a></p>
-            </footer>
-        </div>
-
-        <script src="{{ site.url }}/assets/js/rainbow-custom.min.js"></script>
+        {{ content }}
 
         <script type="text/javascript">
 
