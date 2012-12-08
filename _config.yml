@@ -1,10 +1,11 @@
-permalink: /:categories/:title
-exclude: ["assets/styles/sass/", "CNAME"]
+permalink: /:categories/:title/
+exclude: ["assets/styles/sass/", "CNAME", "Rakefile"]
 auto: true
 markdown: kramdown
 
-title: "Aniket Pant"
+name: "Aniket Pant"
 tagline: "Rawrrr"
+description: "Notes and Essays by a developer"
 author:
  name: "Aniket Pant"
  email: "me@aniketpant.com"
