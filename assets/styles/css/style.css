@@ -2671,7 +2671,8 @@ footer {
   margin-top: 1rem; }
 
 .brand a {
-  color: #4d4d4d; }
+  color: #4d4d4d;
+  font-weight: 700; }
   .brand a:hover {
     color: #1a1a1a;
     text-decoration: none; }
@@ -2707,8 +2708,10 @@ a {
   a:hover {
     color: #02525a; }
 
-.post_title a:hover, .page_title a:hover {
-  text-decoration: none; }
+.post_title, .page_title {
+  font-weight: 700; }
+  .post_title a:hover, .page_title a:hover {
+    text-decoration: none; }
 
 /**
  * $NAV
@@ -2764,9 +2767,13 @@ blockquote {
 /**
  * $MEDIA_QUERIES
  */
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 720px) {
   body {
-    width: 90% !important; }
+    width: 90% !important;
+    padding: 1rem !important; }
+
+  .gw {
+    margin-left: -2.5rem !important; }
 
   .g {
     width: 100% !important; }
