@@ -47,7 +47,8 @@ Here comes the time for another beautiful point by Jeff:
 
 > We’ve got a long way to go. One of the *explicit* goals of my next project is to do whatever we can to buff up a … particular … open source language ecosystem such that it can truly compete with PHP in ease of installation and deployment.
 
-Jeff puts me in a dilemma once again. How is something more easier than apt-get install php5*</span>.*</p> 
+Jeff puts me in a dilemma once again. How is something more easier than `apt-get install php5`.
+
 ## Some great responses
 
 http://twitter.com/ianlandsman/status/218683995154677760

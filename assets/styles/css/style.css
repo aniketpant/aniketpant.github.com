@@ -2736,11 +2736,20 @@ a {
 .highlight {
   color: #ee2b43; }
 
-.flyout__content {
-  font-style: italic; }
-
 .archive .split__detail, .home .split__detail {
   color: #ee2b43; }
+
+blockquote {
+  border-left: 0.25rem solid #f68997;
+  padding-left: 1rem;
+  margin-left: 1rem;
+  -webkit-transition: border-color 250ms linear;
+  -moz-transition: border-color 250ms linear;
+  -ms-transition: border-color 250ms linear;
+  -o-transition: border-color 250ms linear;
+  transition: border-color 250ms linear; }
+  blockquote:hover {
+    border-color: #ee2b43; }
 
 ::selection, ::-moz-selection, ::-webkit-selection {
   color: #FAFAFA;
