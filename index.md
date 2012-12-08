@@ -5,7 +5,7 @@ slug: home
 ---
 <p class="island lead">I'm Aniket Pant. I love to code, write and occasionally I even write some free-verses.</p>
 
-<section class="g one-whole cf info-on-me text-cols--2 landmark" markdown="1">
+<section class="g one-whole info-on-me text-cols--2 landmark" markdown="1">
 Three of my tools are Codeigniter, Laravel and WordPress. But there is another power that I have which allows me to think of great application architectural designs. Other than that I love to speak at events and occasionally write poetry.
 
 Over here, you will find me writing about web building, new technologies and anything new I find.
@@ -21,12 +21,12 @@ If you wish to consult me for any project, or if you want me to [speak](/speakin
 	</ul>
 </section>
 
-<section class="g one-half cf">
+<section class="g one-half">
 	<h3>What am I doing nowadays?</h3>
 	<p>Nowadays I am working full time as the Curator of <a href="http://markmyword.in">Mark My Word</a> which is India's First Content and Design Conference scheduled to happen on Feb 2, 2013..</p>
 </section>
 
-<section class="g one-whole cf recent-posts">
+<section class="g one-whole recent-posts">
 	<h3>Take a look at my last few posts</h3>
 	<dl class="split">
 		{% for post in site.posts limit:5 %}
