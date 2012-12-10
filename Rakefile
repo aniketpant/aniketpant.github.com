@@ -43,23 +43,20 @@ task :post do
   end
 end # task :post
 
-# Usage: rake page name="about.html"
-# You can also specify a sub-directory path.
-# If you don't specify a file extention we create an index.html at the path specified
+# Usage: rake page name="about"
 desc "Create a new page."
 task :page do
   name = ENV["name"] || "new-page.md"
   filename = File.join(SOURCE, "#{name}")
-  filename = File.join(filename, "index.md") if File.extname(filename) == ""
   title = File.basename(filename, File.extname(filename)).gsub(/[\W\_]/, " ").gsub(/\b\w/){$&.upcase}
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   if File.exist?(filename)
     abort("That name is in use already")
   end
   
-  mkdir_p File.dirname(filename)
-  puts "Creating new page: #{filename}"
-  open(filename, 'w') do |post|
+  mkdir_p slug
+  puts "Creating new page: #{slug}/index.md"
+  open("#{slug}/index.md", 'w') do |post|
     post.puts "---"
     post.puts "layout: page"
     post.puts "title: #{title}"
