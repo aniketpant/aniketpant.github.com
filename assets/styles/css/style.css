@@ -2748,6 +2748,10 @@ a {
 .archive .split__detail, .home .split__detail {
   color: #ee2b43; }
 
+.note {
+  background: rgba(3, 127, 140, 0.15);
+  border-bottom: 1px solid rgba(3, 127, 140, 0.25); }
+
 blockquote {
   border-left: 0.25rem solid #f68997;
   padding-left: 1rem;
