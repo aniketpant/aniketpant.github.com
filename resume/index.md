@@ -10,7 +10,7 @@ slug: resume
         <hr class="g one-whole rule rule--dashed" />
         <ul class="g one-whole nav nav--banner">
         	<li><a href="mailto:me@aniketpant.com">me@aniketpant.com</a></li>
-        	<li><a href="https//aniketpant.com">aniketpant.com</a></li>
+        	<li><a href="http://aniketpant.com">aniketpant.com</a></li>
         	<li><a href="https://twitter.com/aniket_Pant">@aniket_pant</a></li>
         	<li><a href="https://github.com/aniketpant">Github</a></li>
         </ul>
