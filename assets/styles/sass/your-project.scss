@@ -32,9 +32,9 @@ body {
 footer {
 	text-align: center;
 	a {
-		color: $link-color-2;
+		color: $color-3;
 		&:hover {
-			color: darken($link-color-2, 10%);
+			color: darken($color-3, 10%);
 		}
 	}
 }
@@ -48,11 +48,22 @@ footer {
 	margin-top: 1rem;
 }
 
+/**
+ * ~LOGO
+ */
+
 .brand a {
 	color: $brand-color;
 	font-weight: 700;
+	.part {
+		color: $color-4;
+	}
 	&:hover {
 		color: darken($brand-color, 20%);
+		text-decoration: none;
+	}
+	&:active {
+		color: $color-2;
 		text-decoration: none;
 	}
 }
@@ -84,10 +95,16 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 a {
-	color: $link-color;
-	@include vendor(transition, color 250ms linear);
+	color: $color-2;
+	@include vendor(transition, all 250ms linear);
 	&:hover {
-		color: darken($link-color, 10%);
+		color: darken($color-2, 20%);
+	}
+	&:active {
+		color: ligten($color-2, 20%);
+		text-decoration: none;
+		background: rgba($color-2, 0.1);
+		border-radius: 5px;
 	}
 }
 
@@ -104,9 +121,9 @@ a {
 
 .nav {
 	a {
-		color: $link-color-2;
+		color: $color-3;
 		&:hover {
-			color: darken($link-color-2, 10%);
+			color: darken($color-3, 10%);
 		}
 	}
 }
@@ -128,7 +145,7 @@ a {
  */
 
 .post_title {
-	color: $title-color;
+	color: $color-4;
 }
 
 .meta {
@@ -146,33 +163,33 @@ a {
 }
 
 .highlight {
-	color: $base-color;
+	color: $color-1;
 }
 
 .archive, .home {
 	.split__detail {
-		color: $base-color;
+		color: $color-1;
 	}
 }
 
 .note {
-	background:  rgba($link-color, 0.15);
-	border-bottom: 1px solid rgba($link-color, 0.25);
+	background:  rgba($color-2, 0.15);
+	border-bottom: 1px solid rgba($color-2, 0.25);
 }
 
 blockquote {
-	border-left: 0.25rem solid lighten($base-color, 20%);
+	border-left: 0.25rem solid lighten($color-1, 20%);
 	padding-left: 1rem;
 	margin-left: 1rem;
 	@include vendor(transition, border-color 250ms linear);
 	&:hover {
-		border-color: $base-color;
+		border-color: $color-1;
 	}
 }
 
 ::selection, ::-moz-selection, ::-webkit-selection {
 	color: #FAFAFA;
-	background: lighten($base-color, 10%);
+	background: lighten($color-1, 10%);
 }
 
 /**

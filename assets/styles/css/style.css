@@ -2670,11 +2670,19 @@ footer {
   margin-top: 16px;
   margin-top: 1rem; }
 
+/**
+ * ~LOGO
+ */
 .brand a {
   color: #4d4d4d;
   font-weight: 700; }
+  .brand a .part {
+    color: #f23535; }
   .brand a:hover {
     color: #1a1a1a;
+    text-decoration: none; }
+  .brand a:active {
+    color: #037f8c;
     text-decoration: none; }
 
 /**
@@ -2700,13 +2708,18 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: #037f8c;
-  -webkit-transition: color 250ms linear;
-  -moz-transition: color 250ms linear;
-  -ms-transition: color 250ms linear;
-  -o-transition: color 250ms linear;
-  transition: color 250ms linear; }
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+  -ms-transition: all 250ms linear;
+  -o-transition: all 250ms linear;
+  transition: all 250ms linear; }
   a:hover {
-    color: #02525a; }
+    color: #012428; }
+  a:active {
+    color: ligten(#037f8c, 20%);
+    text-decoration: none;
+    background: rgba(3, 127, 140, 0.1);
+    border-radius: 5px; }
 
 .post_title, .page_title {
   font-weight: 700; }
