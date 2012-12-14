@@ -1,14 +1,7 @@
 @charset "UTF-8";
 /*------------------------------------*\
-    YOUR-PROJECT.CSS
+    RAWRRR.CSS
 \*------------------------------------*/
-/**
- * 
- * sass --watch rawrrr.scss:your-project.min.css --style compressed
- * 
- * Here we set up some variables, include the inuit.css framework, then add our
- * project-specific components afterwards.
- */
 /**
  * Setup
  */
@@ -2647,9 +2640,6 @@ label,
   right: -99999px; }
 
 /* endif */
-/**
- * She’s all yours, cap’n... Begin importing your stuff here.
- */
 body {
   max-width: 60rem;
   margin: 0 auto;
@@ -2733,6 +2723,8 @@ a {
   color: #bf2c47; }
   .nav a:hover {
     color: #962238; }
+  .nav a:active {
+    background: rgba(77, 77, 77, 0.1); }
 
 /**
  * $SECTIONS
