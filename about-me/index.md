@@ -4,7 +4,7 @@ title: About Me
 slug: about-me
 ---
 
-<div class="g one-whole">
+<div class="g one-whole full-bleed">
 
 <div class="g one-quarter">
 	<h2>That's me</h2>
@@ -19,7 +19,7 @@ slug: about-me
 </div>
 
 <div class="g three-quarters" markdown="1">
-I am Aniket Pant and welcome to my little piece of the web that I started working on in 2010 and since then I have continued to write about all that I have done in the last few years.
+Hey, I am Aniket and I have been around on the web since 2010. It's not long but it been quite an [adventure](/archive) since then. 
 </div>
 
 <div class="g one-quarter">
@@ -31,7 +31,7 @@ I love to code. I guess there is no doubt about it. And if you still are a bit s
 
 I also [love to speak](/speaking). Though I haven't done this quite frequently but you might want to call me to your conference someday.
 
-I am also the _Curator of [Mark My Word](http://markmyword.in)_, which is India's First Content &amp; Design Conference.
+Along with all of the above, I am also the _Curator of [Mark My Word](http://markmyword.in)_, which is India's First Content &amp; Design Conference.
 </div>
 
 <div class="g one-quarter">
@@ -39,23 +39,9 @@ I am also the _Curator of [Mark My Word](http://markmyword.in)_, which is India'
 </div>
 
 <div class="g three-quarters">
-<p>I bet you wish to contact me now. Just look below.</p>
-<div class="this-or-this">
-<a href="http://twitter.com/aniket_pant" class="this-or-this__this  one-fifths">
-Twitter
-</a>
-<span class="this-or-this__or  one-fifth">
-or
-</span>
-<span class="this-or-this__this  one-fifths highlight">
-me[at]aniketpant[dot]com
-</span>
-<span class="this-or-this__or  one-fifth">
-or
-</span>
-<a href="https://github.com/aniketpant" class="this-or-this__this  one-fifths">
-Github
-</a>
-</div>
+<p>I bet you wish to connect with me now. Just look below.</p>
+<a href="http://twitter.com/aniket_pant" class="btn btn--full">Follow me on Twitter</a>
+<a href="mailto:me@aniketpant.com" class="btn btn--full highlight text--center">me[at]aniketpant[dot]com</a>
+<a href="https://github.com/aniketpant" class="btn btn--full">Fork my repositories on Github</a>
 </div>
 </div>
