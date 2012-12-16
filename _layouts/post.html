@@ -4,7 +4,7 @@ layout: base
 <div class="g one-whole post {{page.slug}}">
 	<header class="g one-quarter post--header">
   		<h1 class="post_title">{{ page.title }}</h1>
-  		<div class="meta"><date class="date">Posted on {{ page.date | date_to_long_string }}</date><br/>Under <span class="category">{{ page.category }}</a><br/>Tagged </span>{% if page.tags != empty %}<span class="tags">{{ page.tags | array_to_sentence_string }}</span>{% endif %}</div>
+  		<div class="meta"><date class="date">Posted on {{ page.date | date_to_long_string }}</date><br/>Under <span class="category">{{ page.category }}</a>{% if page.tags != empty %}<br/>Tagged </span><span class="tags">{{ page.tags | array_to_sentence_string }}</span>{% endif %}</div>
       <div class="share island">
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>
         <div class="g-plusone" data-size="medium"></div>

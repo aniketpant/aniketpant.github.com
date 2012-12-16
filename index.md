@@ -11,6 +11,8 @@ Three of my tools are Codeigniter, Laravel and WordPress. But there is another p
 Over here, you will find me writing about web building, new technologies and anything new I find.
 
 If you wish to consult me for any project, or if you want me to [speak](/speaking) at an event, say hello.
+
+Read my latest post: {% for post in site.posts limit:1 %}<a href="{{ post.url }}">_{{ post.title }}_</a>{% endfor %}
 </section>
 
 <section class="g one-half links">
