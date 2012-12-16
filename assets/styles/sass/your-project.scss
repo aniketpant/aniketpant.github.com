@@ -186,14 +186,7 @@ blockquote {
  * $MEDIA_QUERIES
  */
 
-@media only screen and (max-width: 720px) {
-	body {
-		width: 90% !important;
-		padding: 1rem !important;
-	}
-	.gw { margin-left: -2.5rem !important }
-	.g { width: 100% !important; }
-	.logo { width: 50%; }
+@include media-query(portable) {
 	.navbar ul {
 		text-align: center !important;
 		border: 0 solid #ccc;
@@ -229,5 +222,52 @@ blockquote {
 			color: $brand-color;
 			@include font-size(10px);
 		}
+	}
+}
+
+/**
+ * BOASTFUL
+ */
+
+.boastful {
+	display: inline;
+	img{
+		width: 48px;
+		height: 48px;
+		margin: 3px;
+		border: 0;
+		border-radius: 7px 0 7px 0;
+	}
+	.boastful_pointer{
+		position: absolute;
+		z-index: 999;
+		left: -9999px;
+		opacity: .7;
+		display: none;
+		width: 0;
+		height: 0;
+		border-left: 10px solid transparent; 
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #000;
+		border-top: 0;
+	}
+	.boastful_tweet{
+		position: absolute;
+		z-index: 999;
+		left: -9999px;
+		background-color: #222;
+		opacity: .8;
+		padding: 5px;
+		width: 250px;
+		font-size: 11px;
+		text-shadow: 1px 1px 0 #000;
+		color: #eee;
+		border-radius: 7px;
+		-webkit-border-radius: 7px;
+		-moz-border-radius: 7px;
+	}
+	.boastful_handle{
+		font-size: 13px;
+		font-weight: bold;
 	}
 }
