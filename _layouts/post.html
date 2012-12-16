@@ -2,7 +2,7 @@
 layout: base
 ---
 <div class="g one-whole post {{page.slug}}">
-	<header class="g one-quarter post--header">
+	<header class="g one-quarter portable-one-whole post--header">
   		<h1 class="post_title">{{ page.title }}</h1>
   		<div class="meta"><date class="date">Posted on {{ page.date | date_to_long_string }}</date><br/>Under <span class="category">{{ page.category }}</a>{% if page.tags != empty %}<br/>Tagged </span><span class="tags">{{ page.tags | array_to_sentence_string }}</span>{% endif %}</div>
       <div class="share island">
@@ -10,8 +10,9 @@ layout: base
         <div class="g-plusone" data-size="medium"></div>
         <div class="fb-like" data-href="http://aniketpant.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-action="recommend"></div>
       </div>
+      <div id="boastful"></div>
 	</header><!-- post-header -->
-	<div class="g three-quarters">
+	<div class="g three-quarters portable-one-whole">
 		<article class="post--content">
 	  	{{ content }}  
 		</article><!-- post-content -->
@@ -32,21 +33,28 @@ layout: base
     </section>
 
     <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'aniketpant'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 	</div>
 
 </div><!-- post -->
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="{{ site.url }}/assets/js/jquery.boastful.js"></script>
 <script src="{{ site.url }}/assets/js/rainbow-custom.min.js"></script>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'aniketpant'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    $(document).ready(function() {
+    $('#boastful').boastful();
+    });
+</script>
