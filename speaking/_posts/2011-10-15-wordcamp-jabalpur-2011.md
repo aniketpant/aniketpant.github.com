@@ -8,6 +8,10 @@ topic: Theme Development & Customization
 link: http://2011.jabalpur.wordcamp.org
 ---
 
+<div class="media islet">
+	<img class="media__img" src="/assets/images/Me-at-WordCamp-Jabalpur-2011.jpg" />
+</div>
+
 ## The Talk
 
 My talk was was focused in general on the basics of **Theme Development in WordPress**. I went on to cover aspects like _Child Themes_ and why they are **so good**.
