@@ -31,6 +31,10 @@ Hey, I am Aniket and I have been around on the web since 2010. It's not long but
 <div class="g three-quarters portable-one-whole" markdown="1">
 I love to code. I guess there is no doubt about it. And if you still are a bit skeptical, then checkout my [Github profile](https://github.com/aniketpant).
 
+<div class="marginalia">
+	<div class="marginalia__body  desk-one-fifth">Although, a majority of my work is writing syntax for design.</div>
+</div>
+
 I also [love to speak](/speaking). Though I haven't done this quite frequently but you might want to call me to your conference someday.
 
 Along with all of the above, I am also the _Curator of [Mark My Word](http://markmyword.in)_, which is India's First Content &amp; Design Conference.
@@ -41,7 +45,6 @@ Along with all of the above, I am also the _Curator of [Mark My Word](http://mar
 </div>
 
 <div class="g three-quarters portable-one-whole">
-<p>I bet you wish to connect with me now. Just look below.</p>
 <a href="http://twitter.com/aniket_pant" class="btn btn--full">Follow me on Twitter</a>
 <a href="mailto:me@aniketpant.com" class="btn btn--full highlight text--center">me[at]aniketpant[dot]com</a>
 <a href="https://github.com/aniketpant" class="btn btn--full">Fork my repositories on Github</a>
