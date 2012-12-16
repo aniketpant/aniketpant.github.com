@@ -259,15 +259,13 @@ blockquote {
 		opacity: .8;
 		padding: 5px;
 		width: 250px;
-		font-size: 11px;
+    	@include font-size($base-font-size);
 		text-shadow: 1px 1px 0 #000;
 		color: #eee;
 		border-radius: 7px;
-		-webkit-border-radius: 7px;
-		-moz-border-radius: 7px;
 	}
 	.boastful_handle{
-		font-size: 13px;
+    	@include font-size($base-font-size);
 		font-weight: bold;
 	}
 }
