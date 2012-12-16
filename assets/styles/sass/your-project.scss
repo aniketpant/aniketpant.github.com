@@ -44,7 +44,6 @@ footer {
 	font-weight: 700;
 	.part {
 		color: $color-4;
-		@include vendor(text-shadow, 1px 1px 1px lighten($brand-color, 40%));
 	}
 	&:hover {
 		color: darken($brand-color, 20%);
