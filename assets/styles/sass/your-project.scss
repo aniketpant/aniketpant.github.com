@@ -227,7 +227,7 @@ blockquote {
 		li:before {
 			content: ' ♦ ';
 			color: $brand-color;
-			@include font-size(10);
+			@include font-size(10px);
 		}
 	}
 }

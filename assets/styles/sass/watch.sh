@@ -8,6 +8,5 @@
 #sass --watch your-project.scss:your-project.css --style expanded
 
 sass --watch your-project.scss:../css/style.min.css --style compressed
-sass --watch your-project.scss:../css/style.css --style expanded
 
 exit 0
