@@ -13,7 +13,7 @@ If you wish to consult me for any project, or if you want me to [speak](/speakin
 Read my latest post: {% for post in site.posts limit:1 %}<a href="{{ post.url }}">_{{ post.title }}_</a>{% endfor %}
 </section>
 
-<section class="g one-half links">
+<section class="g one-half portable-one-whole links">
 	<h3>Where would you like to teleport to?</h3>
 	<ul class="block-list">
 		<li><a href="/archive" class="block-list__link">The Old Archives</a></li>
@@ -21,7 +21,7 @@ Read my latest post: {% for post in site.posts limit:1 %}<a href="{{ post.url }}
 	</ul>
 </section>
 
-<section class="g one-half">
+<section class="g one-half portable-one-whole">
 	<h3>What am I doing nowadays?</h3>
 	<p>Nowadays I am working full time as the Curator of <a href="http://markmyword.in">Mark My Word</a> which is India's First Content and Design Conference scheduled to happen on Feb 2, 2013..</p>
 </section>

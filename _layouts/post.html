@@ -44,6 +44,10 @@ layout: base
 <script src="{{ site.url }}/assets/js/rainbow-custom.min.js"></script>
 
 <script type="text/javascript">
+    $(document).ready(function() {
+    $('#boastful').boastful();
+    });
+
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'aniketpant'; // required: replace example with your forum shortname
 
@@ -53,8 +57,4 @@ layout: base
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
-
-    $(document).ready(function() {
-    $('#boastful').boastful();
-    });
 </script>
