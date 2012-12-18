@@ -231,6 +231,7 @@ blockquote {
 
 .boastful {
 	display: inline;
+	font-family: $slab;
 	img{
 		width: 48px;
 		height: 48px;
@@ -259,13 +260,13 @@ blockquote {
 		opacity: .8;
 		padding: 5px;
 		width: 250px;
-    	@include font-size($base-font-size);
+    	@include font-size($base-font-size * 0.8);
 		text-shadow: 1px 1px 0 #000;
 		color: #eee;
 		border-radius: 7px;
 	}
 	.boastful_handle{
-    	@include font-size($base-font-size);
+    	@include font-size($base-font-size * 0.9);
 		font-weight: bold;
 	}
 }
