@@ -14,51 +14,26 @@
 
         {% if page.type == 'post' %}
         {% capture text %}{{ page.content | strip_html }}{% endcapture %}
-        {% capture truncated_text %}{{ text | truncate: 200, '' }}{% endcapture %}
+        {% capture truncated_text %}{{ text | truncate: 197, '' }}{% endcapture %}
         <!-- twitter cards -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
         <meta name="twitter:site" content="@aniket_pant">
         <meta name="twitter:creator" content="@aniket_pant">
         <meta name="twitter:title" content="{{ page.title }}">
-        <meta name="twitter:description" content="{{ truncated_text }}">
+        <meta name="twitter:description" content="{{ truncated_text }}...">
+
+        <!-- open graph tags -->
+        <meta property="og:title" content="Rawrrr! Aniket here." />
+        <meta property="og:type" content="blog" />
+        <meta property="og:url" content="http://aniketpant.com" />
+        <meta property="og:image" content="http://aniketpant.com/assets/images/logo-200x200.jpg" />
+        <meta property="og:site_name" content="Rawrrr! Aniket here." />
+        <meta property="fb:admins" content="714102934" />
         {% endif %}
 
         <!-- stylesheets -->
         <link rel="stylesheet" href="/assets/styles/css/style.min.css">
-
-        <!-- Typekit Fonts -->
-        <script type="text/javascript">
-          (function() {
-            var config = {
-              kitId: 'rsd5dqz',
-              scriptTimeout: 3000
-            };
-            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-          })();
-
-          (function(doc, script) {
-            var js, 
-                fjs = doc.getElementsByTagName(script)[0],
-                frag = doc.createDocumentFragment(),
-                add = function(url, id) {
-                    if (doc.getElementById(id)) {return;}
-                    js = doc.createElement(script);
-                    js.src = url;
-                    id && (js.id = id);
-                    frag.appendChild( js );
-                };
-                
-              // Google+ button
-              add('http://apis.google.com/js/plusone.js');
-              // Facebook SDK
-              add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=465363156848461', 'facebook-jssdk');
-              // Twitter SDK
-              add('//platform.twitter.com/widgets.js');
-
-              fjs.parentNode.insertBefore(frag, fjs);
-          }(document, 'script'));
-        </script>
 
     </head>
     <body>
@@ -107,6 +82,39 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
 
+        </script>
+
+        <!-- Typekit Fonts -->
+        <script type="text/javascript">
+          (function() {
+            var config = {
+              kitId: 'rsd5dqz',
+              scriptTimeout: 3000
+            };
+            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+          })();
+
+          (function(doc, script) {
+            var js, 
+                fjs = doc.getElementsByTagName(script)[0],
+                frag = doc.createDocumentFragment(),
+                add = function(url, id) {
+                    if (doc.getElementById(id)) {return;}
+                    js = doc.createElement(script);
+                    js.src = url;
+                    id && (js.id = id);
+                    frag.appendChild( js );
+                };
+                
+              // Google+ button
+              add('http://apis.google.com/js/plusone.js');
+              // Facebook SDK
+              add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=465363156848461', 'facebook-jssdk');
+              // Twitter SDK
+              add('//platform.twitter.com/widgets.js');
+
+              fjs.parentNode.insertBefore(frag, fjs);
+          }(document, 'script'));
         </script>
 
     </body>
