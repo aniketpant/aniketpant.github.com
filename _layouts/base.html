@@ -24,23 +24,24 @@
         <meta name="twitter:description" content="{{ truncated_text }}...">
 
         <!-- open graph tags -->
-        <meta property="og:title" content="Rawrrr! Aniket here." />
-        <meta property="og:type" content="blog" />
-        <meta property="og:url" content="http://aniketpant.com" />
-        <meta property="og:image" content="http://aniketpant.com/assets/images/logo-200x200.jpg" />
-        <meta property="og:site_name" content="Rawrrr! Aniket here." />
-        <meta property="fb:admins" content="714102934" />
-
         <meta property="fb:app_id" content="465363156848461" /> 
         <meta property="og:type"   content="article" /> 
         <meta property="og:url"    content="{{ site.url}}{{ page.url }}" /> 
         <meta property="og:title"  content="{{ page.title }}" /> 
         <meta property="og:image"  content="http://aniketpant.com/assets/images/logo-200x200.jpg" />
         {% endif %}
+        {% if page.slug == "home" %}
+        <!-- open graph tags -->
+        <meta property="og:title" content="Rawrrr! Aniket here." />
+        <meta property="og:type" content="blog" />
+        <meta property="og:url" content="http://aniketpant.com" />
+        <meta property="og:image" content="http://aniketpant.com/assets/images/logo-200x200.jpg" />
+        <meta property="og:site_name" content="Rawrrr! Aniket here." />
+        <meta property="fb:admins" content="714102934" />
+        {% endif %}
 
         <!-- stylesheets -->
         <link rel="stylesheet" href="/assets/styles/css/style.min.css">
-
     </head>
     <body>
         <!--[if lt IE 7]>

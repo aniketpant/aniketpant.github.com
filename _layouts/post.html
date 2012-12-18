@@ -45,7 +45,10 @@ layout: base
 
 <script type="text/javascript">
     $(document).ready(function() {
-    $('#boastful').boastful();
+      $('#boastful').boastful({
+          location: '{{site.url }}{{ page.url }}',
+          empty_message: '<p>Bah! Why ain\'t anyone tweeting this.</p>'  
+      });
     });
 
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
