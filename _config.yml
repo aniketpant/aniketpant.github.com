@@ -3,6 +3,8 @@ exclude: ["assets/styles/sass/", "CNAME", "Rakefile", "README.md"]
 auto: true
 markdown: kramdown
 
+url: http://aniketpant.com
+
 name: "Aniket Pant"
 tagline: "Rawrrr"
 description: "Notes and Essays by a developer"
