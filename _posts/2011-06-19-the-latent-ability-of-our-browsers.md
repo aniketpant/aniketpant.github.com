@@ -2,6 +2,7 @@
 author: Aniket
 title: The Latent Ability Of Our Browsers
 layout: post
+type: post
 category:
   - article
 tags:

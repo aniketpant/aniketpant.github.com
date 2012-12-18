@@ -2,6 +2,7 @@
 author: Aniket
 title: 'Laravel : Setting up and getting down to business'
 layout: post
+type: post
 category:
   - article
 tags:

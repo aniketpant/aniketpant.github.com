@@ -2,6 +2,7 @@
 author: Aniket
 title: Dream, Innovate
 layout: post
+type: post
 category:
   - weblog
 tags:

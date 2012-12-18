@@ -2,6 +2,7 @@
 author: Aniket
 title: A year down the road
 layout: post
+type: post
 category:
   - weblog
 tags:

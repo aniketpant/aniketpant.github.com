@@ -4,6 +4,7 @@ title: >
   Hassled by Codeigniter but ended up
   writing a cool new code
 layout: post
+type: post
 category:
   - weblog
 tags:

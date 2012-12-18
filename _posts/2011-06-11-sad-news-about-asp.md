@@ -2,6 +2,7 @@
 author: Aniket
 title: Sad News about ASP
 layout: post
+type: post
 category:
   - weblog
 tags:

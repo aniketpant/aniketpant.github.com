@@ -2,6 +2,7 @@
 author: Aniket
 title: My Good Days
 layout: post
+type: post
 category:
   - weblog
 tags:

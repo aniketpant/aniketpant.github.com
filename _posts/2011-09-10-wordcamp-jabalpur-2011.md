@@ -2,6 +2,7 @@
 author: Aniket
 title: WordCamp Jabalpur 2011
 layout: post
+type: post
 category:
   - weblog
 tags:

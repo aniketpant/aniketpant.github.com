@@ -2,6 +2,7 @@
 author: Aniket
 title: Encounter with ASP
 layout: post
+type: post
 category:
   - weblog
 tags:

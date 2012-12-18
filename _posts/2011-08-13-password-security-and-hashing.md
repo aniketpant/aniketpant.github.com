@@ -2,6 +2,7 @@
 author: Aniket
 title: Password Security and Hashing
 layout: post
+type: post
 category:
   - weblog
 tags:

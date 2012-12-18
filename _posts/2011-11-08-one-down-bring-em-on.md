@@ -2,6 +2,7 @@
 author: Aniket
 title: "One down, Bring em' on"
 layout: post
+type: post
 category:
   - weblog
 tags: [ ]

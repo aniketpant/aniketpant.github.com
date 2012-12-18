@@ -1,5 +1,6 @@
 ---
 layout: post
+type: post
 title: "Don't learn from your neighbor"
 tags: []
 category: article

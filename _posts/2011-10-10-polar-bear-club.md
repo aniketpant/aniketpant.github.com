@@ -2,6 +2,7 @@
 author: Aniket
 title: Polar Bear Club
 layout: post
+type: post
 category:
   - weblog
 tags:

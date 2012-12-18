@@ -2,6 +2,7 @@
 author: Aniket
 title: Return of Minimalistic Me
 layout: post
+type: post
 category:
   - article
 tags:

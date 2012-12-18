@@ -2,6 +2,7 @@
 author: Aniket
 title: The "Merry" New Year
 layout: post
+type: post
 category:
   - weblog
 tags:

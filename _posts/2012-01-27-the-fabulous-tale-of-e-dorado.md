@@ -2,6 +2,7 @@
 author: Aniket
 title: The Fabulous tale of E-Dorado
 layout: post
+type: post
 category:
   - article
 tags:

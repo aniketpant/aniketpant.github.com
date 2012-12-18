@@ -2,6 +2,7 @@
 author: Aniket
 title: 'Online Test Management: Cosmetic Changes Left'
 layout: post
+type: post
 category:
   - weblog
 tags:

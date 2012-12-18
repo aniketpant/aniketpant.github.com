@@ -2,6 +2,7 @@
 author: Aniket
 title: Treading New Territories
 layout: post
+type: post
 category:
   - weblog
 tags:

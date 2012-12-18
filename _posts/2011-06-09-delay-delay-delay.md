@@ -2,6 +2,7 @@
 author: Aniket
 title: Delay! Delay! Delay!
 layout: post
+type: post
 category:
   - weblog
 tags:

@@ -2,6 +2,7 @@
 author: Aniket
 title: Work and Inspiration
 layout: post
+type: post
 category:
   - weblog
 tags:

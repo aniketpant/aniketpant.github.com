@@ -2,6 +2,7 @@
 author: Aniket
 title: Dabbling with gists
 layout: post
+type: post
 category:
   - weblog
 tags:

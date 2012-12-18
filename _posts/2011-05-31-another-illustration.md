@@ -2,6 +2,7 @@
 author: Aniket
 title: Another Illustration
 layout: post
+type: post
 category:
   - weblog
 tags:

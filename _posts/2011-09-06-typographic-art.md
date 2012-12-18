@@ -2,6 +2,7 @@
 author: Aniket
 title: Typographic Art
 layout: post
+type: post
 category:
   - weblog
 tags:

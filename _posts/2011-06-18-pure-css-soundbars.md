@@ -8,6 +8,7 @@ excerpt: |
   
   There's just one thing to it, they work only in "modern" browsers like FF5/Aurora, Webkit and Chrome.
 layout: post
+type: post
 category:
   - weblog
 tags:

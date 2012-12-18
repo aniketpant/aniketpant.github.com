@@ -2,6 +2,7 @@
 author: Aniket
 title: New CSS Trick
 layout: post
+type: post
 category:
   - tutorial
 tags:

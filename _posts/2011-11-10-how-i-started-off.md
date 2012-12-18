@@ -2,6 +2,7 @@
 author: Aniket
 title: How I started off
 layout: post
+type: post
 category:
   - weblog
 tags:

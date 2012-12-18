@@ -2,6 +2,7 @@
 author: Aniket
 title: Fallen Leaves
 layout: post
+type: post
 category:
   - weblog
 tags:

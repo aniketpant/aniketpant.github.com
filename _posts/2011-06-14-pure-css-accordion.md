@@ -2,6 +2,7 @@
 author: Aniket
 title: Pure CSS Accordion
 layout: post
+type: post
 category:
   - weblog
 tags:

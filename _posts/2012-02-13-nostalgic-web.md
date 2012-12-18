@@ -2,6 +2,7 @@
 author: Aniket
 title: Nostalgic Web
 layout: post
+type: post
 category:
   - weblog
 tags:

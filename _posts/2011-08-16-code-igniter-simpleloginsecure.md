@@ -2,6 +2,7 @@
 author: Aniket
 title: 'Code Igniter - SimpleLoginSecure'
 layout: post
+type: post
 category:
   - weblog
 tags:

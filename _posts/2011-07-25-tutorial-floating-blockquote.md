@@ -2,6 +2,7 @@
 author: Aniket
 title: 'tutorial: Floating Blockquote'
 layout: post
+type: post
 category:
   - tutorial
 tags:

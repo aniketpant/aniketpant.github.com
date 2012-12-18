@@ -4,6 +4,7 @@ title: >
   HTML5 Semantics and Good Coding
   Practices
 layout: post
+type: post
 category:
   - article
 tags:

@@ -2,6 +2,7 @@
 author: Aniket
 title: "The year I won't forget"
 layout: post
+type: post
 category:
   - weblog
 tags:

@@ -2,6 +2,7 @@
 author: Aniket
 title: 'New Idea - Visual Sitemap Generator'
 layout: post
+type: post
 category:
   - weblog
 ---

@@ -2,6 +2,7 @@
 author: Aniket
 title: Search and Filter It
 layout: post
+type: post
 category:
   - weblog
 tags:

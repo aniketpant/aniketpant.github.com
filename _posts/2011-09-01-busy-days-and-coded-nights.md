@@ -2,6 +2,7 @@
 author: Aniket
 title: Busy Days and Coded Nights
 layout: post
+type: post
 category:
   - weblog
 tags:

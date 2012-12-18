@@ -2,6 +2,7 @@
 author: Aniket
 title: New things and some new ideas
 layout: post
+type: post
 category:
   - weblog
 tags:

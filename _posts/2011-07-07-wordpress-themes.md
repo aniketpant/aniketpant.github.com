@@ -2,6 +2,7 @@
 author: Aniket
 title: Wordpress Themes
 layout: post
+type: post
 category:
   - weblog
 tags: [ ]

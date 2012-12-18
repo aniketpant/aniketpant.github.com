@@ -2,6 +2,7 @@
 author: Aniket
 title: Hectic times. Need to work more.
 layout: post
+type: post
 category:
   - weblog
 tags: [ ]

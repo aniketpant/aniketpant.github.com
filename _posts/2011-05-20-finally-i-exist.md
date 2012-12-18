@@ -2,6 +2,7 @@
 author: Aniket
 title: Finally I Exist
 layout: post
+type: post
 category:
   - weblog
 tags: [ ]

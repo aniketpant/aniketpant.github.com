@@ -2,6 +2,7 @@
 author: Aniket
 title: Simple Pricing Table
 layout: post
+type: post
 category:
   - tutorial
 tags:

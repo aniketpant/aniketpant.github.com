@@ -2,6 +2,7 @@
 author: Aniket
 title: WP Format Code
 layout: post
+type: post
 category:
   - article
 tags:

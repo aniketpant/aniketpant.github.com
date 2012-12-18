@@ -2,6 +2,7 @@
 author: Aniket
 title: Feels Great To Be Back
 layout: post
+type: post
 category:
   - weblog
 tags: [ ]

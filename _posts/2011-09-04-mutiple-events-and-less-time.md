@@ -2,6 +2,7 @@
 author: Aniket
 title: Mutiple Events and Less Time
 layout: post
+type: post
 category:
   - weblog
 tags:

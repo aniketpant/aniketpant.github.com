@@ -2,6 +2,7 @@
 author: Aniket
 title: Creative Foliage
 layout: post
+type: post
 category:
   - weblog
 tags:

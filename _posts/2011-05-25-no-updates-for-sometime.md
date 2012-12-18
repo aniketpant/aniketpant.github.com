@@ -2,6 +2,7 @@
 author: Aniket
 title: No Updates for sometime
 layout: post
+type: post
 category:
   - weblog
 tags:
