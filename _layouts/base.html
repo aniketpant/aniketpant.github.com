@@ -17,7 +17,7 @@
         {% capture truncated_text %}{{ text | truncate: 200, '' }}{% endcapture %}
         <!-- twitter cards -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:url" content="{{ page.url }}">
+        <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
         <meta name="twitter:site" content="@aniket_pant">
         <meta name="twitter:creator" content="@aniket_pant">
         <meta name="twitter:title" content="{{ page.title }}">
