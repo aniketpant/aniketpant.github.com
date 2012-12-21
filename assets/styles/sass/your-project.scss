@@ -10,10 +10,12 @@
 @import "inuit.css/inuit";
 
 body {
+	background: #FAFAFA;
+}
+
+.wrapper {
 	max-width: 60rem;
 	margin: 0 auto;
-	padding: 1.618rem;
-	background: #FAFAFA;
 }
 
 footer {
@@ -31,28 +33,18 @@ footer {
 }
 
 .navbar {
-	margin-top: 16px;
-	margin-top: 1rem;
+	margin-top: 32px;
+	margin-top: 2rem;
 }
 
 /**
  * ~LOGO
  */
 
-.brand a {
-	color: $brand-color;
-	font-weight: 700;
-	.part {
-		color: $color-4;
-	}
-	&:hover {
-		color: darken($brand-color, 20%);
-		text-decoration: none;
-	}
-	&:active {
-		color: $color-2;
-		text-decoration: none;
-	}
+.logo {
+	margin: 1rem 0 0;
+	width: 200px;
+	max-width: 200px;
 }
 
 /**
@@ -148,10 +140,6 @@ a {
  * $MISC
  */
 
-.meta--info {
-
-}
-
 .highlight {
 	color: $color-1;
 }
@@ -182,28 +170,29 @@ blockquote {
 	background: lighten($color-1, 10%);
 }
 
+.full-width {
+	width: 100%;
+}
+
+.zen-space {
+	background: $color-1;
+	height: 5px;
+}
+
 /**
  * $MEDIA_QUERIES
  */
 
 @include media-query(portable) {
-	.navbar ul {
-		text-align: center !important;
-		border: 0 solid #ccc;
-		list-style: none;
-		margin-left: 0;
-		border-top-width: 1px;
-		li {
-			display: block !important;
-			border: 0 solid #ccc;
-			border-bottom-width: 1px;
-    		padding: 12px;
-    		a {
-    			display: block !important;
-				padding: 12px;
-				margin: -12px;
-    		}
-		}
+	.portable-nav--stacked {
+        text-align:center;
+	}
+	.portable-text-cols--1 {
+		@include vendor(column-count, 1);
+	}
+	.logo {
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
