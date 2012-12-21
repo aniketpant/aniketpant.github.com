@@ -2,12 +2,12 @@
 layout: base
 ---
 <div class="page {{page.slug}}" itemscope itemtype="http://schema.org/Event">
-	<header class="g one-third">
+	<header class="g one-third portable-one-whole">
 		<h1 class="page_title" itemprop="name"><a href="{{ page.link }}"  itemprop="url">{{ page.title }}</a></h1>
 		<p class="lead">I spoke on <span class="highlight">{{ page.topic }}</span>.</p>
 		<div class="meta"><meta itemprop="startDate" content="{{ page.date | date_to_xmlschema }}">On <date class="date">{{ page.date | date_to_long_string }}</date></div>
 	</header>
-	<article class="g two-thirds">
+	<article class="g two-thirds portable-one-whole">
 	{{ content }}  
 	</article>
 </div><!-- talk -->
