@@ -16,6 +16,7 @@ body {
 .wrapper {
 	max-width: 60rem;
 	margin: 0 auto;
+	padding-right: 1.5rem;
 }
 
 footer {
@@ -193,6 +194,9 @@ blockquote {
 	.logo {
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.navbar {
+		margin-top: 0;
 	}
 }
 
