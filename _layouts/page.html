@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-<div class="g one-whole page {{page.slug}}">
+<div class="page {{page.slug}}">
 	{% if page.slug != 'home' %}
 	<header class="g one-whole">
 		<h1 class="page_title">{{ page.title }}</h1>
@@ -15,7 +15,7 @@ layout: base
 	    <a href="http://www.aniketpant.com" itemprop="url">aniketpant.com</a>
 	</div>
 	{% endif %}
-	<article>
+	<article role="main">
 	{{ content }}  
 	</article>
 </div><!-- page -->

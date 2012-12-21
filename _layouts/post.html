@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-<div class="g one-whole post {{page.slug}}">
+<div class="post {{page.slug}}">
 	<header class="g one-quarter portable-one-whole post--header">
   		<h1 class="post_title">{{ page.title }}</h1>
   		<div class="meta"><date class="date">Posted on {{ page.date | date_to_long_string }}</date><br/>Under <span class="category">{{ page.category }}</a>{% if page.tags != empty %}<br/>Tagged </span><span class="tags">{{ page.tags | array_to_sentence_string }}</span>{% endif %}</div>
@@ -21,14 +21,7 @@ layout: base
       <p class="lead">
         Hey, you just went through <em><span class="highlight">{{ page.content | number_of_words }}</span></em> words written by Aniket.<br/><br/>If you liked them, then you should definitely follow him on twitter too. He would be so excited to know that you are going to follow him.
       </p>
-      <div class="this-or-this">
-        <div class="this-or-this__this  two-fifths">
-          <a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="false">Follow @aniket_pant</a>
-        </div>
-        <span class="this-or-this__or  one-fifth">or</span>
-        <div class="this-or-this__this  two-fifths">
-          <div class="fb-subscribe" data-href="https://www.facebook.com/aniket.pant" data-layout="button_count" data-show-faces="true" data-width="450"></div>
-        </div>
+      <a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="false">Follow @aniket_pant</a>
       </div>
     </section>
 

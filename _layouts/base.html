@@ -49,32 +49,38 @@
         <![endif]-->
 
         <div class="header-container gw">
-            <header class="g one-whole" role="banner">
-                <h1 class="g one-third portable-one-whole title brand"><a href="/">Rawrrr!<br/><span class="part">Aniket</span> Here</a></h1>
-                <nav class="navbar g two-thirds portable-one-whole">
-                    <ul class="nav nav--block">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about-me">About Me</a></li>
-                        <li><a href="/speaking">Speaking</a></li>
-                        <li><a href="/archive">Archive</a></li>
-                    </ul>
-                </nav>
-            </header> <!-- header -->
+            <div class="g one-whole zen-space full-width"></div>
+            <div class="wrapper">
+                <header class="g one-whole flexbox" role="banner">
+                    <h1 class="g one-third portable-one-whole flexbox__item"><a class="logo media" href="/" rel="nofollow"><img class="media__item" src="/assets/images/rawrrr.png" alt="Rawrrr! Aniket here." /></a></h1>
+                    <nav class="navbar g two-thirds portable-one-whole flexbox__item">
+                        <ul class="nav nav--block portable-nav--stacked">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about-me">About Me</a></li>
+                            <li><a href="/speaking">Speaking</a></li>
+                            <li><a href="/archive">Archive</a></li>
+                        </ul>
+                    </nav>
+                </header> <!-- header -->
+            </div>
         </div> <!-- header-container -->
 
         <div class="main-container gw">
-            <div role="main">
-
+            <div class="wrapper">
+                <div class="g one-whole">
                 {{ content }}
-
-            </div> <!-- main -->
+                </div>
+            </div>
         </div> <!-- main-container -->
 
         <div class="footer-container gw">
-            <footer class="g one-whole" role="contentinfo">
-                <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
-                <p>by <a href="http://twitter.com/{{ site.author.twitter }}">@aniket_pant</a> | &copy; 2010 - {{ site.time || date: '%Y' }} | <a href="/colophon">Colophon</a></p>
-            </footer> <!-- footer -->
+            <div class="wrapper">
+                <footer class="g one-whole" role="contentinfo">
+                    <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
+                    <p>by <a href="http://twitter.com/{{ site.author.twitter }}">@aniket_pant</a> | &copy; 2010 - {{ site.time || date: '%Y' }} | <a href="/colophon">Colophon</a></p>
+                </footer> <!-- footer -->
+            </div>
+            <div class="g one-whole zen-space full-width"></div>
         </div> <!-- footer-container -->
 
         <script type="text/javascript">
