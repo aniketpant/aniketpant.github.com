@@ -8,8 +8,8 @@ topic: Theme Development & Customization
 link: http://2011.jabalpur.wordcamp.org
 ---
 
-<div class="media islet">
-	<img class="media__img" src="/assets/images/Me-at-WordCamp-Jabalpur-2011.jpg" />
+<div class="islet">
+	<img class="img--center img--medium" src="/assets/images/Me-at-WordCamp-Jabalpur-2011.jpg" />
 </div>
 
 ## The Talk
