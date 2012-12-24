@@ -11,8 +11,8 @@ slug: about-me
 </div>
 
 <div class="g three-quarters portable-one-whole">
-	<div class="media islet">
-		<img class="media__img" src="/assets/images/thats-me.jpg" />
+	<div class="islet">
+		<img class="img--center img--small" src="/assets/images/thats-me.jpg" />
 	</div>
 </div>
 
