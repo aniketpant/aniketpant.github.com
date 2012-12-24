@@ -20,7 +20,6 @@ body {
 }
 
 footer {
-	text-align: center;
 	a {
 		color: $color-3;
 		&:hover {
@@ -145,6 +144,10 @@ a {
 	color: $color-1;
 }
 
+.subtle {
+	color: #999;
+}
+
 .archive, .home {
 	.split__detail {
 		color: $color-1;
@@ -185,18 +188,48 @@ blockquote {
  */
 
 @include media-query(portable) {
+	.logo {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 150px;
+	}
 	.portable-nav--stacked {
         text-align:center;
 	}
 	.portable-text-cols--1 {
 		@include vendor(column-count, 1);
 	}
+	.navbar {
+		margin-top: 0;
+	}
+}
+
+@include media-query(palm) {
 	.logo {
 		margin-left: auto;
 		margin-right: auto;
+		max-width: 100px;
 	}
-	.navbar {
-		margin-top: 0;
+	.split {
+		text-align: left;
+		dd {
+			margin-left: 0;
+			&::before {
+				content: "/ ";
+			}	
+		}
+	}
+	.img--short{
+		height: auto;
+	    max-height:5 * $base-spacing-unit;
+	}
+	.img--medium{
+		height: auto;
+	    max-height:10 * $base-spacing-unit;
+	}
+	.img--tall{
+		height: auto;
+	    max-height:15 * $base-spacing-unit;
 	}
 }
 
