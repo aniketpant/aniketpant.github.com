@@ -100,7 +100,7 @@ end # task :draft
 desc "Publishing a draft: #{CONFIG['posts']}"
 task :publish do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
-  title = ENV["title"] || "new-post"
+  title = ENV["title"]
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
