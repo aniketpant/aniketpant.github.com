@@ -36,6 +36,7 @@ task :post do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
+    post.puts "type: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts "tags: []"
     post.puts "category: "
@@ -89,6 +90,7 @@ task :draft do
   open(draft_filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
+    post.puts "type: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts "tags: []"
     post.puts "category: "
