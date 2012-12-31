@@ -11,7 +11,7 @@ aniketpant.github.com
  * Inspired by [Ben Schwarz's site](http://germanforblack.com)
  * Fonts &ndash; [Adelle](https://typekit.com/fonts/adelle-web) &amp; [Source Sans Pro](https://typekit.com/fonts/source-sans-pro) served by Typekit
  * And the beautiful colors are &ndash;
-  1. <span style="color: #EE2B43">#EE2B43</span>
-  2. <span style="color: #BF2C47">#BF2C47</span>
-  3. <span style="color: #F23535">#F23535</span>
-  4. <span style="color: #037F8C">#037F8C</span>
+  1. #EE2B43
+  2. #BF2C47
+  3. #F23535
+  4. #037F8C
