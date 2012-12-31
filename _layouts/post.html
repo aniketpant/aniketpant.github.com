@@ -24,11 +24,6 @@ layout: base
       <a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="false">Follow @aniket_pant</a>
     </section>
 
-    <div id="disqus_thread"></div>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-	</div>
-
 </div><!-- post -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
@@ -36,19 +31,9 @@ layout: base
 <script src="/assets/js/rainbow-custom.min.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-      $('#boastful').boastful({
-          empty_message: '<p>Bah! Why ain\'t anyone tweeting this.</p>'  
-      });
+  $(document).ready(function() {
+    $('#boastful').boastful({
+        empty_message: '<p>Bah! Why ain\'t anyone tweeting this.</p>'  
     });
-
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'aniketpant'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+  });
 </script>
