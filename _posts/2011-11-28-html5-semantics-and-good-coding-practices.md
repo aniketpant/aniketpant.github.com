@@ -6,7 +6,7 @@ title: >
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - coding
   - html5

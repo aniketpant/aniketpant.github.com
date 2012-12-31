@@ -4,7 +4,7 @@ title: A Look On My Current Work
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - ASP
   - Online Test Management

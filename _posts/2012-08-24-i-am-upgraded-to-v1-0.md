@@ -4,7 +4,7 @@ title: I am upgraded to v1.0
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Self-Improvement
 ---

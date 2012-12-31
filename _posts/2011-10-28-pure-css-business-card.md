@@ -4,7 +4,7 @@ title: Pure CSS Business Card
 layout: post
 type: post
 category:
-  - tutorial
+  - notes
 tags:
   - business card
   - CSS

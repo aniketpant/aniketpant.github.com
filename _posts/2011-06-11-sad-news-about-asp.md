@@ -4,7 +4,7 @@ title: Sad News about ASP
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - ASP
   - Problem

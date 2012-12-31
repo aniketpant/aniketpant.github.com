@@ -4,7 +4,7 @@ title: Creative Foliage
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Theme
   - Wordpress

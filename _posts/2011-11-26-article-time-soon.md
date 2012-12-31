@@ -4,7 +4,7 @@ title: article Time Soon
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Announcement
 ---

@@ -4,7 +4,7 @@ title: Dream, Innovate
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Dream
   - Innovate

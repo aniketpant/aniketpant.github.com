@@ -4,7 +4,7 @@ type: post
 title: "Upgraded to v1.1"
 tags: []
 category:
-  - weblog
+  - notes
 ---
 
 <p class="lead text-center">

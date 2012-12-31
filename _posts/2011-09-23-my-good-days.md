@@ -4,7 +4,7 @@ title: My Good Days
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - happy
   - todo

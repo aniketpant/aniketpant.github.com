@@ -6,7 +6,7 @@ title: >
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Codeigniter
 ---

@@ -4,7 +4,7 @@ title: Password Security and Hashing
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - bcrypt
   - Codeigniter

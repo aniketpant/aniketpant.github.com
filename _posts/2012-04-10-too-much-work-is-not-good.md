@@ -4,7 +4,7 @@ title: Too Much Work Is Not Good
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - Habits
 ---

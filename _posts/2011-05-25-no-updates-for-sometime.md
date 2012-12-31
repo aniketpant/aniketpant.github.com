@@ -4,7 +4,7 @@ title: No Updates for sometime
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Time Pass
 ---

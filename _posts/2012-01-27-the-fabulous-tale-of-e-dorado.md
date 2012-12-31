@@ -4,7 +4,7 @@ title: The Fabulous tale of E-Dorado
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - E-Dorado
 ---

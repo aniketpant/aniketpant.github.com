@@ -4,7 +4,7 @@ title: Work started on new theme
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Theme
 ---

@@ -4,7 +4,7 @@ title: How I started off
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - inspiration
 ---

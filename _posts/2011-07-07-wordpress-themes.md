@@ -4,7 +4,7 @@ title: Wordpress Themes
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags: [ ]
 ---
 For quite sometime I was busy reading articles for design inspirations and finally I have found what I have been looking for.

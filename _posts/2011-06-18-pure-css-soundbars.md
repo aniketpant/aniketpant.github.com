@@ -10,12 +10,11 @@ excerpt: |
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - CSS
   - CSS3
   - Pure CSS Sound Bars
-  - tutorial
 post_format: [ ]
 ---
 Keep thinking and you will surely find a new way to have fun with CSS.

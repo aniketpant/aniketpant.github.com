@@ -4,7 +4,7 @@ title: Typographic Art
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Art
   - Photoshop

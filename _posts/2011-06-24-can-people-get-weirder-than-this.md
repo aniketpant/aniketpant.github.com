@@ -4,7 +4,7 @@ title: Can people get weirder than this?
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Time Pass
 ---

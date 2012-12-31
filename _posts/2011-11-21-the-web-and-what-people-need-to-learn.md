@@ -4,7 +4,7 @@ title: The web and what people need to learn
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - Design
 ---

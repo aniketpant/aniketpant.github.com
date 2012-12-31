@@ -4,7 +4,7 @@ title: Busy Days and Coded Nights
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Busy
   - Music

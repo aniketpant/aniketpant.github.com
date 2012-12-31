@@ -4,7 +4,7 @@ title: 'Code Igniter: Jquery Problem'
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Codeigniter
   - Jquery

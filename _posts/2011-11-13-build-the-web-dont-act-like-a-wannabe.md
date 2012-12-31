@@ -4,7 +4,7 @@ title: "Build the web, don't act like a wannabe"
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - Build
   - Wannabe

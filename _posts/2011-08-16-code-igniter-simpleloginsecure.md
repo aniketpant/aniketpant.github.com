@@ -4,7 +4,7 @@ title: 'Code Igniter - SimpleLoginSecure'
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - bcrypt
   - Codeigniter

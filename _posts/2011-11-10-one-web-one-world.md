@@ -4,7 +4,7 @@ title: One Web, One World
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - Idea
   - Utopian

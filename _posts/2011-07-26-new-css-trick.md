@@ -4,7 +4,7 @@ title: New CSS Trick
 layout: post
 type: post
 category:
-  - tutorial
+  - notes
 tags:
   - CSS
   - Trick

@@ -4,7 +4,7 @@ title: WP Format Code
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - Code Formatting
   - Plugin

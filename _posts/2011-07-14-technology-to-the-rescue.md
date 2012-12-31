@@ -4,7 +4,7 @@ title: Technology To The Rescue
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Rescue
   - Technology

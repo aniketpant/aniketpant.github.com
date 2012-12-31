@@ -4,7 +4,7 @@ title: Another Illustration
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - ASP
   - Wordpress

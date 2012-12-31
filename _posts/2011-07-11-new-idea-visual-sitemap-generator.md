@@ -4,7 +4,7 @@ title: 'New Idea - Visual Sitemap Generator'
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 ---
 Today has been quite a nice day.
 

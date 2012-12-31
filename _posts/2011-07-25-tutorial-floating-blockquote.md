@@ -4,10 +4,9 @@ title: 'tutorial: Floating Blockquote'
 layout: post
 type: post
 category:
-  - tutorial
+  - notes
 tags:
   - blockquote
-  - tutorial
 ---
 You would have seen this at a number of places. There is a blockquote to one side and the content is flowing around it.
 

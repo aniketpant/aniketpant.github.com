@@ -4,7 +4,7 @@ title: 'WordCamp Jabalpur 2011 : From Start To End'
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Jabalpur
   - WordCamp

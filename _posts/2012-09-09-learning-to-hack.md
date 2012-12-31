@@ -4,7 +4,7 @@ title: Learning to hack
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Growth Hacking
 ---

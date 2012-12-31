@@ -4,7 +4,7 @@ title: Announcement for the Summer
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Announcement
 ---

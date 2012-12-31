@@ -4,7 +4,7 @@ title: Encounter with ASP
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - ASP
 ---

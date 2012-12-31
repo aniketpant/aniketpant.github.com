@@ -4,7 +4,7 @@ title: Dabbling with gists
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - dabblet
   - patterns

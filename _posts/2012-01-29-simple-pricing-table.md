@@ -4,11 +4,10 @@ title: Simple Pricing Table
 layout: post
 type: post
 category:
-  - tutorial
+  - notes
 tags:
   - Demo
   - Pricing Tables
-  - tutorial
 ---
 Yesterday I was browsing through [Design Curate][1] and I found [this][2].
 

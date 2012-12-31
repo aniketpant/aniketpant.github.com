@@ -4,7 +4,7 @@ title: Hectic times. Need to work more.
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags: [ ]
 ---
 Today I feel that I have reached my limit. And I am feeling great about it.

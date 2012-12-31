@@ -4,7 +4,7 @@ title: CodeIgniter Form Validation Problem
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Codeigniter
   - Form Validation

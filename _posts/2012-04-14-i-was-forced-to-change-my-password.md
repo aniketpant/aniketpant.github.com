@@ -4,7 +4,7 @@ title: I was forced to change my password
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Password
   - Security

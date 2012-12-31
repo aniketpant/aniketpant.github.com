@@ -4,7 +4,7 @@ title: Finally I Exist
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags: [ ]
 ---
 Hello everyone

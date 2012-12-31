@@ -4,7 +4,7 @@ title: "Why social sharing won't work for you?"
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - Facebook
   - Memes

@@ -4,7 +4,7 @@ title: "One down, Bring em' on"
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags: [ ]
 ---
 Waves 2011 got over on 5th and I have lazed around since then, not much to do. Well, actually there is lots to do, but recently everything seems lazy.

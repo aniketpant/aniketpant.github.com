@@ -4,11 +4,10 @@ title: Pure CSS Accordion
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Accordion
   - CSS
-  - tutorial
 ---
 This is a simple accordion made by using Pure CSS.
 

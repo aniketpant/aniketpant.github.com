@@ -4,7 +4,7 @@ title: The Tale of E-Dorado
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Event
   - Quark 2012

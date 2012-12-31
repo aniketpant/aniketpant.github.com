@@ -4,7 +4,7 @@ title: "The year I won't forget"
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - New Year
 ---

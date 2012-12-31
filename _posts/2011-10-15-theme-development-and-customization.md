@@ -4,7 +4,7 @@ title: Theme Development and Customization
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Slides
   - themes

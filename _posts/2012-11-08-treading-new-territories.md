@@ -4,7 +4,7 @@ title: Treading New Territories
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Conference
   - Mark My Word

@@ -4,7 +4,7 @@ title: 'CSS3 Filters : Usage and Implementation'
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - CSS3
   - Filters

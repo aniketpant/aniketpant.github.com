@@ -4,7 +4,7 @@ title: Confession of a programmer
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - Codeigniter
   - Igniteplate

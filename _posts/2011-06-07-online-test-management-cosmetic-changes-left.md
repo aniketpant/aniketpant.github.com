@@ -4,7 +4,7 @@ title: 'Online Test Management: Cosmetic Changes Left'
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - ASP
   - Online Test Management

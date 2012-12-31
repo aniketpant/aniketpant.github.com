@@ -4,7 +4,7 @@ title: A Nav Bar Concept
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - Animation
   - CSS3

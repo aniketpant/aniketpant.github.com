@@ -4,7 +4,7 @@ title: And the fun begins...
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - WordCamp
 ---

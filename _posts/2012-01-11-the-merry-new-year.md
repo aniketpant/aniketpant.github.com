@@ -4,7 +4,7 @@ title: The "Merry" New Year
 layout: post
 type: post
 category:
-  - weblog
+  - notes
 tags:
   - Random Thoughts
 ---

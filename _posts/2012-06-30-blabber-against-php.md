@@ -4,7 +4,7 @@ title: Blabber against PHP
 layout: post
 type: post
 category:
-  - article
+  - essays
 tags:
   - PHP
 ---
