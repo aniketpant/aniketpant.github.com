@@ -1,5 +1,4 @@
 permalink: /:categories/:title
-exclude: ["assets/styles/sass/", "CNAME", "Rakefile", "README.md"]
 auto: true
 markdown: kramdown
 
