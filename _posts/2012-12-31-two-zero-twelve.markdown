@@ -24,6 +24,9 @@ There were a number of other developments that I made in my old projects. You ca
 
 I [moved on](/notes/moving-on) to Jekyll from WordPress which has been a great experience in itself. Because of this tiny change, I have a stronger understanding of OOCSS as I used [inuit.css](http://inuitcss.com). Thank you [Harry](http://csswizardry) for inuit.css.
 
-**The Mutiny:** I am now working with [Web Mutiny](http://webmutiny.in) as a technical lead.
+**The Mutiny:** I am now working with [Web Mutiny](http://webmutiny.in) as a technical lead. A personal thanks to [King Sidharth](http://kingsidharth.com) for getting me on the team.
 
-**Mark My Word:** I must say that this has been the most fulfilling part of the year. I will able to take a short break after 2nd February 2013.
+**[Mark My Word](http://markmyword.in):** I must say that this has been the most fulfilling part of the year. I will able to take a short break after 2nd February 2013.
+
+<span class="note">P.S</span>
+I will be concentrating more towards poetry, working out, and more open source contribution to some of the great projects I have been working with.
