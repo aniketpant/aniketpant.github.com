@@ -6,7 +6,6 @@ type: post
 category:
   - weblog
 tags: [ ]
-post_format: [ ]
 ---
 Hello everyone
 

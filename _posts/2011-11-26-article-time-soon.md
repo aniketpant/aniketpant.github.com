@@ -7,7 +7,6 @@ category:
   - weblog
 tags:
   - Announcement
-post_format: [ ]
 ---
 ## The Start
 

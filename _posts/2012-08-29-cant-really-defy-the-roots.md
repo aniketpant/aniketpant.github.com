@@ -5,7 +5,7 @@ layout: post
 type: post
 category:
   - weblog
-tags: [ ]
+tags: []
 ---
 Yesterday was a nightmare for me! I spent more than two hours trying to root my **Motorola Defy Plus**.
 
