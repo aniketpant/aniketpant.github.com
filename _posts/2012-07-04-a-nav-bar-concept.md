@@ -3,8 +3,7 @@ author: Aniket
 title: A Nav Bar Concept
 layout: post
 type: post
-category:
-  - essays
+category: essays
 tags:
   - Animation
   - CSS3

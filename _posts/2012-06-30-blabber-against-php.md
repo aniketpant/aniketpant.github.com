@@ -3,8 +3,7 @@ author: Aniket
 title: Blabber against PHP
 layout: post
 type: post
-category:
-  - essays
+category: essays
 tags:
   - PHP
 ---

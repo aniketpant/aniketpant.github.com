@@ -3,8 +3,7 @@ author: Aniket
 title: New CSS Trick
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - CSS
   - Trick

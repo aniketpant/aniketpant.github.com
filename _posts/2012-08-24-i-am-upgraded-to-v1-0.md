@@ -3,8 +3,7 @@ author: Aniket
 title: I am upgraded to v1.0
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Self-Improvement
 ---

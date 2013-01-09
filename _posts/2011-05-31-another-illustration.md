@@ -3,8 +3,7 @@ author: Aniket
 title: Another Illustration
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - ASP
   - Wordpress

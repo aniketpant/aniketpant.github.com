@@ -3,8 +3,7 @@ author: Aniket
 title: Lessons learnt from building TEDxBITSGoa 2012
 layout: post
 type: post
-category:
-  - essays
+category: essays
 tags:
   - TEDxBITSGoa
 ---

@@ -3,8 +3,7 @@ author: Aniket
 title: Fallen Leaves
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Wordpress
 ---

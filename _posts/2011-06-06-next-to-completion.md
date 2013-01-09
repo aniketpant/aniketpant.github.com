@@ -3,8 +3,7 @@ author: Aniket
 title: Next To Completion
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - ASP
   - Online Test Management

@@ -2,8 +2,7 @@
 author: Aniket
 title: The Paper City
 layout: poetry
-category:
-  - poetry
+category: poetry
 ---
 My city drowned  
 Dreams grew like a tree  

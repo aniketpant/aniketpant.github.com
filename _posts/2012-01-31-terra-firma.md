@@ -2,8 +2,7 @@
 author: Aniket
 title: Terra Firma
 layout: poetry
-category:
-  - poetry
+category: poetry
 ---
 This room is not what it seems like  
 Go see the painting on the wall  

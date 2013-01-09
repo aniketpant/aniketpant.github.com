@@ -3,8 +3,7 @@ author: Aniket
 title: Work started on new theme
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Theme
 ---

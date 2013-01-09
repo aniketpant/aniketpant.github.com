@@ -3,8 +3,7 @@ author: Aniket
 title: 'WordCamp Jabalpur 2011 : From Start To End'
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Jabalpur
   - WordCamp

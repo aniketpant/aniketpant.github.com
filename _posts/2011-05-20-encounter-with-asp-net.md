@@ -3,8 +3,7 @@ author: Aniket
 title: Encounter with ASP
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - ASP
 ---

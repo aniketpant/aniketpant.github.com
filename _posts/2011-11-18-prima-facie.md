@@ -2,8 +2,7 @@
 author: Aniket
 title: Prima Facie
 layout: poetry
-category:
-  - poetry
+category: poetry
 ---
 Don’t just breathe  
 Feel life  

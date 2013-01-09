@@ -2,8 +2,7 @@
 layout: post
 type: post
 title: "Don't learn from your neighbor"
-category:
-  - essays
+category: essays
 tags: []
 ---
 <p class="lead" markdown="1">There are countless living examples who learn on their own, and then there are select few who try to learn from their neighbors. Well, there is nothing bad in doing so, but in the process there is a very high chance that you will end up copying his methods and _never_, _ever_ develop any originality in your work.</p>

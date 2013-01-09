@@ -3,8 +3,7 @@ author: Aniket
 title: Update on Igniteplate
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Igniteplate
   - Update

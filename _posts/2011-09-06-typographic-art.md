@@ -3,8 +3,7 @@ author: Aniket
 title: Typographic Art
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Art
   - Photoshop

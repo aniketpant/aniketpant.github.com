@@ -3,8 +3,7 @@ author: Aniket
 title: WP Format Code
 layout: post
 type: post
-category:
-  - essays
+category: essays
 tags:
   - Code Formatting
   - Plugin

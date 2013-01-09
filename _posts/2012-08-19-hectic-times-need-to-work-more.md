@@ -3,8 +3,7 @@ author: Aniket
 title: Hectic times. Need to work more.
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags: []
 ---
 Today I feel that I have reached my limit. And I am feeling great about it.

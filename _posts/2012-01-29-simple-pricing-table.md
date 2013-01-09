@@ -3,8 +3,7 @@ author: Aniket
 title: Simple Pricing Table
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Demo
   - Pricing Tables

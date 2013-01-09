@@ -5,8 +5,7 @@ title: >
   writing a cool new code
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Codeigniter
 ---

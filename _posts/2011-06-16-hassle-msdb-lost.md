@@ -3,8 +3,7 @@ author: Aniket
 title: Hassle! msdb lost
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Problem
 ---

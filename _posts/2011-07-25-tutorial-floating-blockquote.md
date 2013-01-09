@@ -3,8 +3,7 @@ author: Aniket
 title: 'tutorial: Floating Blockquote'
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - blockquote
 ---

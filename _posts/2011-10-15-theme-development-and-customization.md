@@ -3,8 +3,7 @@ author: Aniket
 title: Theme Development and Customization
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Slides
   - themes

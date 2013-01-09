@@ -3,8 +3,7 @@ author: Aniket
 title: A shift from Codeigniter to Laravel
 layout: post
 type: post
-category:
-  - essays
+category: essays
 tags:
   - Codeigniter
   - Laravel

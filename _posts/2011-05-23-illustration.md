@@ -3,8 +3,7 @@ author: Aniket
 title: Illustration
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Blue Monster
   - Illustrator

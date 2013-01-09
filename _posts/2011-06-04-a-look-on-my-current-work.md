@@ -3,8 +3,7 @@ author: Aniket
 title: A Look On My Current Work
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - ASP
   - Online Test Management

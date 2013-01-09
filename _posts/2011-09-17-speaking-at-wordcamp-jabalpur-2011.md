@@ -3,8 +3,7 @@ author: Aniket
 title: Speaking at WordCamp Jabalpur 2011
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Jabalpur
   - Speaker

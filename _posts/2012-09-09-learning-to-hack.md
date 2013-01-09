@@ -3,8 +3,7 @@ author: Aniket
 title: "Learning to hack"
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Growth Hacking
 ---

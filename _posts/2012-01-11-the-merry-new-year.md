@@ -3,8 +3,7 @@ author: Aniket
 title: The "Merry" New Year
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Random Thoughts
 ---

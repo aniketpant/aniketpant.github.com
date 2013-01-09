@@ -3,8 +3,7 @@ author: Aniket
 title: New Post Soon
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Announcement
 ---

@@ -3,8 +3,7 @@ author: Aniket
 title: Delay! Delay! Delay!
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - ASP
   - Online Test Management

@@ -2,8 +2,7 @@
 layout: post
 type: post
 title: "Upgraded to v1.1"
-category:
-  - notes
+category: notes
 tags: []
 ---
 <p class="lead text-center">

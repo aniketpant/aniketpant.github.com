@@ -3,8 +3,7 @@ author: Aniket
 title: I was forced to change my password
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Password
   - Security

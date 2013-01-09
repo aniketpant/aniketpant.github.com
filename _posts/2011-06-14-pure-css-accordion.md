@@ -3,8 +3,7 @@ author: Aniket
 title: Pure CSS Accordion
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Accordion
   - CSS

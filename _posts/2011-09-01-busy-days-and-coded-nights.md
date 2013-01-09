@@ -3,8 +3,7 @@ author: Aniket
 title: Busy Days and Coded Nights
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Busy
   - Music

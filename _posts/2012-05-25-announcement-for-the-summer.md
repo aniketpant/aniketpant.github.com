@@ -3,8 +3,7 @@ author: Aniket
 title: Announcement for the Summer
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Announcement
 ---

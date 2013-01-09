@@ -3,8 +3,7 @@ author: Aniket
 title: 'Code Igniter: Jquery Problem'
 layout: post
 type: post
-category:
-  - notes
+category: notes
 tags:
   - Codeigniter
   - Jquery
