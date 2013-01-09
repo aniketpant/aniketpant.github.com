@@ -1,6 +1,6 @@
 ---
 author: Aniket
-title: Hassle! msdb lost :(
+title: Hassle! msdb lost
 layout: post
 type: post
 category:

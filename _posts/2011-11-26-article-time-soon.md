@@ -1,6 +1,6 @@
 ---
 author: Aniket
-title: article Time Soon
+title: Article Time Soon
 layout: post
 type: post
 category:

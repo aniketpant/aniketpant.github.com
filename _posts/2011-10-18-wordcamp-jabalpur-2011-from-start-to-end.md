@@ -8,7 +8,7 @@ category:
 tags:
   - Jabalpur
   - WordCamp
-post_format: [ ]
+post_format: []
 ---
 6 days back I had started on my journey to Jabalpur to speak at the WordCamp. Let me start with the whole thing.
 

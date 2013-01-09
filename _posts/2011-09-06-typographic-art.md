@@ -8,7 +8,7 @@ category:
 tags:
   - Art
   - Photoshop
-post_format: [ ]
+post_format: []
 ---
 _image missing_
 

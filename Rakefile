@@ -38,8 +38,8 @@ task :post do
     post.puts "layout: post"
     post.puts "type: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts "tags: []"
     post.puts "category: "
+    post.puts "tags: []"
     post.puts "---"
   end
 end # task :post

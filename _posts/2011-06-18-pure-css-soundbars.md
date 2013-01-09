@@ -1,12 +1,6 @@
 ---
 author: Aniket
 title: Pure CSS Soundbars
-excerpt: |
-  Keep thinking and you will surely find a new way to have fun with CSS.
-  
-  Yesterday, I introduced myself to CSS3 keyframes and today (out of the blue), I came up with these Pure CSS Sound Bars.
-  
-  There's just one thing to it, they work only in "modern" browsers like FF5/Aurora, Webkit and Chrome.
 layout: post
 type: post
 category:
@@ -15,7 +9,6 @@ tags:
   - CSS
   - CSS3
   - Pure CSS Sound Bars
-post_format: [ ]
 ---
 Keep thinking and you will surely find a new way to have fun with CSS.
 

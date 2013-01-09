@@ -5,7 +5,7 @@ layout: post
 type: post
 category:
   - notes
-tags: [ ]
+tags: []
 ---
 Just setup my workstation. My HDD is on and speakers back with me. Sum 41 playing and I feel like getting back to work.
 

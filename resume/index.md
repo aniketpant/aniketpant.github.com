@@ -4,6 +4,7 @@ title: Resume
 slug: resume
 ---
 
+<div class="wrapper">
 <div class="header-container gw">
     <header class="g one-whole" role="banner">
         <h1 class="g one-whole title text-center">Aniket Pant</h1>
@@ -74,8 +75,9 @@ slug: resume
         <hr class="g one-whole rule rule--dashed" />
     	<section>
     		<h2>Speaking</h2>
-    		<p>I have been a speaker at two events in the past &mdash;</p>
+    		<p>I have been a speaker at the following events in the past &mdash;</p>
     		<ul>
+          <li><a href="/speaking/barcamp-goa-2013">BarCamp in Goa 2013</a></li>
     			<li><a href="/speaking/wordcamp-jabalpur-2011">WordCamp in Jabalpur 2011</a></li>
     			<li><a href="/speaking/barcamp-goa-2011">BarCamp in Goa 2011</a></li>
     		</ul>
@@ -127,3 +129,4 @@ slug: resume
 		</section>
     </div> <!-- main -->
 </div> <!-- main-container -->
+</div> <!-- wrapper -->

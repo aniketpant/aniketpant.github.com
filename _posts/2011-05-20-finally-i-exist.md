@@ -5,7 +5,7 @@ layout: post
 type: post
 category:
   - notes
-tags: [ ]
+tags: []
 ---
 Hello everyone
 
@@ -15,6 +15,6 @@ Well, I have been working on making my website for quite sometime, and I was fin
 
 Earlier I had made my own website using an HTML template but then I planned to shift to WordPress.
 
-So this is what I have here –> My Site
+So this is what I have here, _my site_.
 
 I would keep posting my day-to-day account on what I work on.

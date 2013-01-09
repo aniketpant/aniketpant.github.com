@@ -2,11 +2,10 @@
 layout: post
 type: post
 title: "Upgraded to v1.1"
-tags: []
 category:
   - notes
+tags: []
 ---
-
 <p class="lead text-center">
 <em>Yet again we make decisions that we will never regret<br/>
 Still we strive to achieve perfection</em>

@@ -5,7 +5,7 @@ layout: post
 type: post
 category:
   - notes
-tags: [ ]
+tags: []
 ---
 Today I feel that I have reached my limit. And I am feeling great about it.
 

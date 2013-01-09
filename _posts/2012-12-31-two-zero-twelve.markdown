@@ -2,12 +2,11 @@
 layout: post
 type: post
 title: "Two-Zero-Twelve"
-tags:
-  - 2012
 category:
   - notes
+tags:
+  - 2012
 ---
-
 <p class="lead">2012 has been an exciting year for me. I worked on a number of great projects and learned twice more than what I did in the previous year.</p>
 
 ## The year in Open Source
