@@ -14,7 +14,7 @@ link: http://2011.jabalpur.wordcamp.org
 
 ## The Talk
 
-<p class="lead">My talk was focused in general on the basics of **Theme Development in WordPress**. I went on to cover aspects like _Child Themes_ and why they are **so good**.</p>
+<p class="lead" markdown="1">My talk was focused in general on the basics of **Theme Development in WordPress**. I went on to cover aspects like _Child Themes_ and why they are **so good**.</p>
 
 ## Quotes
 
