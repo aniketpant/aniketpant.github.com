@@ -22,10 +22,24 @@
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
 
+/**
+ * Helpers
+ */
 
+@mixin sans {
+  font-family: $sans;
+}
+
+@mixin slab {
+  font-family: $slab;
+}
+
+/**
+ * $CONTENT-AREAS
+ */
 
 body {
-  background: #FAFAFA;
+  background: $white;
 }
 
 .wrapper {
@@ -66,22 +80,14 @@ footer {
  * $TYPOGRAPHY
  */
 body {
-  font-family: $sans;
+  @include sans;
   color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $slab;
+  @include slab;
   font-weight: 500;
   color: #3d3d3d;
-}
-
-.sans {
-  font-family: $sans;
-}
-
-.slab {
-  font-family: $slab;
 }
 
 /**
