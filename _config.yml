@@ -1,8 +1,7 @@
 permalink: /:categories/:title
 auto: true
 markdown: kramdown
-include: assets/styles/css
-exclude: Rakefile, CNAME, assets/styles/sass, README.md
+exclude: Rakefile, CNAME, sass/, script/, README.md
 
 url: http://aniketpant.com
 

@@ -1,26 +1,26 @@
-@charset "UTF-8";
-/*------------------------------------*\
-    STYLE.CSS
-\*------------------------------------*/
-/**
- * 
- * sass --watch style.scss:style.min.css --style compressed
- * 
- * Here we pull in some variables, include the inuit.css framework, then add our
- * project-specific components afterwards.
+/*
+ * Includes all of Inuit
+ * Define custom variables that overwrite Inuit's defaults
+ * Any Inuit variables not overwritten shall use the defaults
  */
 
+// Variables
+@import "variables";
 
-/**
- * Setup
+/* All of Inuit.css
+ * This could be made nicer by moving vars into the inuit.css subfolder
+ * and including it at the top of inuit.scss, as per justnorris's pull request
+ * https://github.com/csswizardry/inuit.css/pull/105
+ *
+ * Because vendor/inuit.css is added to sass's load path then we don't need to
+ * prefix everything with '../../vendor/inuit.css'. Inuit's vars.scss should be
+ * moved into the inuit.css subfolder to make it obvious that these are inuit's
+ * default variables
  */
 @import "vars";
 @import "inuit.css/inuit";
 
-
-/**
- * She’s all yours, cap’n... Begin importing your stuff here.
- */
+// You own imports / custom code here
 
 /**
  * Helpers

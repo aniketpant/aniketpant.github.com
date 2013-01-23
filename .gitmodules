@@ -1,3 +1,3 @@
-[submodule "assets/styles/sass"]
-	path = assets/styles/sass
-	url = git@github.com:aniketpant/inuit.css.git
+[submodule "vendor/inuit.css"]
+	path = vendor/inuit.css
+	url = git@github.com:csswizardry/inuit.css
