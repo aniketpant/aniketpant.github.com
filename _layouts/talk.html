@@ -7,7 +7,15 @@ layout: base
 		<p class="lead">I spoke on <span class="highlight">{{ page.topic }}</span>.</p>
 		<div class="meta"><meta itemprop="startDate" content="{{ page.date | date_to_xmlschema }}">On <date class="date">{{ page.date | date_to_long_string }}</date></div>
 	</header>
-	<article class="g two-thirds portable-one-whole">
-	{{ content }}  
-	</article>
+  <div class="g two-thirds portable-one-whole">
+    <article>
+    {{ content }}  
+    </article>
+    <section class="meta--info island">
+      <p class="lead">
+        If you liked the slides, then you should definitely follow him on twitter too. He would be excited to know that you likes his work.
+      </p>
+      <a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="false">Follow @aniket_pant</a>
+    </section>
+  </div>
 </div><!-- talk -->

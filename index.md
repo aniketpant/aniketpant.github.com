@@ -3,15 +3,13 @@ layout: page
 title: Home
 slug: home
 ---
-<p class="island lead" markdown="1">I'm Aniket Pant. I love to code, listen to music and I even write free-verses at times. A majority of my work goes into _writing syntax for design_.</p>
-
 <section class="g one-whole info-on-me text-cols--2 portable-text-cols--1 landmark" markdown="1">
 Three of my tools are Codeigniter, Laravel and WordPress. But there is another power that I have which allows me to think of great application architectural designs. Other than that I _love to speak_ at events and occasionally _write poetry_.
 
 If you wish to consult me for any project, or if you want me to [speak](/speaking) at an event, say <a href="mailto:me@aniketpant.com">hello</a>.
 
 {% for post in site.posts limit:1 %}
-**Read my latest {% if post.category == "notes" %}note{% elsif post.category == "essays" %}essay{% elsif post.category == "poetry" %}poem{% endif %} &mdash; <a href="{{ post.url }}">{{ post.title }}</a>{% endfor %}**
+**Read my latest {% if post.category == "notes" %}note{% elsif post.category == "essays" %}essay{% elsif post.category == "poetry" %}poem{% elsif post.category == "talk" %}talk{% endif %} &mdash; <a href="{{ post.url }}">{{ post.title }}</a>{% endfor %}**
 </section>
 
 <section class="g one-half portable-one-whole links">

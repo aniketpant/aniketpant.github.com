@@ -40,6 +40,7 @@
 
 body {
   background: $white;
+  color: $gray;
 }
 
 .wrapper {
@@ -81,7 +82,6 @@ footer {
  */
 body {
   @include sans;
-  color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -90,21 +90,31 @@ h1, h2, h3, h4, h5, h6 {
   color: #3d3d3d;
 }
 
+.lede,
+.lead {
+  @include slab;
+  @include font-size($base-font-size * 1.25);
+  color: lighten($gray, 10%);
+}
+
 /**
  * $LINKS
  */
 
 a {
   color: $color-2;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
   @include vendor(transition, all 250ms linear);
   &:hover {
     color: darken($color-2, 20%);
+    text-decoration: none;
+    border-bottom: 2px solid lighten($gray, 60%);
   }
   &:active {
     color: ligten($color-2, 20%);
-    text-decoration: none;
     background: rgba($color-2, 0.1);
-    border-radius: 5px;
+    text-decoration: none;
   }
 }
 
@@ -122,11 +132,14 @@ a {
 .nav {
   a {
     color: $color-3;
+    border-bottom: 3px solid $color-3;
     &:hover {
       color: darken($color-3, 10%);
+      border-bottom: 3px solid darken($color-3, 10%);
     }
     &:active {
-      background: rgba($brand-color, 0.1);
+      color: $gray;
+      border-bottom: 3px solid $color-2;
     }
   }
 }
@@ -162,6 +175,12 @@ a {
  * $MISC
  */
 
+.about-me {
+  @include slab;
+  @include font-size($base-font-size * 1.15);
+  color: lighten($gray, 10%);
+}
+
 .highlight {
   color: $color-1;
 }
@@ -176,8 +195,13 @@ a {
   }
 }
 
+.meta--info {
+  background: lighten(rgba($color-2, 0.15), 50%);
+  border-radius: 5px;
+}
+
 .note {
-  background:  rgba($color-2, 0.15);
+  background: rgba($color-2, 0.15);
   border-bottom: 1px solid rgba($color-2, 0.25);
 }
 
@@ -234,10 +258,12 @@ blockquote {
   }
   .split {
     text-align: left;
-    dd {
+    .split__detail {
+      color: #999;
       margin-left: 0;
       &::before {
-        content: "/ ";
+        content: "-";
+        margin-left: 0.5rem;
       } 
     }
   }
@@ -305,7 +331,7 @@ blockquote {
     position: absolute;
     z-index: 999;
     left: -9999px;
-    background-color: #222;
+    background-color: $gray;
     opacity: .8;
     padding: 5px;
     width: 250px;
