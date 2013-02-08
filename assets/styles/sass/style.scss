@@ -186,6 +186,7 @@ a {
 .link-complex:hover,
 .link-complex:active,
 .link-complex:focus{
+  border-bottom: none;
   .link-complex__target {
     text-decoration: none;
   }
