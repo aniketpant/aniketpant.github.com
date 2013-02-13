@@ -7,7 +7,7 @@ slug: resume
 <div class="header-container gw">
   <div class="g one-whole zen-space full-width"></div>
   <header class="g one-whole" role="banner">
-      <h1 class="g one-whole title text-center">Aniket Pant</h1>
+      <h1 class="g one-whole title text--center">Aniket Pant</h1>
       <hr class="g one-whole rule rule--dashed" />
       <ul class="g one-whole nav nav--banner">
       	<li><a href="mailto:me@aniketpant.com">me@aniketpant.com</a></li>

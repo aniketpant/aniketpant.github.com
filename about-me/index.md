@@ -44,9 +44,7 @@ Along with all of the above, I am also the **Curator of [Mark My Word](http://ma
 </div>
 
 <div class="g three-quarters portable-one-whole">
-  <a href="http://twitter.com/aniket_pant" class="btn btn--full">Follow me on Twitter</a>
-  <a href="mailto:me@aniketpant.com" class="btn btn--full highlight text--center">me[at]aniketpant[dot]com</a>
-  <a href="https://github.com/aniketpant" class="btn btn--full">Fork my repositories on Github</a>
+  <p>Just go ahead and <a href="http://twitter.com/aniket_pant">follow me on Twitter</a>. If you're afraid of that, then you can <a href="mailto:me@aniketpant.com" class="highlight">drop me a mail</a>. If you're looking for my codes, then you can <a href="https://github.com/aniketpant">fork my repositories on Github</a>.</p>
 </div>
 
 </div>

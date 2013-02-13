@@ -104,18 +104,14 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: $color-2;
-  border-bottom: 2px solid transparent;
   text-decoration: none;
   @include vendor(transition, all 250ms linear);
   &:hover {
     color: darken($color-2, 20%);
-    text-decoration: none;
-    border-bottom: 2px solid lighten($gray, 60%);
   }
   &:active {
     color: ligten($color-2, 20%);
     background: rgba($color-2, 0.1);
-    text-decoration: none;
   }
 }
 
@@ -133,13 +129,17 @@ a {
  * $NAV
  */
 
-.nav {
+.navbar {
+  li {
+    padding: 0 1rem 0 0;
+  }
   a {
     color: $color-3;
     border-bottom: 3px solid $color-3;
     &:hover {
-      color: darken($color-3, 10%);
-      border-bottom: 3px solid darken($color-3, 10%);
+      color: darken($color-2, 10%);
+      border-bottom: 3px solid darken($color-2, 10%);
+      text-decoration: none;
     }
     &:active {
       color: $gray;
@@ -176,19 +176,6 @@ a {
 .meta {
   .date, .category, .tags {
     font-style: italic;
-  }
-}
-
-/**
- * $LINK-COMPLEX
- */
-.link-complex,
-.link-complex:hover,
-.link-complex:active,
-.link-complex:focus{
-  border-bottom: none;
-  .link-complex__target {
-    text-decoration: none;
   }
 }
 
@@ -238,7 +225,7 @@ blockquote {
 
 ::selection, ::-moz-selection, ::-webkit-selection {
   color: #FAFAFA;
-  background: lighten($color-1, 10%);
+  background: lighten($gray, 10%);
 }
 
 .full-width {

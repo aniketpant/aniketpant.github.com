@@ -8,7 +8,7 @@ slug: speaking
 
 <p class="lead">You can take a look at my slides at <a href="https://speakerdeck.com/aniketpant">my Speaker Deck profile</a>. Also, you can <a href="https://github.com/aniketpant/presentations">fork my slides</a> here.</p>
 
-<ul class="block-list text-center">
+<ul class="block-list text--center">
 {% for post in site.posts %}
 	{% if post.category == 'talk' %}
 		<li>
