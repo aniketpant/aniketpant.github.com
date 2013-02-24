@@ -7,14 +7,12 @@ layout: none
   	{% for page in site.pages %}
 	<url>
 	    <loc>{{ site.url }}{{ page.url | remove: '/index.html' }}</loc>
-    	<changefreq>weekly</changefreq>
 	</url>
 	{% endfor %}
 	{% for post in site.posts %}
 	<url>
 		<loc>{{ site.url }}{{ post.url }}</loc>
 		<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-		<changefreq>weekly</changefreq>
 	</url>
 	{% endfor %}
 </urlset>
