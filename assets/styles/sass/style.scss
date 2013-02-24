@@ -184,7 +184,6 @@ a {
  */
 
 .about-me {
-  @include slab;
   @include font-size($base-font-size * 1.15);
   color: lighten($gray, 10%);
 }
