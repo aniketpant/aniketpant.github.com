@@ -26,12 +26,12 @@
  * Helpers
  */
 
-@mixin sans {
-  font-family: $sans;
+@mixin content {
+  font-family: $content;
 }
 
-@mixin slab {
-  font-family: $slab;
+@mixin headings {
+  font-family: $headings;
 }
 
 /**
@@ -63,8 +63,12 @@ footer {
 }
 
 .navbar {
+  @include headings;
   margin-top: 32px;
   margin-top: 2rem;
+  .nav {
+    float: right;
+  }
 }
 
 /**
@@ -73,27 +77,24 @@ footer {
 
 .logo {
   margin: 1rem 0 0;
-  width: 200px;
-  max-width: 200px;
+  width: 100px;
+  max-width: 100px;
 }
 
 /**
  * $TYPOGRAPHY
  */
 body {
-  @include sans;
+  @include content;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @include slab;
-  font-weight: 300;
+  @include headings;
   color: #3d3d3d;
-  letter-spacing: -2px;
 }
 
 .lede,
 .lead {
-  @include slab;
   @include font-size($base-font-size * 1.25);
   color: lighten($gray, 10%);
 }
@@ -115,13 +116,16 @@ a {
   }
 }
 
-.post_title, .page_title {
-  font-weight: 300;
+.page_title {
+  @include font-size($base-font-size * 4);
+}
+
+.post_title {
+  @include font-size($base-font-size * 3);
   a {
-    border-bottom: none;
-  }
-  a:hover {
-    border-bottom: none;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -157,12 +161,12 @@ a {
 }
 
 .poetry {
-  @include slab;
+  @include headings;
   text-align: center;
 }
 
 .topic {
-  @include slab;
+  @include headings;
 }
 
 /**
@@ -247,12 +251,15 @@ blockquote {
     max-width: 150px;
   }
   .portable-nav--stacked {
-        text-align:center;
+    text-align:center;
   }
   .portable-text-cols--1 {
     @include vendor(column-count, 1);
   }
   .navbar {
+    .nav {
+      float: none;
+    }
     margin-top: 0;
   }
 }
@@ -261,7 +268,6 @@ blockquote {
   .logo {
     margin-left: auto;
     margin-right: auto;
-    max-width: 100px;
   }
   .split {
     text-align: left;
@@ -313,7 +319,7 @@ blockquote {
 
 .boastful {
   display: inline;
-  font-family: $slab;
+  font-family: $headings;
   img{
     width: 48px;
     height: 48px;
