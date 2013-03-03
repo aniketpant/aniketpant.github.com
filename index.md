@@ -4,7 +4,9 @@ title: Home
 slug: home
 ---
 <section class="g one-whole info-on-me text-cols--2 portable-text-cols--1 landmark" markdown="1">
-Three of my tools are Codeigniter, Laravel and WordPress. But there is another power that I have which allows me to think of great application architectural designs. Other than that I _love to speak_ at events and occasionally _write poetry_.
+I'm **Aniket**. I love to code, listen to music and I even write free-verses at times. A majority of my work involves _writing syntax for design_.
+
+Three of my tools are Codeigniter, Laravel and WordPress. But there is another power that I have which allows me to think of great application architectural designs. Other than that I _love to speak_ at events and blabber about music.
 
 If you wish to consult me for any project, or if you want me to [speak](/speaking) at an event, say <a href="mailto:me@aniketpant.com">hello</a>.
 
