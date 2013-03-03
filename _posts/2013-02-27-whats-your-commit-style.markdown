@@ -4,7 +4,7 @@ layout: post
 type: post
 date: 2013-02-27 01:38
 title: "What's your commit style?"
-category: essay
+category: essays
 tags: []
 ---
 <p class="lead">I have been experimenting with commit styles for the last one month and there are three styles that actually caught my attention and are very useful.</p>
