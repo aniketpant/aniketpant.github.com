@@ -3,133 +3,154 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head {% if page.type == 'post' %}prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"{% endif %}>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if page.slug == "home" %}{{ site.tagline }}{% else %}{{ page.title }}{% endif %} &mdash; {{ site.name }}</title>
-        <meta name="author" content="{{ author.name }}">
-        <meta name="description" content="{{ site.desc }}">
-        <meta name="keywords" content="aniket, pant, rawrrr, weblog, css, php, html, codeigniter, laravel, jekyll">
-        <meta name="viewport" content="width=device-width">
+<head {% if page.type == 'post' %}prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"{% endif %}>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{% if page.slug == "home" %}{{ site.tagline }}{% else %}{{ page.title }}{% endif %} &mdash; {{ site.name }}</title>
+  <meta name="author" content="{{ author.name }}">
+  <meta name="description" content="{{ site.desc }}">
+  <meta name="keywords" content="aniket, pant, rawrrr, weblog, css, php, html, codeigniter, laravel, jekyll">
+  <meta name="viewport" content="width=device-width">
 
-        {% if page.type == 'post' %}
-        {% capture text %}{{ page.content | strip_html }}{% endcapture %}
-        {% capture truncated_text %}{{ text | truncate: 197, '' }}{% endcapture %}
-        <!-- twitter cards -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-        <meta name="twitter:site" content="@aniket_pant">
-        <meta name="twitter:creator" content="@aniket_pant">
-        <meta name="twitter:title" content="{{ page.title }}">
-        <meta name="twitter:description" content="{{ truncated_text }}...">
+  {% if page.type == 'post' %}
+  {% capture text %}{{ page.content | strip_html }}{% endcapture %}
+  {% capture truncated_text %}{{ text | truncate: 197, '' }}{% endcapture %}
+  <!-- twitter cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:site" content="@aniket_pant">
+  <meta name="twitter:creator" content="@aniket_pant">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ truncated_text }}...">
 
-        <!-- open graph tags -->
-        <meta property="fb:app_id" content="465363156848461" /> 
-        <meta property="og:type"   content="article" /> 
-        <meta property="og:url"    content="{{ site.url}}{{ page.url }}" /> 
-        <meta property="og:title"  content="{{ page.title }}" /> 
-        <meta property="og:image"  content="http://aniketpant.com/assets/images/logo-200x200.jpg" />
-        {% endif %}
-        {% if page.slug == "home" %}
-        <!-- open graph tags -->
-        <meta property="og:title" content="Rawrrr! Aniket here." />
-        <meta property="og:type" content="blog" />
-        <meta property="og:url" content="http://aniketpant.com" />
-        <meta property="og:image" content="http://aniketpant.com/assets/images/logo-200x200.jpg" />
-        <meta property="og:site_name" content="Rawrrr! Aniket here." />
-        <meta property="fb:admins" content="714102934" />
-        {% endif %}
+  <!-- open graph tags -->
+  <meta property="fb:app_id" content="465363156848461" /> 
+  <meta property="og:type"   content="article" /> 
+  <meta property="og:url"    content="{{ site.url}}{{ page.url }}" /> 
+  <meta property="og:title"  content="{{ page.title }}" /> 
+  <meta property="og:image"  content="http://aniketpant.com/assets/images/logo-200x200.jpg" />
+  {% endif %}
+  {% if page.slug == "home" %}
+  <!-- open graph tags -->
+  <meta property="og:title" content="Rawrrr! Aniket here." />
+  <meta property="og:type" content="blog" />
+  <meta property="og:url" content="http://aniketpant.com" />
+  <meta property="og:image" content="http://aniketpant.com/assets/images/logo-200x200.jpg" />
+  <meta property="og:site_name" content="Rawrrr! Aniket here." />
+  <meta property="fb:admins" content="714102934" />
+  {% endif %}
 
-        <!-- stylesheets -->
-        <link rel="stylesheet" href="/assets/styles/css/style.min.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-        <![endif]-->
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="/assets/styles/css/style.min.css">
+</head>
+<body>
+  <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+  <![endif]-->
 
-        <div class="header-container gw">
-            <div class="g one-whole zen-space full-width"></div>
-            <div class="wrapper">
-                <header class="g one-whole flexbox" role="banner">
-                    <h1 class="g one-third portable-one-whole flexbox__item"><a class="logo media" href="/" rel="nofollow"><img class="media__item" src="/assets/images/logo.jpg" alt="Rawrrr! Aniket here." /></a></h1>
-                    <nav class="g two-thirds portable-one-whole flexbox__item navbar">
-                        <ul class="nav nav--block portable-nav--stacked">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about-me">About Me</a></li>
-                            <li><a href="/speaking">Speaking</a></li>
-                            <li><a href="/archive">Archive</a></li>
-                        </ul>
-                    </nav>
-                    <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
-                </header> <!-- header -->
-            </div>
-        </div> <!-- header-container -->
+  <div class="header-container gw">
+    <div class="g one-whole zen-space full-width"></div>
+    <div class="wrapper">
+      <header class="g one-whole flexbox" role="banner">
+        <h1 class="g one-third portable-one-whole flexbox__item"><a class="logo media" href="/" rel="nofollow"><img class="media__item" src="/assets/images/logo.jpg" alt="Rawrrr! Aniket here." /></a></h1>
+        <nav class="g two-thirds portable-one-whole flexbox__item navbar">
+          <ul class="nav nav--block portable-nav--stacked">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-me">About Me</a></li>
+            <li><a href="/speaking">Speaking</a></li>
+            <li><a href="/archive">Archive</a></li>
+          </ul>
+        </nav>
+        <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
+      </header> <!-- header -->
+    </div>
+  </div> <!-- header-container -->
 
-        <div class="main-container gw">
-            <div class="wrapper">
-                <section class="g one-whole" role="main">
-                {{ content }}
-                </section>
-            </div>
-        </div> <!-- main-container -->
+  <div class="main-container gw">
+    <div class="wrapper">
+      <section class="g one-whole" role="main">
+      {{ content }}
+      </section>
+    </div>
+  </div> <!-- main-container -->
 
-        <div class="footer-container gw">
-            <div class="wrapper">
-                <footer class="g one-whole text--center" role="contentinfo">
-                    <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
-                    <p class="smallprint"><a href="http://twitter.com/{{ site.author.twitter }}">@aniket_pant</a><span class="subtle">&nbsp;/&nbsp;Since 2010&nbsp;/&nbsp;</span><a href="/colophon">Colophon</a></p>
-                </footer> <!-- footer -->
-            </div>
-            <div class="g one-whole zen-space full-width"></div>
-        </div> <!-- footer-container -->
+  <div class="footer-container">
+    <div class="info-bar full-width">
+      <div class="gw wrapper">
+        <aside class="g one-third portable-one-whole">
+          <h3 class="section-heading">What do I do?</h3>
+          <p>I am the Curator of <a href="http://markmyword.in" class="highlight">Mark My Word</a> which is India's First Content and Design Conference. I also develop web applications and love to teach people about what I do.</p>
+        </aside>
+        <aside class="g one-third portable-one-whole">
+          <h3 class="section-heading">{% if page.type == 'post' %}Like my work?{% else %}Follow me on twitter{% endif %}</h3>
+          {% if page.type == 'post' %}
+          <p>Hey, you just went through <em>{{ page.content | number_of_words }}</em> words handcrafted by me.If you liked them, then you should definitely follow me on twitter and give me a shout out.</p>
+          {% else %}
+          <p>I tweet about my ongoing projects, developments around the web and music.</p>
+          {% endif %}
+          <a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="false">Follow @aniket_pant</a>
+        </aside>
+        <aside class="g one-third portable-one-whole">
+          <h3 class="section-heading">Read some of my best</h3>
+          <p>If you like HTML, then you should definitely read <a href="/essays/html5-semantics-and-good-coding-practices">HTML5 Semantics and Good Coding Practices</a>. Another interesting read for you would be about <a href="/essays/whats-your-commit-style">commit styles</a>. And if you are one who likes poetry, you might want to read <a href="/poetry/the-paper-city">The Paper City</a>.</p>
+        </aside>
+      </div>
+    </div>
+    <div class="gw wrapper">
+      <footer class="g one-whole text--center" role="contentinfo">
+        <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
+        <p class="smallprint"><a href="http://twitter.com/{{ site.author.twitter }}">@aniket_pant</a><span class="subtle">&nbsp;/&nbsp;Since 2010&nbsp;/&nbsp;</span><a href="/colophon">Colophon</a></p>
+      </footer> <!-- footer -->
+    </div>
+    <div class="g one-whole zen-space full-width"></div>
+  </div> <!-- footer-container -->
 
-        <script type="text/javascript">
+  <script type="text/javascript">
 
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-23477947-1']);
-          _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23477947-1']);
+    _gaq.push(['_trackPageview']);
 
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-        </script>
+  </script>
 
-        <!-- Typekit Fonts -->
-        <script type="text/javascript">
-          (function() {
-            var config = {
-              kitId: 'rsd5dqz',
-              scriptTimeout: 3000
-            };
-            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-          })();
+    <!-- Typekit Fonts -->
+  <script type="text/javascript">
+    (function() {
+      var config = {
+        kitId: 'rsd5dqz',
+        scriptTimeout: 3000
+      };
+      var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+    })();
 
-          (function(doc, script) {
-            var js, 
-                fjs = doc.getElementsByTagName(script)[0],
-                frag = doc.createDocumentFragment(),
-                add = function(url, id) {
-                    if (doc.getElementById(id)) {return;}
-                    js = doc.createElement(script);
-                    js.src = url;
-                    id && (js.id = id);
-                    frag.appendChild( js );
-                };
-                
-              // Google+ button
-              add('http://apis.google.com/js/plusone.js');
-              // Facebook SDK
-              add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=465363156848461', 'facebook-jssdk');
-              // Twitter SDK
-              add('//platform.twitter.com/widgets.js');
+    (function(doc, script) {
+      var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        frag = doc.createDocumentFragment(),
+        add = function(url, id) {
+            if (doc.getElementById(id)) {return;}
+            js = doc.createElement(script);
+            js.src = url;
+            id && (js.id = id);
+            frag.appendChild( js );
+        };
+          
+        // Google+ button
+        add('http://apis.google.com/js/plusone.js');
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=465363156848461', 'facebook-jssdk');
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js');
 
-              fjs.parentNode.insertBefore(frag, fjs);
-          }(document, 'script'));
-        </script>
+        fjs.parentNode.insertBefore(frag, fjs);
+    }(document, 'script'));
+  </script>
 
-    </body>
+</body>
 </html>
