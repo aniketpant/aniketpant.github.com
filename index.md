@@ -15,24 +15,18 @@ If you wish to consult me for any project, or if you want me to [speak](/speakin
 </section>
 
 <section class="g one-half portable-one-whole links">
-	<h3>Where would you like to teleport to?</h3>
+	<h3>Wish to teleport somewhere?</h3>
 	<ul class="block-list">
 		<li><a href="/archive" class="block-list__link">The Old Archives</a></li>
 		<li><a href="http://markmyword.in" class="block-list__link">Mark My Word Conference</a></li>
 	</ul>
 </section>
 
-<section class="g one-half portable-one-whole">
-	<h3>What am I doing nowadays?</h3>
-	<p>Nowadays I am working full time as the Curator of <a href="http://markmyword.in">Mark My Word</a> which is India's First Content and Design Conference scheduled to happen on Feb 2, 2013.</p>
-</section>
-
-<section class="g one-whole recent-posts">
-	<h3>Take a look at my last few posts</h3>
-	<dl class="split">
+<section class="g one-half portable-one-whole recent-posts">
+	<h3>Read something I wrote</h3>
+	<ul>
 		{% for post in site.posts limit:5 %}
-			<dt class="split__title"><a href="{{ post.url }}">{{ post.title }}</a></dt>
-			<dd class="split__detail"><em>{{ post.date | date:"%d %b" }}</em></dd>
+			<li><a href="{{ post.url }}">{{ post.title }}</a></dt>
 		{% endfor %}
-	</dl>
+	</ul>
 </section>
