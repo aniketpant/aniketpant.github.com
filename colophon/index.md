@@ -3,7 +3,6 @@ layout: page
 title: Colophon
 slug: colophon
 ---
-
 <div class="g one-whole">
 
 <div markdown="1">
@@ -15,7 +14,7 @@ slug: colophon
 
  
  * Inspired by [Ben Schwarz's site](http://germanforblack.com)
- * Fonts &ndash; [Adelle](https://typekit.com/fonts/adelle-web) &amp; [Source Sans Pro](https://typekit.com/fonts/source-sans-pro) served by Typekit
+ * Fonts &ndash; [Cubano](https://typekit.com/fonts/cubano) &amp; [Source Sans Pro](https://typekit.com/fonts/source-sans-pro) served by Typekit
  * And the beautiful colors are &ndash;
   1. <span style="color: #EE2B43">#EE2B43</span>
   2. <span style="color: #BF2C47">#BF2C47</span>
