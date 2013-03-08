@@ -71,6 +71,36 @@ footer {
   }
 }
 
+.footer-container {
+}
+
+.info-bar {
+  background: $color-2;
+  padding: 1rem 0 1rem;
+  margin-bottom: 1rem;
+  .section-heading, p {
+    color: $white;
+  }
+  a {
+    font-weight: bold;
+    color: $white;
+    border-bottom: 1px solid $white;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      border-bottom: 1px solid darken($color-2, 10%);
+    }
+    &.highlight {
+    background: rgba($white, 0.25);
+    padding: 0 5px;
+    @include vendor(border-radius, 5px);
+      &:hover {
+        background: rgba($white, 0.35);
+      }
+    }
+  }
+}
+
 /**
  * ~LOGO
  */
@@ -106,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $color-2;
   text-decoration: none;
-  @include vendor(transition, all 250ms linear);
+  @include vendor(transition, all 100ms linear);
   &:hover {
     color: darken($color-2, 20%);
   }
@@ -121,7 +151,6 @@ a {
 }
 
 .post_title {
-  @include font-size($base-font-size * 3);
   a {
     &:hover {
       text-decoration: none;
@@ -161,7 +190,6 @@ a {
 }
 
 .poetry {
-  @include headings;
   text-align: center;
 }
 
@@ -188,7 +216,6 @@ a {
  */
 
 .about-me {
-  @include font-size($base-font-size * 1.15);
   color: lighten($gray, 10%);
 }
 
