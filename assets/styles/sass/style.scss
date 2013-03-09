@@ -75,7 +75,7 @@ footer {
 }
 
 .info-bar {
-  background: $color-2;
+  background: darken($color-2, 10%);
   padding: 1rem 0 1rem;
   margin-bottom: 1rem;
   .section-heading, p {
@@ -88,7 +88,7 @@ footer {
     &:hover {
       color: $white;
       text-decoration: none;
-      border-bottom: 1px solid darken($color-2, 10%);
+      border-bottom: 1px solid darken($color-2, 20%);
     }
     &.highlight {
     background: rgba($white, 0.25);
@@ -215,16 +215,8 @@ a {
  * $MISC
  */
 
-.about-me {
-  color: lighten($gray, 10%);
-}
-
 .highlight {
   color: $color-1;
-}
-
-.subtle {
-  color: #999;
 }
 
 .archive, .home {
