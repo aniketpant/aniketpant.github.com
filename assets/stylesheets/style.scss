@@ -5,7 +5,7 @@
  */
 
 // Variables
-@import "variables";
+@import "vars";
 
 /* All of Inuit.css
  * This could be made nicer by moving vars into the inuit.css subfolder
@@ -17,7 +17,6 @@
  * moved into the inuit.css subfolder to make it obvious that these are inuit's
  * default variables
  */
-@import "vars";
 @import "inuit.css/inuit";
 
 // You own imports / custom code here
