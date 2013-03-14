@@ -1,27 +1,25 @@
 ---
 layout: base
 ---
-<div class="post {{page.slug}}">
-	<header class="g one-quarter portable-one-whole post--header">
-  		<h1 class="post_title">{{ page.title }}</h1>
-  		<div class="meta"><date class="date">Posted on {{ page.date | date_to_long_string }}</date><br/>Under <span class="category">{{ page.category }}</a>{% if page.tags != empty %}<br/>Tagged </span><span class="tags">{{ page.tags | array_to_sentence_string }}</span>{% endif %}</div>
-      <div class="share island">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>
-      </div>
-      <div id="boastful"></div>
-	</header><!-- post-header -->
-	<div class="g three-quarters portable-one-whole">
-		<article class="post--content">
+<div class="post">
+	<header class="grid__unit one-quarter portable-one-whole">
+		<h1 class="post_title">{{ page.title }}</h1>
+		<div class="meta"><date class="date">Posted on {{ page.date | date_to_long_string }}</date><br/>Under <span class="category">{{ page.category }}</a>{% if page.tags != empty %}<br/>Tagged </span><span class="tags">{{ page.tags | array_to_sentence_string }}</span>{% endif %}</div>
+    <div class="share island">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>
+    </div>
+    <div id="boastful"></div>
+	</header><!--
+  --><div class="grid__unit three-quarters portable-one-whole">
+		<article>
 	  	{{ content }}  
-		</article><!-- post-content -->
+		</article>
   </div>
-	<footer class="post--footer"></footer><!-- post-footer -->
 </div><!-- post -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script src="/assets/js/jquery.boastful.js"></script>
 <script src="/assets/js/rainbow-custom.min.js"></script>
-
 <script type="text/javascript">
   $(document).ready(function() {
     $('#boastful').boastful({
