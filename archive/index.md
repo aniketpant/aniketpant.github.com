@@ -3,7 +3,7 @@ layout: page
 title: Archive
 slug: archive
 ---
-<div class="grid__unit one-whole">
+<div class="grid__item one-whole">
 {% for post in site.posts %}
 {% unless post.next %}
 <h3>{{ post.date | date: '%Y' }}</h3>
