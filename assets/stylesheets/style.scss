@@ -43,9 +43,13 @@ body {
 }
 
 .wrapper {
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  max-width: 45rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 1rem;
+  &.wrapper--big {
+    max-width: 60rem;
+  }
 }
 
 footer {
@@ -63,8 +67,6 @@ footer {
 
 .navbar {
   @include headings;
-  margin-top: 32px;
-  margin-top: 2rem;
   .nav {
     float: right;
   }
@@ -105,7 +107,6 @@ footer {
  */
 
 .logo {
-  margin: 1rem 0 0;
   width: 100px;
   max-width: 100px;
 }
@@ -317,18 +318,6 @@ blockquote {
  */
 
 .resume {
-  max-width: 44rem;
-  margin: 0 auto;
-  .nav {
-    li:first-child:before {
-      content: none;
-    }
-    li:before {
-      content: ' ♦ ';
-      color: $brand-color;
-      @include font-size(10px);
-    }
-  }
 }
 
 /**

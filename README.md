@@ -9,7 +9,7 @@ aniketpant.github.com
 
  
  * Inspired by [Ben Schwarz's site](http://germanforblack.com)
- * Fonts &ndash; [Adelle](https://typekit.com/fonts/adelle-web) &amp; [Source Sans Pro](https://typekit.com/fonts/source-sans-pro) served by Typekit
+ * Fonts &ndash; [Cubano](https://typekit.com/fonts/cubano) &amp; [Source Sans Pro](https://typekit.com/fonts/source-sans-pro) served by Typekit
  * And the beautiful colors are &ndash;
   1. #EE2B43
   2. #BF2C47

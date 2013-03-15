@@ -3,7 +3,7 @@ layout: base
 ---
 <div class="page {{ page.slug }}">
 	{% if page.slug != 'home' %}
-	<header class="grid__unit one-whole">
+	<header class="grid__item one-whole">
 		<h1 class="page_title">{{ page.title }}</h1>
 	</header>
 	{% endif %}
@@ -15,7 +15,9 @@ layout: base
     <a href="http://www.aniketpant.com" itemprop="url">aniketpant.com</a>
 	</div>
 	{% endif %}
-	<article role="main">
-	{{ content }}  
+	<article class="grid__item one-whole" role="main">
+		<div class="grid">
+		{{ content }}
+		</div>
 	</article>
 </div><!-- page -->

@@ -3,8 +3,7 @@ layout: page
 title: About Me
 slug: about-me
 ---
-<div class="g one-whole text-cols--2 portable-text-cols--1 " markdown="1">
-
+<div class="grid__item one-whole" markdown="1">
 ## Howdy!
 
 Hey, I am Aniket and I have been around on the web since 2010. It's not long but it been quite an [adventure](/archive) since then. In all this time I have worked with various web frameworks and nowadays I am experimenting with Ruby.
