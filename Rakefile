@@ -85,7 +85,7 @@ task :poem do
     abort("That name is in use already")
   end
   
-  puts "Creating new post: #{filename}"
+  puts "Creating new poem: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "author: Aniket"
@@ -95,4 +95,4 @@ task :poem do
     post.puts "category: poetry"
     post.puts "---"
   end
-end # task :post
+end # task :poetry
