@@ -1,25 +1,5 @@
-/*
- * Includes all of Inuit
- * Define custom variables that overwrite Inuit's defaults
- * Any Inuit variables not overwritten shall use the defaults
- */
-
-// Variables
 @import "vars";
-
-/* All of Inuit.css
- * This could be made nicer by moving vars into the inuit.css subfolder
- * and including it at the top of inuit.scss, as per justnorris's pull request
- * https://github.com/csswizardry/inuit.css/pull/105
- *
- * Because vendor/inuit.css is added to sass's load path then we don't need to
- * prefix everything with '../../vendor/inuit.css'. Inuit's vars.scss should be
- * moved into the inuit.css subfolder to make it obvious that these are inuit's
- * default variables
- */
 @import "inuit.css/inuit";
-
-// You own imports / custom code here
 
 /**
  * Helpers
