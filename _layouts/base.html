@@ -140,25 +140,7 @@
     })();
   </script>
 
-  <script type="text/javascript">
-    (function(doc, script) {
-      var js, 
-        fjs = doc.getElementsByTagName(script)[0],
-        frag = doc.createDocumentFragment(),
-        add = function(url, id) {
-            if (doc.getElementById(id)) {return;}
-            js = doc.createElement(script);
-            js.src = url;
-            id && (js.id = id);
-            frag.appendChild( js );
-        };
-        
-        // Twitter SDK
-        add('//platform.twitter.com/widgets.js');
-
-        fjs.parentNode.insertBefore(frag, fjs);
-    }(document, 'script'));
-  </script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 </body>
 </html>
