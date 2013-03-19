@@ -81,9 +81,9 @@
           <h3 class="section-heading">{% if page.type == 'post' %}Like my work?{% else %}Follow me on twitter{% endif %}</h3>
           {% if page.type == 'post' %}
           <p>Hey, you just went through <em>{{ page.content | number_of_words }}</em> words handcrafted by me. If you liked them, then you should definitely follow me on twitter and give me a shout out.</p>
-          {% else if page.category == 'poetry' %}
+          {% elsif page.category == 'poetry' %}
           <p>I write poetry at times and if you really like what I penned down, then share it with others and I hope you will remember my words.</p>
-          {% else if page.category == 'talk' %}
+          {% elsif page.category == 'talk' %}
           <p>If you liked my slides, then you should definitely follow me on twitter too.</p>
           {% else %}
           <p>I tweet about my ongoing projects, developments around the web and music.</p>
