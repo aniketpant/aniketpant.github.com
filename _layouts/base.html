@@ -17,8 +17,8 @@
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
   <meta name="twitter:site" content="@aniket_pant">
   <meta name="twitter:creator" content="@aniket_pant">
-  <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{ page.content }}">
+  <meta name="twitter:title" content="{{ page.title | strip_html | truncate:70 }}">
+  <meta name="twitter:description" content="{{ page.content | strip_html | truncate:200 }}">
 
   <!-- open graph tags -->
   {% if page.slug == "home" %}
