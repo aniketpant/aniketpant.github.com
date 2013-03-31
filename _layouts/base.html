@@ -12,17 +12,13 @@
   <meta name="keywords" content="aniket, pant, rawrrr, weblog, css, php, html, codeigniter, laravel, jekyll">
   <meta name="viewport" content="width=device-width">
 
-  {% capture text_title %}{{ page.title | strip_html }}{% endcapture %}
-  {% capture truncated_title %}{{ text_title | truncate: 70, '' }}{% endcapture %}
-  {% capture text_description %}{{ page.content | strip_html }}{% endcapture %}
-  {% capture truncated_description %}{{ text_description | truncate: 197, '' }}{% endcapture %}
   <!-- twitter cards -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
   <meta name="twitter:site" content="@aniket_pant">
   <meta name="twitter:creator" content="@aniket_pant">
-  <meta name="twitter:title" content="{{ truncated_title }}">
-  <meta name="twitter:description" content="{{ truncated_description }}...">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.content }}">
 
   <!-- open graph tags -->
   {% if page.slug == "home" %}
