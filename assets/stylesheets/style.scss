@@ -34,9 +34,9 @@ body {
 
 footer {
   a {
-    color: $color-3;
+    color: $red;
     &:hover {
-      color: darken($color-3, 10%);
+      color: darken($red, 10%);
     }
   }
 }
@@ -56,7 +56,7 @@ footer {
 }
 
 .info-bar {
-  background: darken($color-2, 10%);
+  background: darken($blue, 10%);
   padding: 1rem 0;
   margin-bottom: 1rem;
   .section-heading, p {
@@ -69,7 +69,7 @@ footer {
     &:hover {
       color: $white;
       text-decoration: none;
-      border-bottom: 1px solid darken($color-2, 20%);
+      border-bottom: 1px solid darken($blue, 20%);
     }
     &.highlight {
     background: rgba($white, 0.25);
@@ -88,19 +88,19 @@ footer {
     border: none;
   }
   li:nth-of-type(n+1) .highlight {
-    color: $color-1;
+    color: $red;
   }
   li:nth-of-type(n+2) .highlight {
-    color: lighten($color-1, 5%);
+    color: lighten($red, 5%);
   }
   li:nth-of-type(n+3) .highlight {
-    color: lighten($color-1, 10%);
+    color: lighten($red, 10%);
   }
   li:nth-of-type(n+4) .highlight {
-    color: lighten($color-1, 15%);
+    color: lighten($red, 15%);
   }
   li:nth-of-type(n+5) .highlight {
-    color: lighten($color-1, 20%);
+    color: lighten($red, 20%);
   }
 }
 
@@ -136,15 +136,15 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 a {
-  color: $color-2;
+  color: $blue;
   text-decoration: none;
   @include vendor(transition, all 100ms linear);
   &:hover {
-    color: darken($color-2, 20%);
+    color: $red;
   }
   &:active {
-    color: ligten($color-2, 20%);
-    background: rgba($color-2, 0.1);
+    color: lighten($blue, 20%);
+    background: rgba($blue, 0.1);
   }
 }
 
@@ -169,16 +169,16 @@ a {
     padding: 0 1rem 0 0;
   }
   a {
-    color: $color-3;
-    border-bottom: 3px solid $color-3;
+    color: $red;
+    border-bottom: 3px solid $red;
     &:hover {
-      color: darken($color-2, 10%);
-      border-bottom: 3px solid darken($color-2, 10%);
+      color: darken($blue, 10%);
+      border-bottom: 3px solid darken($blue, 10%);
       text-decoration: none;
     }
     &:active {
       color: $gray;
-      border-bottom: 3px solid $color-2;
+      border-bottom: 3px solid $blue;
     }
   }
 }
@@ -204,7 +204,7 @@ a {
  */
 
 .post_title {
-  color: darken($color-2, 10%);
+  color: darken($blue, 10%);
 }
 
 .meta {
@@ -218,47 +218,52 @@ a {
  */
 
 .highlight {
-  color: $color-1;
+  color: $red;
 }
 
 .highlight--block {
-  background: lighten($color-1, 10%);
+  background: lighten($red, 10%);
   color: $white;
   &:hover {
-    background: $color-1;
+    background: $red;
     color: $white;
   }
 }
 
 .archive, .home {
   .split__detail {
-    color: $color-1;
+    color: $red;
   }
 }
 
 .meta--info {
-  background: lighten(rgba($color-2, 0.15), 50%);
+  background: lighten(rgba($blue, 0.15), 50%);
   border-radius: 5px;
 }
 
 .note {
-  background: rgba($color-2, 0.15);
-  border-bottom: 1px solid rgba($color-2, 0.25);
+  background: rgba($blue, 0.15);
+  border-bottom: 1px solid rgba($blue, 0.25);
 }
 
 blockquote {
-  border-left: 0.25rem solid lighten($color-1, 20%);
+  border-left: 0.25rem solid lighten($red, 20%);
   padding-left: 1rem;
   margin-left: 1rem;
   @include vendor(transition, border-color 250ms linear);
   &:hover {
-    border-color: $color-1;
+    border-color: $red;
   }
 }
 
-::selection, ::-moz-selection, ::-webkit-selection {
+::selection {
   color: #FAFAFA;
-  background: lighten($gray, 10%);
+  background-color: lighten($gray, 10%);  
+}
+
+::-moz-selection {
+  color: #FAFAFA;
+  background-color: lighten($gray, 10%);
 }
 
 .full-width {
@@ -266,7 +271,7 @@ blockquote {
 }
 
 .zen-space {
-  background: $color-1;
+  background: lighten($red, 10%);
   height: 5px;
 }
 
