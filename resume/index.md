@@ -13,7 +13,7 @@ slug: resume
       	<li><a href="mailto:me@aniketpant.com">me@aniketpant.com</a></li><!--
       	--><li><a href="http://aniketpant.com">aniketpant.com</a></li><!--
         --><li><a href="https://twitter.com/aniket_Pant">@aniket_pant</a></li><!--
-        --><li><a href="https://github.com/aniketpant">Github</a></li>
+        --><li><a href="https://github.com/aniketpant">GitHub</a></li>
       </ul>
     </header> <!-- header -->
   </div>
