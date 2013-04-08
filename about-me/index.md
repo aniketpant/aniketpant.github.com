@@ -11,7 +11,7 @@ slug: about-me
 **Nowadays, I am having fun with Ruby and killing time by building features on small applications.**
 
 <div class="islet">
-  <img class="img--center img--small" src="/assets/images/thats-me.jpg" />
+  <img class="img--center img--small" src="/assets/images/me-again.jpg" />
 </div>
 
 ## So, what all do I do?
