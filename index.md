@@ -3,7 +3,7 @@ layout: page
 title: Home
 slug: home
 ---
-<section class="grid__item one-whole text-cols--2 portable-text-cols--1 landmark" markdown="1">
+<section class="grid__item one-whole landmark" markdown="1">
 I'm **Aniket**. I love to code, listen to music and I even write free-verses at times. A majority of my work involves _writing syntax for design_.
 
 Three of my tools are Codeigniter, Laravel and WordPress. But there is another power that I have which allows me to think of great application architectural designs. Other than that I _love to speak_ at events and blabber about music.

@@ -170,6 +170,7 @@ a {
   a {
     color: $red;
     border-bottom: 3px solid $red;
+    text-transform: uppercase;
     &:hover {
       color: darken($blue, 10%);
       border-bottom: 3px solid darken($blue, 10%);
@@ -280,28 +281,16 @@ blockquote {
 
 @include media-query(portable) {
   .logo {
+    max-width: 150px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 150px;
-  }
-  .portable-nav--stacked {
-    text-align:center;
-  }
-  .portable-text-cols--1 {
-    @include vendor(column-count, 1);
-  }
-  .navbar {
-    .nav {
-      float: none;
-    }
-    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 @include media-query(palm) {
   .logo {
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100px;
   }
   .split {
     text-align: left;
@@ -312,6 +301,21 @@ blockquote {
         content: "-";
         margin-left: 0.5rem;
       } 
+    }
+  }
+  .palm-nav--stacked {
+    text-align:center;
+  }
+  .navbar {
+    .nav {
+      float: none;
+      li {
+        display: list-item;
+        a {
+          display: block;
+          border-bottom: none;
+        }
+      }
     }
   }
   .img--short{
