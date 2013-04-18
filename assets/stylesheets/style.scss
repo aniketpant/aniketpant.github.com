@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .lead {
   @include font-size($base-font-size * 1.25);
-  color: lighten($gray, 10%);
+  color: darken($gray, 10%);
 }
 
 /**
