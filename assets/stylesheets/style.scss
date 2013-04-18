@@ -41,6 +41,12 @@ footer {
   }
 }
 
+article[role="main"], .info-bar a {
+  a {
+    font-weight: bold;
+  }
+}
+
 .main-container {
   margin-bottom: 1rem;
 }
@@ -63,7 +69,6 @@ footer {
     color: $white;
   }
   a {
-    font-weight: bold;
     color: $white;
     border-bottom: 1px solid $white;
     &:hover {
