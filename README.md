@@ -15,3 +15,5 @@ aniketpant.github.com
   2. #BF2C47
   3. #F23535
   4. #037F8C
+
+Content in the _posts folder is copyrighted. All other aspects of this repository are MIT licensed.
