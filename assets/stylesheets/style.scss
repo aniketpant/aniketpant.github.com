@@ -65,6 +65,9 @@ article[role="main"], .info-bar {
   background: darken($blue, 10%);
   padding: 1rem 0;
   margin-bottom: 1rem;
+  .section-heading {
+    @include content;
+  }
   .section-heading, p {
     color: $white;
   }
@@ -263,7 +266,7 @@ blockquote {
 
 ::selection {
   color: #FAFAFA;
-  background-color: lighten($gray, 10%);  
+  background-color: lighten($gray, 10%);
 }
 
 ::-moz-selection {
@@ -305,7 +308,7 @@ blockquote {
       &::before {
         content: "-";
         margin-left: 0.5rem;
-      } 
+      }
     }
   }
   .palm-nav--stacked {
@@ -370,7 +373,7 @@ blockquote {
     display: none;
     width: 0;
     height: 0;
-    border-left: 10px solid transparent; 
+    border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid #000;
     border-top: 0;
