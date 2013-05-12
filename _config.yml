@@ -1,6 +1,6 @@
 permalink: /:year/:month/:title
 markdown: kramdown
-exclude: ['Rakefile', 'CNAME', 'sass/', 'script/', 'README.md']
+exclude: ['Rakefile', 'CNAME', 'sass/', 'script/', 'README.md', 'LICENSE']
 
 url: http://aniketpant.com
 
