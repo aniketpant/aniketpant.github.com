@@ -265,13 +265,13 @@ blockquote {
 }
 
 ::selection {
-  color: #FAFAFA;
-  background-color: lighten($gray, 10%);
+  color: $white;
+  background-color: darken($gray, 10%);
 }
 
 ::-moz-selection {
-  color: #FAFAFA;
-  background-color: lighten($gray, 10%);
+  color: $white;
+  background-color: darken($gray, 10%);
 }
 
 .full-width {
