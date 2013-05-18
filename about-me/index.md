@@ -23,5 +23,5 @@ I love to code. I guess there is no doubt about it. And if you still are a bit s
 Along with all of the above, I also founded **[Mark My Word](http://markmyword.in)**, which is India's First Content &amp; Design Conference.
 
 ## Initiate contact
-Just go ahead and **[tweet me](https://twitter.com/intent/tweet?screen_name=aniket_pant&text=Hey)**. If you're afraid of that, then you can [drop a mail](mailto:me@aniketpant.com?subject=Hey). And if by any chance you're looking for my codes, then you can [fork me](https://github.com/aniketpant).
+Just go ahead and **[tweet me](https://twitter.com/intent/tweet?screen_name=aniket_pant&text=Hey)**. If you're afraid of that, then you can <a href="me@aniketpant.com?subject=Hey">drop a mail</a>. And if by any chance you're looking for my codes, then you can [fork me](https://github.com/aniketpant).
 </div>

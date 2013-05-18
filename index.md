@@ -8,7 +8,7 @@ I'm **Aniket**. I love to code, listen to music and I even write free-verses at 
 
 Three of my tools are Codeigniter, Laravel and WordPress. But there is another power that I have which allows me to think of great application architectural designs. Other than that I _love to speak_ at events and blabber about music.
 
-If you wish to consult me for any project, or if you want me to [speak](/speaking) at an event, say [hello](mailto:me@aniketpant.com).
+If you wish to consult me for any project, or if you want me to [speak](/speaking) at an event, say <a href="me@aniketpant.com?subject=Hey">hello</a>.
 </section>
 <section class="grid__item one-whole" markdown="1">
 ### Recent writings
