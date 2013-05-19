@@ -1,1 +1,0 @@
-sass --watch --style compressed --load-path assets/stylesheets/inuit.css assets/stylesheets/style.scss:assets/stylesheets/style.min.css
