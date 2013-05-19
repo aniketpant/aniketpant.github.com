@@ -6,7 +6,7 @@ require 'time'
 # Rake tools
 # Based on jekyll-bootstrap
 # post: Create new post
-# page: Create new page
+# poem: Create new poem
 
 SOURCE = "."
 CONFIG = {
@@ -31,7 +31,7 @@ task :post do
   if File.exist?(filename)
     abort("That name is in use already")
   end
-  
+
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
@@ -45,28 +45,6 @@ task :post do
     post.puts "---"
   end
 end # task :post
-
-# Usage: rake page name="about"
-desc "Create a new page."
-task :page do
-  name = ENV["name"] || "new-page.md"
-  filename = File.join(SOURCE, "#{name}")
-  title = File.basename(filename, File.extname(filename)).gsub(/[\W\_]/, " ").gsub(/\b\w/){$&.upcase}
-  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-  if File.exist?(filename)
-    abort("That name is in use already")
-  end
-  
-  mkdir_p slug
-  puts "Creating new page: #{slug}/index.md"
-  open("#{slug}/index.md", 'w') do |post|
-    post.puts "---"
-    post.puts "layout: page"
-    post.puts "title: #{title}"
-    post.puts "slug: #{slug}"
-    post.puts "---"
-  end
-end # task :page
 
 # Usage: rake poem title="A Title" [date="2012-02-09"]
 desc "Begin a new poem in #{CONFIG['posts']}"
@@ -84,7 +62,7 @@ task :poem do
   if File.exist?(filename)
     abort("That name is in use already")
   end
-  
+
   puts "Creating new poem: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
@@ -95,4 +73,4 @@ task :poem do
     post.puts "category: poetry"
     post.puts "---"
   end
-end # task :poetry
+end # task :poem
