@@ -2,7 +2,7 @@
 layout: base
 ---
 <div class="post">
-	<header class="grid__item one-whole landmark">
+	<header class="grid__item one-whole">
 		<h1 class="post_title">{{ page.title }}</h1>
 		<div class="meta">
       <p>Written on <date class="date">{{ page.date | date_to_long_string }}</date><br/>
@@ -12,7 +12,7 @@ layout: base
 	</header><!--
   --><div class="grid__item one-whole">
 		<article role="main">
-	  	{{ content }}  
+	  	{{ content }}
 		</article>
     <footer>
       <div class="meta--info islet">
