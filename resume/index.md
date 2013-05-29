@@ -38,7 +38,7 @@ slug: resume
 
       <hr class="grid__unit one-whole rule rule--dotted" />
 
-			<h3>2012 &ndash 2013
+			<h3>2012 &ndash; 2013<h3>
 			
       <p><em>Lead Front End Developer at <a href="http://webmutiny.in">Web Mutiny</a></em></p>
     	<p>The major concentration of my work was building websites which have a strong foundation making them easier to scale.</p>
