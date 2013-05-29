@@ -35,9 +35,13 @@ slug: resume
 
 			<p><em>Curator of <a href="http://markmyword.in">Mark My Word</a></em></p>
 			<p>Founded Mark My Word which is India's First Content &amp; Design Conference featuring speakers around India and gathering a crowd of over 500 people.</p>
+
+      <hr class="grid__unit one-whole rule rule--dotted" />
+
+			<h3>2012 &ndash 2013
 			
-      <p><em>Front-end Lead at <a href="http://webmutiny.in">Web Mutiny</a></em></p>
-    	<p>The major concentration of my work is in building websites which have a strong foundation making them easier to scale.</p>
+      <p><em>Lead Front End Developer at <a href="http://webmutiny.in">Web Mutiny</a></em></p>
+    	<p>The major concentration of my work was building websites which have a strong foundation making them easier to scale.</p>
       
       <hr class="grid__unit one-whole rule rule--dotted" />
 
