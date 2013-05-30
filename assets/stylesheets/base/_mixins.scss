@@ -1,0 +1,9 @@
+// Mixins
+
+@mixin content {
+  font-family: $content;
+}
+
+@mixin headings {
+  font-family: $headings;
+}

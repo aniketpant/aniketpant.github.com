@@ -1,0 +1,21 @@
+// Navigation
+
+.navbar {
+  li {
+    padding: 0 1rem 0 0;
+  }
+  a {
+    color: $red;
+    border-bottom: 3px solid $red;
+    text-transform: uppercase;
+    &:hover {
+      color: darken($blue, 10%);
+      border-bottom: 3px solid darken($blue, 10%);
+      text-decoration: none;
+    }
+    &:active {
+      color: $gray;
+      border-bottom: 3px solid $blue;
+    }
+  }
+}

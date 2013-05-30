@@ -1,0 +1,15 @@
+// Typography
+
+body {
+  @include content;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include headings;
+  color: #3d3d3d;
+}
+
+.lead {
+  @include font-size($base-font-size * 1.25);
+  color: darken($gray, 10%);
+}

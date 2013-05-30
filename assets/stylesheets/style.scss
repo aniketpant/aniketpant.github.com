@@ -1,21 +1,26 @@
+// variables and overrides
 @import "vars";
+
+// inuit.css core
 @import "inuit.css/inuit";
 
-/**
- * Helpers
- */
+// base
+@import "base/mixins";
+@import "base/links";
+@import "base/typography";
 
-@mixin content {
-  font-family: $content;
-}
+// elements
+@import "elements/navbar";
+@import "elements/blockquote";
 
-@mixin headings {
-  font-family: $headings;
-}
+// miscellaneous
+@import "misc/miscellaneous";
+@import "misc/selection";
+@import "misc/highlight";
+@import "misc/code-theme";
 
-/**
- * $CONTENT-AREAS
- */
+// responsive
+@import "responsive";
 
 body {
   background: $white;
@@ -112,47 +117,9 @@ article[role="main"], .info-bar {
   }
 }
 
-/**
- * ~LOGO
- */
-
 .logo {
   width: 100px;
   max-width: 100px;
-}
-
-/**
- * $TYPOGRAPHY
- */
-body {
-  @include content;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  @include headings;
-  color: #3d3d3d;
-}
-
-.lead {
-  @include font-size($base-font-size * 1.25);
-  color: darken($gray, 10%);
-}
-
-/**
- * $LINKS
- */
-
-a {
-  color: $blue;
-  text-decoration: none;
-  @include vendor(transition, all 100ms linear);
-  &:hover {
-    color: $red;
-  }
-  &:active {
-    color: darken($blue, 10%);
-    background: rgba($blue, 0.1);
-  }
 }
 
 .page_title {
@@ -167,34 +134,6 @@ a {
   }
 }
 
-/**
- * $NAV
- */
-
-.navbar {
-  li {
-    padding: 0 1rem 0 0;
-  }
-  a {
-    color: $red;
-    border-bottom: 3px solid $red;
-    text-transform: uppercase;
-    &:hover {
-      color: darken($blue, 10%);
-      border-bottom: 3px solid darken($blue, 10%);
-      text-decoration: none;
-    }
-    &:active {
-      color: $gray;
-      border-bottom: 3px solid $blue;
-    }
-  }
-}
-
-/**
- * $SECTIONS
- */
-
 .post--header {
   margin-bottom: 1em;
 }
@@ -207,10 +146,6 @@ a {
   @include headings;
 }
 
-/**
- * $POST
- */
-
 .post_title {
   color: darken($blue, 10%);
 }
@@ -221,253 +156,8 @@ a {
   }
 }
 
-/**
- * $MISC
- */
-
-.highlight {
-  color: $red;
-}
-
-.highlight--block {
-  background: lighten($red, 10%);
-  color: $white;
-  &:hover {
-    background: $red;
-    color: $white;
-  }
-}
-
 .archive, .home {
   .split__detail {
     color: $red;
   }
-}
-
-.meta--info {
-  background: lighten(rgba($blue, 0.15), 50%);
-  border-radius: 5px;
-}
-
-.note {
-  background: rgba($gray, 0.1);
-  border-bottom: 1px solid rgba($blue, 0.25);
-}
-
-blockquote {
-  border-left: 0.25rem solid lighten($red, 20%);
-  padding-left: 1rem;
-  margin-left: 1rem;
-  @include vendor(transition, border-color 250ms linear);
-  &:hover {
-    border-color: $red;
-  }
-}
-
-::selection {
-  color: $white;
-  background-color: darken($gray, 10%);
-}
-
-::-moz-selection {
-  color: $white;
-  background-color: darken($gray, 10%);
-}
-
-.full-width {
-  width: 100%;
-}
-
-.zen-space {
-  background: lighten($red, 10%);
-  height: 5px;
-}
-
-/**
- * $MEDIA_QUERIES
- */
-
-@include media-query(portable) {
-  .logo {
-    max-width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-  }
-}
-
-@include media-query(palm) {
-  .logo {
-    max-width: 100px;
-  }
-  .split {
-    text-align: left;
-    .split__detail {
-      color: #999;
-      margin-left: 0;
-      &::before {
-        content: "-";
-        margin-left: 0.5rem;
-      }
-    }
-  }
-  .palm-nav--stacked {
-    text-align:center;
-  }
-  .navbar {
-    .nav {
-      float: none;
-      li {
-        display: list-item;
-        a {
-          display: block;
-          border-bottom: none;
-        }
-      }
-    }
-  }
-  .img--short{
-    height: auto;
-      max-height:5 * $base-spacing-unit;
-  }
-  .img--medium{
-    height: auto;
-      max-height:10 * $base-spacing-unit;
-  }
-  .img--tall{
-    height: auto;
-      max-height:15 * $base-spacing-unit;
-  }
-}
-
-/**
- * $RESUME
- */
-
-.resume {
-  h1, h2, h3, h4, h5, h6 {
-    @include content;
-    color: #3d3d3d;
-  }
-}
-
-/**
- * BOASTFUL
- */
-
-.boastful {
-  display: inline;
-  font-family: $headings;
-  img{
-    width: 48px;
-    height: 48px;
-    margin: 3px;
-    border: 0;
-    border-radius: 7px 0 7px 0;
-  }
-  .boastful_pointer{
-    position: absolute;
-    z-index: 999;
-    left: -9999px;
-    opacity: .7;
-    display: none;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #000;
-    border-top: 0;
-  }
-  .boastful_tweet{
-    position: absolute;
-    z-index: 999;
-    left: -9999px;
-    background-color: $gray;
-    opacity: .8;
-    padding: 5px;
-    width: 250px;
-    @include font-size($base-font-size * 0.8);
-    text-shadow: 1px 1px 0 #000;
-    color: #eee;
-    border-radius: 7px;
-  }
-  .boastful_handle{
-    @include font-size($base-font-size * 0.9);
-    font-weight: bold;
-  }
-}
-
-/**
- * GitHub theme
- * for rainbow.js
- *
- * @author Craig Campbell
- * @version 1.0.4
- */
-pre {
-  border: 1px solid #ccc;
-  word-wrap: break-word;
-  padding: 6px 10px;
-  line-height: 19px;
-  margin-bottom: 20px;
-  code {
-    border: 0px;
-    padding: 0px;
-    margin: 0px;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-  }
-  .comment {
-    color: #998;
-  }
-  .support {
-    color: #0086B3;
-  }
-  .tag, .tag-name {
-    color: navy;
-  }
-  .keyword, .css-property, .vendor-fix, .sass, .class, .id, .css-value, .entity.function, .storage.function {
-    font-weight: bold;
-  }
-  .css-property, .css-value, .vendor-prefix, .support.namespace {
-    color: #333;
-  }
-  .constant.numeric, .keyword.unit, .hex-color {
-    font-weight: normal;
-    color: #099;
-  }
-  .entity.class {
-    color: #458;
-  }
-  .entity.id, .entity.function {
-    color: #900;
-  }
-  .attribute, .variable {
-    color: teal;
-  }
-  .string, .support.value  {
-    font-weight: normal;
-    color: #d14;
-  }
-  .regexp {
-    color: #009926;
-  }
-}
-code {
-  border: 1px solid #eaeaea;
-  margin: 0px 2px;
-  padding: 0px 5px;
-  font-size: 12px;
-}
-pre, code {
-  font-family: Consolas, 'Liberation Mono', Courier, monospace;
-  color: #333;
-  background: #f8f8f8;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-pre, pre code {
-  font-size: 13px;
 }

@@ -1,0 +1,14 @@
+// Links
+
+a {
+  color: $blue;
+  text-decoration: none;
+  @include vendor(transition, all 100ms linear);
+  &:hover {
+    color: $red;
+  }
+  &:active {
+    color: darken($blue, 10%);
+    background: rgba($blue, 0.1);
+  }
+}

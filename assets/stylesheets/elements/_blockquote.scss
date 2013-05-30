@@ -1,0 +1,11 @@
+// Blockquote
+
+blockquote {
+  border-left: 0.25rem solid lighten($red, 20%);
+  padding-left: 1rem;
+  margin-left: 1rem;
+  @include vendor(transition, border-color 250ms linear);
+  &:hover {
+    border-color: $red;
+  }
+}
