@@ -103,7 +103,7 @@ Projects:
 
 - Inventory Allotment App
 
-  The project required me to redesign the database and refactor the code for an already existing inventory application. The old application lacked a number of features and the code had to be rewritten. I build the application using Laravel and MySQL.
+  The project required me to redesign the database and refactor the code for an already existing inventory application. The old application lacked a number of features and the code had to be rewritten. I built the application using Laravel and MySQL.
 
 **10th &amp; 12th &mdash; CBSE Board**
 
