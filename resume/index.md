@@ -3,124 +3,116 @@ layout: custom
 title: Resume
 slug: resume
 ---
-<div class="header-container">
-  <div class="zen-space full-width"></div>
-  <div class="grid wrapper">
-    <header class="grid__unit one-whole" role="banner">
-      <h1 class="grid__unit one-whole title text--center">Aniket Pant</h1>
-      <hr class="grid__unit one-whole rule" />
-      <ul class="grid__unit one-whole nav nav--banner nav--block">
-      	<li><a href="mailto:me@aniketpant.com">me@aniketpant.com</a></li><!--
-      	--><li><a href="http://aniketpant.com">aniketpant.com</a></li><!--
-        --><li><a href="https://twitter.com/aniket_Pant">@aniket_pant</a></li><!--
-        --><li><a href="https://github.com/aniketpant">GitHub</a></li>
-      </ul>
-    </header> <!-- header -->
-  </div>
-</div> <!-- header-container -->
+<div class="zen-space full-width"></div>
+<div class="grid wrapper">
+<header class="grid__item one-quarter push--top portable-one-whole" role="banner">
+  <h1 class="grid__item one-whole beta">Aniket Pant</h1>
+  <nav>
+    <ul class="grid__item one-whole nav nav--stacked">
+    	<li><a href="mailto:me@aniketpant.com">me@aniketpant.com</a></li><!--
+    	--><li><a href="http://aniketpant.com">aniketpant.com</a></li><!--
+      --><li><a href="https://twitter.com/aniket_pant">@aniket_pant</a></li><!--
+      --><li><a href="https://github.com/aniketpant">GitHub</a></li>
+    </ul>
+  </nav>
+</header><!--
+--><div class="grid__item three-quarters portable-one-whole push--top" role="main" markdown="1">
+## About Me
 
-<div class="main-container">
-  <div class="grid wrapper" role="main">
-  	<section>
-  		<h2>Summary</h2>
-  		<p markdown="1">
-  			I am a passionate about making the **front-end semantic and understandable**. I love to build new applications and fiddling with any new technology out there.
-  		</p>
-  	</section>
-    <hr class="grid__unit one-whole rule" />
-  	<section>
-  		<h2>Experience</h2>
+I am a full stack developer with expertise in front-end, passionate about making the **front-end semantic and understandable**. I love to build new applications and fiddling with any new technology out there. Currently, I am working with Ruby and experimenting with Rails.
 
-  		<h3>2012 &ndash; Present</h3>
+## Experience
 
-			<p><em>Curator of <a href="http://markmyword.in">Mark My Word</a></em></p>
-			<p>Founded Mark My Word which is India's First Content &amp; Design Conference featuring speakers around India and gathering a crowd of over 500 people.</p>
+### Curator of [Mark My Word](http://markmyword.in)
 
-      <hr class="grid__unit one-whole rule rule--dotted" />
+Feb, 2012 &ndash; Present
 
-			<h3>2012 &ndash; 2013</h3>
-			
-      <p><em>Lead Front End Developer at <a href="http://webmutiny.in">Web Mutiny</a></em></p>
-    	<p>The major concentration of my work was building websites which have a strong foundation making them easier to scale.</p>
-      
-      <hr class="grid__unit one-whole rule rule--dotted" />
+Founded Mark My Word which is India's First Content &amp; Design Conference featuring speakers around India and gathering a crowd of over 500 people.
 
-			<h3>2011</h3>
+### Lead Front End Developer at [Web Mutiny](http://webmutiny.in)
 
-			<p><em>Intern at <a href="http://nih.ernet.in">National Institute of Hydrology, Roorkee</a></em></p>
-			<p>Worked in Remote Sensing &amp; GIS Laboratory and learnt how to use different GIS software. Along with this, I also worked on a project on "Web GIS and Its Applications in Water Resource Systems".</p>
+Nov, 2012 &ndash; May, 2013
 
-			<p><em>Developer at <a href="http://tedxbitsgoa.com/2012">TEDxBITSGoa 2012</a></em></p>
-			<p>Built the website for TEDxBITSGoa 2012. The entire design and development of the website was handled by me.</p>
-      
-      <hr class="grid__unit one-whole rule rule--dotted" />
-      
-      <h3>2010</h3>
+The major concentration of my work was building websites which have a strong foundation making them easier to scale. During my term at Web Mutiny, I worked on two projects:
 
-			<p><em>Summer Intern at <a href="http://lsipl.com">Logicsoft International Private Limited</a></em></p>
-			<p>Worked as a summer intern working with ASP .NET and SQL Server 2005. I got the opportunity to work on a live project and understand how projects are handled.</p>
-  	</section>
-    <hr class="grid__unit one-whole rule" />
-  	<section>
-  		<h2>Speaking</h2>
-  		<p>I have been a speaker at the following events in the past &ndash;</p>
-  		<ul>
-        {% for post in site.posts %}{% if post.category == 'talk' %}
-        <li><a href="{{ post.url }}">{{ post.title }} on <span class="highlight">{{ post.topic }}</span></a></li>
-        {% endif %}{% endfor %}
-  		</ul>
-  	</section>
-    <hr class="grid__unit one-whole rule" />
-  	<section>
-  		<h2>Technical Skills</h2>
-  		<p>I have a good level of understanding of projects and my major skill lies in creating the architecture for projects which involves planning at the modular level, the database design and the timeline for the project.</p>
-  		<ul class="matrix two-cols">
-  			<li class="all-cols"><strong>Front-end stack</strong></li>
-  			<li>HTML(5)</li>
-  			<li>CSS(3)</li>
-  			<li>Haml, Sass and LESS</li>
-  			<li>Javascript</li>
-  			<li class="all-cols"><strong>Back-end stack</strong></li>
-  			<li>PHP &ndash; Codeigniter &amp; Laravel</li>
-  			<li>SQL &ndash; MySQL &amp; SQL Server 2005</li>
-  		</ul>
-  	</section>
-    <hr class="grid__unit one-whole rule" />
-  	<section>
-  		<h2>Education</h2>
-  		<table class="table--bordered">
-        <colgroup>
-          <col class="t25">
-          <col class="t25">
-          <col>
-        </colgroup>
-        <tbody>
-    			<tr>
-    				<td><strong>2010 &ndash; Present</strong></td>
-    				<td colspan="2">
-    					<p><strong>B.E (Hons) Mechanical Engineering</strong></p>
-    					<p><a href="http://universe.bits-pilani.ac.in">BITS Pilani</a></p>
-              <p>Undertook Internetworking Technologies, Journalism, Financial Management as electives. I also developed an Inventory Allotment application as a project which is used by the faculty.</p>
-    				</td>
-    			</tr>
-    			<tr>
-    				<td><strong>2008 &ndash; 2010</strong></td>
-    				<td colspan="2">
-    					<p><strong>10th &amp; 12th &mdash; CBSE Board</strong></p>
-    					<p><a href="http://www.apsdk.com">Army Public School, Dhaula Kuan</a></p>
-    				</td>
-    			</tr>
-        </tbody>
-  		</table>
-  	</section>
-    <hr class="grid__unit one-whole rule" />
-  	<section>
-  		<h2>Professional Interests</h2>
-  		<p>application building, database design, project conceptualization, front-end web development, educating people about the web, typography</p>
-    </section>
-  </div> <!-- main -->
-</div> <!-- main-container -->
+- [**Instamojo**](http://instamojo.com)
 
-<div class="footer-container">
-  <div class="zen-space full-width"></div>
-</div>
+  Created a static website design using Jekyll. inuit.css was used as the CSS framework as it provides a strong foundation for designing. All page templates and basic page designs were created by me.
+
+- **Current News**
+
+  Built a new child theme for Thesis. The theme had support for a new custom post type which was further associated with taxonomies of it's own. The features needed for creating the new site required the creation of a number of custom loops. We created a Custom Loop API of our own which made the creation of pages simpler. The theme also had a number of custom hooks created by us. Metabox support for custom post types was built using [Custom Metaboxes and Fields for WordPress](https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress).
+
+### Developer at [TEDxBITSGoa 2012](http://tedxbitsgoa.com/2012)
+
+Feb, 2012 &ndash; May, 2012
+
+The entire design and development of the TEDxBITSGoa 2012 website was handled by me. The website was developed over WordPress and I created a new theme that used a custom post types for listing the speakers. The theme used Bones as the WordPress theme framework. The curator of TEDxBITSGoa 2012 was looking for a fresh design for the event and he did not want to go for the usual designs followed by other TEDx events happening around. CSS animations were new around the scene that time and I created some interactive elements for the website.
+
+### Intern at [National Institute of Hydrology, Roorkee](http://nih.ernet.in)
+
+May, 2012 &ndash; July, 2012
+
+Worked in Remote Sensing &amp; GIS Laboratory and spent my time learning different GIS software. The completion of the internship also involved a project titled "Web GIS and its Applications in Water Resource Systems". The project required me to create a web application using Open GIS.
+
+### Summer Intern at [Logicsoft International Private Limited](http://lsipl.com)
+
+May, 2011 &ndash; July, 2011
+
+Worked as a summer intern working with C#, ASP .NET and SQL Server 2005. The initial phase of my internship went into learning the required technologies from my mentor. Later, I got the opportunity to work on a live project with the entire team and understand how projects are handled.
+
+## Speaking
+
+I love to speak and I have been a speaker at a few events in the past:
+
+{% for post in site.posts %}{% if post.category == 'talk' %}
+- [{{ post.title }} on {{ post.topic }}]({{ post.url }})<!--
+-->{% endif %}{% endfor %}
+
+In April 2013, I conducted a workshop on HTML5 organized by Mozilla User Group, Goa for final year students of various colleges from Goa.
+
+## Technical Skills
+
+I have a good level of understanding of projects and my major skill lies in creating the architecture for projects which involves planning at the modular level, the database design and the timeline for the project.
+
+**Front-end stack**
+
+- HTML(5)
+- CSS(3)
+- Haml, LESS, Sass and Compass
+- jQuery
+
+**Back-end stack**
+
+- PHP &ndash; Codeigniter, Laravel and WordPress
+- SQL &ndash; MySQL
+
+## Education
+
+**B.E (Hons) Mechanical Engineering**
+
+2010 &ndash; Present<br>
+[BITS Pilani](http://universe.bits-pilani.ac.in)
+
+Electives undertaken:
+
+- Internetworking Technologies
+- Journalism
+- Financial Management
+
+Projects:
+
+- Inventory Allotment App
+
+  The project required me to redesign the database and refactor the code for an already existing inventory application. The old application lacked a number of features and the code had to be rewritten. I build the application using Laravel and MySQL.
+
+**10th &amp; 12th &mdash; CBSE Board**
+
+2008 &ndash; 2010<br>
+[Army Public School, Dhaula Kuan](http://www.apsdk.com)
+
+## Professional Interests
+
+application building, database design, project conceptualization, front-end web development, educating people about the web, typography
+</div></div>
+<div class="zen-space full-width"></div>
