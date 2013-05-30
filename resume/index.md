@@ -19,7 +19,7 @@ slug: resume
 --><div class="grid__item three-quarters portable-one-whole push--top" role="main" markdown="1">
 ## About Me
 
-I am a full stack developer with expertise in front-end, passionate about making the **front-end semantic and understandable**. I love to build new applications and fiddling with any new technology out there. Currently, I am working with Ruby and experimenting with Rails.
+I am a self-taught full stack developer with expertise in front-end, passionate about making the **front-end semantic and understandable**. I love to build new applications and fiddling with any new technology out there. Currently, I am working with Ruby and experimenting with Rails.
 
 ## Experience
 
@@ -45,7 +45,7 @@ The major concentration of my work was building websites which have a strong fou
 
 ### Developer at [TEDxBITSGoa 2012](http://tedxbitsgoa.com/2012)
 
-Feb, 2012 &ndash; May, 2012
+Nov, 2011 &ndash; Feb, 2012
 
 The entire design and development of the TEDxBITSGoa 2012 website was handled by me. The website was developed over WordPress and I created a new theme that used a custom post types for listing the speakers. The theme used Bones as the WordPress theme framework. The curator of TEDxBITSGoa 2012 was looking for a fresh design for the event and he did not want to go for the usual designs followed by other TEDx events happening around. CSS animations were new around the scene that time and I created some interactive elements for the website.
 
@@ -56,7 +56,6 @@ May, 2012 &ndash; July, 2012
 Worked in Remote Sensing &amp; GIS Laboratory and spent my time learning different GIS software. The completion of the internship also involved a project titled "Web GIS and its Applications in Water Resource Systems". The project required me to create a web application using Open GIS.
 
 ### Summer Intern at [Logicsoft International Private Limited](http://lsipl.com)
-
 May, 2011 &ndash; July, 2011
 
 Worked as a summer intern working with C#, ASP .NET and SQL Server 2005. The initial phase of my internship went into learning the required technologies from my mentor. Later, I got the opportunity to work on a live project with the entire team and understand how projects are handled.
