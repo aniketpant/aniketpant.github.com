@@ -5,7 +5,9 @@
 @import "inuit.css/inuit";
 
 // base
+@import "base/layout";
 @import "base/mixins";
+@import "base/colors";
 @import "base/links";
 @import "base/typography";
 
@@ -14,20 +16,9 @@
 @import "misc/selection";
 
 body {
-  background: $white;
-  color: $gray;
   text-align: justify;
 }
 
-.resume {
-  .wrapper {
-    max-width: 60rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 1rem;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    @include content;
-    color: #3d3d3d;
-  }
+.wrapper {
+  max-width: 60rem;
 }

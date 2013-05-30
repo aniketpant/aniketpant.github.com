@@ -25,16 +25,15 @@
     }
   }
   .palm-nav--stacked {
-    text-align:center;
+    text-align: center;
   }
   .navbar {
     .nav {
-      float: none;
       li {
         display: list-item;
         a {
           display: block;
-          border-bottom: none;
+          // border-bottom: none;
         }
       }
     }

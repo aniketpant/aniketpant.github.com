@@ -5,9 +5,16 @@
 @import "inuit.css/inuit";
 
 // base
+@import "base/layout";
 @import "base/mixins";
+@import "base/colors";
 @import "base/links";
 @import "base/typography";
+
+// areas
+@import "areas/header";
+@import "areas/content";
+@import "areas/footer";
 
 // elements
 @import "elements/navbar";
@@ -22,30 +29,6 @@
 // responsive
 @import "responsive";
 
-body {
-  background: $white;
-  color: $gray;
-}
-
-.wrapper {
-  max-width: 45rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 1rem;
-  &.wrapper--big {
-    max-width: 60rem;
-  }
-}
-
-footer {
-  a {
-    color: $red;
-    &:hover {
-      color: darken($red, 10%);
-    }
-  }
-}
-
 article[role="main"], .info-bar {
   a {
     font-weight: bold;
@@ -58,9 +41,6 @@ article[role="main"], .info-bar {
 
 .navbar {
   @include headings;
-  .nav {
-    float: right;
-  }
 }
 
 .footer-container {
