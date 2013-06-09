@@ -9,11 +9,11 @@ tags:
   - themes
   - WordCamp
 ---
-My slides are up on my github profile. Here is the [link][1].
+My slides are up on GitHub. Here is the [link][1].
 
 Sorry, the slides won’t be on Slide Share or Speaker Deck as they weren’t made as PDF’s
 
-Here is my [github][2].
+My [GitHub profile][2].
 
  [1]: https://github.com/aniketpant/WordCamp-Presentation "Git Repo for my slides"
  [2]: https://github.com/aniketpant "My Github Repos"

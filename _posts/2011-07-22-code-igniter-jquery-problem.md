@@ -21,14 +21,14 @@ I had made the most idiotic error.
 
 It should have been
 
-    <script src="<?php echo base_url(); ?>public/js/jquery.js" type="text/javascript"></script>
-    
+  <script src="<?php echo base_url(); ?>public/js/jquery.js" type="text/javascript"></script>
+{:data-language="html"}
 
 rather than
 
-    <script href="<?php echo base_url(); ?>public/js/jquery.js" type="text/javascript"></script>
-    
+  <script href="<?php echo base_url(); ?>public/js/jquery.js" type="text/javascript"></script>
+{:data-language="html"}
 
-I ended up wasting quite sometime because of this. After this, I realised that my Netbeans code template was written wrong :|
+I ended up wasting quite sometime because of this. After this, I realised that my Netbeans code template was written wrong.
 
  [1]: http://codeigniter.com/forums/viewthread/194701/ "My Post"

@@ -17,7 +17,7 @@ What it does is that it converts all text enclosed by ` (grave accent)
 into
 
     <span class="code">text</span>
-    
+{:data-language="html"}
 
 ### Version 1.0
 
@@ -25,7 +25,7 @@ I first thought of making it with a fixed styling and that was my first version.
 
 ### Version 1.1
 
-The one includes 2 themes – Light & Dark along with padding changes.  
+The one includes 2 themes – Light & Dark along with padding changes.
 So you can have a defined length of the code block you create.
 
 ### Version 1.2

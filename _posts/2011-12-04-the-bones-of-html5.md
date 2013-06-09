@@ -21,7 +21,7 @@ BTW, I recommend you read my short article on [HTML5 Semantics and Good Coding P
 
 ## What is Bones?
 
-[Bones][3] is a WordPress theme framework developed by [Eddie Machado][4]. Twist it and turn it the way you want. Highly flexible it is!  
+[Bones][3] is a WordPress theme framework developed by [Eddie Machado][4]. Twist it and turn it the way you want. Highly flexible it is!
 I use it for my website and speak about it nearly every time I talk to any WordPress developer or whenever I give a talk.
 
 Bones is available in 3 flavors -
@@ -40,41 +40,41 @@ Let’s start with the navigation bar that is your menu bar is not enclosed in d
 
 Code:
 
-    <nav role="navigation"> <!--?php bones_main_nav(); // Adjust using Menus in WordPress Admin ?-->
+    <nav role="navigation">
+      <!--?php bones_main_nav(); // Adjust using Menus in WordPress Admin ?-->
     </nav>
-    
+{:data-language="html"}
 
 ### In terms of posts
 
 Bones uses HTML5 the way it’s supposed to be. The use of div’s has been greatly reduced and the code is highly semantic.
 
-Let me explain this with an example.  
+Let me explain this with an example.
 Take a look at the code below. It is a snippet from the index.php.
 
     <article id="post-<?php the_ID(); ?>" php="" post_class="" clearfix="">role="article">
-    <header>
-    <h1>
-    
-    <!--?php _e("Posted", "bonestheme"); ?--><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate=""><!--?php the_time('F jS, Y'); ?--></time> <!--?php the_author_posts_link(); ?--> & <!--?php _e("filed under", "bonestheme"); ?--> <!--?php the_category(', '); ?-->.</h1>
-    </header>
-     <!-- end article header -->
-    <section><!--?php the_content(_e('<span-->Read more on "'.the_title('', '', false).'" »', "bonestheme")); ?></section>
-     <!-- end article section -->
-    <footer>
-    <!--?php the_tags('<span-->Tags: ', ', ', ''); ?></footer>
-     <!-- end article footer --></article>
-     <!-- end article -->
-    
+      <header>
+        <h1>
+          <!--?php _e("Posted", "bonestheme"); ?--><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate=""><!--?php the_time('F jS, Y'); ?--></time> <!--?php the_author_posts_link(); ?--> & <!--?php _e("filed under", "bonestheme"); ?--> <!--?php the_category(', '); ?-->.</h1>
+          </header>
+          <!-- end article header -->
+          <section><!--?php the_content(_e('<span-->Read more on "'.the_title('', '', false).'" »', "bonestheme")); ?></section>
+          <!-- end article section -->
+          <footer>
+          <!--?php the_tags('<span-->Tags: ', ', ', ''); ?></footer>
+          <!-- end article footer --></article>
+          <!-- end article -->
+{:data-language="html"}
 
 Okay, please ignore the class h2 with the h1. I’ll get to the un-semantic part later.
 
 Apart from that minor error mentioned above, you can notice that an article is being used to for each post generated using the \*mighty\* loop. Each post will be enclosed in an article tag. The article tag in turn has it’s very own header, footer and section. This is how **semantics** roll!
 
-The <header> contains the post title of each post and also the meta information of the post. The meta is also used very correctly by enclosing the time of the post in a time tag. From the header we move to the section.
+The `<header>` contains the post title of each post and also the meta information of the post. The meta is also used very correctly by enclosing the time of the post in a time tag. From the header we move to the section.
 
-The <section> is used because it is closely related to the article but not so close to the other articles or the page as such.
+The `<section>` is used because it is closely related to the article but not so close to the other articles or the page as such.
 
-Then the <footer> tag. This harbors your tags of the post.
+Then the `<footer>` tag. This harbors your tags of the post.
 
 Similarly the comment listing and the other pages also use a similar format for displaying the content. The comments are enclosed in a unordered list. And each list element contains an article with header, section and footer inside.
 
@@ -85,19 +85,19 @@ New attributes like itemscope and itemprop have been implemented in the latest u
 This is the way they are being used in page.php.
 
     <article id="post-<?php the_ID(); ?>" php="" post_class="" clearfix="">role="article" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-    <h1></h1>
-    <!--?php _e("Posted", "bonestheme"); ?--><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate=""><!--?php the_time('F jS, Y'); ?--></time> <!--?php _e("by", "bonestheme"); --> <!--?php the_author_posts_link(); ?-->.</header>
-     <!-- end article header -->
-    <section itemprop="articleBody"><!--?php the_content(); ?--></section>
-     <!-- end article section -->
-    <footer><!--?php the_tags('
-    <br ?-->Tags: ', ', ', '
-    
-    '); ?></footer>
-     <!-- end article footer --></article>
-     <!-- end article -->
-    
+      <header>
+        <h1></h1>
+        <!--?php _e("Posted", "bonestheme"); ?--><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate=""><!--?php the_time('F jS, Y'); ?--></time> <!--?php _e("by", "bonestheme"); --> <!--?php the_author_posts_link(); ?-->.</header>
+        <!-- end article header -->
+        <section itemprop="articleBody"><!--?php the_content(); ?--></section>
+        <!-- end article section -->
+        <footer><!--?php the_tags('
+          <br ?-->Tags: ', ', ', '
+
+          '); ?></footer>
+          <!-- end article footer --></article>
+          <!-- end article -->
+{:data-language="html"}
 
 Notice itemscope and itemtype attributes in the article. The BlogPosting schema is being used in the itemtype too. Also, you will notice itemprop inside the section which has the value “articleBody”.
 
@@ -106,23 +106,23 @@ Notice itemscope and itemtype attributes in the article. The BlogPosting schema 
 The sidebar is one area where some changes can be made. A better way to understand this is by looking at this code snippet.
 
     function bones_register_sidebars() {
-      register_sidebar(array(
-        'id' => 'sidebar1',
-        'name' => 'Sidebar 1',
-        'description' => 'The first (primary) sidebar.',
-        'before_widget' =></pre>
+    register_sidebar(array(
+    'id' => 'sidebar1',
+    'name' => 'Sidebar 1',
+    'description' => 'The first (primary) sidebar.',
+    'before_widget' =></pre>
     <div id="%1$s">',
      'after_widget' => '</div>
-    <pre>
-    ',
-        'before_title' => '</pre>
-    <h4>',
-     'after_title' => '</h4>
-    <pre>
-    ',
-      ));
-    }
-    
+     <pre>
+      ',
+      'before_title' => '</pre>
+      <h4>',
+       'after_title' => '</h4>
+       <pre>
+        ',
+        ));
+      }
+{:data-language="php"}
 
 This code registers the sidebar but places div’s around each widget. Instead of using div’s, a good option would be to go ahead with using aside’s. Semantic!
 
@@ -130,7 +130,7 @@ This is the *orc* blood I warned you about.
 
 ## The Functions
 
-Bones makes use of a core function file called as bones.php  
+Bones makes use of a core function file called as bones.php
 The features are:
 
 ### Theme Support
@@ -146,7 +146,7 @@ Bones provides with a function to include links in the footer of your site. Quit
 
 ### Bones Related posts
 
-This is interesting. This function looks for related posts by checking on tags of the other posts.  
+This is interesting. This function looks for related posts by checking on tags of the other posts.
 Very simple to do but it comes by default, so good for us!
 
 ### Page Navigation
@@ -155,14 +155,14 @@ A pagination thingy for you. Use this function to generate a numeric page naviga
 
 ### Filtering <p> tags from images
 
-Code from [css-tricks.com][9]  
+Code from [css-tricks.com][9]
 Your text:
 
     blah blah blah</pre>
     <img src="image.jpg" alt="" />
     <pre>
     blah blah blah
-    
+{:data-language="html"}
 
 WordPress turns it into:
 
@@ -170,7 +170,7 @@ WordPress turns it into:
     <img src="image.jpg" alt="" />
     <pre>
     blah blah blah
-    
+{:data-language="html"}
 
 Our little function removes the p around the img and makes it into this.
 
@@ -178,7 +178,7 @@ Our little function removes the p around the img and makes it into this.
     <img src="image.jpg" alt="" />
     <pre>
     blah blah blah
-    
+{:data-language="html"}
 
 ## The Stylesheet
 
@@ -208,7 +208,7 @@ Eddie has changed 960.gs into a flexible grid system. By flexible I mean that yo
     .col780 { width: 82.978723%; } /* width 780px / grid_10 */
     .col860 { width: 91.489362%; } /* width 860px / grid_11 */
     .col940 { width: 100.0%; } /* width 940px / grid_12 */
-    
+{:data-language="css"}
 
 ### Media Queries
 

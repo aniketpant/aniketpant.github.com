@@ -21,7 +21,7 @@ Thankfully HTML5 puts and end to much of this evilery. Well at least it tries to
 
 Let’s start with starting of comment
 
-    <!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN”  
+    <!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN”
 “http://www.w3.org/TR/html4/loose.dtd”>
 {:data-language="html"}
 
@@ -36,7 +36,7 @@ Read this brilliant post on Smashing Magazine Coding on [The Document Outlining 
 
 It will help you understand the importance of using headings and the hgroup element.and enclose the post with a class like “post”
 
-You can later use the hgroup to club your headings and create an outline which is actually related to the way you write it and show it.  
+You can later use the hgroup to club your headings and create an outline which is actually related to the way you write it and show it.
 hgroup is like a wrapper for your headings ranging from h1-h6. You can make a list of these inside a hgroup according to title, subtitle and the rest.
 
 The use of hgroup is to create an effective document outline.
@@ -50,7 +50,7 @@ Almost every (sane) front-end developer was using similar ids and classes with s
 
 and so on.
 
-We have tags like header, footer, nav, article, section and aside, which bring clarity to your code and make it  more sane.  
+We have tags like header, footer, nav, article, section and aside, which bring clarity to your code and make it  more sane.
 Isn’t it simple to have more meaningful tags like these to structure your content.
 
 ### Header
@@ -60,7 +60,7 @@ You can use [header][2] as many times as you want to anywhere on your page. Usua
 You must be used to seeing things like
 
     <div id="header">
-{:data-language="html"}   
+{:data-language="html"}
 
 header is a substitute to this.
 
@@ -71,7 +71,7 @@ The [footer][3] is similar to header.
 Replace your
 
     <div id="footer">
-{:data-language="html"}    
+{:data-language="html"}
 
 with a simple footer tag. You can use it as many times as you want to!
 
@@ -82,31 +82,31 @@ You can group together your links in the [nav][4] element.
 This is the way we code as of now —
 
     <div id="main-nav" class="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/blog/">Blog</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
     </div>
-{:data-language="html"}    
+{:data-language="html"}
 
 Change your primitive code to this —
 
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/blog/">Blog</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
     </nav>
-{:data-language="html"}    
+{:data-language="html"}
 
 ### article and Section
 
 The spec defines [section][5] as —
 
 > The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.
-> 
+>
 > Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the element.
 
 The next line makes the use of section clear.
@@ -123,12 +123,12 @@ You can read about the [article][8] element from HTML5 Doctor.
 
 From what I have read and understood about [aside][9] is that it can be used to relate content to the element it is enclosed inside.
 
-For example, if an aside is contained inside an article, it means that the content of the aside is related to the article but not to the page.  
+For example, if an aside is contained inside an article, it means that the content of the aside is related to the article but not to the page.
 Whereas, if the aside is outside the article, then it means that it is not as closely related to the article but related to the page.
 
 ### Address
 
-Another addition to the new elements is an [address][10] tag! Yes, we have an address tag.  
+Another addition to the new elements is an [address][10] tag! Yes, we have an address tag.
 Imagine that you can actually get the address from a webpage more easily now, by just looking for this simple tag.
 
 ### Example
@@ -141,14 +141,14 @@ Here is an example.
 
 ## Groupings
 
-A figure tag has been introduced for your images and other illustrations.  
+A figure tag has been introduced for your images and other illustrations.
 As of now we to do this by making divs or my associating different classes, but soon we will begin to enclose them with the figure element.
 
     <figure>
     <!-- Your image here -->
     <figcaption></figcaption>
     </figure>
-{:data-language="html"}    
+{:data-language="html"}
 
 See this [fiddle][11], I made to demonstrate the use!
 
@@ -156,13 +156,13 @@ See this [fiddle][11], I made to demonstrate the use!
 
 Form elements were changed the most in HTML5.
 
-We have placeholders! Yes, placeholders are there which we used by javascripts.  
+We have placeholders! Yes, placeholders are there which we used by javascripts.
 Now, how to use placeholders. Well, it’s as easy as eating cheese!
 
 Just include placeholders and the text you need inside you input elements.
 
     <input name="user-name" type="email" placeholder="Your username is your email address">
-{:data-language="html"}    
+{:data-language="html"}
 
 Apart from this, we have keygen.
 
@@ -170,16 +170,16 @@ The [draft][12] says —
 
 > The keygen element represents a key pair generator control. When the control’s form is submitted, the private key is stored in the local keystore, and the public key is packaged and sent to the server.
 
-It will help in improving security by verification, I think. Need to study more about it!  
+It will help in improving security by verification, I think. Need to study more about it!
 According to the [draft][13], the output element represents the result of a calculation.
 
 See the following code —
 
     <form name="main">
-    Result: <output name="result"></output>
-    <script>
-    document.forms.main.elements.result.value = 'Hello World';
-    </script>
+      Result: <output name="result"></output>
+      <script>
+        document.forms.main.elements.result.value = 'Hello World';
+      </script>
     </form>
 {:data-language="html"}
 
@@ -194,20 +194,20 @@ Meter element is nothing big in terms of what it does, but it brings logic to yo
 ### BAD CODE
 
     <section>
-        My height is 5 feet and 10 inches.
+      My height is 5 feet and 10 inches.
     </section>
-{:data-language="html"}    
+{:data-language="html"}
 
 ### GOOD CODE
 
     <section>
     My height is
     <dl>
-        <dt>Feet: <dd> <meter min=0 max=7 value=5>5ft</meter>
-        <dt>Inches: <dd> <meter min=0 max=12 value=11>11in</meter>
+      <dt>Feet: <dd> <meter min=0 max=7 value=5>5ft</meter>
+      <dt>Inches: <dd> <meter min=0 max=12 value=11>11in</meter>
     </dl>
     </section>
-{:data-language="html"}    
+{:data-language="html"}
 
 You can easily understand what all this means. Better than before right?
 
@@ -220,21 +220,21 @@ The elements under this category are … wait for it …
 *   Command
 *   Menu
 
-To be frank, I did not use the details element but I saw an example a while back and it pretty cool!  
+To be frank, I did not use the details element but I saw an example a while back and it pretty cool!
 It’s like a mini-accordion.
 
-As of now, you can use it in webkit browsers. Won’t work on Mozilla. And it will be soon available in Opera.  
+As of now, you can use it in webkit browsers. Won’t work on Mozilla. And it will be soon available in Opera.
 So, what details does is that you can easily collapsible elements.
 
 The code for it is like this -
 
     <details>
-        <summary>Show/Hide me</summary>
-        <p>Hello! I am a paragraph element inside a details tag.</p>
+      <summary>Show/Hide me</summary>
+      <p>Hello! I am a paragraph element inside a details tag.</p>
     </details>
-{:data-language="html"}    
+{:data-language="html"}
 
-It would look like this, a simple arrow before the summary text and when you click on the arrow, you will see the paragraph text.  
+It would look like this, a simple arrow before the summary text and when you click on the arrow, you will see the paragraph text.
 [Demo][14] for details element.
 
 Another good [example ][15]with a collapsible table of contents.
@@ -249,7 +249,7 @@ In the case of the list state attribute, the element will represent an unordered
 
 ## Embeddable Elements
 
-Fresh out of the oven, we have these 6 things.  
+Fresh out of the oven, we have these 6 things.
 Canvas, area, map, audio, video and track.
 
 Everyone is very much aware of Canvas. Use canvas for anything and everything. Build games using it, render graphs or play with images.
@@ -271,22 +271,22 @@ Moving onto the map and area elements. It can be used to relate pixel coordinate
 A good example from HTML5 Doctor is this -
 
     <section>
-        <h1>Clothing</h1>
-        <img src="/images/menu.gif" alt="Select a department to go to its page." usemap="#nav">
+      <h1>Clothing</h1>
+      <img src="/images/menu.gif" alt="Select a department to go to its page." usemap="#nav">
     </section>
     <footer>
-        <map name="nav">
-        <p>
-            <a href="/women/">Women</a>
-            <area alt="Women" coords="0,0,100,50" href="/women/"> |
-            <a href="/men/">Men</a>
-            <area ALT="Men" coords="0,0,100,50" href="/men/"> |
-            <a HREF="/kids/">Kids</a>
-            <area alt="Food" coords="0,0,100,50" href="/kids/"> |
-        </p>
-        </map>
+      <map name="nav">
+      <p>
+        <a href="/women/">Women</a>
+        <area alt="Women" coords="0,0,100,50" href="/women/"> |
+        <a href="/men/">Men</a>
+        <area ALT="Men" coords="0,0,100,50" href="/men/"> |
+        <a HREF="/kids/">Kids</a>
+        <area alt="Food" coords="0,0,100,50" href="/kids/"> |
+      </p>
+      </map>
     </footer>
-{:data-language="html"}    
+{:data-language="html"}
 
 Seems useful!
 
@@ -311,12 +311,12 @@ Let’s do this the HTML5 way.
     <video width="640"  height="360" src="http://www.youtube.com/demo/google_main.mp4"  controls autobuffer>
     <p> Try this page in Safari  4! Or you can <a  href="http://www.youtube.com/demo/google_main.mp4">download the  video</a> instead.</p>
     </video>
-{:data-language="html"}    
+{:data-language="html"}
 
-Oh, this is so neat! (This is what you said, right?)  
+Oh, this is so neat! (This is what you said, right?)
 You can even add an autoplay to the video tag and you know what it means.
 
-The track element can be used with video and you will be able to link external files to your video.  
+The track element can be used with video and you will be able to link external files to your video.
 Code for it is quite easy to understand.
 
 Example:
@@ -339,10 +339,10 @@ The audio tag defines 5 attributes.
 Example:
 
     <audio controls preload="auto" autobuffer>
-        <source src="track.mp3" />
-        <source src="track.ogg" />
+      <source src="track.mp3" />
+      <source src="track.ogg" />
     </audio>
-{:data-language="html"}    
+{:data-language="html"}
 
 This enables controls for the audio, enable auto buffering and loads the file beforehand.
 
@@ -356,7 +356,7 @@ The new elements introduced are effective over what we had earlier. At least tha
 
 For a front-end guy, some of the changes won’t make difference like map, area, address and others like these.
 
-The minor things don’t make that much of a difference in terms of the result. Code your pages the way you wish.  
+The minor things don’t make that much of a difference in terms of the result. Code your pages the way you wish.
 But if someone doesn’t see the result and checks your code, he will be able to make out the difference because of these minor things.
 
 ## Resources

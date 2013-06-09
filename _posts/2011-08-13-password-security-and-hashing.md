@@ -27,21 +27,21 @@ To implement this password hashing technique, there is a library available.
 
 #### Load the library
 
-    $this->load->library('PasswordHash',array(8, FALSE));
-    
+  $this->load->library('PasswordHash',array(8, FALSE));
+{:data-language="php"}
 
 #### How to hash the password?
 
-    $this->PasswordHash->HashPassword($password);
-    
+  $this->PasswordHash->HashPassword($password);
+{:data-language="php"}
 
 #### Check if a password is correct?
 
     $password = $_POST['password'];
     $actualPassword = /*Get the hashed password from your db*/;
-    
+
     $check = $this->PasswordHash->CheckPassword($password, $actualPassword);
-    
+
 
 If you are not using CI, you can go through this [link][4].
 

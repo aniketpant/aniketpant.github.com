@@ -20,7 +20,7 @@ What you see above was my first attempt and it turned out to be pretty decent. T
 
     background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,4,80,.5) 10px, rgba(255,4,80,.5) 20px),
     repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255,4,80,.5) 10px, rgba(255,4,80,.5) 20px) #000;
-    
+{:data-language="css"}
 
 Here is the [dabblet][2].
 
@@ -33,7 +33,7 @@ This one is a little more intricate than the previous one, but easy to understan
     repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
     repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px),
     repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
-    
+{:data-language="css"}
 
 [Link][4]to the dabblet.
 
@@ -78,12 +78,12 @@ The HTML goes like this.
             </ul>
         </li>
     </ul>
-    
+{:data-language="html"}
 
 And the CSS for it.
 
     @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
-    
+
     a {
         display: block;
         text-decoration: none;
@@ -132,7 +132,7 @@ And the CSS for it.
     ul.mainlist li ul.sublist li a:hover {
     color: #222;
     }
-    
+{:data-language="css"}
 
 I am very pleased with the result of these menus and there are very high chances of me going for a similar design in some new project of mine.
 
@@ -140,7 +140,7 @@ I am very pleased with the result of these menus and there are very high chances
 
 2 days back I made these [buttons][7]. The palletes are from [design-seeds.com][8]. I love the palletes over there and the colors are inspired from their website.
 
-Along with making the buttons and adding a little animation to them, I incorporated another background pattern to the demo.  
+Along with making the buttons and adding a little animation to them, I incorporated another background pattern to the demo.
 Now, I plan to learn a little bit about radial patterns.
 
 _image missing_
@@ -154,24 +154,24 @@ _image missing_
 The HTML markup for it.
 
     <img class="chrome" src="http://www.wowpedia.org/images/8/89/Chrome.png" />
-    
+{:data-language="html"}
 
 And the simple animation.
 
     @-moz-keyframes rotate {
-    0% { transform: rotate(0deg) }
-    100% { transform: rotate(360deg) }
+        0% { transform: rotate(0deg) }
+        100% { transform: rotate(360deg) }
     }
     img.chrome {
-    width: 10%;
-    -moz-animation: rotate infinite 1s linear;
+        width: 10%;
+        -moz-animation: rotate infinite 1s linear;
     }
     img.chrome:hover {
-    -moz-animation: rotate infinite 0.5s linear;
+        -moz-animation: rotate infinite 0.5s linear;
     }
-    
+{:data-language="css"}
 
-Even you can try out these simple tricks and learn a great deal from them.  
+Even you can try out these simple tricks and learn a great deal from them.
 Keep dabbling like crazy.
 
  [2]: http://dabblet.com/gist/1614813 "Very basic CSS pattern"

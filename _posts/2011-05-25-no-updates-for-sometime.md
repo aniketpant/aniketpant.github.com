@@ -11,6 +11,4 @@ There won’t be any updates on dev.aniketpant.com for quite sometime now as I w
 
 Working on ASP .NET
 
- 
-
 Should be fun :D
