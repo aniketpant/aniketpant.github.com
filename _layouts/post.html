@@ -1,28 +1,26 @@
 ---
 layout: base
 ---
-<div class="post">
-	<header class="grid__item one-whole">
+<div class="grid__item one-whole post">
+	<header>
 		<h1 class="post_title">{{ page.title }}</h1>
-		<div class="meta">
-      <p>Written on <date class="date">{{ page.date | date_to_long_string }}</date><br/>
-      Under <span class="category">{{ page.category }}</span>{% if page.tags != empty %}<br/>
-      Tagged <span class="tags">{{ page.tags | array_to_sentence_string }}</span>{% endif %}</p>
-    </div>
-	</header><!--
-  --><div class="grid__item one-whole">
-		<article role="main">
-	  	{{ content }}
-		</article>
-    <footer>
-      <div class="meta--info islet">
-        <p class="lead">If you really liked my post, you might want to share it with some friends of yours. I bet they would like it too if you did.</p>
-
+	</header>
+	<article role="main">
+  	{{ content }}
+	</article>
+  <footer class="grid">
+    <div class="meta">
+      <aside class="grid__item one-half">
+        <p>Written on <date class="date">{{ page.date | date_to_long_string }}</date><br/>
+        Under <span class="category">{{ page.category }}</span>{% if page.tags != empty %}<br/>
+        Tagged <span class="tags">{{ page.tags | array_to_sentence_string }}</span>{% endif %}</p>
+      </aside><!--
+      --><aside class="grid__item one-half">
+        <p>If you really liked my post, you might want to share it with some friends of yours. I bet they would like it too if you did.</p>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>
-      </div>
-    </footer>
-  </div>
+      </aside>
+    </div>
+  </footer>
 </div><!-- post -->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script src="/assets/js/rainbow-custom.min.js"></script>
