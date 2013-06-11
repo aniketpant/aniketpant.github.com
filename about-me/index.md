@@ -2,6 +2,10 @@
 layout: page
 title: About Me
 slug: about-me
+sitemap:
+    priority: 0.7
+    changefreq: monthly
+    lastmod: 2013-06-09T12:49:30+05:30
 ---
 <div class="grid__item one-whole" markdown="1">
 ## Howdy!

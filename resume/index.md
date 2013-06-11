@@ -2,6 +2,10 @@
 layout: custom
 title: Resume
 slug: resume
+sitemap:
+    priority: 0.7
+    changefreq: monthly
+    lastmod: 2013-06-11T12:07:30+05:30
 ---
 <div class="zen-space full-width"></div>
 <div class="grid wrapper">

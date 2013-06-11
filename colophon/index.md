@@ -2,6 +2,10 @@
 layout: page
 title: Colophon
 slug: colophon
+sitemap:
+    priority: 0.7
+    changefreq: monthly
+    lastmod: 2013-06-09T10:23:30+05:30
 ---
 <div class="grid">
 <div class="grid__item one-whole" markdown="1">

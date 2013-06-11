@@ -2,6 +2,10 @@
 layout: page
 title: Archive
 slug: archive
+sitemap:
+    priority: 0.7
+    changefreq: weekly
+    lastmod: 2013-06-10T10:18:30+05:30
 ---
 <div class="grid__item one-whole">
 {% for post in site.posts %}
