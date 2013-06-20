@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: About Aniket
 slug: about-me
 sitemap:
     priority: 0.7

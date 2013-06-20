@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Archive
+title: The preserved archives
 slug: archive
 sitemap:
     priority: 0.7

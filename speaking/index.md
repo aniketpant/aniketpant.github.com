@@ -1,7 +1,11 @@
 ---
 layout: page
-title: Speaking
+title: My speaking engagements
 slug: speaking
+sitemap:
+    priority: 0.7
+    changefreq: weekly
+    lastmod: 2013-05-18T10:04:30+05:30
 ---
 <div class="grid__item one-whole" markdown="1">
 
