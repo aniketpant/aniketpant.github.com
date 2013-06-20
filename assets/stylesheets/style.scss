@@ -103,7 +103,6 @@ article[role="main"], .info-bar {
 }
 
 .page_title {
-  @include font-size($base-font-size * 4);
 }
 
 .post_title {
@@ -140,4 +139,8 @@ article[role="main"], .info-bar {
   .split__detail {
     color: $red;
   }
+}
+
+.highlight--block {
+  @include focus-block();
 }

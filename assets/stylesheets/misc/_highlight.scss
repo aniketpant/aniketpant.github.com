@@ -4,15 +4,6 @@
   color: $red;
 }
 
-.highlight--block {
-  background: lighten($red, 10%);
-  color: $white;
-  &:hover {
-    background: $red;
-    color: $white;
-  }
-}
-
 .note {
   background: rgba($gray, 0.1);
   border-bottom: 1px solid rgba($blue, 0.25);

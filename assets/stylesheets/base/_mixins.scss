@@ -7,3 +7,12 @@
 @mixin headings {
   font-family: $headings;
 }
+
+@mixin focus-block($bg: $red) {
+  background: lighten($bg, 10%);
+  color: $white;
+  &:hover {
+    background: $bg;
+    color: $white;
+  }
+}
