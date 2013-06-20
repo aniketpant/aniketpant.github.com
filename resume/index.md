@@ -10,15 +10,17 @@ sitemap:
 <div class="zen-space full-width"></div>
 <div class="grid wrapper">
 <header class="grid__item one-quarter push--top portable-one-whole" role="banner">
-  <h1 class="grid__item one-whole beta">Aniket Pant</h1>
-  <nav>
-    <ul class="grid__item one-whole nav nav--stacked">
-    	<li><a href="mailto:me@aniketpant.com">me@aniketpant.com</a></li><!--
-    	--><li><a href="http://aniketpant.com">aniketpant.com</a></li><!--
-      --><li><a href="https://twitter.com/aniket_pant">@aniket_pant</a></li><!--
-      --><li><a href="https://github.com/aniketpant">GitHub</a></li>
-    </ul>
-  </nav>
+  <div class="grid">
+    <h1 class="grid__item one-whole beta">Aniket Pant</h1>
+    <nav class="grid__item one-whole">
+      <ul class="nav nav--stacked">
+    	  <li><a href="mailto:me@aniketpant.com">me@aniketpant.com</a></li><!--
+    	  --><li><a href="http://aniketpant.com">aniketpant.com</a></li><!--
+        --><li><a href="https://twitter.com/aniket_pant">@aniket_pant</a></li><!--
+        --><li><a href="https://github.com/aniketpant">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
 </header><!--
 --><div class="grid__item three-quarters portable-one-whole push--top" role="main" markdown="1">
 ## About Me
