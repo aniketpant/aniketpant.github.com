@@ -13,6 +13,6 @@ The website is pure handcoded HTML written over the brilliant [Jekyll](https://g
 
 I wrote the entire site using [Sublime Text 2](http://www.sublimetext.com/2) with Frontier [Color Scheme by Dayle Rees](https://github.com/daylerees/colour-schemes).
 
-The design of the website has been hugely inspired by [Ben Schwarz's site](http://germanforblack.com). The fonts used are &ndash; [Cubano](https://typekit.com/fonts/cubano) &amp; [Source Sans Pro](https://typekit.com/fonts/source-sans-pro) and served by Typekit. The pretty colors you see are are &ndash; <span style="color: #BF2C47">#BF2C47</span> and <span style="color: #037F8C">#037F8C</span>.
+The fonts used is [Source Sans Pro](https://typekit.com/fonts/source-sans-pro) and served by Typekit. The pretty colors you see are are &ndash; <span style="color: #BF2C47">#BF2C47</span> and <span style="color: #037F8C">#037F8C</span>.
 </div>
 </div>
