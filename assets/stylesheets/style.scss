@@ -129,18 +129,6 @@ article[role="main"], .info-bar {
   color: darken($blue, 10%);
 }
 
-.meta {
-  .date, .category, .tags {
-    font-style: italic;
-  }
-}
-
-.archive, .home {
-  .split__detail {
-    color: $red;
-  }
-}
-
 .highlight--block {
   @include focus-block();
 }

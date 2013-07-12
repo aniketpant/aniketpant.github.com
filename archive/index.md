@@ -23,7 +23,7 @@ sitemap:
 {% endif %}
 {% endunless %}
 <dt class="split__title"><a href="{{ post.url }}">{{ post.title }}</a></dt>
-<dd class="split__detail"><em>{{ post.date | date:"%d %b" }}</em></dd>
+<dd class="split__detail">{{ post.date | date:"%d %b" }}</dd>
 {% endfor %}
 </dl>
 </div>
