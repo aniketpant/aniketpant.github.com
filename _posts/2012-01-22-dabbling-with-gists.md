@@ -3,7 +3,7 @@ author: Aniket
 title: Dabbling with gists
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - dabblet
   - patterns

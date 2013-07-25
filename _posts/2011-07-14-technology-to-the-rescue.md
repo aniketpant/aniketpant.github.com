@@ -3,7 +3,7 @@ author: Aniket
 title: Technology To The Rescue
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Rescue
   - Technology

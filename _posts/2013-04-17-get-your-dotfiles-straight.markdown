@@ -4,7 +4,7 @@ layout: post
 type: post
 date: 2013-04-17 17:01
 title: "Get your dotfiles straight"
-category: notes
+category: note
 tags: []
 ---
 <p class="lead">Fiddling with dotfiles has made me learn many things. I learnt that data needs to organized well everywhere. When you make aliases or write functions for each type of tool that you use, you should organize it well.</p>

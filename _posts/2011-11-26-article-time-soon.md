@@ -3,7 +3,7 @@ author: Aniket
 title: Article Time Soon
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Announcement
 ---

@@ -3,7 +3,7 @@ author: Aniket
 title: I am upgraded to v1.0
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Self-Improvement
 ---
@@ -11,7 +11,7 @@ After roughly three months of unexplainable inactivity and extreme learning expe
 
 ## Learning over the past few months
 
-The only way I can support the above is by stating a couple of things that I have learnt in the past few months.  
+The only way I can support the above is by stating a couple of things that I have learnt in the past few months.
 Here are some tips that you should focus on -
 
 1.  Choose the best tool
@@ -25,7 +25,7 @@ At present I have two options. One takes me back to an old project that I dumped
 
 The first option will involve lots of code rewriting that I am thoroughly enjoying. But the other one will make my work simpler and will not let me face massive challenges.
 
-But I think that I will ditch both and go for a complete new idea to work on. **And that is contributing to both the frameworks.**  
+But I think that I will ditch both and go for a complete new idea to work on. **And that is contributing to both the frameworks.**
 As of now I know what I can do better and it seems like going for new ideas and working on the core will help me learn better. And along with all of that I will keep fiddling and dabbling with new stuff.
 
 All of this seems so exciting and I am most probably going to stay this way for the next few months.

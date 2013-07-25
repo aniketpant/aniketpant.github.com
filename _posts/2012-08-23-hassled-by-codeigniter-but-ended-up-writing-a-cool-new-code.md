@@ -5,7 +5,7 @@ title: >
   writing a cool new code
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Codeigniter
 ---
@@ -13,7 +13,7 @@ After months I am working on Codeigniter and I just found a cool new method whic
 
 ## The incredibly simple problem
 
-The thing starts with modal windows. For my last project I was using modal windows for editing records.  
+The thing starts with modal windows. For my last project I was using modal windows for editing records.
 The place where I faltered was where the number of records on one page would go to a hundred or so. The method I was using was creation of that many modal windows on that page and calling the respective one.
 
 So, take a case where I have 50 records on that page, then I will have that many modal windows created.

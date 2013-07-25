@@ -3,7 +3,7 @@ author: Aniket
 title: Can people get weirder than this?
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Time Pass
 ---

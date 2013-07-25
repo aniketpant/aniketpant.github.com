@@ -3,7 +3,7 @@ author: Aniket
 title: Finally I Exist
 layout: post
 type: post
-category: notes
+category: note
 tags: []
 ---
 Hello everyone

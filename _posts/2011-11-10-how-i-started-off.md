@@ -3,7 +3,7 @@ author: Aniket
 title: How I started off
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - inspiration
 ---

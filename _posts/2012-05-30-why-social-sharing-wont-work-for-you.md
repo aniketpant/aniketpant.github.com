@@ -3,7 +3,7 @@ author: Aniket
 title: "Why social sharing won't work for you?"
 layout: post
 type: post
-category: essays
+category: essay
 tags:
   - Facebook
   - Memes
@@ -14,7 +14,7 @@ Social media marketing was a big hype a couple of years ago and now it is dying.
 
 ## The problem
 
-Social sharing won’t work now because we have options now.  
+Social sharing won’t work now because we have options now.
 As a consumer, I have many options now. I am specific about what I want and there is not bullshit that figures on my list.
 
 ### Case: Facebook

@@ -3,11 +3,11 @@ author: Aniket
 title: Work started on new theme
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Theme
 ---
-I have lots of issues and I know it. I just can’t stick to one thing for a long time and it has again happened with me.  
+I have lots of issues and I know it. I just can’t stick to one thing for a long time and it has again happened with me.
 It’s not exactly a really big problem but I never feel content with what I have, so I have finally begun work on a new theme for my blog.
 
 It’s always a good feeling when you work on something you truly like to put time in. My current blog is decent but in terms of overall planning, it ain’t that good as I made it in a couple of hours and never bothered to work on it again.

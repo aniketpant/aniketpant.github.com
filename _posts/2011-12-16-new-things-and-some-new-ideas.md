@@ -3,7 +3,7 @@ author: Aniket
 title: New things and some new ideas
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Announcement
 ---

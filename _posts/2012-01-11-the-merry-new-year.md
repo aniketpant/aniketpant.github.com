@@ -3,13 +3,13 @@ author: Aniket
 title: The "Merry" New Year
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Random Thoughts
 ---
 This year has been going really great so far. I haven’t been able to write anything so far but will be regular now.
 
-There are quite a lot of things that have kept me busy and happy at the same time. The two events I am managing for my college’s festival [Quark 2012][1] are going well.  
+There are quite a lot of things that have kept me busy and happy at the same time. The two events I am managing for my college’s festival [Quark 2012][1] are going well.
 I will soon share the problems I have created for one of the events. The other event is the treasure hunt and it’s called [E-Dorado][2].
 
 Apart from this I haven’t been able to put much time into [dabbling][3] and this is the only [good thing][4] I have been able to make so far.

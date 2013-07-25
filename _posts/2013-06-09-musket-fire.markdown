@@ -4,7 +4,7 @@ layout: post
 type: post
 date: 2013-06-09 10:18
 title: "Musket Fire"
-category: notes
+category: note
 tags: []
 ---
 <p class="lead">Musket is the latest RubyGem I am working on. The project started off after I was fed up of writing standard files again and again. We front-end developers need to create many HTML files which have a standard structure. We also write a a lot CSS and JS, and most of these files have a similar starting point.</p>

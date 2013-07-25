@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Moving on"
-category: notes
+category: note
 tags: []
 ---
 <p class="lead">I have moved to Jekyll and it's a beautiful way to build static websites. There is no visual interface and it's a perfect platform for people who like to write in Markdown.</p>

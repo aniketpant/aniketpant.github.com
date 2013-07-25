@@ -3,7 +3,7 @@ author: Aniket
 title: 'WordCamp Jabalpur 2011 : From Start To End'
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Jabalpur
   - WordCamp
@@ -84,7 +84,7 @@ And **Gaurav Singh**, amazing work with the organization and management (sorry c
 
 Will end this with a quote of mine from my talk -
 
-> People say Web Design is not coding, I call that bullshit.  
+> People say Web Design is not coding, I call that bullshit.
 > We design the web by coding.
 
  []: http://i2.wp.com/www.aniketpant.com/wp-content/uploads/2011/10/IMG_0032.jpg

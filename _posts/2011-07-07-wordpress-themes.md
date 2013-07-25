@@ -3,7 +3,7 @@ author: Aniket
 title: Wordpress Themes
 layout: post
 type: post
-category: notes
+category: note
 tags: []
 ---
 For quite sometime I was busy reading articles for design inspirations and finally I have found what I have been looking for.

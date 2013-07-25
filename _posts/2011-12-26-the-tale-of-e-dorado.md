@@ -3,7 +3,7 @@ author: Aniket
 title: The Tale of E-Dorado
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Event
   - Quark 2012

@@ -3,12 +3,12 @@ author: Aniket
 title: I was forced to change my password
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Password
   - Security
 ---
-![Locked Out][1] 
+![Locked Out][1]
 2 days back, I was testing a feature for [igniteplate][2] and because of just one mail, I locked down my Google account for myself.
 
 I was testing account verification by email and I used my primary google account for that. This turned out to be the worst thing I could do. Even though I created a new app password for SMTP access, and everything was going well. Then I registered a new user using my app and a mail was sent to my account.

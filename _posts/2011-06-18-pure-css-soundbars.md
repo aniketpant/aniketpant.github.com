@@ -3,7 +3,7 @@ author: Aniket
 title: Pure CSS Soundbars
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - CSS
   - CSS3

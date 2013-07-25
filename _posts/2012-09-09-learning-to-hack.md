@@ -3,7 +3,7 @@ author: Aniket
 title: "Learning to hack"
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Growth Hacking
 ---
@@ -11,7 +11,7 @@ I applied for the **Codeacademy fellowship** a couple of days back.
 
 https://twitter.com/aniket_pant/status/242662933820215298
 
-And then I even went ahead and applied for **Hacker School**. I wanted to do that ever since I first read about it.  
+And then I even went ahead and applied for **Hacker School**. I wanted to do that ever since I first read about it.
 But I got rejected in a very funny manner.
 
 https://twitter.com/aniket_pant/status/242663124380037120

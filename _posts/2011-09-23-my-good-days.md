@@ -3,7 +3,7 @@ author: Aniket
 title: My Good Days
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - happy
   - todo

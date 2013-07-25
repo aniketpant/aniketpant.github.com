@@ -3,7 +3,7 @@ author: Aniket
 title: Dream, Innovate
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Dream
   - Innovate

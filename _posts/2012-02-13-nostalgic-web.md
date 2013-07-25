@@ -3,7 +3,7 @@ author: Aniket
 title: Nostalgic Web
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Random Thoughts
 ---
@@ -17,7 +17,7 @@ There were 2 more games that I used to play then. One was [Biocide City][2] and 
 
 **Text based MMORPGs are really great.**
 
-Apart from all of this, GSoC 2012 is approaching and I need to try my hand at it. There aren’t many organizations that I can apply for but I will definitely give it a try.  
+Apart from all of this, GSoC 2012 is approaching and I need to try my hand at it. There aren’t many organizations that I can apply for but I will definitely give it a try.
 My target is to build something for WordPress as I have been working with it for a long time.
 
 Have to start writing a plugin and learn how to meddle with the system.

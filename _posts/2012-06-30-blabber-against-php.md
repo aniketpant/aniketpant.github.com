@@ -3,7 +3,7 @@ author: Aniket
 title: Blabber against PHP
 layout: post
 type: post
-category: essays
+category: essay
 tags:
   - PHP
 ---
@@ -59,27 +59,27 @@ One of the [best comments][5] out on the discussion.
 
 [Another one][6] that I love.
 
-> His post irritated the hell out of me. For 90% of it, he rips on PHP, then at the end he says, “how about bloggers stop ripping on PHP?”  
+> His post irritated the hell out of me. For 90% of it, he rips on PHP, then at the end he says, “how about bloggers stop ripping on PHP?”
 > Hey guys, Jeff said his piece about PHP, everyone else shut up about it now.
 
 And yet another we have hordes of comments that shows that people support PHP.
 
-> I simply disagree with the premise. PHP has a lot going for it.  
-> Did we read the same article? Jeff admits that PHP has a lot going for it and we should stop complaining about it.  
+> I simply disagree with the premise. PHP has a lot going for it.
+> Did we read the same article? Jeff admits that PHP has a lot going for it and we should stop complaining about it.
 > The biggest thing PHP has going for it is that it is supported everywhere.
 
-> I think you forgot an important feature of PHP: it just works.  
+> I think you forgot an important feature of PHP: it just works.
 > I can pretty much create and “deploy” a PHP web app within minutes of getting a run-of-the-mill hosting service
 
 And here is the link to the [most beautiful comment][7] out there.
 
 Here is [an angry one][8] that I like:
 
-> Sorry Jeff. The only thing broken with PHP is you (and other people like you).  
-> How much PHP do you use Jeff? Lets assume none. How is PHP hurting you? I mean seriously, how much contact do you even have with PHP?  
-> PHP is easy to learn, easy to make websites with. There are a tonne of paying jobs which require PHP. PHP runs a lot of websites.  
-> I am a PHP developer. I prefer Python but my PHP job pays me just fine. There are a lot of things about PHP that I don’t like but it gets the job done just fine. You can write reasonable code with PHP. You can write secure code with PHP.  
-> The main people who have problems with PHP are either ex-PHP developers who usually have gone on to Ruby and look back and fire a few shots at PHP. Or people like Jeff Atwood. Undeniably smart and talented programmers who for some reason are irked by the mere existence of PHP.  
+> Sorry Jeff. The only thing broken with PHP is you (and other people like you).
+> How much PHP do you use Jeff? Lets assume none. How is PHP hurting you? I mean seriously, how much contact do you even have with PHP?
+> PHP is easy to learn, easy to make websites with. There are a tonne of paying jobs which require PHP. PHP runs a lot of websites.
+> I am a PHP developer. I prefer Python but my PHP job pays me just fine. There are a lot of things about PHP that I don’t like but it gets the job done just fine. You can write reasonable code with PHP. You can write secure code with PHP.
+> The main people who have problems with PHP are either ex-PHP developers who usually have gone on to Ruby and look back and fire a few shots at PHP. Or people like Jeff Atwood. Undeniably smart and talented programmers who for some reason are irked by the mere existence of PHP.
 > Please get over yourself.
 
 If you want to read some more responses, [head to the discussion][9].

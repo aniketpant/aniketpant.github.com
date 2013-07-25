@@ -5,7 +5,7 @@ title: >
   Practices
 layout: post
 type: post
-category: essays
+category: essay
 tags:
   - coding
   - html5

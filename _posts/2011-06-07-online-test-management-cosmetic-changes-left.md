@@ -3,7 +3,7 @@ author: Aniket
 title: 'Online Test Management: Cosmetic Changes Left'
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - ASP
   - Online Test Management

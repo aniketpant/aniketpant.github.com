@@ -4,7 +4,7 @@ layout: post
 type: post
 date: 2013-02-25 09:06
 title: "It's all about the community"
-category: notes
+category: note
 tags: []
 ---
 <p class="lead" markdown="1">After my experience at [WordCamp Pune 2013](http://2013.pune.wordcamp.org), I came across a lot of things that I had never seen. Let me describe my experience at WordCamp Pune over the two days and I am sure you will get a picture of what I am talking about.</p>

@@ -3,7 +3,7 @@ author: Aniket
 title: Hectic times. Need to work more.
 layout: post
 type: post
-category: notes
+category: note
 tags: []
 ---
 Today I feel that I have reached my limit. And I am feeling great about it.
@@ -29,7 +29,7 @@ I had been working on it for over two months because I wasn’t provided with th
 
 Then came the best part. I was given the option to rewrite the entire application during the vacations.
 
-The work on the application was really incredible because I tried out a new PHP framework which is my favorite now. It’s called Laravel.  
+The work on the application was really incredible because I tried out a new PHP framework which is my favorite now. It’s called Laravel.
 And because of the project I was able to understand so much more about application architecture design.
 
 ## Other Side Projects

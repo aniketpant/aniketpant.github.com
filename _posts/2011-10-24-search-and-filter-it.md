@@ -3,7 +3,7 @@ author: Aniket
 title: Search and Filter It
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - filter
   - help

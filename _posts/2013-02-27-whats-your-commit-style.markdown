@@ -4,7 +4,7 @@ layout: post
 type: post
 date: 2013-02-27 01:38
 title: "What's your commit style?"
-category: essays
+category: essay
 tags: []
 ---
 <p class="lead">I have been experimenting with commit styles for the last one month and there are three styles that actually caught my attention and are very useful.</p>
@@ -18,7 +18,7 @@ List out the **type of change** and then describe what the change is. This is ho
 * `Added`: When adding a new file to the repository
 * `Removed`: When removing file
 * `Changed`: When making a new change in a file
-* `Updated`: When updating some existing code in a file 
+* `Updated`: When updating some existing code in a file
 * `Fixed`: When fixing a bug
 
 <div class="media" markdown="1">

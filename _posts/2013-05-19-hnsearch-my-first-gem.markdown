@@ -4,7 +4,7 @@ layout: post
 type: post
 date: 2013-05-19 15:55
 title: "HNsearch, my first gem"
-category: notes
+category: note
 tags: []
 ---
 <p class="lead" markdown="1">I finally wrote my first Ruby gem and it's called [HNsearch](https://github.com/aniketpant/HNsearch). All it does is allows me to search for users and items on Hacker News from my terminal. It was a great experience for me to write a gem of my own and if you like to work with Ruby, then you should write one too.</p>

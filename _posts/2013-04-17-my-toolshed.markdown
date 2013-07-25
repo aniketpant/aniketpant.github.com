@@ -4,7 +4,7 @@ layout: post
 type: post
 date: 2013-04-17 15:01
 title: "My Toolshed"
-category: notes
+category: note
 tags: []
 ---
 <p class="lead">I have been experimenting yet again and I am writing this post for people who might be interested in knowing how I work.</p>

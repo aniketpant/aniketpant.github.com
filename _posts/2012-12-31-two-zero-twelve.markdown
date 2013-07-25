@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Two-Zero-Twelve"
-category: notes
+category: note
 tags:
   - 2012
 ---

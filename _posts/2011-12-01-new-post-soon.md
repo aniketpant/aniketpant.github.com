@@ -3,7 +3,7 @@ author: Aniket
 title: New Post Soon
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Announcement
 ---
@@ -19,7 +19,7 @@ Revealing the new article:
 
 **The Bones of HTML5**
 
-To be frank the title of the post is misleading. A lot of people would think that I would be writing on HTML5 and it’s structure & things.  
+To be frank the title of the post is misleading. A lot of people would think that I would be writing on HTML5 and it’s structure & things.
 But actually the post is going to be on how [Bones][2] (WordPress Framework) uses HTML5.
 
 Bones is my favorite framework and my current theme is based on it! So I plan to write on how it uses HTML5.

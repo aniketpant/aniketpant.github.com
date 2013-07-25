@@ -3,18 +3,18 @@ author: Aniket
 title: A year down the road
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Self-Improvement
 ---
 ## The story so far
 
-> Progress comes from the intelligent use of experience.  
+> Progress comes from the intelligent use of experience.
 > — Elbert Hubbard
 
 It has been just a little over a year that I bought [aniketpant.com][1] and nearly the same time that I first set foot on the mysterious webbed grounds of the internet.
 
-I starting creating web pages in February 2011. Before that I only knew **C++** and had seen my father coding in PHP.  
+I starting creating web pages in February 2011. Before that I only knew **C++** and had seen my father coding in PHP.
 The first thing I worked on was **Joomla!** and slowly I took on **HTML**, **CSS** and a bit of **jQuery**. And in sometime I was working with **PHP**.
 
 Soon, came the interesting phase of my new interest. **WordPress** – it’s like the anti-hero of my superhero tale that I befriended and my made my most precious ally.
@@ -23,8 +23,8 @@ And after a couple of months, I got to know about **Codeigniter**. And for the m
 
 ## How I got my powers?
 
-> Learn from the mistakes of others. You can’t live long enough to make them all yourself.  
-> — [Eleanor Roosevelt][3]<aside></aside> 
+> Learn from the mistakes of others. You can’t live long enough to make them all yourself.
+> — [Eleanor Roosevelt][3]<aside></aside>
 
 I started with reading articles on [CSS-Tricks][4] and [Smashing Magazine][5]. I still go through them regularly.
 
@@ -38,7 +38,7 @@ I have learnt hell loads of things. Understood the new trends and what is happen
 
 So, if you wish to make a difference, if you wish to shape the future of the web and become *the architects of tomorrow*. **Start now!**
 
-> The secret to getting ahead is getting started.  
+> The secret to getting ahead is getting started.
 > — [Mark Twain][11]
 
  [1]: http://aniketpant.com "My Website"

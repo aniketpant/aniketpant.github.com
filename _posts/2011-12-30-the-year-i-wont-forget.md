@@ -3,7 +3,7 @@ author: Aniket
 title: "The year I won't forget"
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - New Year
 ---
@@ -35,7 +35,7 @@ There is a lot more than just what I have written. I still have two more article
 
 One of my articles is going to be a redesign of a popular web app with HTML5 and the other will be on [igniteplate][8].
 
-A new year with lots more to do!  
+A new year with lots more to do!
 All I can say is that *it’s gonna be fun.*
 
  [1]: http://css-tricks.com/ "CSS-Tricks"

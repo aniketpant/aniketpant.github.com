@@ -3,7 +3,7 @@ author: Aniket
 title: The Bones of HTML5
 layout: post
 type: post
-category: essays
+category: essay
 tags:
   - Bones
   - html5

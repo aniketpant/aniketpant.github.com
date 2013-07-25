@@ -3,7 +3,7 @@ author: Aniket
 title: CodeIgniter Form Validation Problem
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Codeigniter
   - Form Validation

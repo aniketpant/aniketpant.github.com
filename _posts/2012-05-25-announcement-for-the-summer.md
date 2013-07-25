@@ -3,7 +3,7 @@ author: Aniket
 title: Announcement for the Summer
 layout: post
 type: post
-category: notes
+category: note
 tags:
   - Announcement
 ---
@@ -17,7 +17,7 @@ The details are going to be out soon enough.
 
 Apart from this, I have a college project to take care of and along with it a lot of work is still left for igniteplate.
 
-This is sure going to be a new experience for me.I am soon going to start work on a project at the 
+This is sure going to be a new experience for me.I am soon going to start work on a project at the
 
 [National Institute of Hydrology, Roorkee][1] in the **Remote Sensing and GIS Division**.
 
