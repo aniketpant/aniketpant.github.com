@@ -18,7 +18,7 @@ If you wish to consult me for any project, or if you want me to [speak](/speakin
 ### Recent writings
 
 <ul class="block-list recent-posts">
-{% for post in site.posts limit:6 %}
+{% for post in site.posts limit:5 %}
 <li>
 {% if forloop.index == 1 %}
 <a href="{{ post.url }}" class="highlight--block block-list__link">
