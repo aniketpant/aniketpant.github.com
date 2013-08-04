@@ -20,4 +20,5 @@ strong {
 
 .lead {
   @include font-size($base-font-size * 1.25);
+  line-height: 1.6;
 }
