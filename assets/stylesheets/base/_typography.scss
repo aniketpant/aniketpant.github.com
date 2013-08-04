@@ -4,8 +4,18 @@ body {
   @include content;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .alpha,
+h2, .beta,
+h3, .gamma,
+h4, .delta,
+h5, .epsilon,
+h6, .zeta {
   @include headings;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
 }
 
 .lead {
