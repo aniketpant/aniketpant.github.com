@@ -18,19 +18,17 @@ If you wish to consult me for any project, or if you want me to [speak](/speakin
 ### Recent writings
 
 <ul class="block-list recent-posts">
-{% for post in site.posts limit:5 %}
+{% for post in site.posts limit:6 %}
 <li>
 {% if forloop.index == 1 %}
 <a href="{{ post.url }}" class="highlight--block block-list__link">
 <span class="gamma">{{ post.title }}</span><br/>
 <span class="zeta">Written on <date class="date">{{ post.date | date:"%d %B" }}</date></span><br/>
-<span class="zeta">This is my latest {% if post.category == "notes" %}note{% elsif post.category == "essays" %}essay{% elsif post.category == "poetry" %}poem{% elsif post.category == "talk" %}talk{% endif %}</span>
+<span class="zeta">This is my latest {{ post.category }}</span>
 </a>
 {% else %}
 <a href="{{ post.url }}" class="block-list__link">
   <span class="highlight gamma">{{ post.title }}</span><br/>
-  <span class="zeta">Written on <date class="date">{{ post.date | date:"%d %B" }}</date></span><br/>
-  <span>{{ post.category }}</span>
 </a>
 {% endif %}
 </li>
