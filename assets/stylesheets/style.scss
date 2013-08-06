@@ -122,3 +122,12 @@ article[role="main"], .info-bar {
 .highlight--block {
   @include focus-block();
 }
+
+.block-list--crystal {
+  a {
+    color: $blue;
+    &:hover {
+      color: darken($blue, 10%);
+    }
+  }
+}

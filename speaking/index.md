@@ -11,7 +11,7 @@ sitemap:
 
 You can take a look at my slides at [my Speaker Deck profile](https://speakerdeck.com/aniketpant). Also, you can [fork my slides](https://github.com/aniketpant/presentations) here.
 
-<ul class="block-list text--center">
+<ul class="block-list text--center block-list--crystal">
 {% for post in site.posts %}
 	{% if post.category == 'talk' %}
 	<li>
