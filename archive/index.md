@@ -11,19 +11,21 @@ sitemap:
 {% for post in site.posts %}
 {% unless post.next %}
 <h3>{{ post.date | date: '%Y' }}</h3>
-<dl class="split">
+<ul class="block-list">
 {% else %}
 {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
 {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
 {% if year != nyear %}
-</dl>
-<hr class="rule rule--dashed" />
+</ul>
 <h3>{{ post.date | date: '%Y' }}</h3>
-<dl class="split">
+<ul class="block-list">
 {% endif %}
 {% endunless %}
-<dt class="split__title"><a href="{{ post.url }}">{{ post.title }}</a></dt>
-<dd class="split__detail">{{ post.date | date:"%d %b" }}</dd>
+<li>
+  <a class="block-list__link link-complex" href="{{ post.url }}">
+    <span class="link-complex__target">{{ post.title }}</span> <span class="muted">on {{ post.date | date:"%d %b" }}</span>
+  </a>
+</li>
 {% endfor %}
-</dl>
+</ul>
 </div>
