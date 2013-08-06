@@ -1,7 +1,7 @@
 aniketpant.com
 ==============
 
-The website is pure handcoded HTML written over the brilliant [Jekyll](https://github.com/mojombo/jekyll) platform. It is served via the amazing [Github](https://github.com) and only [inuit.css](https://github.com/csswizardry/inuit.css) is used. **No crapware guaranteed.** The [source code](https://github.com/aniketpant/aniketpant.github.com) has been specially kept for you to fork it.
+The website is pure handcoded HTML written over the brilliant [Jekyll](https://github.com/mojombo/jekyll) platform. It is served via the amazing [GitHub](https://github.com) and only [inuit.css](https://github.com/csswizardry/inuit.css) is used. **No crapware guaranteed.** The [source code](https://github.com/aniketpant/aniketpant.github.com) has been specially kept for you to fork it.
 
 I wrote the entire site using [Sublime Text 2](http://www.sublimetext.com/2) with Frontier [Color Scheme by Dayle Rees](https://github.com/daylerees/colour-schemes).
 
