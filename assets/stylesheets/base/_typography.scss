@@ -19,10 +19,11 @@ strong {
 }
 
 .lead {
-  @include font-size($base-font-size * 1.25);
+  @include font-size($base-font-size * 1.375);
   line-height: 1.6;
 }
 
 p {
-  @include font-size($base-font-size * 1.15);
+  @include font-size($base-font-size * 1.2);
+  line-height: 1.5;
 }
