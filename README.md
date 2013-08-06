@@ -9,6 +9,6 @@ The design of the website has been hugely inspired by [Ben Schwarz's site](http:
 
 ## Copyright
 
-Content in the `_posts` folder is copyrighted.
+The **Rawrrr!** logo and Content in the `_posts` folder is copyrighted. All other aspects of this repository are MIT licensed.
 
-All other aspects of this repository are MIT licensed.
+![Rawrrr!](https://github.com/aniketpant/aniketpant.github.com/raw/master/assets/images/logo.jpg)
