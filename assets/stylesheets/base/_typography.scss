@@ -22,3 +22,7 @@ strong {
   @include font-size($base-font-size * 1.25);
   line-height: 1.6;
 }
+
+p {
+  @include font-size($base-font-size * 1.15);
+}
