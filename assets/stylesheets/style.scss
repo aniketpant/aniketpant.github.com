@@ -103,15 +103,8 @@ article[role="main"], .info-bar {
   max-width: 100px;
 }
 
-.page_title {
-}
-
-.post_title {
-  a {
-    &:hover {
-      text-decoration: none;
-    }
-  }
+.page_title, .post_title {
+  color: darken($blue, 10%);
 }
 
 .post--header {
@@ -124,10 +117,6 @@ article[role="main"], .info-bar {
 
 .topic {
   @include headings;
-}
-
-.post_title {
-  color: darken($blue, 10%);
 }
 
 .highlight--block {
