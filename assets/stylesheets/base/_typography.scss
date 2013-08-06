@@ -11,11 +11,11 @@ h4, .delta,
 h5, .epsilon,
 h6, .zeta {
   @include headings;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 strong {
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .lead {
