@@ -7,4 +7,8 @@ I wrote the entire site using [Sublime Text 2](http://www.sublimetext.com/2) wit
 
 The design of the website has been hugely inspired by [Ben Schwarz's site](http://germanforblack.com). The fonts used are & [Cubano](https://typekit.com/fonts/cubano) & [Source Sans Pro](https://typekit.com/fonts/source-sans-pro) and served by Typekit. The pretty colors you see are are `#BF2C47` and `#037F8C`.
 
-Content in the `_posts` folder is copyrighted. All other aspects of this repository are MIT licensed.
+## Copyright
+
+Content in the `_posts` folder is copyrighted.
+
+All other aspects of this repository are MIT licensed.
