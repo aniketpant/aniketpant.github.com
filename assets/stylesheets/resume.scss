@@ -19,6 +19,21 @@
   max-width: 40rem;
 }
 
+.tagline {
+  @include font-size($base-font-size * 1.375);
+  line-height: 1.5;
+  background: darken($white, 5%);
+  border-bottom: 2px solid $blue;
+}
+
+.sub-section {
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 @include media-query(palm) {
   .palm-nav--stacked {
     text-align: center;

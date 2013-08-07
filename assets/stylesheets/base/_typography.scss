@@ -7,12 +7,12 @@ body {
 
 h1, .alpha,
 h2, .beta,
-h3, .gamma {
+h3, .gamma,
+h4, .delta {
   @include headings;
   font-weight: 400;
 }
 
-h4, .delta
 h5, .epsilon,
 h6, .zeta {
   font-weight: 300;
