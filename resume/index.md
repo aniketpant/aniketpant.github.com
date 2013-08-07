@@ -1,6 +1,6 @@
 ---
 layout: custom
-title: Resume
+title: Aniket Pant's Resume
 slug: resume
 sitemap:
     priority: 0.7
