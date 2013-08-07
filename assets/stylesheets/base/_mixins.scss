@@ -2,10 +2,12 @@
 
 @mixin content {
   font-family: $content;
+  font-weight: 300;
 }
 
 @mixin headings {
   font-family: $headings;
+  font-weight: 400;
 }
 
 @mixin focus-block($bg: $red) {
@@ -15,4 +17,10 @@
     background: $bg;
     color: $white;
   }
+}
+
+@mixin wrap($width: 45rem) {
+  max-width: $width;
+  margin-left: auto;
+  margin-right: auto;
 }

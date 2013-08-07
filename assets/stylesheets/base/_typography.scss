@@ -2,7 +2,6 @@
 
 body {
   @include content;
-  font-weight: 300;
 }
 
 h1, .alpha,
@@ -10,7 +9,6 @@ h2, .beta,
 h3, .gamma,
 h4, .delta {
   @include headings;
-  font-weight: 400;
 }
 
 h5, .epsilon,
