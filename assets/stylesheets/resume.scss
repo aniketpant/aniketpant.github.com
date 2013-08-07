@@ -15,13 +15,22 @@
 @import "misc/miscellaneous";
 @import "misc/selection";
 
-body {
-  text-align: justify;
+.wrapper {
+  max-width: 40rem;
 }
 
-.wrapper {
-  max-width: 60rem;
-}
-h1, h2, h3, h4, h5, h6 {
-  @include content;
+@include media-query(palm) {
+  .palm-nav--stacked {
+    text-align: center;
+  }
+  .navbar {
+    .nav {
+      li {
+        display: list-item;
+        a {
+          display: block;
+        }
+      }
+    }
+  }
 }

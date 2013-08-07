@@ -13,17 +13,6 @@
   .logo {
     max-width: 100px;
   }
-  .split {
-    text-align: left;
-    .split__detail {
-      color: #999;
-      margin-left: 0;
-      &::before {
-        content: "-";
-        margin-left: 0.5rem;
-      }
-    }
-  }
   .palm-nav--stacked {
     text-align: center;
   }
@@ -33,7 +22,6 @@
         display: list-item;
         a {
           display: block;
-          // border-bottom: none;
         }
       }
     }

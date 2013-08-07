@@ -2,28 +2,32 @@
 
 body {
   @include content;
+  font-weight: 300;
 }
 
 h1, .alpha,
 h2, .beta,
-h3, .gamma,
-h4, .delta,
+h3, .gamma {
+  @include headings;
+  font-weight: 400;
+}
+
+h4, .delta
 h5, .epsilon,
 h6, .zeta {
-  @include headings;
   font-weight: 300;
 }
 
 strong {
   font-weight: bold;
+  font-weight: 400;
 }
 
 .lead {
   @include font-size($base-font-size * 1.375);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 p {
-  @include font-size($base-font-size * 1.2);
-  line-height: 1.5;
+  @include font-size($base-font-size * 1.2, true);
 }

@@ -11,11 +11,13 @@ $blue:              #037F8C;
 $red:               #BF2C47;
 
 $white:             #FAFAFA;
-$gray:              #4d4d4d;
+$gray:              #1d1d1d;
 
 /**
  * Overrides
  */
+
+$english-quotes:    false;
 
 $use-grids:         true;
 $use-nav:           true;
@@ -24,3 +26,4 @@ $use-island:        true;
 $use-block-list:    true;
 $use-link-complex:  true;
 $use-rules:         true;
+$use-marginalia:    true;

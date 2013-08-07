@@ -4,6 +4,7 @@ a {
   color: $blue;
   text-decoration: none;
   @include vendor(transition, all 100ms linear);
+  font-weight: 400;
   &:hover {
     color: $red;
   }
