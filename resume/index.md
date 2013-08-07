@@ -26,7 +26,7 @@ sitemap:
 </header>
 
 <section class="grid__item one-whole landmark">
-<p class="lead" markdown="1">I am a self-taught full stack developer with expertise in front-end, passionate about making the **front-end semantic and understandable**. I love to build new applications and fiddling with any new technology out there. Currently, I am working with Ruby and experimenting with Rails.</p>
+<p class="island tagline">Self-taught full stack developer with expertise in front-end and a passion for making the front-end semantic and understandable.</p>
 </section>
 
 <section class="grid__item one-whole landmark" markdown="1">
@@ -95,7 +95,7 @@ The entire design and development of the TEDxBITSGoa 2012 website was handled by
 </div>
 </div>
 
-Worked in Remote Sensing &amp; GIS Laboratory and spent my time learning different GIS software. The completion of the internship also involved a project titled "Web GIS and its Applications in Water Resource Systems". The project required me to create a web application using Open GIS.
+Worked in Remote Sensing &amp; GIS Laboratory and spent my time learning different GIS software. The completion of the internship also involved a project titled _Web GIS and its Applications in Water Resource Systems_. The project required me to create a web application using Open GIS.
 </div>
 
 <div class="sub-section" markdown="1">
@@ -132,7 +132,7 @@ I have a good level of understanding of projects and my major skill lies in crea
 <div class="marginalia">
 <div class="marginalia__body desk-two-thirds" markdown="1">
 <span class="delta">Front-end stack</span><br/>
-<span class="epsilon">HTML(5), CSS(3), Haml, LESS, Sass and Compass, jQuery</span>
+<span class="epsilon">HTML(5), CSS(3), Sass, jQuery</span>
 </div>
 </div>
 
