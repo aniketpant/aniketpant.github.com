@@ -131,23 +131,21 @@ I have a good level of understanding of projects and my major skill lies in crea
 <div class="sub-section" markdown="1">
 <div class="marginalia">
 <div class="marginalia__body desk-two-thirds" markdown="1">
-<span class="delta">Front-end stack</span><br/>
-<span class="epsilon">HTML(5), CSS(3), Sass, jQuery</span>
+<span class="delta">Front-end stack</span>
 </div>
 </div>
 
-Write about front-end skills.
+HTML(5), CSS(3), Sass, jQuery
 </div>
 
 <div class="sub-section" markdown="1">
 <div class="marginalia">
 <div class="marginalia__body desk-two-thirds" markdown="1">
-<span class="delta">Back-end stack</span><br/>
-<span class="epsilon">CodeIgniter, Laravel, WordPress, MySQL</span>
+<span class="delta">Back-end stack</span>
 </div>
 </div>
 
-Write about back-end skills.
+CodeIgniter, Laravel, WordPress, MySQL
 </div>
 </section>
 
@@ -187,14 +185,14 @@ The project required me to redesign the database and refactor the code for an al
 </div>
 </div>
 
-Write about school experience.
+An active member of the Quiz Club and Genesis (Computer Club). Throughout my school years I actively participated in a number of events ranging from quizzing to music.
 </div>
 </section>
 
 <section class="grid__item one-whole landmark" markdown="1">
 ## Professional Interests
 
-application building, database design, project conceptualization, front-end web development, educating people about the web, typography
+Application Building, Front-end Architecture, Education, Typography
 </section>
 
 </div>
