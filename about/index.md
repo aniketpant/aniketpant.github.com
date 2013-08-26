@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Aniket
-slug: about-me
+slug: about
 sitemap:
     priority: 0.7
     changefreq: monthly
