@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Rawrrr!
+title: Aniket Pant
 slug: home
 sitemap:
     priority: 0.7

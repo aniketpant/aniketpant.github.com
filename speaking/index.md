@@ -1,6 +1,6 @@
 ---
 layout: page
-title: My speaking engagements
+title: Aniket's speaking engagements
 slug: speaking
 sitemap:
     priority: 0.7
