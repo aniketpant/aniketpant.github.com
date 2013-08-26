@@ -7,8 +7,8 @@ sitemap:
     changefreq: weekly
     lastmod: 2013-05-18T10:04:30+05:30
 ---
-<section class="grid__item one-whole landmark" markdown="1">
-<p class="lead" markdown="1">I'm **Aniket**. I love to code, listen to music and I even write free-verses at times. Nowadays, I spend my time tinkering with Ruby and writing a tiny handbook for web developers.</p>
+<section class="grid__item one-whole push--top landmark" markdown="1">
+<p class="lead text--center" markdown="1">I'm **Aniket**. I love to code, listen to music and I even write free-verses at times. Nowadays, I spend my time tinkering with Ruby and writing a tiny handbook for web developers.</p>
 </section>
 <section class="grid__item one-whole" markdown="1">
 ### Recent writings
