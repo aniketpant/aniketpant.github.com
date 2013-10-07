@@ -16,13 +16,13 @@ tags: []
 That's how my workspace looks. I work with four workspaces, on one I run my music player, the other one runs my browser, the third has my editor and the last one has the terminal running. All this segregation has resulted due to the use of [dotfiles](https://github.com/aniketpant/dotfiles). **Yes, dotfiles.**
 
 <div class="media" markdown="1">
-![The editor](/assets/images/my-toolshed/editor.jpg "The editor")
+<img src="/assets/images/my-toolshed/editor.jpg" title="The editor" alt="The editor" />
 </div>
 
 I use [Sublime Text 2](http://www.sublimetext.com/2) as my text editor and it is absolutely brilliant. Also, I recently ditched the use of Frontier as my theme and switched to _Bluedawn_.
 
 <div class="media" markdown="1">
-![Terminal](/assets/images/my-toolshed/terminal.jpg "Terminal")
+<img src="/assets/images/my-toolshed/terminal.jpg" title="Terminal" alt="Terminal" />
 </div>
 
 The rest of it is fairly simple. My `bash` has been replaced by `zsh`, which in-turn uses [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh). My theme for `zsh` is _gallois_, it's pretty sweet- less clutter, gives me more space to work and works well with plugins.

@@ -23,7 +23,7 @@ The things on my list at the moment are -
 6.  Working with inuit.css and building a custom front-end starter project
 7.  Discuss with myself whether to shift from WP to Jekyll or not
 
-It’s not that I don’t like my current design but I am just going to throw away the sidebar from my next design. I am so so bored with having so much of excessive content on my page where anyone would lose focus if you don’t use colors and typefaces properly.
+It's not that I don't like my current design but I am just going to throw away the sidebar from my next design. I am so so bored with having so much of excessive content on my page where anyone would lose focus if you don't use colors and typefaces properly.
 
  [1]: http://markmyword.in "Mark My Word"
  [2]: http://markmyword.in/speakers "Mark My Word - Speakers"

@@ -22,4 +22,4 @@ Just setup my workstation. My HDD is on and speakers back with me. Sum 41 playin
 *   Start working on new projects
 *   Hmmm… Drum a little
 
-I’ll keep everyone posted and get to work in sometime. Need to take some time off work.
+I'll keep everyone posted and get to work in sometime. Need to take some time off work.

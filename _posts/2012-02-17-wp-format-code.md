@@ -8,7 +8,7 @@ tags:
   - Code Formatting
   - Plugin
 ---
-Today I finished writing my first WordPress plugin. It’s damn simple and was really easy to build.
+Today I finished writing my first WordPress plugin. It's damn simple and was really easy to build.
 
 I call it **Format Code**.
 
@@ -16,8 +16,9 @@ What it does is that it converts all text enclosed by ` (grave accent)
 
 into
 
-    <span class="code">text</span>
-{:data-language="html"}
+```html
+<span class="code">text</span>
+```
 
 ### Version 1.0
 

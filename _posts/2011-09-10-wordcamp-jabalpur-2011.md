@@ -21,6 +21,4 @@ Jabalpur, India
 
 #### Website
 
-[WordCamp Jabalpur 2011][1]
-
- [1]: http://2011.jabalpur.wordcamp.org/ "WordCamp Jabalpur 2011"
+[WordCamp Jabalpur 2011](http://2011.jabalpur.wordcamp.org/)

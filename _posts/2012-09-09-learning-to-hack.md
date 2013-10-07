@@ -20,12 +20,12 @@ The only reason I applied for Hacker School was to get a little insight about my
 
 https://twitter.com/aniket_pant/status/242663328135147521
 
-They say this (I haven’t included the entire message) —
+They say this (I haven't included the entire message) &ndash;
 
-> While we don’t think Hacker School is a fit now, we thought you could be a promising candidate. Your application does not demonstrate your actual, intellectual curiosity or mental clarity. We encourage you to apply again to a future batch.
+> While we don't think Hacker School is a fit now, we thought you could be a promising candidate. Your application does not demonstrate your actual, intellectual curiosity or mental clarity. We encourage you to apply again to a future batch.
 
 Now, I am completely clueless about *how to demonstrate my actual , intellectual curiosity or mental clarity*.
 
 Then I thought more about it (and I continue to think about it) and finally decided that I need to be more versatile. As of now I know C++ and PHP along with HTML, CSS and other front-end stuff, but I need to head towards some awesome hacker-like languages.
 
-So, right now I am learning **CoffeeScript** (since it lets me work on the web really well) and then I am trying my hand at **Haskell**. If Haskell suits me, then I will try learning more of it and if it doesn’t then I shall try out Lisp.
+So, right now I am learning **CoffeeScript** (since it lets me work on the web really well) and then I am trying my hand at **Haskell**. If Haskell suits me, then I will try learning more of it and if it doesn't then I shall try out Lisp.

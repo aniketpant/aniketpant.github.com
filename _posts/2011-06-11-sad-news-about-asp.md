@@ -16,4 +16,4 @@ And maybe sometime later, when I make it better, I might go for a windows based 
 
 **Note to make: An issue with ASP based websites, that they cannot be hosted on a Linux Based Server.**
 
-Windows is a little weirds, but not possible to **NOT** use it.
+Windows is a little weird, but not possible to **NOT** use it.

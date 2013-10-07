@@ -21,9 +21,6 @@ WordPress 3.3 update, the bar is looking good, but I feel that the side admin ba
 
 Github changed again, and I am not liking the top buttons, seems to icon-ish.
 
-Today only I discovered [Dabblet][1]. It can be easily called the father of [jsfiddle][2] in terms of  HTML and CSS as we have live changes and easy access in Dabblet with the advantage of saving it as a gist on Github.
+Today only I discovered [Dabblet](http://dabblet.com). It can be easily called the father of [jsfiddle](http://jsfiddle.net) in terms of  HTML and CSS as we have live changes and easy access in Dabblet with the advantage of saving it as a gist on Github.
 
-And the last thing would definitely be changes on delicious. It’s looking way better and clean.
-
- [1]: http://dabblet.com/ "Dabblet"
- [2]: http://jsfiddle.net "jsFiddle"
+And the last thing would definitely be changes on delicious. It's looking way better and clean.

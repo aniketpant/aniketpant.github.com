@@ -9,7 +9,7 @@ tags:
   - Music
   - Progress
 ---
-It’s been hardly a month since college has started and I have already become so busy.
+It's been hardly a month since college has started and I have already become so busy.
 
 #### What Happened?
 

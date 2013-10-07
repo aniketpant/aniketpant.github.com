@@ -15,16 +15,16 @@ Let me describe my three days with **Laravel**.
 
 ## Day 1
 
-> Laravel is so cool. The documentation is superb and so many amazing features to work on. Let’s give it a shot.
+> Laravel is so cool. The documentation is superb and so many amazing features to work on. Let's give it a shot.
 
 This was my first reaction when I saw the documentation and I immediately installed it.
 
-For the first half an hour, I didn’t understand why I was able to see the directory listing on the opening it on my server. That shouldn’t have been the case.
+For the first half an hour, I didn't understand why I was able to see the directory listing on the opening it on my server. That shouldn't have been the case.
 I had followed all the instructions given in the documentation and it should have been working.
 
 ### The tale of the splash page
 
-The first thing I didn’t get was that their was no index.php and yet it said that if I have mod_rewrite enabled along with the apt .htaccess file, it should show me the **beautiful splash page**.
+The first thing I didn't get was that their was no index.php and yet it said that if I have mod_rewrite enabled along with the apt .htaccess file, it should show me the **beautiful splash page**.
 
 I checked application/routes.php and thought that *I am so cool*, I can figure it out all by myself. I made a change and went ahead.
 
@@ -52,13 +52,13 @@ Feeling invincible, I moved on to create the **models**. But, no. I still had to
 
 We have something called as **artisan** in Laravel.
 
-Artisan provides us with a **Command Line Interface (CLI)**. Just write a simple line in English and you have database migrations set up. Run tasks and install bundles. It’s amazing.
+Artisan provides us with a **Command Line Interface (CLI)**. Just write a simple line in English and you have database migrations set up. Run tasks and install bundles. It's amazing.
 
 I thought of setting up an administrator account and do the basic configuration by making a task. The task was easy to write. It would call up a model and use the functions. Sounds simple.
 
 ### Models Wreaking Havoc
 
-I was now required to make models. From my Codeigniter experience, models are placed in application/models. Even here it’s all the same. So, I made my two files and wrote all the functions.
+I was now required to make models. From my Codeigniter experience, models are placed in application/models. Even here it's all the same. So, I made my two files and wrote all the functions.
 
 Codeigniter uses an **active query** method to interact with databases.
 Laravel provides us with two methods to do it:
@@ -69,7 +69,7 @@ Laravel provides us with two methods to do it:
 Like an idiot I read Eloquent ORM and opened Fluent Query Builder. This was my first mistake (you will understand what implications it has soon).
 
 I wrote my models with the Fluent Query Builder and tried to run the tasks using artisan. One task ran and the other failed.
-Made some changes but it didn’t budge. So, I left it for Day 3.
+Made some changes but it didn't budge. So, I left it for Day 3.
 
 #### Takeaways
 
@@ -98,7 +98,7 @@ Having understood migrations, now it was time to code the models.
 
 ### Eloquent ORM
 
-I started building the models and they were ready in no time. But on running the tasks, they didn’t seem to work. I couldn’t understand why.
+I started building the models and they were ready in no time. But on running the tasks, they didn't seem to work. I couldn't understand why.
 Then I remembered about the naming conventions of Laravel and the way I had named the models, it was all incorrect.
 
 My models were named like this: abc\_def\_ghi.

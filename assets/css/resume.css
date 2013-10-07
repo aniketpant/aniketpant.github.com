@@ -1,0 +1,76 @@
+/*
+Syntax error: Mixin "media-query" does not accept a content block.
+        on line 123 of /home/aniket/code/aniketpant.github.com/assets/scss/inuit.css/generic/_widths.scss, in `media-query'
+        from line 123 of /home/aniket/code/aniketpant.github.com/assets/scss/inuit.css/generic/_widths.scss
+        from line 208 of /home/aniket/code/aniketpant.github.com/assets/scss/inuit.css/_inuit.scss
+        from line 5 of /home/aniket/code/aniketpant.github.com/assets/scss/resume.scss
+
+Backtrace:
+/home/aniket/code/aniketpant.github.com/assets/scss/inuit.css/generic/_widths.scss:123:in `media-query'
+/home/aniket/code/aniketpant.github.com/assets/scss/inuit.css/generic/_widths.scss:123
+/home/aniket/code/aniketpant.github.com/assets/scss/inuit.css/_inuit.scss:208
+/home/aniket/code/aniketpant.github.com/assets/scss/resume.scss:5
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:252:in `visit_mixin'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:203:in `visit_if'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `block in visit_import'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `map'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `visit_import'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `block in visit_import'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `map'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `visit_import'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/tree/root_node.rb:20:in `render'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:68:in `perform'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/bin/compass:44:in `call'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/bin/compass:23:in `load'
+/home/aniket/.rvm/gems/ruby-2.0.0-p247/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Mixin \"media-query\" does not accept a content block.\A         on line 123 of /home/aniket/code/aniketpant.github.com/assets/scss/inuit.css/generic/_widths.scss, in `media-query'\A         from line 123 of /home/aniket/code/aniketpant.github.com/assets/scss/inuit.css/generic/_widths.scss\A         from line 208 of /home/aniket/code/aniketpant.github.com/assets/scss/inuit.css/_inuit.scss\A         from line 5 of /home/aniket/code/aniketpant.github.com/assets/scss/resume.scss"; }

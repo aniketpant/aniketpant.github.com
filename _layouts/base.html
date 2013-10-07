@@ -49,7 +49,7 @@
   {% endif %}
 
   <!-- stylesheets -->
-  <link rel="stylesheet" href="/assets/stylesheets/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- feed -->
   <link rel="alternate" href="/feed/index.xml" title="{{ site.name }}" type="application/rss+xml">
@@ -60,11 +60,10 @@
   <![endif]-->
 
   <div class="header-container">
-    <div class="zen-space full-width"></div>
-    <header class="grid wrapper push--top" role="banner">
-      <h1 class="grid__item one-quarter palm-one-whole"><img class="logo" src="/assets/images/logo.jpg" alt="Rawrrr! Aniket here." /></h1><!--
-      --><nav class="grid__item three-quarters palm-one-whole navbar">
-        <ul class="nav nav--block palm-nav--stacked">
+    <header class="" role="banner">
+      <h1 class=""><img class="logo" src="/assets/images/new-logo.jpg" alt="Aniket Pant" /></h1><!--
+      --><nav class="">
+        <ul class="">
           <li><a href="/">Home</a></li><!--
           --><li><a href="/about">About</a></li><!--
           --><li><a href="/speaking">Speaking</a></li><!--
@@ -76,41 +75,22 @@
   </div> <!-- header-container -->
 
   <div class="main-container">
-    <section class="grid wrapper">
+    <section class="">
     {{ content }}
     </section>
   </div> <!-- main-container -->
 
   <div class="footer-container">
-    <div class="info-bar full-width">
-      <div class="grid wrapper">
-        <aside class="grid__item one-whole">
-          <h3 class="section-heading">{% if page.type == 'post' %}Like my work?{% else %}Follow me on twitter{% endif %}</h3>
-          {% if page.type == 'post' %}
-          <p>Hey, you just went through {{ page.content | number_of_words }} words handcrafted by me. If you liked them, then you should definitely follow me on twitter and give me a shout out.</p>
-          {% elsif page.category == 'poetry' %}
-          <p>I write poetry at times and if you really like what I penned down, then share it with others and I hope you will remember my words.</p>
-          {% elsif page.category == 'talk' %}
-          <p>If you liked my slides, then you should definitely follow me on twitter too.</p>
-          {% else %}
-          <p>I tweet about my ongoing projects, developments around the web and music.</p>
-          {% endif %}
-          <p><a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="true">Follow @aniket_pant</a>{% if page.type == 'post' %}<a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>{% endif %}</p>
-        </aside>
-      </div>
+    <div class="">
+      <aside class="">
+        <p><a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="true">Follow @aniket_pant</a></p>
+      </aside>
     </div>
-    <div class="grid wrapper">
+    <div class="">
       <footer role="contentinfo">
         <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
-        <div class="grid__item one-whole">
-          <p class="smallprint">
-            <span class="muted">Handcrafted by</span> <a href="http://twitter.com/{{ site.author.twitter }}">Aniket</a>. <span class="muted">Around the scene since 2010.</span><br/>
-            <a href="/colophon">Colophon</a>
-          </p>
-        </div>
       </footer> <!-- footer -->
     </div>
-    <div class="zen-space full-width"></div>
   </div> <!-- footer-container -->
 
   <script type="text/javascript">
