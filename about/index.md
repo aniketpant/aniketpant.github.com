@@ -7,8 +7,8 @@ sitemap:
     changefreq: monthly
     lastmod: 2013-06-09T12:49:30+05:30
 ---
-<div class="grid__item one-whole" markdown="1">
-<p class="lead" markdown="1">Hey, I am **Aniket** and I have been around on the web since 2010. It's not long but it been quite an [adventure](/archive) since then. In all this time I have worked with various web frameworks, built a number of applications, written hundreds of front-end code, refactored tonnes of old code and enjoyed every single bit of it.</p>
+<div class="grid__item one-whole">
+<p class="lead">Hey, I am <strong>Aniket</strong> and I have been around on the web since 2010. It's not long but it been quite an <a href="/archive">adventure</a> since then. In all this time I have worked with various web frameworks, built a number of applications, written hundreds of front-end code, refactored tonnes of old code and enjoyed every single bit of it.</p>
 
 <div class="islet">
   <img class="img--center img--small" src="/assets/images/me-again.jpg" />
