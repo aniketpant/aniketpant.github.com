@@ -1,0 +1,13 @@
+/**
+ * Links
+ */
+
+a, a:visited {
+  color: $grey;
+  border-bottom: 1px solid darken($white, 10%);
+
+  text-decoration: none;
+  &:hover {
+    border-bottom-color: $grey;
+  }
+}

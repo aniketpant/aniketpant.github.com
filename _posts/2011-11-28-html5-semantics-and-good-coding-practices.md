@@ -70,7 +70,7 @@ header is a substitute to this.
 
 ### Footer
 
-The [footer][3] is similar to header.
+The [footer](http://html5doctor.com/the-footer-element/) is similar to header.
 
 Replace your
 
@@ -108,7 +108,7 @@ Change your primitive code to this &ndash;
 </nav>
 ```
 
-### article and Section
+### Article and Section
 
 The spec defines [section](http://html5doctor.com/the-section-element/) as &ndash;
 

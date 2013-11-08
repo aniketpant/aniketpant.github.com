@@ -1,0 +1,19 @@
+/**
+ * Layout
+ */
+
+body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.wrapper {
+  width: 36rem;
+  margin: 0 auto;
+}
+
+@include media-query(portable) {
+  .wrapper {
+    width: 100%;
+  }
+}

@@ -4,4 +4,16 @@
 // inuit.css core
 @import "inuit.css/inuit";
 
+
+// Globals
+@import "globals/typography";
+@import "globals/layout";
+@import "globals/links";
+
+// Code higlite
 @import "syntax";
+
+.title--page,
+.title--post {
+  text-align: center;
+}

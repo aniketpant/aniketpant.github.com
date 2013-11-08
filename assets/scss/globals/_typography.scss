@@ -1,0 +1,41 @@
+/**
+ * Typography
+ */
+
+body {
+  font-family: $content;
+  font-weight: 300;
+}
+
+p {
+  line-height: 1.5;
+}
+
+@include headings(1, 3) {
+  font-weight: 500;
+}
+
+@include headings(4, 6) {
+  font-weight: 300;
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+pre,
+code {
+  font-family: 'monaco', monospace;
+  @include font-size($base-font-size * 0.9);
+}
+
+.lead {
+  @include font-size($base-font-size * 1.25, false);
+  line-height: 1.5;
+}
+
+blockquote {
+  @include font-size($base-font-size * 1.15);
+  font-style: italic;
+}

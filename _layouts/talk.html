@@ -1,18 +1,20 @@
 ---
 layout: base
 ---
+
 <div class="talk {{ page.slug }}" itemscope itemtype="http://schema.org/Event">
+
 	<header class="grid__item one-whole">
-		<h1 class="" itemprop="name">{{ page.topic }}</h1>
+		<h1 class="title--post" itemprop="name">{{ page.topic }}</h1>
     <h2 class="">{{ page.title }}</h2>
 		<div class="meta">
 		  <p><meta itemprop="startDate" content="{{ page.date | date_to_xmlschema }}"><date class="date">{{ page.date | date_to_long_string }}</date><br/>
       <a href="{{ page.link }}"  itemprop="url">Website</a></p>
     </div>
-	</header><!--
-  --><div class="">
-    <article role="main">
+	</header>
+
+  <article class="grid__item one-whole" role="main">
     {{ content }}
-    </article>
-  </div>
+  </article>
+
 </div><!-- talk -->

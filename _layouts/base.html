@@ -60,34 +60,45 @@
   <![endif]-->
 
   <div class="header-container">
-    <header class="" role="banner">
-      <h1 class="">Aniket Pant</h1><!--
-      --><nav class="">
-        <ul class="">
-          <li><a href="/">Home</a></li><!--
-          --><li><a href="/about">About</a></li><!--
-          --><li><a href="/speaking">Speaking</a></li><!--
-          --><li><a href="/archive">Archive</a></li>
-        </ul>
-      </nav>
-      <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
-    </header> <!-- header -->
+    <div class="wrapper">
+      <header class="grid" role="banner">
+        <div class="grid__item one-whole">
+          <h1 class="text--center"><a href="/" rel="nofollow" class="brand">Aniket Pant</a></h1>
+        </div><!--
+        --><nav class="grid__item one-whole">
+          <ul class="nav nav--block nav--banner">
+            <li><a href="/about">About</a></li><!--
+            --><li><a href="/speaking">Speaking</a></li><!--
+            --><li><a href="/archive">Archive</a></li>
+          </ul>
+        </nav>
+        <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
+      </header> <!-- header -->
+    </div>
   </div> <!-- header-container -->
 
   <div class="main-container">
-    <section class="">
-    {{ content }}
-    </section>
+    <div class="wrapper">
+      <section class="grid">
+      {{ content }}
+      </section>
+    </div>
   </div> <!-- main-container -->
 
   <div class="footer-container">
-    <div class="">
+    <div class="wrapper">
       <aside class="">
         <p><a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="true">Follow @aniket_pant</a></p>
       </aside>
     </div>
-    <div class="">
-      <footer role="contentinfo">
+    <div class="wrapper">
+      <footer class="smallprint" role="contentinfo">
+        <nav>
+          <ul class="nav nav--block">
+            <li><a href="/colophon">Colophon</a></li>
+            <li><a href="https://github.com/aniketpant">GitHub</a></li>
+          </ul>
+        </nav>
         <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
       </footer> <!-- footer -->
     </div>
@@ -116,7 +127,7 @@
 
     // Twitter Widget
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-    </script>
+  </script>
 
 </body>
 </html>

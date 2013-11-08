@@ -1,12 +1,20 @@
 ---
 layout: base
 ---
-<div class="">
-	<header>
-		<h1>{{ page.title }}</h1>
+
+<div class="post">
+
+  <header class="grid__item one-whole">
+		<h1 class="title--post">{{ page.title }}</h1>
 	</header>
-	<article role="main">
+
+  <article class="grid__item one-whole" role="main">
   	{{ content }}
 	</article>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>
+
+  <footer class="grid__item one-whole">
+    <p class="muted">Written on {{ page.date | date_to_long_string }}</p>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>
+  </footer>
+
 </div><!-- post -->
