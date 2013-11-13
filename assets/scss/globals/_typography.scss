@@ -27,7 +27,7 @@ strong {
 pre,
 code {
   font-family: 'monaco', monospace;
-  @include font-size($base-font-size * 0.9);
+  @include font-size($base-font-size * 0.8);
 }
 
 .lead {
