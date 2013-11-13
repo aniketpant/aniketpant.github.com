@@ -3,10 +3,11 @@ author: Aniket
 title: Nostalgic Web
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Random Thoughts
 ---
+
 It is all really very stupid but recently I have been remembering my old days on the web. There were so many sites I used to visit that time and play some text based MMORPGs.
 
 I have been playing [Kings of Chaos][1] for the last 5 years now. Never made any amazing breakthrough but ended up within the *top 1000* always. I have been a dedicated member of LaCN (game based alliance) and have participated in a number of wars.

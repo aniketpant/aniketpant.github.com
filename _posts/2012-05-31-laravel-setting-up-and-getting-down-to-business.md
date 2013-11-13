@@ -8,6 +8,7 @@ tags:
   - Codeigniter
   - Laravel
 ---
+
 After three days of tinkering with Laravel, I finally have it set up and ready to work.
 
 Coming from a Codeigniter background, it did take me some time to understand how it is functioning.

@@ -7,6 +7,7 @@ category: essay
 tags:
   - E-Dorado
 ---
+
 *This is a guest post by Akshay Vikas, a close friend of mine and core contributors of E-Dorado.*
 
 To gauge the success of Dorado in terms of the close to 1,050 odd registrations it received from within the country and abroad, would not only be immensely myopic, but also very unfair to the efforts of those 1,050 people, and to their stories.

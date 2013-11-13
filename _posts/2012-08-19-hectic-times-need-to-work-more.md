@@ -3,9 +3,10 @@ author: Aniket
 title: Hectic times. Need to work more.
 layout: post
 type: post
-category: note
+category: weblog
 tags: []
 ---
+
 Today I feel that I have reached my limit. And I am feeling great about it.
 
 Yes! Most people might be surprised that I am happy about the fact that I am tired and weary at the moment but it surely is a good thing.

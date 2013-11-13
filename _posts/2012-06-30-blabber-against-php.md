@@ -7,6 +7,7 @@ category: essay
 tags:
   - PHP
 ---
+
 I am damn tired of Jeff Attwood's latest [take on PHP][1]. It's damn pissing off to see the kind of points he puts in his posts.
 
 http://twitter.com/codinghorror/status/218661251230875649

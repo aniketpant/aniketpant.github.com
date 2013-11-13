@@ -7,6 +7,7 @@ category: note
 tags:
   - inspiration
 ---
+
 I don't remember exactly when and how all this started off, but I am sure it was 6 years back.
 
 I was in class 9th that time, when my dad gave me a book on C++ by **Robert Lafore**. That time I hardly understood anything and just went through a couple of things. Learnt the usual **Hello World!** program and it was quite fun. Soon, I was making small programs for fun. It was a great experience.

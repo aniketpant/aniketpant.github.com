@@ -12,6 +12,7 @@ tags:
   - PHPass
   - Problem
 ---
+
 My old problem was not solved by now, and I was going through a question on Stack Overflow.
 
 I got to know that MD5 should not be used in anyway. Then I read about SHA1 vs bcrypt. After quite some discussion and thanks to [Lawrence](http://about.me/dclawrence), I got a brilliant solution and really good lesson on password hashing.

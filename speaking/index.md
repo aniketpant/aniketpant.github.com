@@ -7,7 +7,7 @@ sitemap:
     changefreq: weekly
     lastmod: 2013-05-18T10:04:30+05:30
 ---
-<div class="grid__item one-whole">
+
 You can take a look at my slides at <a href="https://speakerdeck.com/aniketpant">my Speaker Deck profile</a>. Also, you can <a href="https://github.com/aniketpant/presentations">fork my slides</a> here.
 
 <ul class="block-list text--center block-list--crystal">
@@ -23,4 +23,3 @@ You can take a look at my slides at <a href="https://speakerdeck.com/aniketpant"
 	{% endif %}
 {% endfor %}
 </ul>
-</div>

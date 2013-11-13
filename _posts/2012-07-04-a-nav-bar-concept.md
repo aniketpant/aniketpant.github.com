@@ -8,6 +8,7 @@ tags:
   - Animation
   - CSS3
 ---
+
 I guess I saw this thing somewhere before but finally I am bringing it to life.
 
 This is the starting point. Let's just put out the HTML markup we will use to create this demo.

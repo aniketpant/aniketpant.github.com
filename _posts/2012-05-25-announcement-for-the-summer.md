@@ -3,10 +3,11 @@ author: Aniket
 title: Announcement for the Summer
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Announcement
 ---
+
 ### The summer break
 
 The break has begun and I have plenty of work to handle.

@@ -3,10 +3,11 @@ author: Aniket
 title: Can people get weirder than this?
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Time Pass
 ---
+
 In the morning, I was reading the newspaper and I saw this article that Arindam Chaudhuri is suing Google. Read [this](http://www.hindustantimes.com/Shooting-the-messenger-eh/article1-712852.aspx).
 
 I know he can get weird and very very stupid everyday, but this is the limit. Suing a search engine. The most common misconception is that "People think Google is the source of information". Well this is just wrong. Google just indexes all the content in the world for us.

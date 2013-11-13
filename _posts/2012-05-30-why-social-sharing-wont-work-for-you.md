@@ -10,6 +10,7 @@ tags:
   - Social Media
   - Twitter
 ---
+
 Social media marketing was a big hype a couple of years ago and now it is dying. Or I should say it's dead. The fashion is gone and now's time of bringing out what your product really is.
 
 ## The problem

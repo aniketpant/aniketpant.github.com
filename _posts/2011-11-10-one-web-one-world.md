@@ -9,6 +9,7 @@ tags:
   - Utopian
   - Vision
 ---
+
 It might be a little stupid of me as I haven't searched on what I am currently writing about.
 
 The idea I am talking of might be utopian but this is something a lot of people including me ask for.

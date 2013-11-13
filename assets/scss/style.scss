@@ -17,3 +17,8 @@
 .title--post {
   text-align: center;
 }
+
+::selection {
+  background: $grey;
+  color: $white;
+}

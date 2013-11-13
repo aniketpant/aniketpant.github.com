@@ -9,6 +9,7 @@ tags:
   - CSS3
   - Pure CSS Sound Bars
 ---
+
 Keep thinking and you will surely find a new way to have fun with CSS.
 
 Yesterday, I introduced myself to CSS3 keyframes and today (out of the blue), I came up with these Pure CSS Sound Bars.

@@ -3,11 +3,12 @@ author: Aniket
 title: My Good Days
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - happy
   - todo
 ---
+
 Exams just got over and the happy days have just begun.
 
 Lots of things to do and I very excited for the next 2 events coming up soon.

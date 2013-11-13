@@ -7,6 +7,7 @@ category: essay
 tags:
   - TEDxBITSGoa
 ---
+
 ## How it all began?
 
 It all started with a call. Nearly two months have passed when I was called by one of my college seniors and told about making the website for [TEDxBITSGoa 2012](http://tedxbitsgoa.com/2012/). The moment I heard it, ideas filled me up and soon we were discussing how the site should look.

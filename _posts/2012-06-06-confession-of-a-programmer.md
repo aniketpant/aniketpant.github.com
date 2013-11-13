@@ -8,6 +8,7 @@ tags:
   - Codeigniter
   - Igniteplate
 ---
+
 Having worked with Codeigniter for over a year, I was finally settling down.
 It felt so great when I coded on Codeigniter, I could write simple PHP anywhere and never thought much about the whole concept.
 

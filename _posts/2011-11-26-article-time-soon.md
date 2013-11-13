@@ -3,10 +3,11 @@ author: Aniket
 title: Article Time Soon
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Announcement
 ---
+
 ## The Start
 
 Two days ago, I told [King Sidharth](http://www.64notes.com/) to help me with an idea for an article for [A List Apart](http://www.alistapart.com)

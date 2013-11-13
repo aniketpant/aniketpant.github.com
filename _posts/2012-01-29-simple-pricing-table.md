@@ -8,6 +8,7 @@ tags:
   - Demo
   - Pricing Tables
 ---
+
 Yesterday I was browsing through [Design Curate](http://designcurate.com) and I found [this](http://designcurate.com/resource/pricing-tables).
 
 It looked pretty nice, so I thought that I could replicate it and make a working demo. Here's what I made [the fiddle](http://jsfiddle.net/aniketpant/FGct5/).

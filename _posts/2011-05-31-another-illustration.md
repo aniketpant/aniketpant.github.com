@@ -3,7 +3,7 @@ author: Aniket
 title: Another Illustration
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - ASP
   - Wordpress
@@ -13,7 +13,7 @@ _image missing_
 
 This is another random work of mine.
 
-Maybe cuz I got too high on illustrator a while back, but now I returned to my site design roots.
+Maybe, because I got too high on illustrator a while back, but now I returned to my site design roots.
 
 This was inspired by Carla Ceia's CV. You can check his site [here](http://hauntedcathouse.org).
 

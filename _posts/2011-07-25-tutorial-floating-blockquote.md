@@ -5,6 +5,7 @@ layout: post
 type: post
 category: note
 ---
+
 You would have seen this at a number of places. There is a blockquote to one side and the content is flowing around it.
 
 Go through the post if you have no idea about how to do it.

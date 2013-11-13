@@ -3,11 +3,12 @@ author: Aniket
 title: Technology To The Rescue
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Rescue
   - Technology
 ---
+
 Neck aches are damn pissing off but they are a part and parcel of a coder's life.
 
 Can't help them but can't avoid them too. Leaving this topic aside, there is something interesting about the changing world.

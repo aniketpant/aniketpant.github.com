@@ -7,6 +7,7 @@ category: essay
 tags:
   - Design
 ---
+
 Being in college I have learnt a few things, out of which the most important thing that I have realized is that there is a dire need to change your attitude about things. You can happily crib about the things that are happening. Yes, you can do that, but it doesn't help in any way possible.
 
 And the other thing is to be able to learn about anything and everything you can, setting you ego aside. To quote a few examples to what I wrote.

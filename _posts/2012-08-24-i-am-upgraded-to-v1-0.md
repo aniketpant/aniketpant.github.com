@@ -3,10 +3,11 @@ author: Aniket
 title: I am upgraded to v1.0
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Self-Improvement
 ---
+
 After roughly three months of unexplainable inactivity and extreme learning experience, I feel that I can start working on core modules of many applications.
 
 ## Learning over the past few months

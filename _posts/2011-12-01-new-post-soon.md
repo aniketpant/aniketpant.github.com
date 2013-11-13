@@ -3,10 +3,11 @@ author: Aniket
 title: New Post Soon
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Announcement
 ---
+
 My last post on [HTML5 Semantics and Good Coding Practices](http://www.aniketpant.com/posts/html5-semantics-and-good-coding-practices) received a great response and a total of **6.4k** hits so far!
 
 It's a great thing for me. So from now on I have decided to write an article of this sort every week. One good article a week. Seems good to me.
@@ -15,7 +16,7 @@ Revealing the new article:
 
 1 … 2 … 3
 
-\*applause\*
+*applause*
 
 **The Bones of HTML5**
 

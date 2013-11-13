@@ -11,6 +11,7 @@ tags:
   - Problem
   - Stack Overflow
 ---
+
 Yesterday, I made an attempt to use PasswordHash and tried to directly convert it into a CI Library. Failing at that, I went ahead and downloaded **SimpleLoginSecure**.
 
 Refer to my [question](http://stackoverflow.com/questions/7072968/passwordhash-not-working-with-codeigniter-solved) on Stack Overflow, regarding why I have been talking about Password Hashing so much.

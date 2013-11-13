@@ -8,6 +8,7 @@ tags:
   - Jabalpur
   - WordCamp
 ---
+
 6 days back I had started on my journey to Jabalpur to speak at the WordCamp. Let me start with the whole thing.
 
 Started off in the evening of 13th from Goa in a semi-sleeper to Mumbai and reached the very next morning. Caught a train in the afternoon and left for Jabalpur.

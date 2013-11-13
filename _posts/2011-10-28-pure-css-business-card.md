@@ -9,6 +9,7 @@ tags:
   - CSS
   - pure
 ---
+
 I remember it was 2-3 days back when I was talking to a friend, and he was making this design for his theme on tumblr.
 
 From what he had made, it was lots of things, like his desk and he had a business card sort of thing on it. So, I asked him that was he going to use CSS to recreate it. And to that, he said that he'll be using it as an image.

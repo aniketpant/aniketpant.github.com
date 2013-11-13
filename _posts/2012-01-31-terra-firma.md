@@ -4,27 +4,28 @@ title: Terra Firma
 layout: poetry
 category: poetry
 ---
-This room is not what it seems like  
-Go see the painting on the wall  
-The future is painted in black and white  
+
+This room is not what it seems like<br/>
+Go see the painting on the wall<br/>
+The future is painted in black and white<br/>
 And if I'm not right, then you better be wrong.
 
-Shed your inhibitions  
-Break these walls  
-Look outside  
+Shed your inhibitions<br/>
+Break these walls<br/>
+Look outside<br/>
 Feel the rain.
 
-You don't need to search for the light  
-Come close to me my love  
-I'll show you the life in you  
+You don't need to search for the light<br/>
+Come close to me my love<br/>
+I'll show you the life in you<br/>
 Stay near, don't ever leave.
 
-Flowers give in to spring  
-Even the leaves fall in autumn  
-But the love we have will last  
+Flowers give in to spring<br/>
+Even the leaves fall in autumn<br/>
+But the love we have will last<br/>
 Till the stars shine in the skies.
 
-I hope you won't ever go  
-The smile would last forever  
-And your beauty won't fade away  
+I hope you won't ever go<br/>
+The smile would last forever<br/>
+And your beauty won't fade away<br/>
 Just like this serenade will never end.

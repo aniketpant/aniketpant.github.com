@@ -7,6 +7,7 @@ category: essay
 tags:
   - Habits
 ---
+
 ## A true story
 
 The games are [Kings of Chaos][1] and [Vile City][2].Let me tell you a story. In the time of today, there is a guy. He loves to code and read articles all day long. His day starts with checking his mail and opening

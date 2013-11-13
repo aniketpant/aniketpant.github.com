@@ -3,12 +3,13 @@ author: Aniket
 title: Return of Minimalistic Me
 layout: post
 type: post
-category: essay
+category: note
 tags:
   - Minimalist
   - Redesign
   - Theme
 ---
+
 Minimalistic Me returns with a bang and now it's cleaner, more readable and amazingly prettier.
 I shall not make you wonder more about the name Minimalistic Me. It's the name of my old theme.
 

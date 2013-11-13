@@ -8,6 +8,7 @@ tags:
   - Code Formatting
   - Plugin
 ---
+
 Today I finished writing my first WordPress plugin. It's damn simple and was really easy to build.
 
 I call it **Format Code**.

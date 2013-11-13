@@ -3,11 +3,12 @@ author: Aniket
 title: Update on Igniteplate
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Igniteplate
   - Update
 ---
+
 My latest self project is coming off really well. In the last 2 days, I have made quite a progress.
 
 **Codeigniter + Template = Igniteplate**

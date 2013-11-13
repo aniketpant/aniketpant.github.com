@@ -3,12 +3,12 @@ author: Aniket
 title: Typographic Art
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Art
   - Photoshop
-post_format: []
 ---
+
 _image missing_
 
 Made this a couple of minutes back.

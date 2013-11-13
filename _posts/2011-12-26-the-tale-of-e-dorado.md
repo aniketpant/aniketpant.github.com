@@ -8,6 +8,7 @@ tags:
   - Event
   - Quark 2012
 ---
+
 E-Dorado is going to start soon and I might not have mentioned this before but I have been working on the platform for it lately!
 
 It's one neat online event purely dependent on searching and looking for hints to relate some  images. The objective is to stay at the top while the administrators pour questions over questions on you and you can't sleep.

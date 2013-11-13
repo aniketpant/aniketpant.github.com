@@ -3,8 +3,9 @@ author: Aniket
 title: CodeIgniter with jQuery Problem
 layout: post
 type: post
-category: note
+category: weblog
 ---
+
 Yesterday, I was trying to run a jquery in my CodeIgniter view and there was some problem.
 
 It wasn't working. I couldn't figure out why. So I asked some friends of mine and they had no idea why it wasn't working.

@@ -5,10 +5,11 @@ title: >
   writing a cool new code
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Codeigniter
 ---
+
 After months I am working on Codeigniter and I just found a cool new method which I didn't think of before.
 
 ## The incredibly simple problem

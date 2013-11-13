@@ -7,6 +7,7 @@ category: note
 tags:
   - New Year
 ---
+
 The *most eventful* year is coming to an end and I don't have many words to describe it perfectly.
 
 ## The Beginning

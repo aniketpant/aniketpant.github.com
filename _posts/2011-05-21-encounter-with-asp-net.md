@@ -3,10 +3,11 @@ author: Aniket
 title: Encounter with ASP
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - ASP
 ---
+
 Today was my first encounter with ASP .NET
 
 Was trying to understand "Why do we need something which Microsoft is offering us? "

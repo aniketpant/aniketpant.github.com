@@ -3,13 +3,14 @@ author: Aniket
 title: Mutiple Events and Less Time
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Jabalpur
   - TEDxBITSGoa
   - Theme
   - WordCamp
 ---
+
 This last week has been quite a time for me.
 
 Had to make the **TEDxBITSGoa** teaser page. (I wonder why what I made wasn't liked by them :|)

@@ -3,11 +3,12 @@ author: Aniket
 title: Sad News about ASP
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - ASP
   - Problem
 ---
+
 I just learnt that I cannot host my ASP site on my current hosting as is it is Linux based.
 
 So, what I will do is, when I done with making the manual. I will post it here :)

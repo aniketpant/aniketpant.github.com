@@ -3,10 +3,11 @@ author: Aniket
 title: Fallen Leaves
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Wordpress
 ---
+
 Work's is nearly finished on Fallen Leaves 1.0
 
 Its like an addiction, making designs, and Fallen Leaves was made quite sometime back.

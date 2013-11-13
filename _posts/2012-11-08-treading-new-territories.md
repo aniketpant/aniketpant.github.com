@@ -3,12 +3,13 @@ author: Aniket
 title: Treading New Territories
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Conference
   - Mark My Word
   - Redesign
 ---
+
 I feel good today. Really really good. There are just so many things on my mind that I want to write about and work on ideas that I keep noting down in my little spark file. Yes, I have been maintaining a spark file, though I write it in a diary like format.
 
 [Mark My Word][1] has been doing really well. The [amazing speaker line-up][2] is nearly complete and we are working hard on getting the required finances for making it a success.

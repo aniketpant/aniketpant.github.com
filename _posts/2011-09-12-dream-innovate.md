@@ -3,12 +3,13 @@ author: Aniket
 title: Dream, Innovate
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Dream
   - Innovate
   - Work
 ---
+
 Today, while going through Hacker News. Well, I read it regularly (like checking it every half an hour), and I read [this](http://nymag.com/news/features/silicon-valley-2011-9/) post.
 
 It turned out to be the most inspiring thing I have ever read. I do not know how to be like [Feross](http://www.feross.org/) but I will try my best to be something close to him.

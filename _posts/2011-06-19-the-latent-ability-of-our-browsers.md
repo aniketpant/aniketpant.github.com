@@ -9,6 +9,7 @@ tags:
   - CSS
   - JavaScript
 ---
+
 Who would have thought that our Web Browsers can be capable of animations without the use of anything? When you see some beautiful color changes or some other wonderful motion animations, you might think that it is happening because of some script running in your browser or some external application being called. Well that might be possible. But if you didn't think of CSS doing that, then you do not know about the latent ability of our Web Browsers.
 
 The modern browsers (Firefox 5, Webkit Browsers) are capable of doing anything, even creating magic. The new techniques in CSS3 have the potential of changing the way we perceive animation and scripts. It won't be long that we'll have animated movies running just by our browsers without using any scripts, just pure CSS. It's going to a beautiful thing to have a small 50kb file and you can see a comic strip in action.

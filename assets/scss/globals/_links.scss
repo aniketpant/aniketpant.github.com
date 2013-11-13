@@ -11,3 +11,7 @@ a, a:visited {
     border-bottom-color: $grey;
   }
 }
+
+.block-list__link {
+  border-bottom: none;
+}

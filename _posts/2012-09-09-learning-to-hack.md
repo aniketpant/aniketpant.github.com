@@ -3,10 +3,11 @@ author: Aniket
 title: "Learning to hack"
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Growth Hacking
 ---
+
 I applied for the **Codeacademy fellowship** a couple of days back.
 
 https://twitter.com/aniket_pant/status/242662933820215298

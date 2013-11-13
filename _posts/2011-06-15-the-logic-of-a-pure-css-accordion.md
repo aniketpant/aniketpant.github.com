@@ -8,6 +8,7 @@ tags:
   - Accordion
   - CSS
 ---
+
 You may have seen [this](https://developer.mozilla.org/en-US/demos/detail/pure-css-accordion/launch), or you might not have.
 
 The logic behind making this was, I had seen an accordion on some site, it was a little different than what I have made (actually very different)

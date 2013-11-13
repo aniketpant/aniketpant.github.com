@@ -3,15 +3,16 @@ author: Aniket
 title: Search and Filter It
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - filter
   - help
   - search
 ---
+
 Exams are over (again), it's quite boring and irritating when you have exams every now and then (that is like once every month).
 
-Now they are over, I can resume work \*happy\*
+Now they are over, I can resume work *happy*
 
 Thing for this week -
 

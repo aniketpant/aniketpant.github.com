@@ -8,7 +8,8 @@ tags:
   - CSS3
   - Filters
 ---
-## Presenting..
+
+## Presenting
 
 CSS3 presents us with a new way to ramp up images (or any element as such).
 Presenting to you, **CSS3 Filters**. This is one hell of an addition to the current features we have.

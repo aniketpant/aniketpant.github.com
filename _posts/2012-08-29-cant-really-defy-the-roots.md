@@ -3,9 +3,10 @@ author: Aniket
 title: "Can't really Defy the roots"
 layout: post
 type: post
-category: note
+category: weblog
 tags: []
 ---
+
 Yesterday was a nightmare for me! I spent more than two hours trying to root my **Motorola Defy Plus**.
 
 The sole reason for my sudden decision to root my phone were two of my friends. Both of them have Motorola Defy and yesterday they installed CM9. And now they have the awesome ICS. At the start I didn't want it but then the interface was so smooth and it was more than any reason to actually shift.

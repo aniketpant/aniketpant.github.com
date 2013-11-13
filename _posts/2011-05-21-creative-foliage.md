@@ -3,11 +3,12 @@ author: Aniket
 title: Creative Foliage
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Theme
   - Wordpress
 ---
+
 This is something I made just to learn how to make a WordPress theme.
 
 I will surely make something better than this.

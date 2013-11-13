@@ -3,8 +3,9 @@ author: Aniket
 title: 'New Idea - Visual Sitemap Generator'
 layout: post
 type: post
-category: note
+category: weblog
 ---
+
 Today has been quite a nice day.
 
 I managed to finish pending work.

@@ -7,25 +7,55 @@ sitemap:
     changefreq: weekly
     lastmod: 2013-06-10T10:18:30+05:30
 ---
-<div class="grid__item one-whole">
+
+<h3>Essays</h3>
+<ul class="block-list block-list--crystal">
 {% for post in site.posts %}
-{% unless post.next %}
-<h3>{{ post.date | date: '%Y' }}</h3>
-<ul class="block-list block-list--crystal">
-{% else %}
-{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-{% if year != nyear %}
-</ul>
-<h3>{{ post.date | date: '%Y' }}</h3>
-<ul class="block-list block-list--crystal">
-{% endif %}
-{% endunless %}
+{% if post.category == 'essay' %}
 <li>
   <a class="block-list__link link-complex" href="{{ post.url }}">
-    <span class="link-complex__target">{{ post.title }}</span> <span class="muted">on {{ post.date | date:"%d %b" }}</span>
+    <span class="link-complex__target">{{ post.title }}</span> <span class="muted">{{ post.date | date:"%Y" }}</span>
   </a>
 </li>
+{% endif %}
 {% endfor %}
 </ul>
-</div>
+
+<h3>Notes</h3>
+<ul class="block-list block-list--crystal">
+{% for post in site.posts %}
+{% if post.category == 'note' %}
+<li>
+  <a class="block-list__link link-complex" href="{{ post.url }}">
+    <span class="link-complex__target">{{ post.title }}</span> <span class="muted">{{ post.date | date:"%Y" }}</span>
+  </a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+
+<h3>Poetry</h3>
+<ul class="block-list block-list--crystal">
+{% for post in site.posts %}
+{% if post.category == 'poetry' %}
+<li>
+  <a class="block-list__link link-complex" href="{{ post.url }}">
+    <span class="link-complex__target">{{ post.title }}</span> <span class="muted">{{ post.date | date:"%Y" }}</span>
+  </a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+
+<h3>Weblog</h3>
+<ul class="block-list block-list--crystal">
+{% for post in site.posts %}
+{% if post.category == 'weblog' %}
+<li>
+  <a class="block-list__link link-complex" href="{{ post.url }}">
+    <span class="link-complex__target">{{ post.title }}</span> <span class="muted">{{ post.date | date:"%Y" }}</span>
+  </a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>

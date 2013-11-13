@@ -11,6 +11,7 @@ tags:
   - html5
   - semantic
 ---
+
 ## Introduction
 
 Evil people put ids to nearly every element on their pages and make *everything* **rigid and ugly**. Moroever there was hardly any semantic structure around the front-end code.

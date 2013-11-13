@@ -6,4 +6,5 @@ exclude: ['Rakefile', 'CNAME', 'README.md', 'LICENSE', 'config.rb', 'scss/']
 url: http://aniketpant.com
 
 name: "Aniket Pant"
-description: "Notes and Essays by a developer"
+tagline: "Notes and Essays by a developer"
+description: "Aniket Pant is a developer who specializes in front-end code and believes in semantics. He enjoys writing HTML, CSS, JavaScript, PHP, Ruby and sometimes even Python."
