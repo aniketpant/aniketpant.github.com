@@ -13,12 +13,49 @@
 // Code higlite
 @import "syntax";
 
+.brand {
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .title--page,
 .title--post {
-  text-align: center;
+  @include font-size($base-font-size * 3);
+  font-weight: 700;
+  color: $secondary;
+}
+
+.list--posts {
+  @extend .block-list;
+  border: none;
+  > li {
+    border-bottom: none;
+    border-left: 1px solid darken($light-gray, 10%);
+    margin-bottom: 1rem;
+  }
+  .date {
+    @include font-size($base-font-size * 0.8);
+  }
+  .title {
+    > a {
+      color: $dark-gray;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 ::selection {
-  background: $grey;
-  color: $white;
+  background: $dark-gray;
+  color: $light-gray;
+}
+
+@include media-query(palm) {
+  .title--page,
+  .title--post {
+    @include font-size($base-font-size * 2);
+  }
 }

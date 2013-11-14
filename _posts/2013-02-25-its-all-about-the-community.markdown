@@ -8,7 +8,8 @@ category: note
 tags: []
 ---
 
-<p class="lead" markdown="1">After my experience at [WordCamp Pune 2013](http://2013.pune.wordcamp.org), I came across a lot of things that I had never seen. Let me describe my experience at WordCamp Pune over the two days and I am sure you will get a picture of what I am talking about.</p>
+After my experience at [WordCamp Pune 2013](http://2013.pune.wordcamp.org), I came across a lot of things that I had never seen. Let me describe my experience at WordCamp Pune over the two days and I am sure you will get a picture of what I am talking about.
+
 
 Let me start with a little background on my experience at WordCamps. The first time I ever spoke at an event was at [WordCamp Jabalpur 2011](http://2011.jabalpur.wordcamp.org). Due to some reasons I couldn't attend the other WordCamps that happened in 2012 and I don't like the fact that I missed out on WordCamp Baroda 2013. But, what I felt about this experience in Pune opened my eyes towards the Indian developer communities. And all of this happened because of the people I met there. Most of them were developers but there were also users who were trying to bring a difference to the community.
 

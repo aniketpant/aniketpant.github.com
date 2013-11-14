@@ -8,7 +8,8 @@ category: note
 tags: []
 ---
 
-<p class="lead">Fiddling with dotfiles has made me learn many things. I learnt that data needs to organized well everywhere. When you make aliases or write functions for each type of tool that you use, you should organize it well.</p>
+Fiddling with dotfiles has made me learn many things. I learnt that data needs to organized well everywhere. When you make aliases or write functions for each type of tool that you use, you should organize it well.
+
 
 I thank [Holman](https://github.com/holman) for his set of [dotfiles](https://github.com/holman/dotfiles). They're great and the kind of organization he has developed over there is remarkable. Over 700 people use his files and are making there own renditions. I am one of them and I am proud of it.
 

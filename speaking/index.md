@@ -10,15 +10,11 @@ sitemap:
 
 You can take a look at my slides at <a href="https://speakerdeck.com/aniketpant">my Speaker Deck profile</a>. Also, you can <a href="https://github.com/aniketpant/presentations">fork my slides</a> here.
 
-<ul class="block-list text--center block-list--crystal">
+<ul class="list--talks">
 {% for post in site.posts %}
 	{% if post.category == 'talk' %}
 	<li>
-		<a href="{{ post.url }}" class="block-list__link">
-			<span class="gamma">{{ post.title }}</span><br/>
-			<span class="topic beta highlight">{{ post.topic }}</span><br/>
-			<span class="muted"><date class="date">{{ post.date | date_to_long_string }}</date> / {{ post.place }}</span>
-		</a>
+		<a href="{{ post.url }}">{{ post.title }}</a>
 	</li>
 	{% endif %}
 {% endfor %}

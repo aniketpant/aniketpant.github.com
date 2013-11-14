@@ -5,8 +5,8 @@ layout: base
 <div class="talk {{ page.slug }}" itemscope itemtype="http://schema.org/Event">
 
 	<header class="grid__item one-whole">
-		<h1 class="title--post" itemprop="name">{{ page.topic }}</h1>
-    <h2 class="">{{ page.title }}</h2>
+		<h1 class="title--post" itemprop="name">{{ page.title }}</h1>
+    <h2 class="">{{ page.event }}</h2>
 		<div class="meta">
 		  <p><meta itemprop="startDate" content="{{ page.date | date_to_xmlschema }}"><date class="date">{{ page.date | date_to_long_string }}</date><br/>
       <a href="{{ page.link }}"  itemprop="url">Website</a></p>

@@ -3,12 +3,11 @@
  */
 
 a, a:visited {
-  color: $grey;
-  border-bottom: 1px solid darken($white, 10%);
-
+  color: $primary;
   text-decoration: none;
+  transition: all 250ms linear;
   &:hover {
-    border-bottom-color: $grey;
+    text-decoration: underline;
   }
 }
 

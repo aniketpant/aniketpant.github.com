@@ -14,7 +14,11 @@ $headings:          $content;
 $black:             black;
 $white:             white;
 
-$grey:              #3c3c3c;
+$light-gray:        #f2f2f2;
+$dark-gray:         #222;
+
+$primary:           #2a9ad9;
+$secondary:         #da3803;
 
 
 
@@ -33,7 +37,7 @@ $base-font-family:  sans-serif;
 /**
  * Default colour for objects’ borders etc.
  */
-$base-ui-color:     $grey;
+$base-ui-color:     $light-gray;
 
 
 
@@ -41,7 +45,7 @@ $base-ui-color:     $grey;
 /**
  * Brand stuff
  */
-$brand-color:       #4a8ec2!default;
+$brand-color:       $dark-gray;
 $brand-face:        $content;
 
 /**
