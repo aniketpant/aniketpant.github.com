@@ -11,30 +11,33 @@ tags:
   - html5
   - semantic
 ---
+
 ## Introduction
 
 Evil people put ids to nearly every element on their pages and make *everything* **rigid and ugly**. Moroever there was hardly any semantic structure around the front-end code.
 
-Thankfully HTML5 puts and end to much of this evilery. Well at least it tries to. Let’s talk about what’s new with HTML5 and how it makes more sense.
+Thankfully HTML5 puts and end to much of this evilery. Well at least it tries to. Let's talk about what's new with HTML5 and how it makes more sense.
 
 ## Doctype
 
-Let’s start with starting of comment
+Let's start with starting of comment
 
-    <!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN”
-“http://www.w3.org/TR/html4/loose.dtd”>
-{:data-language="html"}
 
-DOCTYPEs can’t get simpler than this!
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+```
 
-    <!DOCTYPE html>
-{:data-language="html"}
+DOCTYPEs can't get simpler than this!
+
+```html
+<!DOCTYPE html>
+```
 
 ## The Changes in the Sections
 
-Read this brilliant post on Smashing Magazine Coding on [The Document Outlining Algorithm][1]
+Read this brilliant post on Smashing Magazine Coding on [The Document Outlining Algorithm](http://coding.smashingmagazine.com/2011/08/16/html5-and-the-document-outlining-algorithm/)
 
-It will help you understand the importance of using headings and the hgroup element.and enclose the post with a class like “post”
+It will help you understand the importance of using headings and the hgroup element.and enclose the post with a class like "post"
 
 You can later use the hgroup to club your headings and create an outline which is actually related to the way you write it and show it.
 hgroup is like a wrapper for your headings ranging from h1-h6. You can make a list of these inside a hgroup according to title, subtitle and the rest.
@@ -43,67 +46,72 @@ The use of hgroup is to create an effective document outline.
 
 Almost every (sane) front-end developer was using similar ids and classes with same logic.
 
-    <div class="header">
-    <div class="navigation">
-    <div class="footer">
-{:data-language="html"}
+```html
+<div class="header">
+<div class="navigation">
+<div class="footer">
+```
 
 and so on.
 
 We have tags like header, footer, nav, article, section and aside, which bring clarity to your code and make it  more sane.
-Isn’t it simple to have more meaningful tags like these to structure your content.
+Isn't it simple to have more meaningful tags like these to structure your content.
 
 ### Header
 
-You can use [header][2] as many times as you want to anywhere on your page. Usually it is used to enclose an hgroup or some headings or relevant content like a table of contents or something like these things.
+You can use [header](http://html5doctor.com/the-header-element/) as many times as you want to anywhere on your page. Usually it is used to enclose an hgroup or some headings or relevant content like a table of contents or something like these things.
 
 You must be used to seeing things like
 
-    <div id="header">
-{:data-language="html"}
+```html
+<div id="header">
+```
 
 header is a substitute to this.
 
 ### Footer
 
-The [footer][3] is similar to header.
+The [footer](http://html5doctor.com/the-footer-element/) is similar to header.
 
 Replace your
 
-    <div id="footer">
-{:data-language="html"}
+```html
+<div id="footer">
+```
 
 with a simple footer tag. You can use it as many times as you want to!
 
 ### Nav
 
-You can group together your links in the [nav][4] element.
+You can group together your links in the [nav](http://html5doctor.com/nav-element) element.
 
-This is the way we code as of now —
+This is the way we code as of now &ndash;
 
-    <div id="main-nav" class="navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/blog/">Blog</a></li>
-      </ul>
-    </div>
-{:data-language="html"}
+```html
+<div id="main-nav" class="navigation">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+</div>
+```
 
-Change your primitive code to this —
+Change your primitive code to this &ndash;
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/blog/">Blog</a></li>
-      </ul>
-    </nav>
-{:data-language="html"}
+```html
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+</nav>
+```
 
-### article and Section
+### Article and Section
 
-The spec defines [section][5] as —
+The spec defines [section](http://html5doctor.com/the-section-element/) as &ndash;
 
 > The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.
 >
@@ -111,24 +119,24 @@ The spec defines [section][5] as —
 
 The next line makes the use of section clear.
 
-> Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.
+> Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A Web site's home page could be split into sections for an introduction, news items, and contact information.
 
 Not: The section element should not be used for styling. A div should be preferred.
 
-A great post by Louis Lazaris ([Impressive Webs][6]) on [When to Use the HTML5 “section” element][7].
+A great post by Louis Lazaris ([Impressive Webs](http://www.impressivewebs.com)) on [When to Use the HTML5 "section" element](http://www.impressivewebs.com/html5-section/).
 
-You can read about the [article][8] element from HTML5 Doctor.
+You can read about the [article](http://html5doctor.com/the-article-element/) element from HTML5 Doctor.
 
 ### Aside
 
-From what I have read and understood about [aside][9] is that it can be used to relate content to the element it is enclosed inside.
+From what I have read and understood about [aside](http://html5doctor.com/aside-revisited/) is that it can be used to relate content to the element it is enclosed inside.
 
 For example, if an aside is contained inside an article, it means that the content of the aside is related to the article but not to the page.
 Whereas, if the aside is outside the article, then it means that it is not as closely related to the article but related to the page.
 
 ### Address
 
-Another addition to the new elements is an [address][10] tag! Yes, we have an address tag.
+Another addition to the new elements is an [address](http://html5doctor.com/the-address-element/) tag! Yes, we have an address tag.
 Imagine that you can actually get the address from a webpage more easily now, by just looking for this simple tag.
 
 ### Example
@@ -136,52 +144,55 @@ Imagine that you can actually get the address from a webpage more easily now, by
 Here is an example.
 
 *   A simple blog post of yours. Put the title of the post and the post information in the header.
-*   Move on to the actual post and place in an article. Put the tags and maybe a “tweet my post” link in the footer.
-*   These simple tags make things more logical unlike the earlier method to use ids like “header” and “footer” to do the job.
+*   Move on to the actual post and place in an article. Put the tags and maybe a "tweet my post" link in the footer.
+*   These simple tags make things more logical unlike the earlier method to use ids like "header" and "footer" to do the job.
 
 ## Groupings
 
 A figure tag has been introduced for your images and other illustrations.
 As of now we to do this by making divs or my associating different classes, but soon we will begin to enclose them with the figure element.
 
-    <figure>
-    <!-- Your image here -->
-    <figcaption></figcaption>
-    </figure>
-{:data-language="html"}
+```html
+<figure>
+<!-- Your image here -->
+<figcaption></figcaption>
+</figure>
+```
 
-See this [fiddle][11], I made to demonstrate the use!
+See this [fiddle](http://jsfiddle.net/aniketpant/hUWhD/embedded/result/), I made to demonstrate the use!
 
 ## Forms
 
 Form elements were changed the most in HTML5.
 
 We have placeholders! Yes, placeholders are there which we used by javascripts.
-Now, how to use placeholders. Well, it’s as easy as eating cheese!
+Now, how to use placeholders. Well, it's as easy as eating cheese!
 
 Just include placeholders and the text you need inside you input elements.
 
-    <input name="user-name" type="email" placeholder="Your username is your email address">
-{:data-language="html"}
+```html
+<input name="user-name" type="email" placeholder="Your username is your email address">
+```
 
 Apart from this, we have keygen.
 
-The [draft][12] says —
+The [draft](http://dev.w3.org/html5/spec/Overview.html#the-keygen-element) says &ndash;
 
-> The keygen element represents a key pair generator control. When the control’s form is submitted, the private key is stored in the local keystore, and the public key is packaged and sent to the server.
+> The keygen element represents a key pair generator control. When the control's form is submitted, the private key is stored in the local keystore, and the public key is packaged and sent to the server.
 
 It will help in improving security by verification, I think. Need to study more about it!
-According to the [draft][13], the output element represents the result of a calculation.
+According to the [draft](http://dev.w3.org/html5/spec/Overview.html#the-output-element), the output element represents the result of a calculation.
 
-See the following code —
+See the following code &ndash;
 
-    <form name="main">
-      Result: <output name="result"></output>
-      <script>
-        document.forms.main.elements.result.value = 'Hello World';
-      </script>
-    </form>
-{:data-language="html"}
+```html
+<form name="main">
+  Result: <output name="result"></output>
+  <script>
+    document.forms.main.elements.result.value = 'Hello World';
+  </script>
+</form>
+```
 
 I guess, now you understand the logic of this element. You can manipulate this to change things accordingly and display results in a more orderly fashion.
 
@@ -193,21 +204,23 @@ Meter element is nothing big in terms of what it does, but it brings logic to yo
 
 ### BAD CODE
 
-    <section>
-      My height is 5 feet and 10 inches.
-    </section>
-{:data-language="html"}
+```html
+<section>
+  My height is 5 feet and 10 inches.
+</section>
+```
 
 ### GOOD CODE
 
-    <section>
-    My height is
-    <dl>
-      <dt>Feet: <dd> <meter min=0 max=7 value=5>5ft</meter>
-      <dt>Inches: <dd> <meter min=0 max=12 value=11>11in</meter>
-    </dl>
-    </section>
-{:data-language="html"}
+```html
+<section>
+My height is
+<dl>
+  <dt>Feet: <dd> <meter min=0 max=7 value=5>5ft</meter>
+  <dt>Inches: <dd> <meter min=0 max=12 value=11>11in</meter>
+</dl>
+</section>
+```
 
 You can easily understand what all this means. Better than before right?
 
@@ -215,29 +228,30 @@ You can easily understand what all this means. Better than before right?
 
 The elements under this category are … wait for it …
 
-*   Details
-*   Summary
-*   Command
-*   Menu
+* Details
+* Summary
+* Command
+* Menu
 
 To be frank, I did not use the details element but I saw an example a while back and it pretty cool!
-It’s like a mini-accordion.
+It's like a mini-accordion.
 
-As of now, you can use it in webkit browsers. Won’t work on Mozilla. And it will be soon available in Opera.
+As of now, you can use it in webkit browsers. Won't work on Mozilla. And it will be soon available in Opera.
 So, what details does is that you can easily collapsible elements.
 
 The code for it is like this -
 
-    <details>
-      <summary>Show/Hide me</summary>
-      <p>Hello! I am a paragraph element inside a details tag.</p>
-    </details>
-{:data-language="html"}
+```html
+<details>
+  <summary>Show/Hide me</summary>
+  <p>Hello! I am a paragraph element inside a details tag.</p>
+</details>
+```
 
 It would look like this, a simple arrow before the summary text and when you click on the arrow, you will see the paragraph text.
-[Demo][14] for details element.
+[Demo](http://jsbin.com/egefop#html,live) for details element.
 
-Another good [example ][15]with a collapsible table of contents.
+Another good [example](http://jsbin.com/egefop/8#3) with a collapsible table of contents.
 
 The menu element seems very interesting.
 
@@ -256,13 +270,13 @@ Everyone is very much aware of Canvas. Use canvas for anything and everything. B
 
 What all you can do with the nifty canvas?
 
-*   Draw shapes
-*   Fill colors
-*   Create pretty gradients and patterns
-*   Render text
-*   Get frames from other canvases
-*   Play with pixels
-*   Export your canvas to a file
+* Draw shapes
+* Fill colors
+* Create pretty gradients and patterns
+* Render text
+* Get frames from other canvases
+* Play with pixels
+* Export your canvas to a file
 
 A lot of demos and other articles are already there on how to interact with the canvas. It is one of the very much loved introductions in HTML5.
 
@@ -270,23 +284,24 @@ Moving onto the map and area elements. It can be used to relate pixel coordinate
 
 A good example from HTML5 Doctor is this -
 
-    <section>
-      <h1>Clothing</h1>
-      <img src="/images/menu.gif" alt="Select a department to go to its page." usemap="#nav">
-    </section>
-    <footer>
-      <map name="nav">
-      <p>
-        <a href="/women/">Women</a>
-        <area alt="Women" coords="0,0,100,50" href="/women/"> |
-        <a href="/men/">Men</a>
-        <area ALT="Men" coords="0,0,100,50" href="/men/"> |
-        <a HREF="/kids/">Kids</a>
-        <area alt="Food" coords="0,0,100,50" href="/kids/"> |
-      </p>
-      </map>
-    </footer>
-{:data-language="html"}
+```html
+<section>
+  <h1>Clothing</h1>
+  <img src="/images/menu.gif" alt="Select a department to go to its page." usemap="#nav">
+</section>
+<footer>
+  <map name="nav">
+  <p>
+    <a href="/women/">Women</a>
+    <area alt="Women" coords="0,0,100,50" href="/women/"> |
+    <a href="/men/">Men</a>
+    <area ALT="Men" coords="0,0,100,50" href="/men/"> |
+    <a HREF="/kids/">Kids</a>
+    <area alt="Food" coords="0,0,100,50" href="/kids/"> |
+  </p>
+  </map>
+</footer>
+```
 
 Seems useful!
 
@@ -294,24 +309,26 @@ These ones are the best.
 
 Take a look at this ugly HTML code used for embedding a video from youtube!
 
-    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
-    <param name="allowFullScreen" value="true" />
-    <param name="allowscriptaccess" value="always" />
-    <param name="src" value="http://www.youtube.com/v/oHg5SJYRHA0&hl=en&fs=1&" />
-    <param name="allowfullscreen" value="true" />
-    <embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/oHg5SJYRHA0&hl=en&fs=1&" allowscriptaccess="always" allowfullscreen="true">
-    </embed>
-    </object>
-{:data-language="html"}
+```html
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" />
+<param name="src" value="http://www.youtube.com/v/oHg5SJYRHA0&hl=en&fs=1&" />
+<param name="allowfullscreen" value="true" />
+<embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/oHg5SJYRHA0&hl=en&fs=1&" allowscriptaccess="always" allowfullscreen="true">
+</embed>
+</object>
+```
 
-Don’t even feel like reading what it says.
+Don't even feel like reading what it says.
 
-Let’s do this the HTML5 way.
+Let's do this the HTML5 way.
 
-    <video width="640"  height="360" src="http://www.youtube.com/demo/google_main.mp4"  controls autobuffer>
-    <p> Try this page in Safari  4! Or you can <a  href="http://www.youtube.com/demo/google_main.mp4">download the  video</a> instead.</p>
-    </video>
-{:data-language="html"}
+```html
+<video width="640"  height="360" src="http://www.youtube.com/demo/google_main.mp4"  controls autobuffer>
+<p> Try this page in Safari  4! Or you can <a  href="http://www.youtube.com/demo/google_main.mp4">download the  video</a> instead.</p>
+</video>
+```
 
 Oh, this is so neat! (This is what you said, right?)
 You can even add an autoplay to the video tag and you know what it means.
@@ -321,79 +338,59 @@ Code for it is quite easy to understand.
 
 Example:
 
-    <track kind=subtitles src=abc.vtt srclang=en label="English">
-{:data-language="html"}
+```html
+<track kind=subtitles src=abc.vtt srclang=en label="English">
+```
 
-There are other ‘kind’ for it like subtitles, captions, descriptions, chapters and metadata.
+There are other ‘kind' for it like subtitles, captions, descriptions, chapters and metadata.
 
 Video done, time for some audio.
 
 The audio tag defines 5 attributes.
 
-*   src
-*   autoplay
-*   loop
-*   controls
-*   preload
+* src
+* autoplay
+* loop
+* controls
+* preload
 
 Example:
 
-    <audio controls preload="auto" autobuffer>
-      <source src="track.mp3" />
-      <source src="track.ogg" />
-    </audio>
-{:data-language="html"}
+```html
+<audio controls preload="auto" autobuffer>
+  <source src="track.mp3" />
+  <source src="track.ogg" />
+</audio>
+```
 
 This enables controls for the audio, enable auto buffering and loads the file beforehand.
 
 The support for the filetypes vary from browsers as of now.
 
-Read more on HTML5 Doctor – [Native Audio in the browser][17]
+Read more on HTML5 Doctor – [Native Audio in the browser](http://html5doctor.com/native-audio-in-the-browser)
 
 ## The Final Say
 
-The new elements introduced are effective over what we had earlier. At least that’s what I feel as a guy who loves to code.
+The new elements introduced are effective over what we had earlier. At least that's what I feel as a guy who loves to code.
 
-For a front-end guy, some of the changes won’t make difference like map, area, address and others like these.
+For a front-end guy, some of the changes won't make difference like map, area, address and others like these.
 
-The minor things don’t make that much of a difference in terms of the result. Code your pages the way you wish.
-But if someone doesn’t see the result and checks your code, he will be able to make out the difference because of these minor things.
+The minor things don't make that much of a difference in terms of the result. Code your pages the way you wish.
+But if someone doesn't see the result and checks your code, he will be able to make out the difference because of these minor things.
 
 ## Resources
 
-1.  [Canvas Gradients][18]
-2.  [The Loading Demo][19]
-3.  You can go through [HTML5 Demos][20] for more demos with great technologies.
-4.  [HTML5 Doctor][21] is great for definitions and good explanations of the various elements.
+1.  [Canvas Gradients](http://html5demos.com/canvas-grad)
+2.  [The Loading Demo](http://html5demos.com/canvas)
+3.  You can go through [HTML5 Demos](http://html5demos.com/) for more demos with great technologies.
+4.  [HTML5 Doctor](http://html5doctor.com/) is great for definitions and good explanations of the various elements.
 
 ## Credits
 
-Some examples mentioned above are inspired and taken from the draft and [HTML5 Doctor][21].
+Some examples mentioned above are inspired and taken from the draft and [HTML5 Doctor](http://html5doctor.com/).
 
 ## Brief Note
 
 I have included only those changes which I felt brought more clarity and made the code semantic.
 
-If you are on HN, please upvote. The [link][22] to the discussion.
-
- [1]: http://coding.smashingmagazine.com/2011/08/16/html5-and-the-document-outlining-algorithm/ "The Document Outlining Algorithm"
- [2]: http://html5doctor.com/the-header-element/ "The Header Element"
- [3]: http://html5doctor.com/the-footer-element-update/ "The Footer Element"
- [4]: http://html5doctor.com/nav-element/ "The Nav Element"
- [5]: http://html5doctor.com/the-section-element/ "The Section Element"
- [6]: http://www.impressivewebs.com "Impressive Webs"
- [7]: http://www.impressivewebs.com/html5-section/ "HTML5 Section"
- [8]: http://html5doctor.com/the-article-element/ "The article Element"
- [9]: http://html5doctor.com/aside-revisited/ "Aside"
- [10]: http://html5doctor.com/the-address-element/ "The Address Element"
- [11]: http://jsfiddle.net/aniketpant/hUWhD/embedded/result/ "Fiddle - Figure"
- [12]: http://dev.w3.org/html5/spec/Overview.html#the-keygen-element "Draft - The Keygen Element"
- [13]: http://dev.w3.org/html5/spec/Overview.html#the-output-element "Draft - The Output Element"
- [14]: http://jsbin.com/egefop#html,live "Demo for details element"
- [15]: http://jsbin.com/egefop/8#3 "Example with a collapsible table of contents"
- [17]: http://html5doctor.com/native-audio-in-the-browser/ "Native Audio in the browser"
- [18]: http://html5demos.com/canvas-grad "Canvas Gradients"
- [19]: http://html5demos.com/canvas "Demo for Canvas"
- [20]: http://html5demos.com/ "HTML5 Demos"
- [21]: http://html5doctor.com/ "HTML5 Doctor"
- [22]: http://news.ycombinator.com/item?id=3285210 "HTML5 Semantics and Good Coding Practices on HN"
+If you are on HN, please upvote. The [link](http://news.ycombinator.com/item?id=3285210) to the discussion.

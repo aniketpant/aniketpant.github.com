@@ -8,7 +8,8 @@ tags:
   - Codeigniter
   - Laravel
 ---
-It has been a while that I have been working on igniteplate and I haven’t been able to put much time to it.
+
+It has been a while that I have been working on igniteplate and I haven't been able to put much time to it.
 Two days back, I happened to read [this][1]. And then I thought of giving [Laravel][2] a try.
 
 After being a dedicated Codeigniter developer for so long and even started work on a major project of my own, Laravel was something that took me away.
@@ -35,7 +36,7 @@ The pros and cons of **Codeigniter**.
 
 ## Analysis: Laravel
 
-Now let’s see how **Laravel** is better.
+Now let's see how **Laravel** is better.
 
 ### Pros
 
@@ -51,14 +52,14 @@ Now let’s see how **Laravel** is better.
 
 No problems faced so far.
 
-It’s been only some days that I have been working on it and it’s very different from Codeigniter. It will take me sometime to get the hang of it.
+It's been only some days that I have been working on it and it's very different from Codeigniter. It will take me sometime to get the hang of it.
 I am liking this framework a lot.
 
 ## Dilemma
 
 After I have started working with Laravel, I realized that a product like *igniteplate* is something that can be made with Laravel in a much lesser time.
-The only reason I wish to continue working on igniteplate is that it hasn’t been done on Codeigniter. And I am sure some developers like myself will benefit for me.
-Also, there is sure a little attachment to this project because it’s mine.
+The only reason I wish to continue working on igniteplate is that it hasn't been done on Codeigniter. And I am sure some developers like myself will benefit for me.
+Also, there is sure a little attachment to this project because it's mine.
 
  [1]: http://www.ianlandsman.com/2012/02/22/laravel "Ian Landsman on Laravel"
  [2]: http://laravel.com "Laravel PHP"

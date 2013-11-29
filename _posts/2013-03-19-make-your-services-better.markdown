@@ -7,7 +7,9 @@ title: "Make your services better"
 category: essay
 tags: []
 ---
-<p class="lead">I try out new web applications once in a while and most of the time I am shocked to see that a majority of them do not allow me to download an archive of my activity on their website. Not even a log of what I did since I registered. Moreover, these websites don't even offer me the feature to delete my account on their website.</p>
+
+I try out new web applications once in a while and most of the time I am shocked to see that a majority of them do not allow me to download an archive of my activity on their website. Not even a log of what I did since I registered. Moreover, these websites don't even offer me the feature to delete my account on their website.
+
 
 Having been developing applications for quite sometime I know that making the above possible is not a matter effort but more about what these application owners wish to do with our data.
 

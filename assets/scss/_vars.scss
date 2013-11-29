@@ -1,0 +1,70 @@
+/**
+ * Fonts
+ */
+$content:           "source-sans-pro", Helvetica, Arial, sans-serif;
+$headings:          "adelle", Georgia, serif;
+
+
+
+
+/**
+ * Base Colors
+ */
+
+$black:             black;
+$white:             white;
+
+$light-gray:        #f9f9f9;
+$dark-gray:         #222;
+
+$primary:           #d62a49;
+$secondary:         #222;
+
+
+
+
+/**
+ * Base stuff
+ */
+$base-font-size:    18px!default;
+$base-line-height:  24px!default;
+
+/**
+ * Base font-family.
+ */
+$base-font-family:  sans-serif;
+
+/**
+ * Default colour for objects’ borders etc.
+ */
+$base-ui-color:     darken($light-gray, 20%);
+
+
+
+
+/**
+ * Brand stuff
+ */
+$brand-color:       $dark-gray;
+$brand-face:        $headings;
+
+/**
+ * How big would you like round corners to be by default?
+ */
+$brand-round:        4px;
+
+
+
+
+/**
+ * Overrides
+ */
+
+$use-block-list:    true;
+$use-grids:         true;
+$use-island:        true;
+$use-media:         true;
+$use-nav:           true;
+$use-rules:         true;
+$push:              true;
+$desk-push:         true;

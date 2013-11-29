@@ -8,6 +8,7 @@ tags:
   - Codeigniter
   - Igniteplate
 ---
+
 Having worked with Codeigniter for over a year, I was finally settling down.
 It felt so great when I coded on Codeigniter, I could write simple PHP anywhere and never thought much about the whole concept.
 
@@ -42,7 +43,7 @@ In the last one week, I have learnt
 
 > Never be satisfied.
 
-This will be my motto and should be every other person’s who get too close to their beloved idea.
+This will be my motto and should be every other person's who get too close to their beloved idea.
 
 If you liked my post, then it would be great if you [upvote it on HN][3].The reason for the motto:
 

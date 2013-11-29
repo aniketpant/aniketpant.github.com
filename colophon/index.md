@@ -2,19 +2,15 @@
 layout: page
 title: Colophon
 slug: colophon
-sitemap: 
+sitemap:
   priority: 0.7
   changefreq: monthly
   lastmod: 2013-06-09T04:53:30.000Z
 published: true
 ---
 
-<div class="grid">
-<div class="grid__item one-whole" markdown="1">
-The website is pure handcoded HTML written over the brilliant [Jekyll](https://github.com/mojombo/jekyll) platform. It is served via the amazing [GitHub](https://github.com) and only [inuit.css](https://github.com/csswizardry/inuit.css) is used. **No crapware guaranteed.** The [source code](https://github.com/aniketpant/aniketpant.github.com) has been specially kept for you to fork it.
+The website is handcoded HTML written using [Sublime Text](http://www.sublimetext.com). It is hosted via [GitHub](https://github.com) and is generated using [Jekyll](https://github.com/mojombo/jekyll).
 
-I wrote the entire site using [Sublime Text 2](http://www.sublimetext.com/2) with Frontier [Color Scheme by Dayle Rees](https://github.com/daylerees/colour-schemes).
+The framework used for writing the design is [inuit.css](https://github.com/csswizardry/inuit.css) by [Harry Roberts](http://csswizardry.com).
 
-The font used is [Source Sans Pro](https://typekit.com/fonts/source-sans-pro) and served by Typekit. The pretty colors you see are are &ndash; <span style="color: #BF2C47">#BF2C47</span> and <span style="color: #037F8C">#037F8C</span>.
-</div>
-</div>
+The [source code](https://github.com/aniketpant/aniketpant.github.com) has been specially kept for you to fork it. Just take note that all _content_ present on the website is copyrighted. All other aspects of this repository are MIT licensed.

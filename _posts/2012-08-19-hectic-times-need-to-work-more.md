@@ -3,9 +3,10 @@ author: Aniket
 title: Hectic times. Need to work more.
 layout: post
 type: post
-category: note
+category: weblog
 tags: []
 ---
+
 Today I feel that I have reached my limit. And I am feeling great about it.
 
 Yes! Most people might be surprised that I am happy about the fact that I am tired and weary at the moment but it surely is a good thing.
@@ -25,11 +26,11 @@ Mark My Word Logo
 
 The second part of my routine was working on a [college project][3]. Now, this project has a lot of background story.
 
-I had been working on it for over two months because I wasn’t provided with the option of rewriting the whole application. So, the whole time I kept working on fixing bugs and making small-small changes.
+I had been working on it for over two months because I wasn't provided with the option of rewriting the whole application. So, the whole time I kept working on fixing bugs and making small-small changes.
 
 Then came the best part. I was given the option to rewrite the entire application during the vacations.
 
-The work on the application was really incredible because I tried out a new PHP framework which is my favorite now. It’s called Laravel.
+The work on the application was really incredible because I tried out a new PHP framework which is my favorite now. It's called Laravel.
 And because of the project I was able to understand so much more about application architecture design.
 
 ## Other Side Projects

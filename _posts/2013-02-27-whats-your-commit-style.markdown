@@ -7,7 +7,9 @@ title: "What's your commit style?"
 category: essay
 tags: []
 ---
-<p class="lead">I have been experimenting with commit styles for the last one month and there are three styles that actually caught my attention and are very useful.</p>
+
+I have been experimenting with commit styles for the last one month and there are three styles that actually caught my attention and are very useful.
+
 
 I am not sure how you do it, but I tried our different ways of making commits to my projects and each style has it's own upper-hand.
 

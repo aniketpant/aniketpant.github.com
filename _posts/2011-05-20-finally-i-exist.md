@@ -3,9 +3,10 @@ author: Aniket
 title: Finally I Exist
 layout: post
 type: post
-category: note
+category: weblog
 tags: []
 ---
+
 Hello everyone
 
 This is Aniket Pant.

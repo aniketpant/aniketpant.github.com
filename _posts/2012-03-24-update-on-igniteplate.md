@@ -3,11 +3,12 @@ author: Aniket
 title: Update on Igniteplate
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Igniteplate
   - Update
 ---
+
 My latest self project is coming off really well. In the last 2 days, I have made quite a progress.
 
 **Codeigniter + Template = Igniteplate**
@@ -16,7 +17,7 @@ This is how the name came up and since then I never bothered to delve more into 
 
 ## The Changes
 
-So, the latest changes in Igniteplate are —
+So, the latest changes in Igniteplate are &ndash;
 
 1.  Change in design and layout.
 2.  Twitter Bootstrap 2.0
@@ -28,7 +29,7 @@ So, the latest changes in Igniteplate are —
 
 ### Change in design and layout
 
-This was my first concern to deal with once I had started work on it. For the last 6 months, all my CI projects had a similar layout and it wasn’t very flexible. The current layout gives me more scope for new elements to be placed here and there.
+This was my first concern to deal with once I had started work on it. For the last 6 months, all my CI projects had a similar layout and it wasn't very flexible. The current layout gives me more scope for new elements to be placed here and there.
 
 ### Twitter Bootstrap 2.0
 
@@ -48,7 +49,7 @@ _image missing_
 
 This is the temporary logo for Igniteplate.
 
-I have just colored it. That’s all I did. The two parts are from [The Noun Project][4].
+I have just colored it. That's all I did. The two parts are from [The Noun Project][4].
 
 I used a [fire][5] logo and a [plate][6] logo and came up with this. Even if I continue to use this, I need to make it more intricate, as I find this really stupid and simple.
 

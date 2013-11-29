@@ -1,10 +1,10 @@
 ---
 layout: talk
-title: WordCamp Jabalpur 2011
+title: Theme Development & Customization
 category: talk
 slug: wordcamp-jabalpur-2011
 place: Jabalpur Engineering College
-topic: Theme Development & Customization
+event: WordCamp Jabalpur 2011
 link: http://2011.jabalpur.wordcamp.org
 ---
 

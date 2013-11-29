@@ -1,15 +1,10 @@
 permalink: /:year/:month/:title
-markdown: kramdown
-exclude: ['Rakefile', 'CNAME', 'README.md', 'LICENSE', 'config.rb', '*.scss', 'inuit.css/']
+markdown: redcarpet
+pygments: true
+exclude: ['Rakefile', 'CNAME', 'README.md', 'LICENSE', 'config.rb', 'scss/']
 
 url: http://aniketpant.com
 
 name: "Aniket Pant"
-tagline: "Rawrrr!"
-description: "Notes and Essays by a developer"
-author:
- name: "Aniket Pant"
- email: "me@aniketpant.com"
- github: "aniketpant"
- twitter: "aniket_pant"
- facebook: "aniket.pant"
+tagline: "Notes and Essays by a developer"
+description: "Aniket Pant is a developer who specializes in front-end code and believes in semantics. He enjoys writing HTML, CSS, JavaScript, PHP, Ruby and sometimes even Python."

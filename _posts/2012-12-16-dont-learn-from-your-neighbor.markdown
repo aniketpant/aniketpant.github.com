@@ -5,7 +5,8 @@ title: "Don't learn from your neighbor"
 category: essay
 tags: []
 ---
-<p class="lead" markdown="1">There are countless living examples who learn on their own, and then there are select few who try to learn from their neighbors. Well, there is nothing bad in doing so, but in the process there is a very high chance that you will end up copying his methods and _never_, _ever_ develop any originality in your work.</p>
+
+<p class="lead" markdown="1">There are countless living examples who learn on their own, and then there are select few who try to learn from their neighbors. Well, there is nothing bad in doing so, but in the process there is a very high chance that you will end up copying his methods and never, ever develop any originality in your work.</p>
 
 I am pretty sure that every now and then you come across a person, whose blog is nothing but a poor replica of someone's work, you have been following for a long time. At this point, you may think that this copycat must be new to this world and he will get better in a couple of days. And then after a month or so you stumble onto his blog yet again and you're astonished to see that he has accomplished nothing in this time. He wrote three posts saying that he is working on this and that, but then again, he has nothing on his Github repositories. After learning all of this in a couple of minutes, you come to a conclusion or rather a simple observation that this person joined the web community and got _lost_.
 

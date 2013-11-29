@@ -1,0 +1,63 @@
+// variables and overrides
+@import "vars";
+
+
+// inuit.css core
+@import "inuit.css/inuit";
+
+
+// Globals
+@import "globals/typography";
+@import "globals/layout";
+@import "globals/links";
+
+// Code higlite
+@import "syntax";
+
+.brand {
+  text-transform: uppercase;
+  @include font-size($base-font-size * 1.5);
+  letter-spacing: -1px;
+  .part--latter {
+    transition: color 100ms linear;
+  }
+  &:hover {
+    text-decoration: none;
+    .part--latter {
+      color: $primary;
+    }
+  }
+}
+
+.title--page,
+.title--post {
+  @include font-size($base-font-size * 2);
+  font-weight: 600;
+  color: $secondary;
+}
+
+.list--posts {
+  @extend .block-list;
+  border: none;
+  > li {
+    border-bottom: none;
+    border-left: 1px solid darken($light-gray, 10%);
+    margin-bottom: 1rem;
+  }
+  .date {
+    @include font-size($base-font-size * 0.8);
+  }
+  .title {
+    > a {
+      color: $dark-gray;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+::selection {
+  background: $dark-gray;
+  color: $light-gray;
+}

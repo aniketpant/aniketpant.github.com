@@ -3,10 +3,11 @@ author: Aniket
 title: I am upgraded to v1.0
 layout: post
 type: post
-category: note
+category: weblog
 tags:
   - Self-Improvement
 ---
+
 After roughly three months of unexplainable inactivity and extreme learning experience, I feel that I can start working on core modules of many applications.
 
 ## Learning over the past few months
@@ -33,7 +34,7 @@ All of this seems so exciting and I am most probably going to stay this way for 
 ## Things on my list
 
 *   **Shift to linux once again and run AOE III from the Virtual Box. (Because it seems so cool)**
-*   Learn to work with micro-frameworks - specifically [Toro][1] because it’s so cool too!
+*   Learn to work with micro-frameworks - specifically [Toro][1] because it's so cool too!
 *   Write something for [A List Apart][2]
 *   Work my way to another redesign that will not be so focused on development but be a mix of my personality and code
 *   Do my best in organising [Mark My Word][3]

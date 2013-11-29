@@ -5,22 +5,23 @@ layout: poetry
 category: poetry
 tags: []
 ---
-The skyline  
-Blue  
+
+The skyline<br/>
+Blue<br/>
 Lit up with lights
 
-Sweet lime and orange  
-Someday lavender  
+Sweet lime and orange<br/>
+Someday lavender<br/>
 You still remember the smell
 
-The tree  
-Autumn it was  
+The tree<br/>
+Autumn it was<br/>
 Leaves floating, flying around
 
-My days  
-Might have lost some color  
+My days<br/>
+Might have lost some color<br/>
 But they still aren't gray
 
-Dim lights and dull sounds  
-I still hear my heart beat  
+Dim lights and dull sounds<br/>
+I still hear my heart beat<br/>
 From nothing to green leaves

@@ -8,7 +8,8 @@ tags:
   - CSS3
   - Filters
 ---
-## Presenting..
+
+## Presenting
 
 CSS3 presents us with a new way to ramp up images (or any element as such).
 Presenting to you, **CSS3 Filters**. This is one hell of an addition to the current features we have.
@@ -25,48 +26,55 @@ Forget about making sprites to put in some effects on images, or adding a maskin
 
 Simple to understand. Convert your images to grayscale.
 
-    div { filter: grayscale(100%) }
-{:data-language="css"}
+```css
+div { filter: grayscale(100%) }
+```
 
 ### sepia(amount)
 
 Add a vintage look to your images.
 
-    div { filter: sepia(100%) }
-{:data-language="css"}
+```css
+div { filter: sepia(100%) }
+```
 
 ### blur(amount)
 
 You can now blur your images. No need to add a box-shadow to do the same thing (or even add a mask).
 
-    div { filter: blur(1px) }
-{:data-language="css"}
+```css
+div { filter: blur(1px) }
+```
 
 ### saturate(amount)
 
 You can even change the saturation of the image.
 
-    div { filter: saturate(2) }
-{:data-language="css"}
+```css
+div { filter: saturate(2) }
+```
 
 ### invert(amount)
 
 Invert an image by this simple line of code.
 
-    div { filter: invert(100%) }
-{:data-language="css"}
+```css
+div { filter: invert(100%) }
+```
 
 ### hue-rotate(amount)
 
-    div { filter: hue-rotate(90deg) }
-{:data-language="css"}
+```css
+div { filter: hue-rotate(90deg) }
+```
 
 ### contrast(amount) & brightness(amount)
 
 These do what you expect them to.
 
-    div { filter: contrast(50%) brightness(50%) }
-{:data-language="css"}
+```css
+div { filter: contrast(50%) brightness(50%) }
+```
 
 This will reduce the contrast and brightness of the image to 50%.
 

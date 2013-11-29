@@ -1,0 +1,16 @@
+/**
+ * Links
+ */
+
+a, a:visited {
+  color: $primary;
+  text-decoration: none;
+  transition: all 250ms linear;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.block-list__link {
+  border-bottom: none;
+}
