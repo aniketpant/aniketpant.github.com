@@ -6,21 +6,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>four oh four &ndash; Rawrrr!</title>
+  <title>four oh four &ndash; Aniket Pant</title>
   <meta name="author" content="{{ author.name }}">
   <meta name="description" content="{{ site.desc }}">
   <meta name="keywords" content="aniket, pant, rawrrr, weblog, css, php, html, codeigniter, laravel, jekyll">
   <meta name="viewport" content="width=device-width">
 
   <link href="/sitemap/index.xml" rel="sitemap" title="Sitemap" type="application/xml">
-
-  <!-- twitter cards -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-  <meta name="twitter:site" content="@aniket_pant">
-  <meta name="twitter:creator" content="@aniket_pant">
-  <meta name="twitter:title" content="{{ page.title | strip_html | truncate:70 }}">
-  <meta name="twitter:description" content="{{ page.content | strip_html | truncate:200 }}">
 
   <meta property="fb:app_id" content="465363156848461" />
   <meta property="og:type"   content="article" />
@@ -29,7 +21,7 @@
   <meta property="og:image"  content="http://aniketpant.com/assets/images/logo.jpg" />
 
   <!-- stylesheets -->
-  <link rel="stylesheet" href="/assets/stylesheets/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- feed -->
   <link rel="alternate" href="/feed/index.xml" title="{{ site.name }}" type="application/rss+xml">
@@ -39,69 +31,35 @@
     <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
   <![endif]-->
 
-  <div class="header-container">
-    <div class="zen-space full-width"></div>
-    <header class="grid wrapper push--top" role="banner">
-      <h1 class="grid__item one-quarter palm-one-whole"><img class="logo" src="/assets/images/logo.jpg" alt="Rawrrr! Aniket here." /></h1><!--
-      --><nav class="grid__item three-quarters palm-one-whole navbar">
-        <ul class="nav nav--block palm-nav--stacked">
-          <li><a href="/">Home</a></li><!--
-          --><li><a href="/about-me">About Me</a></li><!--
-          --><li><a href="/speaking">Speaking</a></li><!--
-          --><li><a href="/archive">Archive</a></li>
-        </ul>
-      </nav>
-      <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
-    </header> <!-- header -->
-  </div> <!-- header-container -->
+  <div class="wrapper">
+    <div class="grid">
+      <header class="grid__item  one-fifth  palm-one-whole  header-container" role="banner">
+        <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
+      </header><!--
 
-  <div class="main-container">
-    <section class="grid wrapper">
-      <div class="page 404">
-        <header class="grid__item one-whole">
-          <h1 class="page_title">four oh four</h1>
-        </header>
-        <article class="grid__item one-whole" role="main">
-          <blockquote>
-            <p>The tree<br/>
-            Autumn it was<br/>
-            Leaves floating, flying around</p>
-            <b class="source"><a href="/2013/01/lights--sounds/">Lights & Sounds</a></b>
-          </blockquote>
-          <p>Since, you have stumbled here, you <strong>cannot</strong> follow me on twitter now.</p>
-          <a class="twitter-timeline" href="https://twitter.com/aniket_pant" data-widget-id="310469021873094657">Tweets by @aniket_pant</a>
+      --><div class="grid__item  three-fifths  push--desk-one-fifth  palm-one-whole  main-container">
+        <section class="grid">
+          <div class="grid__item  one-whole">
+            <blockquote>
+              <p>The tree<br/>
+              Autumn it was<br/>
+              Leaves floating, flying around</p>
+              <b class="source"><a href="/2013/01/lights--sounds/">Lights &amp; Sounds</a></b>
+            </blockquote>
           </div>
-        </article>
-      </div><!-- page -->
-    </section>
-  </div> <!-- main-container -->
+        </section>
+      </div><!--
 
-  <div class="footer-container">
-    <div class="info-bar full-width">
-      <div class="grid wrapper">
-        <aside class="grid__item one-whole">
-          <h3 class="section-heading">Follow me on twitter</h3>
-          <p>I tweet about my ongoing projects, developments around the web and music.</p>
-          <p><a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="true">Follow @aniket_pant</a></p>
-        </aside>
-      </div>
+      --><div class="grid__item  one-whole  palm-one-whole  footer-container">
+        <footer role="contentinfo">
+          <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
+        </footer> <!-- footer -->
+      </div> <!-- footer-container -->
     </div>
-    <div class="grid wrapper">
-      <footer role="contentinfo">
-        <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
-        <div class="grid__item one-whole">
-          <p class="smallprint">
-            <span class="muted">Handcrafted by</span> <a href="http://twitter.com/{{ site.author.twitter }}">Aniket</a>. <span class="muted">Around the scene since 2010.</span><br/>
-            <a href="/colophon">Colophon</a>
-          </p>
-        </div>
-      </footer> <!-- footer -->
-    </div>
-    <div class="zen-space full-width"></div>
-  </div> <!-- footer-container -->
+  </div>
 
   <script type="text/javascript">
-
+    // Google Analytics
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-23477947-1']);
     _gaq.push(['_trackPageview']);
@@ -112,10 +70,7 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
-  </script>
-
-  <!-- Typekit Fonts -->
-  <script type="text/javascript">
+    // Typekit Fonts
     (function() {
       var config = {
         kitId: 'rsd5dqz',
@@ -123,9 +78,9 @@
       };
       var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
     })();
+
+    // Twitter Widget
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
   </script>
-
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
 </body>
 </html>
