@@ -14,7 +14,8 @@ p {
 }
 
 @include headings(1, 6) {
-  font-weight: 700;
+  font-family: $headings;
+  font-weight: 300;
 }
 
 b,
@@ -34,6 +35,7 @@ code {
 }
 
 blockquote {
+  font-family: $headings;
   @include font-size($base-font-size * 1.15);
   font-style: italic;
 }

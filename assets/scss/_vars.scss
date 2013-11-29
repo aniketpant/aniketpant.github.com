@@ -1,8 +1,8 @@
 /**
  * Fonts
  */
-$content:           "Source Sans Pro", Helvetica, Arial, sans-serif;
-$headings:          $content;
+$content:           "source-sans-pro", Helvetica, Arial, sans-serif;
+$headings:          "adelle", Georgia, serif;
 
 
 
@@ -14,11 +14,11 @@ $headings:          $content;
 $black:             black;
 $white:             white;
 
-$light-gray:        #f2f2f2;
+$light-gray:        #f9f9f9;
 $dark-gray:         #222;
 
-$primary:           #2a9ad9;
-$secondary:         #da3803;
+$primary:           #d62a49;
+$secondary:         #222;
 
 
 
@@ -37,7 +37,7 @@ $base-font-family:  sans-serif;
 /**
  * Default colour for objects’ borders etc.
  */
-$base-ui-color:     $light-gray;
+$base-ui-color:     darken($light-gray, 20%);
 
 
 
@@ -46,7 +46,7 @@ $base-ui-color:     $light-gray;
  * Brand stuff
  */
 $brand-color:       $dark-gray;
-$brand-face:        $content;
+$brand-face:        $headings;
 
 /**
  * How big would you like round corners to be by default?
@@ -60,8 +60,11 @@ $brand-round:        4px;
  * Overrides
  */
 
-$use-grids:         true;
-$use-nav:           true;
-$use-media:         true;
-$use-island:        true;
 $use-block-list:    true;
+$use-grids:         true;
+$use-island:        true;
+$use-media:         true;
+$use-nav:           true;
+$use-rules:         true;
+$push:              true;
+$desk-push:         true;

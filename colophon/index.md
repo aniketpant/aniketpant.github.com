@@ -13,6 +13,4 @@ The website is handcoded HTML written using [Sublime Text](http://www.sublimetex
 
 The framework used for writing the design is [inuit.css](https://github.com/csswizardry/inuit.css) by [Harry Roberts](http://csswizardry.com).
 
-The [source code](https://github.com/aniketpant/aniketpant.github.com) has been specially kept for you to fork it. Just take note that my _logo_ and all _content_ present on the website is copyrighted. All other aspects of this repository are MIT licensed.
-
-The font used is [Museo Sans](https://typekit.com/fonts/museo-sans) and served by Typekit.
+The [source code](https://github.com/aniketpant/aniketpant.github.com) has been specially kept for you to fork it. Just take note that all _content_ present on the website is copyrighted. All other aspects of this repository are MIT licensed.

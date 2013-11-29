@@ -9,8 +9,7 @@ sitemap:
 ---
 
 <div class="media">
-<img src="http://www.gravatar.com/avatar/b6500b41998cd1ed4aa28464ec0118bb?s=150" class="media__img img  img--left  img--round"  alt="That's Aniket" />
-<p class="lead">My name is <strong>Aniket Pant</strong> and  I love to <em>read</em>, <em>write</em> and <em>code</em>.</p>
+<p class="lead">My name is <a href="/about" rel="nofollow">Aniket Pant</a> and  I love to <em>read</em>, <em>write</em> and <em>code</em>.</p>
 </div>
 
 <ul class="list--posts">
