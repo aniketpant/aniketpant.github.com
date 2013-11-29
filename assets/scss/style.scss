@@ -1,6 +1,7 @@
 // variables and overrides
 @import "vars";
 
+
 // inuit.css core
 @import "inuit.css/inuit";
 
@@ -59,11 +60,4 @@
 ::selection {
   background: $dark-gray;
   color: $light-gray;
-}
-
-@include media-query(palm) {
-  .title--page,
-  .title--post {
-    @include font-size($base-font-size * 2);
-  }
 }

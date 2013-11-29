@@ -1,5 +1,33 @@
 // Variables and overrides
 @import "vars";
 
+
 // inuit.css core
 @import "inuit.css/inuit";
+
+
+// Globals
+@import "globals/typography";
+@import "globals/layout";
+@import "globals/links";
+
+
+.brand {
+  text-transform: uppercase;
+  @include font-size($base-font-size * 1.5);
+  letter-spacing: -1px;
+  .part--latter {
+    transition: color 100ms linear;
+  }
+  &:hover {
+    text-decoration: none;
+    .part--latter {
+      color: $primary;
+    }
+  }
+}
+
+::selection {
+  background: $dark-gray;
+  color: $light-gray;
+}
