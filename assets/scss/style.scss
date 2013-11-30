@@ -57,6 +57,12 @@
   }
 }
 
+.hollow {
+  background: $primary;
+  height: 5px;
+  margin-bottom: 1rem;
+}
+
 ::selection {
   background: $dark-gray;
   color: $light-gray;
