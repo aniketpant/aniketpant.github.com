@@ -5,7 +5,7 @@ slug: archive
 sitemap:
     priority: 0.7
     changefreq: weekly
-    lastmod: 2013-06-10T10:18:30+05:30
+    lastmod: 2013-11-30T08:55:30+05:30
 ---
 
 <h3>Essays</h3>

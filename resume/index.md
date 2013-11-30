@@ -3,9 +3,9 @@ layout: custom
 title: Aniket Pant's Resume
 slug: resume
 sitemap:
-priority: 0.7
-changefreq: monthly
-lastmod: 2013-06-11T12:07:30+05:30
+  priority: 0.7
+  changefreq: monthly
+  lastmod: 2013-11-30T08:55:30+05:30
 ---
 
 <div class="wrapper">

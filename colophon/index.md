@@ -5,7 +5,7 @@ slug: colophon
 sitemap:
   priority: 0.7
   changefreq: monthly
-  lastmod: 2013-06-09T04:53:30.000Z
+  lastmod: 2013-11-30T08:55:30+05:30
 published: true
 ---
 
