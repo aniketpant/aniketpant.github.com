@@ -11,13 +11,21 @@
 @import "globals/layout";
 @import "globals/links";
 
-// Code higlite
+
+// Shared
+@import "shared/brand";
+@import "shared/selection";
+
+
+// Code highlite
 @import "syntax";
+
 
 .brand {
   text-transform: uppercase;
   @include font-size($base-font-size * 1.5);
   letter-spacing: -1px;
+  padding: 12px;
   .part--latter {
     transition: color 100ms linear;
   }
