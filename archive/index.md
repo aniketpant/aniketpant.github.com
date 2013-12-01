@@ -9,52 +9,44 @@ sitemap:
 ---
 
 <h3>Essays</h3>
-<ul class="block-list block-list--crystal">
+<ul class="block-list">
 {% for post in site.posts %}
 {% if post.category == 'essay' %}
 <li>
-  <a class="block-list__link link-complex" href="{{ post.url }}">
-    <span class="link-complex__target">{{ post.title }}</span> <span class="muted">{{ post.date | date:"%Y" }}</span>
-  </a>
+  <a class="block-list__link" href="{{ post.url }}">{{ post.title }}</a>
 </li>
 {% endif %}
 {% endfor %}
 </ul>
 
 <h3>Notes</h3>
-<ul class="block-list block-list--crystal">
+<ul class="block-list">
 {% for post in site.posts %}
 {% if post.category == 'note' %}
 <li>
-  <a class="block-list__link link-complex" href="{{ post.url }}">
-    <span class="link-complex__target">{{ post.title }}</span> <span class="muted">{{ post.date | date:"%Y" }}</span>
-  </a>
+  <a class="block-list__link" href="{{ post.url }}">{{ post.title }}</a>
 </li>
 {% endif %}
 {% endfor %}
 </ul>
 
 <h3>Poetry</h3>
-<ul class="block-list block-list--crystal">
+<ul class="block-list">
 {% for post in site.posts %}
 {% if post.category == 'poetry' %}
 <li>
-  <a class="block-list__link link-complex" href="{{ post.url }}">
-    <span class="link-complex__target">{{ post.title }}</span> <span class="muted">{{ post.date | date:"%Y" }}</span>
-  </a>
+  <a class="block-list__link" href="{{ post.url }}">{{ post.title }}</a>
 </li>
 {% endif %}
 {% endfor %}
 </ul>
 
 <h3>Weblog</h3>
-<ul class="block-list block-list--crystal">
+<ul class="block-list">
 {% for post in site.posts %}
 {% if post.category == 'weblog' %}
 <li>
-  <a class="block-list__link link-complex" href="{{ post.url }}">
-    <span class="link-complex__target">{{ post.title }}</span> <span class="muted">{{ post.date | date:"%Y" }}</span>
-  </a>
+  <a class="block-list__link" href="{{ post.url }}">{{ post.title }}</a>
 </li>
 {% endif %}
 {% endfor %}
