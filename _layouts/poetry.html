@@ -8,13 +8,18 @@ layout: base
     <h1 class="title--post">{{ page.title }}</h1>
   </header>
 
-  <article class="grid__item  one-whole  text--center" role="main">
+  <article class="grid__item  one-whole" role="main">
     {{ content }}
   </article>
 
   <footer class="grid__item  one-whole">
     <p class="muted">Written on {{ page.date | date_to_long_string }}</p>
     <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>
+
+    <hr class="rule  rule--dashed"/>
+
+    <p>The above poem was brought to you by <strong>Aniket</strong>.</p>
+    <p><a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="true">Follow @aniket_pant</a></p>
   </footer>
 
 </div><!-- poem -->
