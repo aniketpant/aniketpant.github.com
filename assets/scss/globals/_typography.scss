@@ -3,7 +3,7 @@
  */
 
 body {
-  font-family: $content;
+  font-family: $font-serif;
   font-weight: 300;
 
   color: $dark-gray;
@@ -14,8 +14,17 @@ p {
 }
 
 @include headings(1, 6) {
-  font-family: $headings;
+  font-family: $font-sans;
   font-weight: 300;
+
+  color: $secondary;
+}
+
+h2,
+.beta {
+  @include font-size($base-font-size * 1.4, false);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
 }
 
 b,
@@ -35,7 +44,6 @@ code {
 }
 
 blockquote {
-  font-family: $headings;
-  @include font-size($base-font-size * 1.15);
-  font-style: italic;
+  font-family: $font-serif;
+  @include font-size($base-font-size * 1.15, true);
 }

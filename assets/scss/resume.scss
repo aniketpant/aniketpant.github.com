@@ -15,3 +15,25 @@
 // Shared
 @import "shared/brand";
 @import "shared/selection";
+
+h3,
+.delta {
+  @include font-size($base-font-size * 1, true);
+}
+
+.byline {
+  @include font-size($base-font-size * 0.9, true);
+  margin-bottom: 0.5rem;
+}
+
+p,
+ul,
+li {
+  @include font-size($base-font-size * 0.9, true);
+}
+
+.current {
+  @include font-size($base-font-size * 0.75, false);
+  line-height: 1;
+  background-color: $primary;
+}

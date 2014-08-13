@@ -1,8 +1,8 @@
 /**
  * Fonts
  */
-$content:           "source-sans-pro", Helvetica, Arial, sans-serif;
-$headings:          "adelle", Georgia, serif;
+$font-serif:        "Vollkorn", Georgia, serif;
+$font-sans:         "Lato", Helvetica, Arial, sans-serif;
 
 
 
@@ -18,7 +18,7 @@ $light-gray:        #f9f9f9;
 $dark-gray:         #222;
 
 $primary:           #d62a49;
-$secondary:         #222;
+$secondary:         #4a4a4a;
 
 
 
@@ -46,7 +46,7 @@ $base-ui-color:     darken($light-gray, 20%);
  * Brand stuff
  */
 $brand-color:       $dark-gray;
-$brand-face:        $headings;
+$brand-face:        $font-sans;
 
 /**
  * How big would you like round corners to be by default?
@@ -67,5 +67,6 @@ $use-marginalia:    true;
 $use-media:         true;
 $use-nav:           true;
 $use-rules:         true;
+$use-lozenges:      true;
 $push:              true;
 $desk-push:         true;

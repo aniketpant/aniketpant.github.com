@@ -40,11 +40,10 @@
 .title--page,
 .title--post {
   @include font-size($base-font-size * 2);
-  font-weight: 600;
   color: $secondary;
 }
 
-.list--posts {
+.list {
   @extend .block-list;
   border: none;
   > li {
@@ -52,15 +51,22 @@
     border-left: 1px solid darken($light-gray, 10%);
     margin-bottom: 1rem;
   }
-  .date {
+  .list__date {
     @include font-size($base-font-size * 0.8);
+    margin-bottom: 0.25rem;
   }
-  .title {
+  .list__title {
+    margin-bottom: 0.5rem;
     > a {
-      color: $dark-gray;
+      color: $secondary;
       &:hover {
         text-decoration: none;
       }
+    }
+  }
+  .list__content {
+    p {
+      margin-bottom: 0;
     }
   }
 }

@@ -107,23 +107,22 @@ Notice itemscope and itemtype attributes in the article. The BlogPosting schema 
 The sidebar is one area where some changes can be made. A better way to understand this is by looking at this code snippet.
 
 ```php
+<?php
+
 function bones_register_sidebars() {
-register_sidebar(array(
-'id' => 'sidebar1',
-'name' => 'Sidebar 1',
-'description' => 'The first (primary) sidebar.',
-'before_widget' =></pre>
-<div id="%1$s">',
- 'after_widget' => '</div>
- <pre>
-  ',
-  'before_title' => '</pre>
-  <h4>',
-   'after_title' => '</h4>
-   <pre>
-    ',
-    ));
-  }
+    register_sidebar(array(
+            'id' => 'sidebar1',
+            'name' => 'Sidebar 1',
+            'description' => 'The first (primary) sidebar.',
+            'before_widget' =></pre>
+            <div id="%1$s">',
+            'after_widget' => '</div><pre>',
+            'before_title' => '</pre><h4>',
+            'after_title' => '</h4><pre>'
+            ));
+}
+
+?>
 ```
 
 This code registers the sidebar but places div's around each widget. Instead of using div's, a good option would be to go ahead with using aside's. Semantic!
