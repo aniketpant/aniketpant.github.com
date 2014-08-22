@@ -22,17 +22,19 @@ h3,
 }
 
 .byline {
+  font-family: $font-sans;
   @include font-size($base-font-size * 0.9, true);
   margin-bottom: 0.5rem;
 }
 
 p,
 ul,
-li {
+li,
+dl {
   @include font-size($base-font-size * 0.9, true);
 }
 
-.current {
+.active {
   @include font-size($base-font-size * 0.75, false);
   line-height: 1;
   background-color: $primary;
