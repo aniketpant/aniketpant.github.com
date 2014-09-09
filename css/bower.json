@@ -27,6 +27,9 @@
     "inuit-box": "*",
     "inuit-media": "*",
     "inuit-flag": "*",
-    "inuit-list-ui": "*"
+    "inuit-list-ui": "*",
+    "inuit-clearfix": "*",
+    "inuit-widths": "*",
+    "inuit-spacing": "*"
   }
 }
