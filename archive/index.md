@@ -2,52 +2,56 @@
 layout: page
 title: The preserved archives
 slug: archive
-sitemap:
-    priority: 0.7
-    changefreq: weekly
-    lastmod: 2013-11-30T08:55:30+05:30
 ---
 
-<h3>Essays</h3>
-<ul class="block-list">
-{% for post in site.posts %}
-{% if post.category == 'essay' %}
-<li>
-  <a class="block-list__link" href="{{ post.url }}">{{ post.title }}</a>
-</li>
-{% endif %}
-{% endfor %}
-</ul>
+<div class="margin--bottom">
+  <h3>Essays</h3>
+  <ul class="list-block list-block--small">
+  {% for post in site.posts %}
+  {% if post.category == 'essay' %}
+    <li>
+      <a class="list-block__link" href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endif %}
+  {% endfor %}
+  </ul>
+</div>
 
-<h3>Notes</h3>
-<ul class="block-list">
-{% for post in site.posts %}
-{% if post.category == 'note' %}
-<li>
-  <a class="block-list__link" href="{{ post.url }}">{{ post.title }}</a>
-</li>
-{% endif %}
-{% endfor %}
-</ul>
+<div class="margin--bottom">
+  <h3>Notes</h3>
+  <ul class="list-block list-block--small">
+  {% for post in site.posts %}
+  {% if post.category == 'note' %}
+    <li>
+      <a class="list-block__link" href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endif %}
+  {% endfor %}
+  </ul>
+</div>
 
-<h3>Poetry</h3>
-<ul class="block-list">
-{% for post in site.posts %}
-{% if post.category == 'poetry' %}
-<li>
-  <a class="block-list__link" href="{{ post.url }}">{{ post.title }}</a>
-</li>
-{% endif %}
-{% endfor %}
-</ul>
+<div class="margin--bottom">
+  <h3>Poetry</h3>
+  <ul class="list-block list-block--small">
+  {% for post in site.posts %}
+  {% if post.category == 'poetry' %}
+    <li>
+      <a class="list-block__link" href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endif %}
+  {% endfor %}
+  </ul>
+</div>
 
-<h3>Weblog</h3>
-<ul class="block-list">
-{% for post in site.posts %}
-{% if post.category == 'weblog' %}
-<li>
-  <a class="block-list__link" href="{{ post.url }}">{{ post.title }}</a>
-</li>
-{% endif %}
-{% endfor %}
-</ul>
+<div class="margin--bottom">
+  <h3>Weblog</h3>
+  <ul class="list-block list-block--small">
+  {% for post in site.posts %}
+  {% if post.category == 'weblog' %}
+    <li>
+      <a class="list-block__link" href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endif %}
+  {% endfor %}
+  </ul>
+</div>

@@ -4,21 +4,21 @@ layout: base
 
 <div class="page {{ page.slug }}">
 
-	{% if page.slug != 'home' %}
-	<header class="grid__item  one-whole">
-		<h1 class="title--page">{{ page.title }}</h1>
-	</header>
-	{% endif %}
+  {% if page.slug != 'home' %}
+  <header>
+  <h1 class="title--page">{{ page.title }}</h1>
+  </header>
+  {% endif %}
 
-	<div class="accessibility" itemscope itemtype="http://schema.org/Person">
-		<span itemprop="name">Aniket Pant</span>
-		<img src="/images/me-again.jpg" itemprop="image" />
-		<a href="mailto:me@aniketpant.com" itemprop="email">me@aniketpant.com</a>
+  <div class="accessibility" itemscope itemtype="http://schema.org/Person">
+    <span itemprop="name">Aniket Pant</span>
+    <img src="/images/me-again.jpg" itemprop="image" />
+    <a href="mailto:me@aniketpant.com" itemprop="email">me@aniketpant.com</a>
     <a href="http://www.aniketpant.com" itemprop="url">aniketpant.com</a>
-	</div>
+  </div>
 
-	<article class="grid__item  one-whole" role="main">
-		{{ content }}
-	</article>
+  <article role="main">
+  {{ content }}
+  </article>
 
 </div><!-- page -->

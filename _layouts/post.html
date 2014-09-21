@@ -4,20 +4,18 @@ layout: base
 
 <div class="post">
 
-  <header class="grid__item  one-whole">
-		<h1 class="title--post">{{ page.title }}</h1>
-	</header>
-
-  <article class="grid__item  one-whole" role="main">
-  	{{ content }}
-	</article>
-
-  <footer class="grid__item  one-whole">
+  <header>
+    <h1 class="title--post">{{ page.title }}</h1>
     <p class="muted">Written on {{ page.date | date_to_long_string }}</p>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>
+  </header>
 
-    <hr class="rule  rule--dashed"/>
+  <article role="main">
+  {{ content }}
+  </article>
 
+  <p>Share this if you liked it: <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a></p>
+
+  <footer class="box  box--highlite">
     <p>The above post was brought to you by <strong>Aniket</strong>.</p>
     <p><a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="true">Follow @aniket_pant</a></p>
   </footer>

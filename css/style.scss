@@ -41,9 +41,11 @@
 @import "bower_components/inuit-page/base.page";
 @import "base.page";
 @import "bower_components/inuit-headings/base.headings";
+@import "bower_components/inuit-paragraphs/base.paragraphs";
 @import "base.type";
 @import "base.links";
 @import "bower_components/inuit-lists/base.lists";
+@import "bower_components/inuit-list-bare/objects.list-bare";
 @import "bower_components/inuit-images/base.images";
 @import "base.quotes";
 
@@ -66,8 +68,15 @@ $inuit-flag-collapse-at:        479px !default;
 
 
 $inuit-list-ui-border-color:    $color-gray-ui;
-$inuit-enable-list-ui--small:   true;
+$inuit-enable-list-ui--tiny:    true;
 @import "bower_components/inuit-list-ui/objects.list-ui";
+
+
+$inuit-enable-list-block--small:    true;
+@import "bower_components/inuit-list-block/objects.list-block";
+
+
+@import "bower_components/inuit-tabs/objects.tabs";
 
 
 
@@ -86,3 +95,123 @@ $inuit-enable-margins:          true;
 $inuit-enable-margins--huge:    true;
 $inuit-enable-margins--none:    true;
 @import "bower_components/inuit-spacing/trumps.spacing";
+
+
+
+
+
+/**
+ * #SYNTAX
+ */
+@import "syntax";
+
+
+
+
+
+.hollow {
+  background: $color-brand;
+  height: 5px;
+  width: 100%;
+}
+
+.brand {
+  @include font-size(26px);
+  border-top: 5px solid transparent;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.brand__link {
+  color: $color-gray;
+  @include attention() {
+    text-decoration: none;
+  }
+  &:hover {
+    .part--latter {
+      color: $color-brand;
+    }
+  }
+}
+.part--former {
+  @include font-weight(light);
+}
+.part--latter {
+  @include font-weight(semi-bold);
+  transition: 100ms color linear;
+}
+
+.nav {
+  .tabs__item {
+  }
+  .tabs__link {
+    border-top: 5px solid transparent;
+    color: $color-gray;
+    padding-top: 1rem;
+    text-transform: uppercase;
+    @include font-size(13px);
+    @include attention() {
+      border-top-color: $color-brand;
+      text-decoration: none;
+    }
+  }
+}
+
+.list-block__link {
+  display: block;
+}
+
+.wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.wrapper--small {
+  width: 40rem;
+  margin: 0 auto;
+}
+
+.accessibility {
+  display: none;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.img--round {
+  border-radius: $base-round;
+}
+
+.title--page,
+.title--post {
+}
+
+.list {
+  @extend .list-ui;
+  @extend .list-ui--tiny;
+}
+
+  .list__date {
+    margin-bottom: 5px;
+  }
+
+  .list__title {
+    margin-bottom: 10px;
+  }
+
+.box--highlite {
+  background: lighten($color-gray-ui, 10%);
+}
+
+.main-container {
+  margin-top: 4rem;
+}
+
+.margin--bottom {
+  margin-bottom: 1rem;
+}

@@ -42,7 +42,7 @@
 
   <!-- stylesheets -->
   <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lato:300,400/Vollkorn:400,400i">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lato:200,300,300i,400">
 
   <!-- feed -->
   <link rel="alternate" href="/feed/index.xml" title="{{ site.name }}" type="application/rss+xml">
@@ -52,28 +52,36 @@
     <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
   <![endif]-->
 
-  <div class="wrapper">
-    <div class="grid">
-      <header class="grid__item  one-fifth  lap-one-third  palm-one-whole  header-container" role="banner">
-        <div class="hollow"></div>
-        <h1><a href="/" rel="nofollow" class="brand"><span class="part--former weight--light">Aniket</span> <span class="part--latter  weight--semibold">Pant</span></a></h1>
-        <nav>
-          <ul class="nav  nav--stacked  nav--block">
-            <li><a href="/about">About</a></li><!--
-            --><li><a href="/speaking">Speaking</a></li><!--
-            --><li><a href="/archive">Archive</a></li>
-          </ul>
-        </nav>
-        <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
-      </header><!--
-
-      --><div class="grid__item  three-fifths  lap-two-thirds  push--desk-one-fifth  palm-one-whole  main-container">
-        <section class="grid">
-        {{ content }}
-        </section>
+  <header class="layout  header-container" role="banner">
+    <div class="wrapper">
+      <div class="layout__item  one-fifth">
+        {% if page.slug == "home" %}
+        <h1 class="brand"><a class=" brand__link" href="/" rel="nofollow"><span class="part--former">Aniket</span> <span class="part--latter">Pant</span></a></h1>
+        {% else %}
+        <div class="brand"><a class=" brand__link" href="/" rel="nofollow"><span class="part--former">Aniket</span> <span class="part--latter">Pant</span></a></div>
+        {% endif %}
       </div><!--
 
-      --><div class="grid__item  one-whole  palm-one-whole  footer-container">
+      --><div class="layout__item  two-fifths  right">
+        <nav>
+          <ul class="tabs  nav">
+            <li class="tabs__item"><a class="tabs__link" href="/about">About</a></li><!--
+            --><li class="tabs__item"><a class="tabs__link" href="/speaking">Speaking</a></li><!--
+            --><li class="tabs__item"><a class="tabs__link" href="/archive">Archive</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
+    </div>
+  </header>
+
+  <div class="layout">
+    <div class="wrapper--small">
+      <div class="layout__item   main-container">
+        {{ content }}
+      </div><!--
+
+      --><div class="layout__item  footer-container">
         <footer role="contentinfo">
           <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
         </footer> <!-- footer -->
@@ -91,5 +99,9 @@
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
   </script>
 
+  <!-- js -->
+  <script type="text/javascript" src="/js/zepto.min.js"></script>
+  <script type="text/javascript" src="/js/moment.min.js"></script>
+  <script type="text/javascript" src="/js/wubwub.js"></script>
 </body>
 </html>

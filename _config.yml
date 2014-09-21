@@ -8,3 +8,6 @@ url: http://aniketpant.com
 name: "Aniket Pant"
 tagline: "Notes and Essays by a developer"
 description: "Aniket is a web developer who loves to write PHP, Ruby and JavaScript"
+
+gems:
+  - jekyll-sitemap
