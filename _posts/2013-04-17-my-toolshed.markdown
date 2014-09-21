@@ -12,19 +12,19 @@ I have been experimenting yet again and I am writing this post for people who mi
 
 
 <div class="media">
-  <img src="/assets/images/my-toolshed/workspace.jpg" title="My workspace" alt="My workspace" />
+  <img src="/images/my-toolshed/workspace.jpg" title="My workspace" alt="My workspace" />
 </div>
 
 That's how my workspace looks. I work with four workspaces, on one I run my music player, the other one runs my browser, the third has my editor and the last one has the terminal running. All this segregation has resulted due to the use of [dotfiles](https://github.com/aniketpant/dotfiles). **Yes, dotfiles.**
 
 <div class="media">
-  <img src="/assets/images/my-toolshed/editor.jpg" title="The editor" alt="The editor" />
+  <img src="/images/my-toolshed/editor.jpg" title="The editor" alt="The editor" />
 </div>
 
 I use [Sublime Text 2](http://www.sublimetext.com/2) as my text editor and it is absolutely brilliant. Also, I recently ditched the use of Frontier as my theme and switched to _Bluedawn_.
 
 <div class="media" markdown="1">
-  <img src="/assets/images/my-toolshed/terminal.jpg" title="Terminal" alt="Terminal" />
+  <img src="/images/my-toolshed/terminal.jpg" title="Terminal" alt="Terminal" />
 </div>
 
 The rest of it is fairly simple. My `bash` has been replaced by `zsh`, which in-turn uses [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh). My theme for `zsh` is _gallois_, it's pretty sweet- less clutter, gives me more space to work and works well with plugins.

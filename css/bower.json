@@ -1,0 +1,41 @@
+{
+  "name": "aniketpant",
+  "version": "0.0.1",
+  "homepage": "https://github.com/aniketpant/aniketpant.github.com",
+  "authors": [
+    "Aniket Pant <me@aniketpant.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-box": "*",
+    "inuit-box-sizing": "*",
+    "inuit-clearfix": "*",
+    "inuit-flag": "*",
+    "inuit-headings": "*",
+    "inuit-images": "*",
+    "inuit-layout": "*",
+    "inuit-lists": "*",
+    "inuit-list-bare": "*",
+    "inuit-list-block": "*",
+    "inuit-list-ui": "*",
+    "inuit-media": "*",
+    "inuit-page": "*",
+    "inuit-paragraphs": "*",
+    "inuit-reset": "*",
+    "inuit-responsive-settings": "*",
+    "inuit-responsive-tools": "*",
+    "inuit-shared": "*",
+    "inuit-spacing": "*",
+    "inuit-starter-kit": "*",
+    "inuit-tabs": "*",
+    "inuit-widths": "*"
+  }
+}

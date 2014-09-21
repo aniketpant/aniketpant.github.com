@@ -50,9 +50,9 @@ Writing a gem of your own is a satisfying experience and you get to learn a lot 
 ## Screenshots
 
 <div class="media">
-  <img src="/assets/images/hnsearch-my-first-gem/screenshot-1.jpg" title="Screenshot 1" alt="Screenshot 1" />
+  <img src="/images/hnsearch-my-first-gem/screenshot-1.jpg" title="Screenshot 1" alt="Screenshot 1" />
 </div>
 
 <div class="media">
-  <img src="/assets/images/hnsearch-my-first-gem/screenshot-2.jpg" title="Screenshot 2" alt="Screenshot 2" />
+  <img src="/images/hnsearch-my-first-gem/screenshot-2.jpg" title="Screenshot 2" alt="Screenshot 2" />
 </div>

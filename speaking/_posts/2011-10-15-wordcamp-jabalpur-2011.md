@@ -9,7 +9,7 @@ link: http://2011.jabalpur.wordcamp.org
 ---
 
 <div class="islet">
-	<img class="img--center img--medium" src="/assets/images/Me-at-WordCamp-Jabalpur-2011.jpg" />
+	<img class="img--center img--medium" src="/images/Me-at-WordCamp-Jabalpur-2011.jpg" />
 </div>
 
 ## The Talk

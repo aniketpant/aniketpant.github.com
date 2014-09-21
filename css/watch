@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sass -E utf-8 --watch style.scss:style.min.css --style compressed --precision 9
+
+exit 0

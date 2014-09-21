@@ -2,10 +2,6 @@
 layout: page
 title: Colophon
 slug: colophon
-sitemap:
-  priority: 0.7
-  changefreq: monthly
-  lastmod: 2013-11-30T08:55:30+05:30
 published: true
 ---
 
