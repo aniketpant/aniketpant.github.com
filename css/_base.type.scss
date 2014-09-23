@@ -37,6 +37,7 @@
  * Code-like elements.
  */
 code, kbd, samp {
+  @include font-size(14px);
   color: $color-code;
   font-family: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 }
