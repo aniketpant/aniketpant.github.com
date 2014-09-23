@@ -90,6 +90,7 @@ $inuit-enable-list-block--small:    true;
 
 $inuit-use-fractions:   false;
 @import "bower_components/inuit-widths/trumps.widths";
+@import "trumps.widths-responsive";
 
 $inuit-enable-margins:          true;
 $inuit-enable-margins--huge:    true;
@@ -118,6 +119,8 @@ $inuit-enable-margins--none:    true;
 .brand {
   @include font-size(26px);
   border-top: 5px solid transparent;
+  margin: 0;
+  padding: 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -151,7 +154,9 @@ $inuit-enable-margins--none:    true;
     text-transform: uppercase;
     @include font-size(13px);
     @include attention() {
-      border-top-color: $color-brand;
+      @include media-query(desk) {
+        border-top-color: $color-brand;
+      }
       text-decoration: none;
     }
   }
@@ -164,11 +169,21 @@ $inuit-enable-margins--none:    true;
 .wrapper {
   width: 980px;
   margin: 0 auto;
+  @include media-query(palm) {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .wrapper--small {
   width: 40rem;
   margin: 0 auto;
+  @include media-query(palm) {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .accessibility {
@@ -185,6 +200,12 @@ $inuit-enable-margins--none:    true;
 
 .img--round {
   border-radius: $base-round;
+}
+
+.img--self {
+  @include media-query(portable) {
+    display: none;
+  }
 }
 
 .title--page,
