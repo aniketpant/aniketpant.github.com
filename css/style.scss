@@ -167,9 +167,9 @@ $inuit-enable-margins--none:    true;
 }
 
 .wrapper {
-  width: 980px;
+  width: 60rem;
   margin: 0 auto;
-  @include media-query(palm) {
+  @include media-query(portable) {
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -179,7 +179,7 @@ $inuit-enable-margins--none:    true;
 .wrapper--small {
   width: 40rem;
   margin: 0 auto;
-  @include media-query(palm) {
+  @include media-query(portable) {
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -203,7 +203,10 @@ $inuit-enable-margins--none:    true;
 }
 
 .img--self {
-  @include media-query(portable) {
+  margin-left: -136px;
+  margin-right: 0;
+  width: 120px;
+  @include media-query(palm) {
     display: none;
   }
 }
@@ -218,7 +221,11 @@ $inuit-enable-margins--none:    true;
 }
 
   .list__date {
-    margin-bottom: 5px;
+    color: $color-gray-light;
+    @include font-size(12px);
+    @include font-weight(semi-bold);
+    margin-bottom: 0;
+    text-transform: uppercase;
   }
 
   .list__title {
@@ -231,6 +238,10 @@ $inuit-enable-margins--none:    true;
 
 .main-container {
   margin-top: 4rem;
+}
+
+.margin--top {
+  margin-top: 1rem;
 }
 
 .margin--bottom {
