@@ -2,22 +2,20 @@
 layout: base
 ---
 
-<div class="post poetry">
+<div class="poetry">
 
-  <header class="layout__item  one-whole">
+  <header>
     <h1 class="title--post">{{ page.title }}</h1>
+    <p class="muted">Written on {{ page.date | date_to_long_string }}</p>
   </header>
 
-  <article class="layout__item  one-whole" role="main">
+  <article role="main">
     {{ content }}
   </article>
 
-  <footer class="layout__item  one-whole">
-    <p class="muted">Written on {{ page.date | date_to_long_string }}</p>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a>
+  <p><a href="https://twitter.com/share" class="twitter-share-button" data-via="aniket_pant" data-related="aniket_pant">Tweet</a></p>
 
-    <hr class="rule  rule--dashed"/>
-
+  <footer class="box  box--highlite">
     <p>The above poem was brought to you by <strong>Aniket</strong>.</p>
     <p><a href="https://twitter.com/aniket_pant" class="twitter-follow-button" data-show-count="true">Follow @aniket_pant</a></p>
   </footer>
