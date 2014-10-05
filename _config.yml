@@ -3,6 +3,8 @@ markdown: redcarpet
 highlighter: pygments
 exclude: ['Rakefile', 'CNAME', 'README.md', 'LICENSE', 'config.rb', 'scss/']
 
+timezone: 'Asia/Calcutta'
+
 url: http://aniketpant.com
 
 name: "Aniket Pant"
