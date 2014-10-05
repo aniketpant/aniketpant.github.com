@@ -230,6 +230,12 @@ $inuit-enable-margins--none:    true;
 
   .list__title {
     margin-bottom: 10px;
+    a {
+      color: $color-gray;
+      @include attention() {
+        text-decoration: none;
+      }
+    }
   }
 
 .box--highlite {
@@ -246,4 +252,8 @@ $inuit-enable-margins--none:    true;
 
 .margin--bottom {
   margin-bottom: 1rem;
+}
+
+.space {
+  margin-bottom: 2rem;
 }
