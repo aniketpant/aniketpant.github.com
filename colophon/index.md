@@ -5,8 +5,6 @@ slug: colophon
 published: true
 ---
 
-The website is handcoded HTML written using [Sublime Text](http://www.sublimetext.com). It is hosted via [GitHub](https://github.com) and is generated using [Jekyll](https://github.com/mojombo/jekyll).
-
-The framework used for writing the design is [inuit.css](https://github.com/csswizardry/inuit.css) by [Harry Roberts](http://csswizardry.com).
+The website is handcoded HTML using Vim, running on top of [Jekyll](https://github.com/mojombo/jekyll) and hosted via [GitHub](https://github.com).
 
 The [source code](https://github.com/aniketpant/aniketpant.github.com) has been specially kept for you to fork it. Just take note that all _content_ present on the website is copyrighted. All other aspects of this repository are MIT licensed.
