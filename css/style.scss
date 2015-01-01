@@ -257,3 +257,12 @@ $inuit-enable-margins--none:    true;
 .space {
   margin-bottom: 2rem;
 }
+
+blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid $color-gray-ui;
+    font-style: italic;
+    p {
+        @include font-size(18px);
+    }
+}
