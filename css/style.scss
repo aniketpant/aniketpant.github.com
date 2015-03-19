@@ -89,6 +89,7 @@ $inuit-enable-list-block--small:    true;
 @import "bower_components/inuit-clearfix/trumps.clearfix";
 
 $inuit-use-fractions:   false;
+@import "bower_components/inuit-tools-widths/tools.widths";
 @import "bower_components/inuit-widths/trumps.widths";
 @import "trumps.widths-responsive";
 
