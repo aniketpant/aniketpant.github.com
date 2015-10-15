@@ -16,9 +16,9 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-sass": "*",
+    "gulp": "^3.9.0",
     "gulp-concat": "*",
+    "gulp-sass": "*",
     "gulp-uglify": "*"
   }
 }

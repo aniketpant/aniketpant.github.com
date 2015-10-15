@@ -5,7 +5,7 @@ var uglify = require('gulp-uglify');
 
 var paths = {
     scripts: ['js/zepto.min.js', 'js/moment.min.js', 'js/wubwub.js'],
-    stylesheets: ['css/style.scss']
+    stylesheets: ['scss/style.scss', 'scss/custom.scss']
 };
 
 gulp.task('scripts', function() {
