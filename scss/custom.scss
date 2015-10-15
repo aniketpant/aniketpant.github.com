@@ -181,6 +181,7 @@ h3 {
 
 .project {
   @include font-size(16px);
+  @include font-weight(semi-bold);
 }
 
 .sub-section {

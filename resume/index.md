@@ -28,34 +28,33 @@ slug: resume
 
           <div class="project">Online Ordering</div>
           <ul>
-            <li>Created the entire platform for online ordering including the menu management system used by Zomato&apos;s team as well as the restaurant managers</li>
-            <li>Built phone number verification service</li>
-            <li>Integrated multiple text messaging providers for different countries</li>
-            <li>Created the <b>callcenter</b> for allotment of orders across various cities and countries</li>
+            <li>Created the entire platform for online ordering including the menu management system used by Zomato&apos;s team as well as the restaurant managers.</li>
+            <li>Built phone number verification service.</li>
+            <li>Integrated multiple text messaging providers for different countries.</li>
+            <li>Created the callcenter for allotment of orders across various cities and countries.</li>
           </ul>
 
           <div class="project">Migration of data for MenuMania.co.nz</div>
           <ul>
-            <li>Responsible for porting all of MenuMania&apos;s data to Zomato</li>
-            <li>Maintaining their API&apos;s after the migration was complete</li>
-            <li>URL redirections to maintain traffic coming to Zomato</li>
+            <li>Responsible for porting all of MenuMania&apos;s data to Zomato.</li>
+            <li>Maintaining their API&apos;s after the migration was complete.</li>
+            <li>URL redirections to maintain traffic coming to Zomato.</li>
           </ul>
 
           <div class="project">Migration of data for Lunchtime.cz and Obedovat.sk</div>
           <ul>
-            <li>Lunchtime and Obedovat had a feature called <b>Daily Menus</b> which is specific to Czech Republic and Slovakia. I was responsible for creating the same feature on Zomato</li>
-            <li>Porting and maintaining existing API&apos;s making use of the daily menu features</li>
+            <li>Lunchtime and Obedovat had a feature called Daily Menus which is specific to Czech Republic and Slovakia. I was responsible for creating the same feature on Zomato.</li>
+            <li>Porting and maintaining existing API&apos;s making use of the daily menu features.</li>
           </ul>
 
           <div class="project">Other work</div>
           <ul>
-            <li>Responsible for timely code cleanups and performance optimisations to keep response time under check</li>
-            <li>Optimised and reworked a number of cron jobs and scripts that stopped working after the <b>Urbanspoon migration</b></li>
-            <li>Service for generating PDFs which takes in HTML and used PhantomJS to render a PDF</li>
-            <li>Text messaging service which includes support for delivery status updates and asynchronous mode</li>
+            <li>Responsible for timely code cleanups and performance optimisations to keep response time under check.</li>
+            <li>Optimised and reworked a number of cron jobs and scripts that stopped working after Urbanspoon's data was migrated to Zomato.</li>
+            <li>Service for generating PDFs which takes in HTML and used PhantomJS to render a PDF.</li>
+            <li>Text messaging service which includes support for delivery status updates and asynchronous mode.</li>
             <li>Built a number of other features like user expertise, new notifications, etc.</li>
-            <li>The existing push notification system had no provision for sending out notifications to a large user base in a small time</li>
-            <li>The new system also takes recent notifications into consideration while sending a new notification to a particular user</li>
+            <li>Wrote a new push notification system which allows scheduling of notifications based on database queries configures as rules. The new notification system also has a high throughput.</li>
           </ul>
         </div>
 
@@ -84,12 +83,13 @@ slug: resume
 
       <section class="section">
         <h2>Technical Skills</h2>
-        <p>I have a good level of understanding of projects and my major skill lies in creating the architecture for projects which involves planning at the modular level, the database design and the timeline for the project.</p>
         <dl>
-          <dt>Front-end</dt>
-          <dd>HTML(5), CSS(3), Sass, jQuery</dd>
-          <dt>Back-end stack</dt>
-          <dd>PHP, MySQL, Redis, Cassandra, Node.js, Go</dd>
+          <dt><b>Front-end</b></dt>
+          <dd>HTML(5), CSS(3), Sass/Less, jQuery</dd>
+          <dt><b>Languages</b></dt>
+          <dd>PHP, Go, JavaScript (Node.js)</dd>
+          <dt><b>Databases</b></dt>
+          <dd>MySQL, Redis, Cassandra</dd>
         </dl>
       </section>
 
