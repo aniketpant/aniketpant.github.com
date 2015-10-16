@@ -100,17 +100,6 @@ $inuit-enable-margins--none:    true;
 
 
 
-h1 {
-    @include font-size(22px);
-}
-
-h2 {
-    @include font-size(20px);
-}
-
-h3 {
-    @include font-size(18px);
-}
 
 .brand {
   @include font-size(26px);
@@ -164,6 +153,11 @@ h3 {
     margin-top: 2rem;
 }
 
+.section-heading {
+    @include font-size(18px);
+    margin-bottom: 0.5em;
+}
+
 .organization {
   @include font-size(18px);
   margin-bottom: 0;
@@ -182,8 +176,4 @@ h3 {
 .project {
   @include font-size(16px);
   @include font-weight(semi-bold);
-}
-
-.sub-section {
-  page-break-before: auto;
 }

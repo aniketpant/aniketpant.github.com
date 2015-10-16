@@ -19,8 +19,8 @@ slug: resume
     </header><!--
 
   --><div class="layout__item  three-quarters   main-container">
-      <section>
-        <h2>Experience</h2>
+      <section class="section">
+        <div class="section-heading">Experience</div>
 
         <div class="sub-section">
           <div class="organization"><a href="http://www.zomato.com">Zomato</a></div>
@@ -59,30 +59,30 @@ slug: resume
         </div>
 
         <div class="sub-section">
-          <div class="organization"><a href="https://www.instamojo.com">Instamojo</a></div>
+          <div class="organization"><arel="nofollow" href="https://www.instamojo.com">Instamojo</a></div>
           <p class="byline">Front End Consultant | September, 2013 &ndash; March, 2014</p>
           <p>Worked with the team remotely to develop a <a href="https://github.com/aniketpant/immoral">modal library</a> and the embed buttons given by Instamojo for remote checkout.</p>
         </div>
 
         <div class="sub-section">
-          <div class="organization"><a href="http://webmutiny.in">Web Mutiny</a></div>
+          <div class="organization"><arel="nofollow" href="http://webmutiny.in">Web Mutiny</a></div>
           <p class="byline">Lead Front End Developer | Nov, 2012 &ndash; May, 2013</p>
           <p>The major concentration of my work was building websites which have a strong foundation making them easier to scale. During my term at Web Mutiny, I worked on two projects &ndash; Instamojo and Current News.</p>
           <ul>
             <li>
-              <strong><a href="http://instamojo.com">Instamojo</a></strong>
+              <strong><arel="nofollow" href="https://www.instamojo.com">Instamojo</a></strong>
               <p>Created a static website design using Jekyll. inuit.css was used as the CSS framework as it provides a strong foundation for designing. All page templates and basic page designs were created by me.</p>
             </li>
             <li>
               <strong>Current News</strong>
-              <p>Built a new child theme for Thesis. The theme had support for a new custom post type which was further associated with taxonomies of it&apos;s own. The features needed for creating the new site required the creation of a number of custom loops. We created a Custom Loop API of our own which made the creation of pages simpler. The theme also had a number of custom hooks created by us. Metabox support for custom post types was built using <a href="https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress">Custom Metaboxes and Fields for WordPress</a>.</p>
+              <p>Built a new child theme for Thesis. The theme had support for a new custom post type which was further associated with taxonomies of it&apos;s own. The features needed for creating the new site required the creation of a number of custom loops. We created a Custom Loop API of our own which made the creation of pages simpler. The theme also had a number of custom hooks created by us. Metabox support for custom post types was built using <a rel="nofollow" href="https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress">Custom Metaboxes and Fields for WordPress</a>.</p>
             </li>
           </ul>
         </div>
       </section>
 
       <section class="section">
-        <h2>Technical Skills</h2>
+        <div class="section-heading">Technical Skills</div>
         <dl>
           <dt><b>Front-end</b></dt>
           <dd>HTML(5), CSS(3), Sass/Less, jQuery</dd>
@@ -94,7 +94,7 @@ slug: resume
       </section>
 
       <section class="section">
-        <h2>Education</h2>
+        <div class="section-heading">Education</div>
 
         <div class="sub-section">
           <div class="organization">B.E (Hons) Mechanical Engineering</div>

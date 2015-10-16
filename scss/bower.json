@@ -37,6 +37,7 @@
     "inuit-starter-kit": "*",
     "inuit-tabs": "*",
     "inuit-widths": "*",
-    "inuit-tools-widths": "~0.1.4"
+    "inuit-tools-widths": "~0.1.4",
+    "inuit-print": "~0.0.2"
   }
 }
