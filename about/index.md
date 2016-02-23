@@ -12,7 +12,7 @@ slug: about
 </div>
 
 ## So, what do I do?
-I am a software engineer at [Zomato](https://www.zomato.com). That means I eat and write code.
+I am a software engineer at [Uber](https://www.uber.com).
 
 Also, I try to contribute code for [Collectivism](https://github.com/collectivism).
 
