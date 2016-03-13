@@ -23,8 +23,13 @@ slug: resume
         <div class="section-heading">Experience</div>
 
         <div class="sub-section">
+          <div class="organization"><a rel="nofollow" href="https://www.uber.com">Uber</a></div>
+          <p class="byline">Software Engineering | January, 2016 &ndash; Present</p>
+        </div>
+
+        <div class="sub-section">
           <div class="organization"><a href="http://www.zomato.com">Zomato</a></div>
-          <p class="byline">Software Engineer | June, 2014 &ndash; Present</p>
+          <p class="byline">Software Engineer | June, 2014 &ndash; December, 2015</p>
 
           <div class="project">Online Ordering</div>
           <ul>
@@ -50,7 +55,7 @@ slug: resume
           <div class="project">Other work</div>
           <ul>
             <li>Responsible for timely code cleanups and performance optimisations to keep response time under check.</li>
-            <li>Optimised and reworked a number of cron jobs and scripts that stopped working after Urbanspoon's data was migrated to Zomato.</li>
+            <li>Optimised and reworked a number of cron jobs and scripts that stopped working after data from Urbanspoon was migrated to Zomato.</li>
             <li>Service for generating PDFs which takes in HTML and used PhantomJS to render a PDF.</li>
             <li>Text messaging service which includes support for delivery status updates and asynchronous mode.</li>
             <li>Built a number of other features like user expertise, new notifications, etc.</li>
@@ -59,18 +64,18 @@ slug: resume
         </div>
 
         <div class="sub-section">
-          <div class="organization"><arel="nofollow" href="https://www.instamojo.com">Instamojo</a></div>
+          <div class="organization"><a rel="nofollow" href="https://www.instamojo.com">Instamojo</a></div>
           <p class="byline">Front End Consultant | September, 2013 &ndash; March, 2014</p>
           <p>Worked with the team remotely to develop a <a href="https://github.com/aniketpant/immoral">modal library</a> and the embed buttons given by Instamojo for remote checkout.</p>
         </div>
 
         <div class="sub-section">
-          <div class="organization"><arel="nofollow" href="http://webmutiny.in">Web Mutiny</a></div>
+          <div class="organization"><a rel="nofollow" href="http://webmutiny.in">Web Mutiny</a></div>
           <p class="byline">Lead Front End Developer | Nov, 2012 &ndash; May, 2013</p>
           <p>The major concentration of my work was building websites which have a strong foundation making them easier to scale. During my term at Web Mutiny, I worked on two projects &ndash; Instamojo and Current News.</p>
           <ul>
             <li>
-              <strong><arel="nofollow" href="https://www.instamojo.com">Instamojo</a></strong>
+              <strong><a rel="nofollow" href="https://www.instamojo.com">Instamojo</a></strong>
               <p>Created a static website design using Jekyll. inuit.css was used as the CSS framework as it provides a strong foundation for designing. All page templates and basic page designs were created by me.</p>
             </li>
             <li>
