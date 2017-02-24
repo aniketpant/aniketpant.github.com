@@ -33,7 +33,7 @@ And after a couple of months, I got to know about **Codeigniter**. And for the m
 
 I started with reading articles on [CSS-Tricks](http://css-tricks.com/) and [Smashing Magazine](http://smashingmagazine.com). I still go through them regularly.
 
-And soon, I found the superheroes of the web. I was following each and every word by [Trent Walton](http://twitter.com/TrentWalton), [Harry Roberts](http://twitter.com/csswizardry), [Simurai](http://twitter.com/simurai), [Divya Manian](http://twitter.com/divya) and [many others](http://https://twitter.com/aniket_pant/get-webbed).
+And soon, I found the superheroes of the web. I was following each and every word by [Trent Walton](http://twitter.com/TrentWalton), [Harry Roberts](http://twitter.com/csswizardry), [Simurai](http://twitter.com/simurai), [Divya Manian](http://twitter.com/divya) and [many others](http://https://twitter.com/noremap/get-webbed).
 
 The best way to develop yourself is to put down a weblog. Write whatever you learn, how you did it and even the parts where you felt a hitch. Because, there will be thousands of newcomers who are starting today and they can learn from your experience for sure.
 

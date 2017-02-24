@@ -17,6 +17,6 @@ I am a software engineer at [Uber](https://www.uber.com).
 Also, I try to contribute code for [Collectivism](https://github.com/collectivism).
 
 ## Initiate contact
-Just go ahead and [tweet](https://twitter.com/intent/tweet?screen_name=aniket_pant&text=Hey!). If you're afraid of that, then you can <a href="me@aniketpant.com?subject=Hey!">drop a mail</a>. You can also [stalk my code](https://github.com/aniketpant) on GitHub.
+Just go ahead and [tweet](https://twitter.com/intent/tweet?screen_name=noremap&text=Hey!). If you're afraid of that, then you can <a href="me@aniketpant.com?subject=Hey!">drop a mail</a>. You can also [stalk my code](https://github.com/aniketpant) on GitHub.
 
 Read the <a href="/colophon">colophon</a> to know more about the site.

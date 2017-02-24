@@ -11,8 +11,8 @@ slug: resume
       <nav>
         <ul class="tabs">
           <li class="tabs__item"><a class="tabs__link" href="mailto:me@aniketpant.com">me@aniketpant.com</a></li><!--
-       --><li class="tabs__item"><a class="tabs__link" href="http://www.aniketpant.com">aniketpant.com</a></li><!--
-       --><li class="tabs__item"><a class="tabs__link" href="https://twitter.com/aniket_pant">@aniket_pant</a></li><!--
+       --><li class="tabs__item"><a class="tabs__link" href="https://www.aniketpant.com">aniketpant.com</a></li><!--
+       --><li class="tabs__item"><a class="tabs__link" href="https://twitter.com/noremap">@noremap</a></li><!--
        --><li class="tabs__item"><a class="tabs__link" href="https://github.com/aniketpant">GitHub</a></li>
         </ul>
       </nav>
@@ -24,7 +24,7 @@ slug: resume
 
         <div class="sub-section">
           <div class="organization"><a rel="nofollow" href="https://www.uber.com">Uber</a></div>
-          <p class="byline">Software Engineering | January, 2016 &ndash; Present</p>
+          <p class="byline">Software Engineering | January, 2016 &ndash; Today</p>
         </div>
 
         <div class="sub-section">

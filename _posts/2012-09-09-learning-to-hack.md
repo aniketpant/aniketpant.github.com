@@ -10,16 +10,16 @@ tags:
 
 I applied for the **Codeacademy fellowship** a couple of days back.
 
-https://twitter.com/aniket_pant/status/242662933820215298
+https://twitter.com/noremap/status/242662933820215298
 
 And then I even went ahead and applied for **Hacker School**. I wanted to do that ever since I first read about it.
 But I got rejected in a very funny manner.
 
-https://twitter.com/aniket_pant/status/242663124380037120
+https://twitter.com/noremap/status/242663124380037120
 
 The only reason I applied for Hacker School was to get a little insight about myself but I got a very very incomprehensible response from their end.
 
-https://twitter.com/aniket_pant/status/242663328135147521
+https://twitter.com/noremap/status/242663328135147521
 
 They say this (I haven't included the entire message) &ndash;
 

@@ -21,7 +21,7 @@ Uber is an absolutely fantastic place to work and anyone who wants to write
 great quality code and work on some epic projects, please [join
 us](https://www.uber.com/careers/)!  If you are looking for some knowledge on
 what we are doing and how you can contribute, get in touch with me. Hit me up on
-[Twitter @aniket_pant](https://twitter.com/aniket_pant).
+[Twitter @noremap](https://twitter.com/noremap).
 
 2016 is going to be the year where I get to work heavily on Python. I have
 always been reluctant to use Python for any of work for a long time simply
