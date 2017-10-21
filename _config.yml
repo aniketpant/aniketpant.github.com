@@ -1,7 +1,7 @@
 permalink: /:year/:month/:title
 exclude: ['Rakefile', 'CNAME', 'README.md', 'LICENSE', 'config.rb', 'scss/', 'node_modules/']
 
-timezone: Asia/Calcutta
+timezone: America/New_York
 
 url: http://aniketpant.com
 
@@ -9,5 +9,5 @@ name: "Aniket Pant"
 tagline: "Notes and Essays by a developer"
 description: "Aniket is a web developer who loves to write PHP, Ruby and JavaScript"
 
-gems:
+plugins:
   - jekyll-sitemap
