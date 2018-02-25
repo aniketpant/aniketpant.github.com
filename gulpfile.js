@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var watch = require('gulp-watch');
 
 var paths = {
     scripts: ['js/zepto.min.js', 'js/moment.min.js', 'js/wubwub.js'],
@@ -9,21 +10,21 @@ var paths = {
 };
 
 gulp.task('scripts', function() {
-    return gulp.src(paths.scripts)
+  return gulp.src(paths.scripts)
     .pipe(uglify())
     .pipe(concat('zeamus.js'))
     .pipe(gulp.dest('js'));
 });
 
 gulp.task('sass', function () {
-    gulp.src(paths.stylesheets)
+  return gulp.src(paths.stylesheets)
     .pipe(sass({ "outputStyle": "compressed", "precision": 9, "sourceComments": false }))
     .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch(paths.scripts, ['scripts']);
-    gulp.watch(paths.stylesheets, ['sass']);
+  return watch(paths.scripts, ['scripts'])
+    .pipe(watch(paths.stylesheets, ['sass']));
 });
 
 gulp.task('default', ['scripts', 'sass']);

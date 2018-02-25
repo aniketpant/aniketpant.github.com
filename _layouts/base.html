@@ -51,36 +51,38 @@
     <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
   <![endif]-->
 
-  <header class="layout  header-container" role="banner">
+  <header class="header-container" role="banner">
     <div class="wrapper">
-      <div class="layout__item  desk-one-fifth  palm-one-whole">
-        {% if page.slug == "home" %}
-        <h1 class="brand"><a class=" brand__link" href="/" rel="nofollow"><span class="part--former">Aniket</span> <span class="part--latter">Pant</span></a></h1>
-        {% else %}
-        <div class="brand"><a class=" brand__link" href="/" rel="nofollow"><span class="part--former">Aniket</span> <span class="part--latter">Pant</span></a></div>
-        {% endif %}
-      </div><!--
+      <div class="o-layout  o-layout--flush">
+        <div class="o-layout__item  u-2/5@desktop  u-1@mobile">
+            {% if page.slug == "home" %}
+            <h1 class="brand"><a class=" brand__link" href="/" rel="nofollow"><span class="part--former">Aniket</span> <span class="part--latter">Pant</span></a></h1>
+            {% else %}
+            <div class="brand"><a class=" brand__link" href="/" rel="nofollow"><span class="part--former">Aniket</span> <span class="part--latter">Pant</span></a></div>
+            {% endif %}
+        </div><!--
 
-      --><div class="layout__item  desk-two-fifths  desk-push-two-fifths  palm-one-whole">
-        <nav>
-          <ul class="tabs  nav">
-            <li class="tabs__item"><a class="tabs__link" href="/about">About</a></li><!--
-            --><li class="tabs__item"><a class="tabs__link" href="/speaking">Speaking</a></li><!--
-            --><li class="tabs__item"><a class="tabs__link" href="/archive">Archive</a></li>
-          </ul>
-        </nav>
-      </div>
-      <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
+        --><div class="o-layout__item   u-2/5@desktop  u-push-1/5@desktop  u-1@mobile">
+            <nav>
+            <ul class="tabs  nav">
+                <li class="tabs__item"><a class="tabs__link" href="/about">About</a></li><!--
+                --><li class="tabs__item"><a class="tabs__link" href="/speaking">Speaking</a></li><!--
+                --><li class="tabs__item"><a class="tabs__link" href="/archive">Archive</a></li>
+            </ul>
+            </nav>
+        </div>
+        <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
+        </div>
     </div>
   </header>
 
-  <div class="layout">
-    <div class="wrapper--small">
-      <div class="layout__item   main-container">
+  <div class="wrapper">
+    <div class="o-layout">
+      <div class="o-layout__item   main-container">
         {{ content }}
       </div><!--
 
-      --><div class="layout__item  footer-container">
+      --><div class="o-layout__item  footer-container">
         <footer role="contentinfo">
           <a href="https://plus.google.com/114828599949215633124?rel=author" class="accessibility">Google +</a>
         </footer>

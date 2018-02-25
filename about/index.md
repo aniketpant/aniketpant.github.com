@@ -4,9 +4,11 @@ title: About Aniket
 slug: about
 ---
 
-<div class="media  margin--bottom">
-  <img class="media__img  img--round img--self" src="http://www.gravatar.com/avatar/b6500b41998cd1ed4aa28464ec0118bb?s=150" />
-  <div class="media__body">
+<div class="o-media  margin--bottom">
+  <div class="o-media__img  u-margin-right-none">
+    <img class="img--round img--self" src="http://www.gravatar.com/avatar/b6500b41998cd1ed4aa28464ec0118bb?s=150" />
+  </div>
+  <div class="o-media__body">
     <p class="lede">Hey, I am <strong>Aniket</strong> and I have been around on the web since 2010. It's not long but it has been an <a href="/archive">adventure</a> since then. In all this time I have worked with various web frameworks, built a number of applications, written hundreds of lines of front-end code, refactored tonnes of old code and enjoyed every single bit of it.</p>
   </div>
 </div>

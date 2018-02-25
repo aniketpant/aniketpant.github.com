@@ -12,7 +12,7 @@ window.analytics.page();
 
 // Google Fonts
 WebFontConfig = {
-    google: { families: [ 'Lato:300,400,300italic:latin' ] }
+    google: { families: [ 'Nunito:300,400,400italic,600:latin' ] }
 };
 (function() {
     var wf = document.createElement('script');
@@ -25,7 +25,7 @@ s.parentNode.insertBefore(wf, s);
 })();
 
 // Date transformation using moment.js
-$.each($('.list__date'), function(index, el) {
+$.each($('.list-item__date'), function(index, el) {
   origTime = $(el).text();
   humanizedTime = moment(origTime).fromNow();
   $(this).text(humanizedTime);
