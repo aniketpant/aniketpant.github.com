@@ -1,12 +1,13 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var batch = require('gulp-batch');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
 
 var paths = {
-    scripts: ['js/zepto.min.js', 'js/moment.min.js', 'js/wubwub.js'],
-    stylesheets: ['scss/style.scss', 'scss/custom.scss']
+  scripts: ['js/zepto.min.js', 'js/moment.min.js', 'js/wubwub.js'],
+  stylesheets: ['scss/style.scss', 'scss/custom.scss']
 };
 
 gulp.task('scripts', function() {
@@ -16,15 +17,23 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('js'));
 });
 
-gulp.task('sass', function () {
+gulp.task('sass', function() {
   return gulp.src(paths.stylesheets)
-    .pipe(sass({ "outputStyle": "compressed", "precision": 9, "sourceComments": false }))
+    .pipe(sass({
+      "outputStyle": "compressed",
+      "precision": 9,
+      "sourceComments": false
+    }))
     .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch', function() {
-  return watch(paths.scripts, ['scripts'])
-    .pipe(watch(paths.stylesheets, ['sass']));
+  watch(paths.scripts, batch(function(events, done) {
+    gulp.start('scripts', done);
+  }));
+  watch(paths.stylesheets, batch(function(events, done) {
+    gulp.start('sass', done);
+  }))
 });
 
 gulp.task('default', ['scripts', 'sass']);

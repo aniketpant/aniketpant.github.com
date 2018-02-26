@@ -149,6 +149,15 @@ assign-symbols@^1.0.0:
   version "1.0.0"
   resolved "https://unpm.uberinternal.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
 
+async-done@^1.0.0:
+  version "1.2.4"
+  resolved "https://unpm.uberinternal.com/async-done/-/async-done-1.2.4.tgz#17b0fcefb9a33cb9de63daa8904c0a65bd535fa0"
+  dependencies:
+    end-of-stream "^1.1.0"
+    once "^1.3.2"
+    process-nextick-args "^1.0.7"
+    stream-exhaust "^1.0.1"
+
 async-each@^1.0.0:
   version "1.0.1"
   resolved "https://unpm.uberinternal.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
@@ -262,6 +271,10 @@ braces@^2.3.0, braces@^2.3.1:
     snapdragon-node "^2.0.1"
     split-string "^3.0.2"
     to-regex "^3.0.1"
+
+buffer-shims@^1.0.0:
+  version "1.0.0"
+  resolved "https://unpm.uberinternal.com/buffer-shims/-/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
 
 builtin-modules@^1.0.0:
   version "1.1.1"
@@ -579,6 +592,12 @@ ecc-jsbn@~0.1.1:
   resolved "https://unpm.uberinternal.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
   dependencies:
     jsbn "~0.1.0"
+
+end-of-stream@^1.1.0:
+  version "1.4.1"
+  resolved "https://unpm.uberinternal.com/end-of-stream/-/end-of-stream-1.4.1.tgz#ed29634d19baba463b6ce6b80a37213eab71ec43"
+  dependencies:
+    once "^1.4.0"
 
 end-of-stream@~0.1.5:
   version "0.1.5"
@@ -1032,6 +1051,13 @@ graceful-fs@^4.1.2:
 graceful-fs@~1.2.0:
   version "1.2.3"
   resolved "https://unpm.uberinternal.com/graceful-fs/-/graceful-fs-1.2.3.tgz#15a4806a57547cb2d2dbf27f42e89a8c3451b364"
+
+gulp-batch@^1.0.5:
+  version "1.0.5"
+  resolved "https://unpm.uberinternal.com/gulp-batch/-/gulp-batch-1.0.5.tgz#c40fc9b2303674897b1216d82e1518b73217da59"
+  dependencies:
+    async-done "^1.0.0"
+    stream-array "^1.0.1"
 
 gulp-cli@^2.0.1:
   version "2.0.1"
@@ -2114,7 +2140,7 @@ object.pick@^1.2.0, object.pick@^1.3.0:
   dependencies:
     isobject "^3.0.1"
 
-once@^1.3.0, once@^1.3.3:
+once@^1.3.0, once@^1.3.2, once@^1.3.3, once@^1.4.0:
   version "1.4.0"
   resolved "https://unpm.uberinternal.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
   dependencies:
@@ -2260,7 +2286,7 @@ pretty-hrtime@^1.0.0:
   version "1.0.3"
   resolved "https://unpm.uberinternal.com/pretty-hrtime/-/pretty-hrtime-1.0.3.tgz#b7e3ea42435a4c9b2759d99e0f201eb195802ee1"
 
-process-nextick-args@^1.0.6:
+process-nextick-args@^1.0.6, process-nextick-args@^1.0.7, process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "https://unpm.uberinternal.com/process-nextick-args/-/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
 
@@ -2348,6 +2374,18 @@ readable-stream@~1.1.9:
     inherits "~2.0.1"
     isarray "0.0.1"
     string_decoder "~0.10.x"
+
+readable-stream@~2.1.0:
+  version "2.1.5"
+  resolved "https://unpm.uberinternal.com/readable-stream/-/readable-stream-2.1.5.tgz#66fa8b720e1438b364681f2ad1a63c618448c9d0"
+  dependencies:
+    buffer-shims "^1.0.0"
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "~1.0.0"
+    process-nextick-args "~1.0.6"
+    string_decoder "~0.10.x"
+    util-deprecate "~1.0.1"
 
 readdirp@^2.0.0:
   version "2.1.0"
@@ -2754,9 +2792,19 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
+stream-array@^1.0.1:
+  version "1.1.2"
+  resolved "https://unpm.uberinternal.com/stream-array/-/stream-array-1.1.2.tgz#9e5f7345f2137c30ee3b498b9114e80b52bb7eb5"
+  dependencies:
+    readable-stream "~2.1.0"
+
 stream-consume@~0.1.0:
   version "0.1.1"
   resolved "https://unpm.uberinternal.com/stream-consume/-/stream-consume-0.1.1.tgz#d3bdb598c2bd0ae82b8cac7ac50b1107a7996c48"
+
+stream-exhaust@^1.0.1:
+  version "1.0.2"
+  resolved "https://unpm.uberinternal.com/stream-exhaust/-/stream-exhaust-1.0.2.tgz#acdac8da59ef2bc1e17a2c0ccf6c320d120e555d"
 
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"
