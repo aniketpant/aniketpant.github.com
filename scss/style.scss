@@ -2,27 +2,19 @@
 @import "settings/settings.config";
 @import "../node_modules/inuitcss/settings/settings.core";
 @import "settings/settings.global";
-@import "settings/settings.colors";
-
-// TOOLS
+@import "settings/settings.colors"; // TOOLS
 @import "../node_modules/inuitcss/tools/tools.font-size";
 @import "../node_modules/inuitcss/tools/tools.clearfix";
 @import "../node_modules/sass-mq/mq";
 @import "tools/tools.aliases";
-@import "tools/tools.mixins";
-
-// GENERIC
+@import "tools/tools.mixins"; // GENERIC
 @import "../node_modules/inuitcss/generic/generic.box-sizing";
 @import "../node_modules/inuitcss/generic/generic.normalize";
-@import "../node_modules/inuitcss/generic/generic.shared";
-
-// ELEMENTS
+@import "../node_modules/inuitcss/generic/generic.shared"; // ELEMENTS
 @import "../node_modules/inuitcss/elements/elements.page";
 @import "../node_modules/inuitcss/elements/elements.headings";
 @import "elements/elements.links";
-@import "elements/elements.quotes";
-
-// OBJECTS
+@import "elements/elements.quotes"; // OBJECTS
 @import "../node_modules/inuitcss/objects/objects.layout";
 @import "../node_modules/inuitcss/objects/objects.media";
 @import "../node_modules/inuitcss/objects/objects.flag";
@@ -31,19 +23,14 @@
 @import "../node_modules/inuitcss/objects/objects.box";
 @import "../node_modules/inuitcss/objects/objects.block";
 @import "../node_modules/inuitcss/objects/objects.table";
-@import "../node_modules/inuitcss/objects/objects.wrapper";
-
-// UTILITIES
+@import "../node_modules/inuitcss/objects/objects.wrapper"; // UTILITIES
 @import "../node_modules/inuitcss/utilities/utilities.widths";
 @import "../node_modules/inuitcss/utilities/utilities.headings";
-@import "../node_modules/inuitcss/utilities/utilities.spacings";
-
-// Base
+@import "../node_modules/inuitcss/utilities/utilities.spacings"; // Base
 @import "base/base.page";
 @import "base/base.links";
 @import "base/base.quotes";
 @import "base/base.type";
-
 /**
  * #SYNTAX
  */
@@ -54,30 +41,29 @@ body {
 }
 
 .layout {
-  width: 960px;
+  width : 960px;
   margin: 0 auto;
 }
 
 h1 {
-    @include font-size(24px);
-    font-weight: 600;
+  @include font-size(24px);
+  font-weight: 600;
 }
 
 h2 {
-    @include font-size(21px);
-    font-weight: 600;
+  @include font-size(21px);
+  font-weight: 600;
 }
 
 h3 {
-    @include font-size(16px);
-    text-transform: uppercase;
+  @include font-size(16px);
+  text-transform: uppercase;
 }
-
 
 .hollow {
   background: $color-brand;
-  height: 5px;
-  width: 100%;
+  height    : 5px;
+  width     : 100%;
 }
 
 .header-container {
@@ -86,30 +72,32 @@ h3 {
 
 .brand {
   @include font-size(26px);
-  border-top: 5px solid transparent;
-  margin: 0;
-  padding: 0;
+  border-top    : 5px solid transparent;
+  margin        : 0;
+  padding       : 0;
   text-transform: uppercase;
-  text-align: left;
+  text-align    : left;
   @include mq(mobile, desktop) {
     text-align: center;
   }
 }
 
 .brand__link {
-  color: $color-gray;
+  color     : $color-gray;
+  transition: $global-transition;
   @include attention() {
     text-decoration: none;
-  }
-  &:hover {
+
     .part--latter {
       color: $color-brand;
     }
   }
 }
+
 .part--former {
   @include font-weight(light);
 }
+
 .part--latter {
   @include font-weight(semi-bold);
   transition: 100ms color linear;
@@ -118,25 +106,26 @@ h3 {
 .nav {
   @extend .o-list-inline;
   text-align: center;
+}
 
-  .tabs__item {
-    @extend .o-list-inline__item;
-    @extend .u-padding-left-small;
-    @extend .u-padding-right-small;
-  }
+.tabs__item {
+  @extend .o-list-inline__item;
+  @extend .u-padding-left-small;
+  @extend .u-padding-right-small;
+}
 
-  .tabs__link {
-    border-top: 4px solid transparent;
-    color: $color-gray;
-    padding-top: 1rem;
-    text-transform: uppercase;
-    @include font-size(13px);
-    @include attention() {
-      @include mq(desktop) {
-        border-top-color: $color-brand;
-      }
-      text-decoration: none;
+.tabs__link {
+  @include font-size(13px);
+  border-top    : 4px solid transparent;
+  color         : $color-gray;
+  padding-top   : 1rem;
+  text-transform: uppercase;
+  transition    : $global-transition;
+  @include attention() {
+    @include mq(desktop) {
+      border-top-color: $color-brand;
     }
+    text-decoration: none;
   }
 }
 
@@ -147,13 +136,13 @@ h3 {
 .wrapper {
   @extend .o-wrapper;
   max-width: 60rem;
-  margin: 0 auto;
+  margin   : 0 auto;
 }
 
 .wrapper--small {
   @extend .o-wrapper;
   max-width: 40rem;
-  margin: 0 auto;
+  margin   : 0 auto;
 }
 
 .accessibility {
@@ -173,58 +162,95 @@ h3 {
 }
 
 .img--self {
-  margin-left: -136px;
+  margin-left : -136px;
   margin-right: 0;
-  width: 120px;
+  width       : 120px;
   @include mq(mobile) {
     display: none;
   }
 }
 
 .title--page,
-.title--post {
-}
+.title--post {}
 
 .list {
   @extend .o-list-bare;
   padding-left: 0;
+}
 
-  .list-item {
-    @extend .o-list-bare__item;
-    border-left: 4px solid transparent;
-    padding-left: 16px;
-    margin-left: -16px;
-    margin-bottom: 40px;
+.list-item {
+  @extend .o-list-bare__item;
+  border-left  : 4px solid transparent;
+  padding-left : 16px;
+  margin-left  : -16px;
+  margin-bottom: 40px;
+  transition   : $global-transition;
+  @include attention() {
+    border-left-color: lighten($color-gray-ui, 10%);
+  }
+}
 
+.list-item__link {
+  display        : block;
+  text-decoration: none;
+  color          : inherit;
+  @include attention() {
+    color          : inherit;
+    text-decoration: none;
+  }
+}
+
+.list-item__title {
+  margin-bottom: 10px;
+
+  a {
+    color     : $color-gray;
+    transition: $global-transition;
     @include attention() {
-      border-left-color: lighten($color-gray-ui, 10%);
-    }
-
-    .list-item__link {
-      display: block;
-      cursor: pointer;
       text-decoration: none;
-      color: inherit;
-
-      .list-item__title {
-        margin-bottom: 10px;
-        a {
-          color: $color-gray;
-          @include attention() {
-            text-decoration: none;
-          }
-        }
-      }
-    }
-
-    .list-item__date {
-      color: $color-gray-light;
-      @include font-size(14px);
-      @include font-weight(semi-bold);
-      margin-bottom: 0;
-      text-transform: uppercase;
     }
   }
+}
+
+.list-item__date {
+  color         : $color-gray-light;
+  @include font-size(14px);
+  @include font-weight(semi-bold);
+  margin-bottom : 0;
+  text-transform: uppercase;
+}
+
+.archive-list {
+  @extend .o-list-bare;
+  padding-left: 0;
+}
+
+.archive-list-item {
+  @extend .o-list-bare__item;
+  border-left  : 4px solid transparent;
+  padding      : 16px;
+  margin-left  : -16px;
+  margin-bottom: 24px;
+  transition   : $global-transition;
+  @include attention() {
+    color            : lighten($color-red, 10%);
+    border-left-color: lighten($color-red, 10%);
+  }
+}
+
+.archive-list-item__link {
+  display        : block;
+  cursor         : pointer;
+  text-decoration: none;
+  color          : $color-gray;
+  transition     : $global-transition;
+  @include attention() {
+    text-decoration: none;
+  }
+}
+
+.archive-list-item__date {
+  text-align: right;
 }
 
 .box--highlite {
@@ -249,21 +275,28 @@ h3 {
 }
 
 blockquote {
-    padding-left: 1rem;
-    border-left: 2px solid $color-gray-ui;
-    font-style: italic;
-    p {
-        @include font-size(18px);
-    }
+  padding-left: 1rem;
+  border-left : 2px solid $color-gray-ui;
+  font-style  : italic;
+
+  p {
+    @include font-size(18px);
+  }
 }
 
 .muted {
-    color: lighten($color-gray, 10%);
+  color: lighten($color-gray, 10%);
 }
 
 .lede {
-    @include font-size(21px);
-    color: lighten($color-gray, 10%);
-    margin-top: 0;
-    line-height: 1.5;
+  @include font-size(21px);
+  color      : lighten($color-gray, 10%);
+  margin-top : 0;
+  line-height: 1.5;
+}
+
+.media {
+  img {
+    max-width: 100%;
+  }
 }
