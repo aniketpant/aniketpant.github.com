@@ -1,23 +1,24 @@
 /*------------------------------------*\
 #TYPE
 \*------------------------------------*/
-
 /**
  * Typographical base selectors.
  */
-
 /**
  * Headings 1–6.
  */
 @include headings() {
-  @include font-weight(regular);
+  @include font-weight(bold);
   color: $color-headings;
 }
-
-
-
-
-
+/**
+ * Content
+ */
+p {
+  @include font-size(24px, 32px);
+  @include font-weight(light);
+  color: lighten($color-gray, 10%);
+}
 /**
  * A generic heading style which can be applied to any headings.
  */
@@ -29,23 +30,22 @@
   @include font-size(16px);
   @include font-weight(bold);
   margin-bottom: 0;
-  color: $color-heading-sub;
+  color        : $color-heading-sub;
 }
-
-
 /**
  * Code-like elements.
  */
-code, kbd, samp {
+code,
+kbd,
+samp {
   @include font-size(14px);
-  color: $color-code;
+  color      : $color-code;
   font-family: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 }
-
-
 /*
  * Font-weight for bold
  */
-strong, b {
+b,
+strong {
   @include font-weight(semi-bold);
 }

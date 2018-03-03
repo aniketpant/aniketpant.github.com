@@ -47,12 +47,10 @@ body {
 
 h1 {
   @include font-size(24px);
-  font-weight: 600;
 }
 
 h2 {
   @include font-size(21px);
-  font-weight: 600;
 }
 
 h3 {
@@ -147,6 +145,10 @@ h3 {
 
 .accessibility {
   display: none;
+
+  .me-again {
+    background-image: url("/images/me-again.jpg");
+  }
 }
 
 .left {
@@ -171,7 +173,17 @@ h3 {
 }
 
 .title--page,
-.title--post {}
+.title--post {
+  @include font-size(32px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title--date {
+  @include font-size(18px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
 .list {
   @extend .o-list-bare;
@@ -201,7 +213,10 @@ h3 {
 }
 
 .list-item__title {
-  margin-bottom: 10px;
+  @include font-size(21px);
+  letter-spacing: 1px;
+  margin-bottom : 24px;
+  color         : $color-gray;
 
   a {
     color     : $color-gray;
@@ -218,6 +233,13 @@ h3 {
   @include font-weight(semi-bold);
   margin-bottom : 0;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.list-item__content {
+  @include font-size(24px, 32px);
+  @include font-weight(light);
+  color: lighten($color-gray, 20%);
 }
 
 .archive-list {
@@ -249,8 +271,19 @@ h3 {
   }
 }
 
+.archive-list-item__title {
+  @include font-size(24px);
+}
+
 .archive-list-item__date {
-  text-align: right;
+  text-align    : right;
+  @include font-size(18px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color         : lighten($color-gray, 20%);
+  @include mq(mobile) {
+    text-align: left;
+  }
 }
 
 .box--highlite {
@@ -289,7 +322,7 @@ blockquote {
 }
 
 .lede {
-  @include font-size(21px);
+  @include font-size(28px, 26px);
   color      : lighten($color-gray, 10%);
   margin-top : 0;
   line-height: 1.5;

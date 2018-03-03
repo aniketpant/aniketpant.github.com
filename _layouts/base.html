@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-  <meta charset="utf-8">
-  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width" name="viewport">
-  <meta content="{{ site.description }}" name="description">
-  <meta content="aniket, pant, weblog, css, php, html, javascript, web development, code" name="keywords">
+  <meta charset="utf-8" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width" name="viewport" />
+  <meta content="{{ site.description }}" name="description" />
+  <meta content="aniket, pant, weblog, css, php, html, javascript, web development, code" name="keywords" />
 
   {% if page.slug %}
   <title>{{ page.title }} | Aniket Pant's Website</title>
@@ -16,13 +16,13 @@
   <title>{{ page.title }} | {{ site.name }}</title>
   {% endif %}
 
-  <meta content="{{ author.name }}" name="author">
-  <link href="https://plus.google.com/114828599949215633124/posts" rel="author">
-  <meta content="@noremap" name="twitter:site">
-  <meta content="@noremap" name="twitter:creator">
+  <meta content="{{ author.name }}" name="author" />
+  <link href="https://plus.google.com/114828599949215633124/posts" rel="author" />
+  <meta content="@noremap" name="twitter:site" />
+  <meta content="@noremap" name="twitter:creator" />
 
-  <link href="/sitemap/index.xml" rel="sitemap" title="Sitemap" type="application/xml">
-  <link href="{{ site.url }}{{ page.url }}" rel="canonical">
+  <link href="/sitemap/index.xml" rel="sitemap" title="Sitemap" type="application/xml" />
+  <link href="{{ site.url }}{{ page.url }}" rel="canonical" />
 
   <!-- open graph tags -->
   {% if page.slug == "home" %}
@@ -40,13 +40,19 @@
   <meta property="og:image"  content="https://www.aniketpant.com/images/logo.jpg" />
   {% endif %}
 
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- blocking, but what else can ya do? -->
+  <!--[if IE]>
+  <link rel="stylesheet" href="/css/style.css" />
+  <![endif]-->
 
   <!-- feed -->
-  <link rel="alternate" href="/feed/index.xml" title="{{ site.name }}" type="application/rss+xml">
+  <link rel="alternate" href="/feed/index.xml" title="{{ site.name }}" type="application/rss+xml" />
 </head>
 <body>
+  <!--[if !IE]> -->
+  <link rel="stylesheet" href="/css/style.css" lazyload="1" />
+  <!-- [endif]-->
+
   <!--[if lt IE 7]>
     <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
   <![endif]-->
