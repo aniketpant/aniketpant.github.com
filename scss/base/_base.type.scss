@@ -14,10 +14,15 @@
 /**
  * Content
  */
-p {
-  @include font-size(24px, 32px);
+@mixin content($size: 24px, $line-height: 36px) {
+  @include font-size($size, $line-height);
   @include font-weight(light);
-  color: lighten($color-gray, 10%);
+  color     : lighten($color-gray, 10%);
+  text-align: justify;
+}
+
+p {
+  @include content();
 }
 /**
  * A generic heading style which can be applied to any headings.
@@ -48,4 +53,7 @@ samp {
 b,
 strong {
   @include font-weight(semi-bold);
+}
+@mixin title-serif() {
+  font-family: "Merriweather", "PT Serif", serif;
 }

@@ -5,11 +5,11 @@ slug: resume
 ---
 
 <div class="wrapper wrapper--small">
-  <div class="layout">
-    <header class="layout__item  one-quarter   header-container">
+  <div class="o-layout  o-layout--flush">
+    <header class="o-layout__item   header-container">
       <h1 class="brand"><a class=" brand__link" href="/" rel="nofollow"><span class="part--former">Aniket</span> <span class="part--latter">Pant</span></a></h1>
       <nav>
-        <ul class="tabs">
+        <ul class="tabs  nav">
           <li class="tabs__item"><a class="tabs__link" href="mailto:me@aniketpant.com">me@aniketpant.com</a></li><!--
        --><li class="tabs__item"><a class="tabs__link" href="https://www.aniketpant.com">aniketpant.com</a></li><!--
        --><li class="tabs__item"><a class="tabs__link" href="https://twitter.com/noremap">@noremap</a></li><!--
@@ -18,7 +18,7 @@ slug: resume
       </nav>
     </header><!--
 
-  --><div class="layout__item  three-quarters   main-container">
+  --><div class="o-layout__item   main-container">
       <section class="section">
         <div class="section-heading">Experience</div>
 

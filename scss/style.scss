@@ -51,11 +51,11 @@ h1 {
 
 h2 {
   @include font-size(21px);
+  @include title-serif();
 }
 
 h3 {
   @include font-size(16px);
-  text-transform: uppercase;
 }
 
 .hollow {
@@ -145,10 +145,6 @@ h3 {
 
 .accessibility {
   display: none;
-
-  .me-again {
-    background-image: url("/images/me-again.jpg");
-  }
 }
 
 .left {
@@ -175,8 +171,7 @@ h3 {
 .title--page,
 .title--post {
   @include font-size(32px);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  @include title-serif();
 }
 
 .title--date {
@@ -213,10 +208,11 @@ h3 {
 }
 
 .list-item__title {
-  @include font-size(21px);
-  letter-spacing: 1px;
-  margin-bottom : 24px;
-  color         : $color-gray;
+  @include font-size(28px);
+  @include title-serif();
+  margin-bottom: 24px;
+  margin-top   : 0;
+  color        : $color-gray;
 
   a {
     color     : $color-gray;
@@ -239,7 +235,8 @@ h3 {
 .list-item__content {
   @include font-size(24px, 32px);
   @include font-weight(light);
-  color: lighten($color-gray, 20%);
+  color     : lighten($color-gray, 20%);
+  text-align: justify;
 }
 
 .archive-list {

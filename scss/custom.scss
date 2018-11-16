@@ -2,27 +2,19 @@
 @import "settings/settings.config";
 @import "../node_modules/inuitcss/settings/settings.core";
 @import "settings/settings.global";
-@import "settings/settings.colors";
-
-// TOOLS
+@import "settings/settings.colors"; // TOOLS
 @import "../node_modules/inuitcss/tools/tools.font-size";
 @import "../node_modules/inuitcss/tools/tools.clearfix";
 @import "../node_modules/sass-mq/mq";
 @import "tools/tools.aliases";
-@import "tools/tools.mixins";
-
-// GENERIC
+@import "tools/tools.mixins"; // GENERIC
 @import "../node_modules/inuitcss/generic/generic.box-sizing";
 @import "../node_modules/inuitcss/generic/generic.normalize";
-@import "../node_modules/inuitcss/generic/generic.shared";
-
-// ELEMENTS
+@import "../node_modules/inuitcss/generic/generic.shared"; // ELEMENTS
 @import "../node_modules/inuitcss/elements/elements.page";
 @import "../node_modules/inuitcss/elements/elements.headings";
 @import "elements/elements.links";
-@import "elements/elements.quotes";
-
-// OBJECTS
+@import "elements/elements.quotes"; // OBJECTS
 @import "../node_modules/inuitcss/objects/objects.layout";
 @import "../node_modules/inuitcss/objects/objects.media";
 @import "../node_modules/inuitcss/objects/objects.flag";
@@ -30,14 +22,10 @@
 @import "../node_modules/inuitcss/objects/objects.list-inline";
 @import "../node_modules/inuitcss/objects/objects.box";
 @import "../node_modules/inuitcss/objects/objects.block";
-@import "../node_modules/inuitcss/objects/objects.table";
-
-// UTILITIES
+@import "../node_modules/inuitcss/objects/objects.table"; // UTILITIES
 @import "../node_modules/inuitcss/utilities/utilities.widths";
 @import "../node_modules/inuitcss/utilities/utilities.headings";
-@import "../node_modules/inuitcss/utilities/utilities.spacings";
-
-// Base
+@import "../node_modules/inuitcss/utilities/utilities.spacings"; // Base
 @import "base/base.page";
 @import "base/base.links";
 @import "base/base.quotes";
@@ -45,10 +33,10 @@
 
 .brand {
   @include font-size(26px);
-  border-top: 5px solid transparent;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  border-top    : 5px solid transparent;
+  margin        : 0;
+  padding       : 0;
+  text-align    : center;
   text-transform: uppercase;
 }
 
@@ -57,57 +45,62 @@
   @include attention() {
     text-decoration: none;
   }
+
   &:hover {
     .part--latter {
       color: $color-brand;
     }
   }
 }
+
 .part--former {
   @include font-weight(light);
 }
+
 .part--latter {
   @include font-weight(semi-bold);
   transition: 100ms color linear;
 }
 
 .header-container {
-    height: 60px;
-    background: #f1f1f1;
+  height    : 60px;
+  background: #f1f1f1;
 }
 
 .wrapper {
-  width: 60rem;
+  width : 60rem;
   margin: 0 auto;
-  @include mq(tablet) {
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 .wrapper--small {
-  width: 40rem;
+  width : 40rem;
   margin: 0 auto;
-  @include mq(tablet) {
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+}
+
+.nav {
+  @extend .o-list-inline;
+  text-align: center;
+}
+
+.tabs__item {
+  @extend .o-list-inline__item;
+  @extend .u-padding-left-small;
+  @extend .u-padding-right-small;
 }
 
 .main-container {
-    margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .section-heading {
-    @include font-size(18px);
-    margin-bottom: 0.5em;
+  @include font-size(18px);
+  margin-bottom: 0.5em;
 }
 
 .organization {
   @include font-size(18px);
   margin-bottom: 0;
+
   a {
     color: $color-gray;
     @include attention() {
@@ -116,7 +109,13 @@
   }
 }
 
+li,
+p {
+  @include content(16px, 24px);
+}
+
 .byline {
+  @include font-size(16px);
   margin-bottom: 10px;
 }
 

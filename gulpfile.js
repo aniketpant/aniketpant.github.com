@@ -4,17 +4,19 @@ var batch = require('gulp-batch');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
+var prettier = require('gulp-prettier');
 
 var paths = {
-  scripts: ['js/zepto.min.js', 'js/moment.min.js', 'js/wubwub.js'],
+  scripts: ['js/src/zepto.min.js', 'js/src/moment.min.js', 'js/src/wubwub.js'],
   stylesheets: ['scss/style.scss', 'scss/custom.scss']
 };
 
 gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
+    .pipe(prettier())
     .pipe(uglify())
     .pipe(concat('zeamus.js'))
-    .pipe(gulp.dest('js'));
+    .pipe(gulp.dest('js/dist'));
 });
 
 gulp.task('sass', function() {
@@ -28,7 +30,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', function() {
-  watch('js/**/*.js', batch(function(events, done) {
+  watch('js/src/*.js', batch(function(events, done) {
     gulp.start('scripts', done);
   }));
   watch('scss/**/*.scss', batch(function(events, done) {
