@@ -2,7 +2,7 @@
 author: Aniket
 layout: post
 type: post
-date: 2013-02-25 09:06
+date: 2013-02-25 09:06 +0530
 title: "It's all about the community"
 category: note
 tags: []

@@ -2,7 +2,7 @@
 author: Aniket
 layout: post
 type: post
-date: 2014-10-05 09:52
+date: 2014-10-05 09:52 +0530
 title: "I love Digital Ocean"
 category: note
 tags: []

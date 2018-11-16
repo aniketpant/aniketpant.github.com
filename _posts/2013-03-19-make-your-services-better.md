@@ -2,7 +2,7 @@
 author: Aniket
 layout: post
 type: post
-date: 2013-03-19 01:32
+date: 2013-03-19 01:32 +0530
 title: "Make your services better"
 category: essay
 tags: []

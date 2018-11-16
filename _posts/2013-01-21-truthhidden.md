@@ -1,7 +1,7 @@
 ---
 author: Aniket
 layout: poetry
-date: 2013-01-21 21:59
+date: 2013-01-21 21:59 +0530
 title: "Truth:Hidden"
 category: poetry
 ---

@@ -2,7 +2,7 @@
 author: Aniket
 layout: post
 type: post
-date: 2013-05-19 15:55
+date: 2013-05-19 15:55 +0530
 title: "HNsearch, my first gem"
 category: note
 tags: []

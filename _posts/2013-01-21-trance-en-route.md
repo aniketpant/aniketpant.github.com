@@ -1,7 +1,7 @@
 ---
 author: Aniket
 layout: poetry
-date: 2013-01-21 21:21
+date: 2013-01-21 21:21 +0530
 title: "Trance En Route"
 category: poetry
 ---

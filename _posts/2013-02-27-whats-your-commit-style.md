@@ -2,7 +2,7 @@
 author: Aniket
 layout: post
 type: post
-date: 2013-02-27 01:38
+date: 2013-02-27 01:38 +0530
 title: "What's your commit style?"
 category: essay
 tags: []

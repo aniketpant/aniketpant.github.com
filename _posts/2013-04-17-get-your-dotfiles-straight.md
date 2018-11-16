@@ -2,7 +2,7 @@
 author: Aniket
 layout: post
 type: post
-date: 2013-04-17 17:01
+date: 2013-04-17 17:01 +0530
 title: "Get your dotfiles straight"
 category: note
 tags: []

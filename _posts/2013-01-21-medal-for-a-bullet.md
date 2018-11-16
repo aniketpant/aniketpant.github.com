@@ -1,7 +1,7 @@
 ---
 author: Aniket
 layout: poetry
-date: 2013-01-21 21:56
+date: 2013-01-21 21:56 +0530
 title: "Medal for a Bullet"
 category: poetry
 ---

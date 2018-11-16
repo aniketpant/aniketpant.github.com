@@ -1,7 +1,7 @@
 ---
 author: Aniket
 layout: poetry
-date: 2013-01-21 21:17
+date: 2013-01-21 21:17 +0530
 title: "Fait Accompli"
 category: poetry
 ---

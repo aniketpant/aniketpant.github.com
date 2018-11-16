@@ -2,7 +2,7 @@
 author: Aniket
 layout: post
 type: post
-date: 2014-09-24 00:02
+date: 2014-09-24 00:02 +0530
 title: "Deploying Sinatra on Digital Ocean"
 category: note
 tags: []
@@ -114,4 +114,3 @@ task :info => :environment do
   end
 end
 ```
-

@@ -2,7 +2,7 @@
 author: Aniket
 layout: post
 type: post
-date: 2014-06-07 14:52
+date: 2014-06-07 14:52 +0530
 title: "Joining Zomato"
 category: note
 tags: []

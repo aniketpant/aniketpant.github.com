@@ -1,7 +1,7 @@
 ---
 author: Aniket
 layout: poetry
-date: 2013-01-21 21:16
+date: 2013-01-21 21:16 +0530
 title: "Upon This Monolith I Bear The Burden Of A Thousand Centuries Of Love"
 category: poetry
 ---

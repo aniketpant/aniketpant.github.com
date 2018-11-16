@@ -2,7 +2,7 @@
 author: Aniket
 layout: post
 type: post
-date: 2017-01-23 00:04
+date: 2017-01-23 00:04 +0530
 title: "Two-Zero-Sixteen"
 category: note
 tags: []

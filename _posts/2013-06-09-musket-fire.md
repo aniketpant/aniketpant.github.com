@@ -2,7 +2,7 @@
 author: Aniket
 layout: post
 type: post
-date: 2013-06-09 10:18
+date: 2013-06-09 10:18 +0530
 title: "Musket Fire"
 category: note
 tags: []
