@@ -12,7 +12,7 @@ SOURCE = "."
 CONFIG = {
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
-  'post_ext' => "markdown"
+  'post_ext' => "md"
 }
 
 # Usage: rake post title="A Title" [date="2012-02-09"]
