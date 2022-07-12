@@ -1,41 +1,51 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var batch = require('gulp-batch');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var watch = require('gulp-watch');
-var prettier = require('gulp-prettier');
+const gulp = require('gulp');
+const batch = require('gulp-batch');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const watch = require('gulp-watch');
+const prettier = require('gulp-prettier');
+const sass = require('gulp-sass')(require('sass'));
 
-var paths = {
+const paths = {
   scripts: ['js/src/zepto.min.js', 'js/src/moment.min.js', 'js/src/wubwub.js'],
-  stylesheets: ['scss/style.scss', 'scss/custom.scss']
+  stylesheets: ['scss/style.scss', 'scss/custom.scss'],
 };
 
-gulp.task('scripts', function() {
-  return gulp.src(paths.scripts)
+gulp.task('scripts', () => {
+  return gulp
+    .src(paths.scripts)
     .pipe(prettier())
     .pipe(uglify())
     .pipe(concat('zeamus.js'))
     .pipe(gulp.dest('js/dist'));
 });
 
-gulp.task('sass', function() {
-  return gulp.src(paths.stylesheets)
-    .pipe(sass({
-      "outputStyle": "compressed",
-      "precision": 9,
-      "sourceComments": false
-    }))
+gulp.task('sass', () => {
+  return gulp
+    .src(paths.stylesheets)
+    .pipe(
+      sass({
+        outputStyle: 'compressed',
+        precision: 9,
+        sourceComments: false,
+      })
+    )
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('watch', function() {
-  watch('js/src/*.js', batch(function(events, done) {
-    gulp.start('scripts', done);
-  }));
-  watch('scss/**/*.scss', batch(function(events, done) {
-    gulp.start('sass', done);
-  }))
+gulp.task('watch', () => {
+  watch(
+    'js/src/*.js',
+    batch(function (events, done) {
+      gulp.start('scripts', done);
+    })
+  );
+  watch(
+    'scss/**/*.scss',
+    batch(function (events, done) {
+      gulp.start('sass', done);
+    })
+  );
 });
 
-gulp.task('default', ['scripts', 'sass']);
+gulp.task('default', gulp.series(['scripts', 'sass']));

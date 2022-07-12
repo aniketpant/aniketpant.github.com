@@ -19,10 +19,10 @@ window.analytics || (window.analytics = []),
     'group',
     'on',
     'once',
-    'off'
+    'off',
   ]),
-  (window.analytics.factory = function(t) {
-    return function() {
+  (window.analytics.factory = function (t) {
+    return function () {
       var a = Array.prototype.slice.call(arguments);
       return a.unshift(t), window.analytics.push(a), window.analytics;
     };
@@ -31,7 +31,7 @@ for (var i = 0; i < window.analytics.methods.length; i++) {
   var method = window.analytics.methods[i];
   window.analytics[method] = window.analytics.factory(method);
 }
-(window.analytics.load = function(t) {
+(window.analytics.load = function (t) {
   var a = document.createElement('script');
   (a.type = 'text/javascript'),
     (a.async = !0),
@@ -48,7 +48,7 @@ for (var i = 0; i < window.analytics.methods.length; i++) {
 window.analytics.page();
 
 // Twitter Widget
-!(function(d, s, id) {
+!(function (d, s, id) {
   var js,
     fjs = d.getElementsByTagName(s)[0];
   if (!d.getElementById(id)) {
@@ -62,10 +62,10 @@ window.analytics.page();
 // Google Fonts
 WebFontConfig = {
   google: {
-    families: ['Merriweather:900', 'Open Sans:300,300italic,400,600:latin']
-  }
+    families: ['Merriweather:900', 'Open Sans:300,300italic,400,600:latin'],
+  },
 };
-(function() {
+(function () {
   var wf = document.createElement('script');
   wf.src =
     ('https:' == document.location.protocol ? 'https' : 'http') +
@@ -77,7 +77,7 @@ WebFontConfig = {
 })();
 
 // Date transformation using moment.js
-$.each($('.list-item__date'), function(index, el) {
+$.each($('.list-item__date'), function (index, el) {
   origTime = $(el).text();
   humanizedTime = moment(origTime).fromNow();
   $(this).text(humanizedTime);
