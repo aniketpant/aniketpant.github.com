@@ -41,7 +41,7 @@
 
   <!-- blocking, but what else can ya do? -->
   <!--[if IE]>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/dist/output.css" />
   <![endif]-->
 
   <!-- feed -->
@@ -49,46 +49,37 @@
 </head>
 <body>
   <!--[if !IE]> -->
-  <link rel="stylesheet" href="/css/style.css" lazyload="1" />
+  <link rel="stylesheet" href="/dist/output.css" lazyload="1" />
   <!-- [endif]-->
 
   <!--[if lt IE 7]>
     <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
   <![endif]-->
 
-  <header class="header-container" role="banner">
-    <div class="wrapper">
-      <div class="o-layout  o-layout--flush">
-        <div class="o-layout__item  u-2/5@desktop  u-1@mobile">
-            {% if page.slug == "home" %}
-            <h1 class="brand"><a class=" brand__link" href="/" rel="nofollow"><span class="part--former">Aniket</span> <span class="part--latter">Pant</span></a></h1>
-            {% else %}
-            <div class="brand"><a class=" brand__link" href="/" rel="nofollow"><span class="part--former">Aniket</span> <span class="part--latter">Pant</span></a></div>
-            {% endif %}
-        </div><!--
-
-        --><div class="o-layout__item   u-2/5@desktop  u-push-1/5@desktop  u-1@mobile">
-            <nav>
-            <ul class="tabs  nav">
-                <li class="tabs__item"><a class="tabs__link" href="/about">About</a></li><!--
-                --><li class="tabs__item"><a class="tabs__link" href="/speaking">Speaking</a></li><!--
-                --><li class="tabs__item"><a class="tabs__link" href="/archive">Archive</a></li>
-            </ul>
-            </nav>
-        </div>
-        <p rel="google-authorship" class="accessibility">By Aniket Pant</p>
-        </div>
+  <header class="container flex flex-row justify-between items-center mx-auto" role="banner">
+    <div class="basis-2/5 text-2xl">
+        {% if page.slug == "home" %}
+        <h1 class="prose-headings"><a href="/" rel="nofollow"><span class="font-bold hover:text-brand">no</span><span>remap</span></a></h1>
+        {% else %}
+        <div class="prose-headings"><a href="/" rel="nofollow"><span class="font-bold hover:text-brand">no</span><span>remap</span></a></div>
+        {% endif %}
     </div>
+    <nav class="basis-3/5 inline-flex justify-end uppercase">
+      <ul class="flex flex-col md:flex-row">
+          <li><a class="block p-4 border-t-4 border-t-bg hover:border-t-brand text-gray" href="/about">About</a></li>
+          <li><a class="block p-4 border-t-4 border-t-bg hover:border-t-brand text-gray" href="/speaking">Speaking</a></li>
+          <li><a class="block p-4 border-t-4 border-t-bg hover:border-t-brand text-gray" href="/archive">Archive</a></li>
+      </ul>
+    </nav>
+    <p rel="google-authorship" class="invisible">By Aniket Pant</p>
   </header>
 
-  <div class="wrapper">
-    <div class="o-layout">
-      <div class="o-layout__item   main-container">
-        {{ content }}
-      </div>
+  <div class="container flex flex-wrap mx-auto">
+    <div class="mx-auto">
+      {{ content }}
     </div>
   </div>
 
-  <script type="text/javascript" src="/js/dist/zeamus.js"></script>
+  <script type="text/javascript" src="/dist/zeamus.js"></script>
 </body>
 </html>

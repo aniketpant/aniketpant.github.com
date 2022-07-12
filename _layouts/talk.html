@@ -2,13 +2,13 @@
 layout: base
 ---
 
-<div class="talk {{ page.slug }}" itemscope itemtype="http://schema.org/Event">
+<div class="prose talk {{ page.slug }}" itemscope itemtype="http://schema.org/Event">
 
   <header>
-    <h1 class="title--post" itemprop="name">{{ page.title }}</h1>
-    <h2 class="">{{ page.event }}</h2>
-    <div class="meta">
-      <p><meta itemprop="startDate" content="{{ page.date | date_to_xmlschema }}"><date class="date">{{ page.date | date_to_long_string }}</date><br/>
+    <h1 class="text-center" itemprop="name">{{ page.title }}</h1>
+    <h2 class="text-center">{{ page.event }}</h2>
+    <div class="text-center">
+      <p class="text-sm"><meta itemprop="startDate" content="{{ page.date | date_to_xmlschema }}"><date class="date">{{ page.date | date_to_long_string }}</date><br/>
       <a href="{{ page.link }}"  itemprop="url">Website</a></p>
     </div>
   </header>
@@ -17,4 +17,4 @@ layout: base
     {{ content }}
   </article>
 
-</div><!-- talk -->
+</div>

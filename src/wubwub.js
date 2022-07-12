@@ -62,7 +62,7 @@ window.analytics.page();
 // Google Fonts
 WebFontConfig = {
   google: {
-    families: ['Merriweather:900', 'Open Sans:300,300italic,400,600:latin'],
+    families: ['Playfair+Display:600', 'Inter:300,300italic,400,600,700'],
   },
 };
 (function () {
@@ -77,7 +77,7 @@ WebFontConfig = {
 })();
 
 // Date transformation using moment.js
-$.each($('.list-item__date'), function (index, el) {
+$.each($('.date'), function (index, el) {
   origTime = $(el).text();
   humanizedTime = moment(origTime).fromNow();
   $(this).text(humanizedTime);

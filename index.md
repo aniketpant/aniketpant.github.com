@@ -4,23 +4,23 @@ title: Aniket Pant
 slug: home
 ---
 
-<p class="lede">My name is <a href="/about" rel="nofollow">Aniket Pant</a> and  I love to <em>read</em>, <em>write</em> and <em>code</em>.</p>
+<p class="prose-lead font-light">My name is <a href="/about" rel="nofollow">Aniket Pant</a> and  I love to <em>read</em>, <em>write</em> and <em>code</em>.</p>
 
-<ul class="list">
+<ul class="prose-ul list-none px-0">
   {% for post in site.posts limit:5 %}
-  <li class="list-item">
-    <span class="list-item__date  muted"><date>{{ post.date | date_to_xmlschema }}</date></span>
-    <a class="list-item__link" href="{{ post.url }}">
-      <h3 class="list-item__title">{{ post.title }}</h3>
-      <div class="list-item__content">{{ post.excerpt | strip_html }}</div>
+  <li class="prose-li px-0">
+    <span class="date prose-stone prose-sm"><date>{{ post.date | date_to_xmlschema }}</date></span>
+    <a class="prose-a no-underline" href="{{ post.url }}">
+      <h3>{{ post.title }}</h3>
+      <p class="prose-slate">{{ post.excerpt | strip_html }}</p>
     </a>
   </li>
   {% endfor %}
   {% for post in site.posts limit:5 offset:5 %}
-  <li class="list-item">
-    <span class="list-item__date  muted"><date>{{ post.date | date_to_xmlschema }}</date></span>
-    <a class="list-item__link" href="{{ post.url }}">
-      <h3 class="list-item__title">{{ post.title }}</h3>
+  <li class="prose-li px-0">
+    <span class="date prose-stone prose-sm"><date>{{ post.date | date_to_xmlschema }}</date></span>
+    <a class="prose-a no-underline" href="{{ post.url }}">
+      <h3>{{ post.title }}</h3>
     </a>
   </li>
   {% endfor %}

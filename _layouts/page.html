@@ -2,15 +2,15 @@
 layout: base
 ---
 
-<div class="page {{ page.slug }}">
+<div class="prose {{ page.slug }}">
 
   {% if page.slug != 'home' %}
   <header>
-  <h1 class="title--page">{{ page.title }}</h1>
+    <h1 class="text-center">{{ page.title }}</h1>
   </header>
   {% endif %}
 
-  <div class="accessibility" itemscope itemtype="http://schema.org/Person">
+  <div class="invisible" itemscope itemtype="http://schema.org/Person">
     <span itemprop="name">Aniket Pant</span>
     <a href="mailto:me@aniketpant.com" itemprop="email">me@aniketpant.com</a>
     <a href="https://www.aniketpant.com" itemprop="url">aniketpant.com</a>
@@ -20,4 +20,4 @@ layout: base
   {{ content }}
   </article>
 
-</div><!-- page -->
+</div>

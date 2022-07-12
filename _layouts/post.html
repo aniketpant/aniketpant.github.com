@@ -2,22 +2,23 @@
 layout: base
 ---
 
-<div class="post">
+<div class="prose">
 
   <header>
-    <h1 class="title--post">{{ page.title }}</h1>
-    <p class="title--date muted">Written on {{ page.date | date_to_long_string }}</p>
+    <h1 class="text-center">{{ page.title }}</h1>
+    <p class="prose-stone prose-sm text-center">Written on {{ page.date | date_to_long_string }}</p>
   </header>
 
-  <article role="main">
+  <article role="main" class="mx-auto">
   {{ content }}
   </article>
 
-  <p><a href="https://twitter.com/share" class="twitter-share-button" data-via="noremap" data-related="noremap">Tweet</a></p>
-
-  <footer class="box  box--highlite">
-    <p>The above post was brought to you by <strong>Aniket</strong>.</p>
-    <p><a href="https://twitter.com/noremap" class="twitter-follow-button" data-show-count="true">Follow @noremap</a></p>
+  <footer class="flex flex-col bg-gray-200 p-2 mb-2 rounded-lg text-slate">
+    <div class="flex justify-center align-middle"><p>The above post was brought to you by <strong class="text-slate">Aniket</strong>.</p></div>
+    <div class="flex justify-center align-middle mb-4">
+      <div class="flex flex-col mr-4"><a href="https://twitter.com/share" class="twitter-share-button" data-via="noremap" data-related="noremap">Tweet</a></div>
+      <div class="flex flex-col align-middle"><a href="https://twitter.com/noremap" class="twitter-follow-button" data-show-count="true">Follow @noremap</a></div>
+    </div>
   </footer>
 
-</div><!-- post -->
+</div>
