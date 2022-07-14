@@ -1,13 +1,22 @@
 permalink: /:year/:month/:title
-exclude: ['Rakefile', 'CNAME', 'README.md', 'LICENSE', 'config.rb', 'scss/', 'js/src/', 'node_modules/']
+exclude:
+  [
+    'Rakefile',
+    'CNAME',
+    'README.md',
+    'LICENSE',
+    'config.rb',
+    'src/',
+    'node_modules/',
+  ]
 
-timezone: America/New_York
+timezone: Europe/Amsterdam
 
 url: http://aniketpant.com
 
-name: "Aniket Pant"
-tagline: "Notes and Essays by a developer"
-description: "Aniket is a full stack developer who loves Go and JavaScript."
+name: 'Aniket Pant'
+tagline: 'Notes and Essays by a developer'
+description: 'Aniket is a full stack developer who loves Go and JavaScript.'
 
 plugins:
   - jekyll-sitemap

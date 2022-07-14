@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<div class="prose {{ page.slug }}">
+<div class="prose prose-slate {{ page.slug }} text-lg md:text-base">
 
   {% if page.slug != 'home' %}
   <header>
@@ -16,7 +16,7 @@ layout: base
     <a href="https://www.aniketpant.com" itemprop="url">aniketpant.com</a>
   </div>
 
-  <article role="main">
+  <article role="main" class="flex flex-col justify-center items-center text-center">
   {{ content }}
   </article>
 
