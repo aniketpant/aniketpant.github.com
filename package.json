@@ -24,12 +24,13 @@
     "prettier": "^2.7.1"
   },
   "scripts": {
-    "build": "npm run prettier && gulp",
-    "watch": "gulp watch",
-    "prettier": "prettier --write js/src/*.js"
+    "js-watch": "prettier && gulp",
+    "css-watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify --watch",
+    "prettier": "prettier --write src/*.js",
+    "prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.4",
     "gulp-batch": "^1.0.5",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.2",
