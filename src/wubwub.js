@@ -62,7 +62,10 @@ window.analytics.page();
 // Google Fonts
 WebFontConfig = {
   google: {
-    families: ['Playfair+Display:600', 'Inter:300,300italic,400,600,700'],
+    families: [
+      'Playfair+Display:400,400italic,600',
+      'Inter:300,300italic,400,600,700',
+    ],
   },
 };
 (function () {

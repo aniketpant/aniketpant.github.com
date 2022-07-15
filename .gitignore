@@ -7,3 +7,4 @@ _site/
 bower_components/
 node_modules/
 *.code-workspace
+.jekyll-cache/

@@ -24,8 +24,9 @@
     "prettier": "^2.7.1"
   },
   "scripts": {
-    "js-watch": "prettier && gulp",
-    "css-watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify --watch",
+    "watch": "yarn watch-js && yarn watch-css",
+    "watch-js": "gulp",
+    "watch-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "prettier": "prettier --write src/*.js",
     "prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },

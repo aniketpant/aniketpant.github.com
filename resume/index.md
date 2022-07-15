@@ -4,20 +4,24 @@ title: "Aniket Pant's Resume"
 slug: resume
 ---
 
-<header class="container mx-auto flex flex-row justify-between items-center">
-  <div class="flex basis-2/5">
-    <h1 class="text-2xl"><a class="no-underline" href="/" rel="nofollow"><span class="font-bold hover:text-brand">Aniket</span> <span>Pant</span></a></h1>
+<header class="container md:mx-auto flex flex-col md:flex-row justify-between items-center text-center">
+  <div class="flex basis-2/5 group">
+    <h1 class="text-2xl">
+      <a class="no-underline" href="/" rel="nofollow">
+        <span class="font-bold group-hover:text-brand">Aniket</span> <span>Pant</span>
+      </a>
+    </h1>
   </div>
   <nav class="basis-3/5 inline-flex justify-end">
-    <ul class="flex flex-col md:flex-row">
-      <li><a class="block p-4" href="mailto:me@aniketpant.com">me@aniketpant.com</a></li>
-      <li><a class="block p-4" href="https://www.aniketpant.com">aniketpant.com</a></li>
-      <li><a class="block p-4" href="https://twitter.com/noremap">@noremap</a></li>
-      <li><a class="block p-4" href="https://github.com/aniketpant">GitHub</a></li>
+    <ul class="flex flex-col md:flex-row text-sm">
+      <li><a class="block p-2" href="mailto:me@aniketpant.com">me@aniketpant.com</a></li>
+      <li><a class="block p-2" href="https://www.aniketpant.com">aniketpant.com</a></li>
+      <li><a class="block p-2" href="https://twitter.com/noremap">@noremap</a></li>
+      <li><a class="block p-2" href="https://github.com/aniketpant">GitHub</a></li>
     </ul>
   </nav>
 </header>
-<div class="container flex mx-auto">
+<div class="container flex flex-col mx-8 md:flex-row md:mx-auto">
   <div class="prose basis-1/2">
     <section>
       <h2 class="text-xl">Experience</h2>

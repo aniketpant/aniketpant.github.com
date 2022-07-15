@@ -4,11 +4,12 @@ title: Aniket Pant
 slug: home
 ---
 
-<p class="font-lead font-light text-xl">
-  My name is <a class="text-brand no-underline" href="/about" rel="nofollow">Aniket</a> and  I love to <em>read</em>, <em>write</em> and <em>code</em>.
+<p class="lead font-serif">
+  Hello!<br>
+  I'm <a class="text-brand no-underline" href="/about" rel="nofollow">Aniket</a> and I love to <em>read</em>, <em>write</em> and <em>code</em>.
 </p>
 
-<ul class="list-none px-0 prose-li:px-0 prose-li:my-8 prose-a:no-underline prose-h3:mt-0">
+<ul class="list-none px-0 prose-li:px-0 prose-li:my-8 prose-a:no-underline prose-h3:mt-0 prose-h3:text-2xl">
   {% for post in site.posts limit:5 %}
   <li>
     <span class="date prose-sm"><date>{{ post.date | date_to_xmlschema }}</date></span>

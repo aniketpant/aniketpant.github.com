@@ -8,7 +8,7 @@
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
   <meta content="width=device-width" name="viewport" />
   <meta content="{{ site.description }}" name="description" />
-  <meta content="aniket, pant, weblog, css, php, html, javascript, web development, code" name="keywords" />
+  <meta content="aniket, pant, noremap, weblog, css, php, html, javascript, web development, code" name="keywords" />
 
   {% if page.slug %}
   <title>{{ page.title }} | Aniket Pant's Website</title>
@@ -30,9 +30,7 @@
   <meta property="og:url" content="https://www.aniketpant.com" />
   <meta property="og:image" content="https://www.aniketpant.com/images/logo.jpg" />
   <meta property="og:site_name" content="Aniket Pant" />
-  <meta property="fb:admins" content="714102934" />
   {% else %}
-  <meta property="fb:app_id" content="465363156848461" />
   <meta property="og:type"   content="article" />
   <meta property="og:url"    content="{{ site.url}}{{ page.url }}" />
   <meta property="og:title"  content="{{ page.title }}" />
@@ -59,9 +57,16 @@
   <header class="flex flex-col justify-between items-center md:container md:mx-auto md:flex-row" role="banner">
     <div class="basis-2/5 text-2xl">
         {% if page.slug == "home" %}
-        <h1><a href="/" rel="nofollow"><span class="font-bold hover:text-brand">no</span><span>remap</span></a></h1>
+        <h1>
+          <a href="/" rel="nofollow" class="group">
+            <span class="font-bold group-hover:text-brand">no</span><span>remap</span>
+          </a>
+        </h1>
         {% else %}
-        <div><a href="/" rel="nofollow"><span class="font-bold hover:text-brand">no</span><span>remap</span></a></div>
+        <div>
+          <a href="/" rel="nofollow" class="group">
+            <span class="font-bold group-hover:text-brand">no</span><span>remap</span></a>
+          </div>
         {% endif %}
     </div>
     <nav class="basis-3/5 inline-flex items-center justify-end md:uppercase">

@@ -1,21 +1,34 @@
 ---
 layout: page
-title: Aniket's speaking engagements
+title: Speaking Engagements
 slug: speaking
 sitemap:
-    priority: 0.7
-    changefreq: weekly
-    lastmod: 2013-11-30T08:55:30+05:30
+  priority: 0.7
+  changefreq: weekly
+  lastmod: 2013-11-30T08:55:30+05:30
 ---
 
-You can take a look at my slides at <a href="https://speakerdeck.com/aniketpant">my Speaker Deck profile</a>. Also, you can <a href="https://github.com/aniketpant/presentations">fork my slides</a> here.
+<table class="table-auto">
+	<thead>
+		<tr>
+			<th>Talk Name</th>
+			<th>Presented On</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for post in site.posts %}
+		{% if post.category == 'talk' %}
+		<tr>
+			<td>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</td>
+			<td>
+				{{ post.date | date_to_long_string }}
+			</td>
+		</tr>
+		{% endif %}
+	{% endfor %}
+	</tbody>
+</table>
 
-<ul class="list">
-{% for post in site.posts %}
-	{% if post.category == 'talk' %}
-	<li class="list__item">
-		<a class="list__link" href="{{ post.url }}">{{ post.title }}</a>
-	</li>
-	{% endif %}
-{% endfor %}
-</ul>
+Take a look at the [slides](https://speakerdeck.com/aniketpant) or see the [code](https://github.com/aniketpant/presentations).
