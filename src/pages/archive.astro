@@ -44,7 +44,7 @@ const years = Array.from(byYear.keys()).sort((a, b) => Number(b) - Number(a));
             {years.map((year) => (
               <section class="animate-fade-in-up">
                 <div class="flex items-baseline gap-3 md:gap-4 mb-6">
-                  <h2 class="text-3xl md:text-4xl font-serif font-bold gradient-text-subtle">{year}</h2>
+                  <h2 class="text-3xl md:text-4xl font-serif font-bold gradient-text-secondary">{year}</h2>
                   <div class="flex-1 h-px bg-[var(--border)]"></div>
                   <span class="text-sm text-[var(--fg-subtle)] tabular-nums shrink-0">{byYear.get(year)!.length} posts</span>
                 </div>
@@ -55,7 +55,7 @@ const years = Array.from(byYear.keys()).sort((a, b) => Number(b) - Number(a));
                         <time datetime={post.isoDate} class="text-sm text-[var(--fg-subtle)] tabular-nums shrink-0 w-28">
                           {post.formattedDate}
                         </time>
-                        <span class="text-[var(--fg)] group-hover:text-[var(--color-brand)] transition-colors duration-200 font-medium">
+                        <span class="text-[var(--fg)] group-hover:text-[var(--color-secondary)] transition-colors duration-200 font-medium">
                           {post.title}
                         </span>
                       </a>

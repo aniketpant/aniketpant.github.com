@@ -16,6 +16,7 @@ const nextFive = sortedPosts.slice(5, 10);
     <!-- Decorative background blobs -->
     <div class="deco-blob bg-[var(--color-brand)] w-[500px] h-[500px] -top-40 -right-40" aria-hidden="true"></div>
     <div class="deco-blob bg-[var(--color-secondary)] w-[300px] h-[300px] top-60 -left-20" aria-hidden="true"></div>
+    <div class="deco-blob bg-[var(--color-tertiary)] w-[250px] h-[250px] top-[32rem] -right-10 opacity-[0.06]" aria-hidden="true"></div>
 
     <div class="mx-auto max-w-5xl px-6 md:px-8">
       <!-- Hero -->
@@ -45,7 +46,7 @@ const nextFive = sortedPosts.slice(5, 10);
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
-              <a href="/archive/" class="inline-flex items-center gap-2 text-sm font-medium text-[var(--fg-subtle)] hover:text-[var(--fg-muted)] transition-colors group">
+              <a href="/archive/" class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-secondary)] hover:text-[var(--color-secondary-hover)] transition-colors group">
                 All posts
                 <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14M12 5l7 7-7 7" />
@@ -73,7 +74,7 @@ const nextFive = sortedPosts.slice(5, 10);
                       {post.relativeTime}
                     </time>
                     <div class="flex-1 min-w-0">
-                      <h3 class="text-xl md:text-2xl font-serif font-semibold text-[var(--fg)] group-hover:text-[var(--color-brand)] transition-colors duration-200 leading-snug">
+                      <h3 class="text-xl md:text-2xl font-serif font-semibold text-[var(--fg)] group-hover:text-[var(--color-secondary)] transition-colors duration-200 leading-snug">
                         {post.title}
                       </h3>
                       {post.excerpt && (
@@ -82,7 +83,7 @@ const nextFive = sortedPosts.slice(5, 10);
                         </p>
                       )}
                     </div>
-                    <svg class="w-5 h-5 text-[var(--fg-subtle)] group-hover:text-[var(--color-brand)] group-hover:translate-x-1 transition-all duration-200 shrink-0 hidden md:block self-center" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                    <svg class="w-5 h-5 text-[var(--fg-subtle)] group-hover:text-[var(--color-secondary)] group-hover:translate-x-1 transition-all duration-200 shrink-0 hidden md:block self-center" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -108,7 +109,7 @@ const nextFive = sortedPosts.slice(5, 10);
                   <time datetime={post.isoDate} class="text-sm text-[var(--fg-subtle)] tabular-nums shrink-0 w-28">
                     {post.relativeTime}
                   </time>
-                  <span class="text-[var(--fg-muted)] group-hover:text-[var(--color-brand)] transition-colors duration-200 font-medium">
+                  <span class="text-[var(--fg-muted)] group-hover:text-[var(--color-tertiary)] transition-colors duration-200 font-medium">
                     {post.title}
                   </span>
                 </a>

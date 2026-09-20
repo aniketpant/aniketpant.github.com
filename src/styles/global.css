@@ -321,6 +321,26 @@ button:focus-visible {
   box-decoration-break: clone;
 }
 
+.gradient-text-secondary {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 0.1em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.gradient-text-tertiary {
+  background: linear-gradient(135deg, var(--color-tertiary) 0%, var(--color-brand) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 0.1em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 .gradient-border {
   position: relative;
 }

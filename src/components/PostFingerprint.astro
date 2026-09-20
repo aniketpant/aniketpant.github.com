@@ -20,6 +20,9 @@ const pairs: [string, string][] = [
   ['#d946ef', '#e11d48'], // pink → rose
   ['#e11d48', '#059669'], // rose → emerald
   ['#c026d3', '#d946ef'], // magenta → pink
+  ['#059669', '#c026d3'], // emerald → magenta
+  ['#c026d3', '#e11d48'], // magenta → rose
+  ['#d946ef', '#c026d3'], // pink → magenta
 ];
 const pairIdx = hashValues(seed + ':pair', 1, pairs.length)[0];
 const [c1, c2] = pairs[pairIdx];
