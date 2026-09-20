@@ -3,31 +3,36 @@ import PageLayout from '../layouts/PageLayout.astro';
 ---
 
 <PageLayout title="About" slug="about">
-  <img
-    class="drop-shadow-sm rounded-full animate-fadeInColor my-6"
-    src="https://www.gravatar.com/avatar/b6500b41998cd1ed4aa28464ec0118bb?s=160"
-    alt="Aniket Pant"
-    width="160"
-    height="160"
-  />
+  <div class="flex flex-col items-center text-center">
+    <img
+      class="rounded-full animate-fadeInColor my-8 shadow-lg"
+      src="https://www.gravatar.com/avatar/b6500b41998cd1ed4aa28464ec0118bb?s=160"
+      alt="Aniket Pant"
+      width="160"
+      height="160"
+      loading="eager"
+    />
 
-  <p class="lead text-lg md:text-xl my-4">
-    Hey, I am <strong>Aniket</strong> and I have been around on the web since 2010. It's not long but it has been an{' '}
-    <a href="/archive/" class="text-brand hover:underline">adventure</a> since then.
-  </p>
+    <p class="lead text-lg md:text-xl my-4 max-w-xl">
+      Hey, I am <strong class="text-[var(--fg)]">Aniket</strong> and I have been around on the web since 2010. It's not long but it has been an{' '}
+      <a href="/archive/" class="text-[var(--color-brand)] hover:underline underline-offset-4">adventure</a> since then.
+    </p>
 
-  <p class="my-4">
-    You can reach out to via a{' '}
-    <a href="https://twitter.com/intent/tweet?screen_name=noremap&text=Hey!" class="text-brand hover:underline" target="_blank" rel="noopener noreferrer">tweet</a>{' '}
-    or{' '}
-    <a href="mailto:me@aniketpant.com?subject=Hey!" class="text-brand hover:underline">drop an email</a>.
-  </p>
+    <p class="my-4 text-[var(--fg-muted)] max-w-xl">
+      You can reach out via a{' '}
+      <a href="https://x.com/noremap" class="text-[var(--color-brand)] hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">message on X</a>{' '}
+      or{' '}
+      <a href="mailto:me@aniketpant.com?subject=Hey!" class="text-[var(--color-brand)] hover:underline underline-offset-4">drop an email</a>.
+    </p>
 
-  <hr class="my-8 w-full border-gray-200" />
+    <hr class="my-10 w-16 border-[var(--border)]" />
 
-  <p class="text-sm text-gray-500">
-    The website is built via <a href="https://astro.build" class="text-brand hover:underline" target="_blank" rel="noopener noreferrer">Astro</a>,{' '}
-    <a href="https://tailwindcss.com" class="text-brand hover:underline" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> and hosted via{' '}
-    <a href="https://github.com" class="text-brand hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>.
-  </p>
+    <p class="text-sm text-[var(--fg-subtle)]">
+      This site is built with{' '}
+      <a href="https://astro.build" class="text-[var(--color-brand)] hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">Astro</a>,{' '}
+      <a href="https://tailwindcss.com" class="text-[var(--color-brand)] hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>,{' '}
+      and hosted on{' '}
+      <a href="https://github.com" class="text-[var(--color-brand)] hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+    </p>
+  </div>
 </PageLayout>

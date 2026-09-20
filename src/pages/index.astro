@@ -12,44 +12,73 @@ const nextFive = sortedPosts.slice(5, 10);
 ---
 
 <BaseLayout title="Aniket Pant" slug="home" isHome={true}>
-  <div class="prose prose-slate home text-lg md:text-base mx-auto">
-    <article role="main" class="flex flex-col justify-center items-center text-center">
-      <p class="lead font-serif text-xl md:text-2xl my-6">
-        Hello!<br />
-        I'm <a class="text-brand no-underline font-normal hover:underline" href="/about/" rel="nofollow">Aniket</a> and I love to <em>read</em>, <em>write</em> and <em>code</em>.
+  <div class="py-16 md:py-24 animate-fade-in">
+    <!-- Hero -->
+    <section class="text-center mb-16 md:mb-20">
+      <p class="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed text-[var(--fg)] max-w-2xl mx-auto">
+        Hello! I'm <a class="text-[var(--color-brand)] no-underline font-normal hover:underline underline-offset-4" href="/about/" rel="nofollow">Aniket</a> and I love to <em>read</em>, <em>write</em> and <em>code</em>.
       </p>
+    </section>
 
-      <ul class="list-none px-0 prose-li:px-0 prose-li:my-8 prose-a:no-underline prose-h3:mt-0 prose-h3:text-2xl text-left w-full max-w-xl">
-        {
-          firstFive.map((post) => (
-            <li class="my-8">
-              <span class="date prose-sm text-gray-400 text-sm block">
-                <time datetime={post.isoDate}>{post.relativeTime}</time>
-              </span>
-              <a href={post.url} class="group block no-underline">
-                <h3 class="text-2xl font-serif font-semibold mt-1 text-slate-900 group-hover:text-brand transition-colors">
-                  {post.title}
-                </h3>
-                {post.excerpt && <p class="font-light text-zinc-400 mt-1">{post.excerpt}</p>}
+    <!-- Recent posts -->
+    <section aria-label="Recent writing">
+      <ul class="space-y-8 md:space-y-10 stagger-children">
+        {firstFive.map((post) => (
+          <li class="animate-fade-in-up">
+            <article>
+              <a href={post.url} class="group block">
+                <div class="flex items-baseline gap-3 mb-1.5">
+                  <time datetime={post.isoDate} class="text-sm text-[var(--fg-subtle)] tabular-nums shrink-0 w-24 md:w-28">
+                    {post.relativeTime}
+                  </time>
+                  <h2 class="text-lg md:text-xl font-serif font-semibold text-[var(--fg)] group-hover:text-[var(--color-brand)] transition-colors duration-200 leading-snug">
+                    {post.title}
+                  </h2>
+                </div>
+                {post.excerpt && (
+                  <p class="text-[var(--fg-muted)] text-sm md:text-base leading-relaxed ml-24 md:ml-28 line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                )}
               </a>
-            </li>
-          ))
-        }
-        {
-          nextFive.map((post) => (
-            <li class="my-8">
-              <span class="date prose-sm text-gray-400 text-sm block">
-                <time datetime={post.isoDate}>{post.relativeTime}</time>
-              </span>
-              <a href={post.url} class="group block no-underline">
-                <h3 class="text-2xl font-serif font-semibold mt-1 text-slate-900 group-hover:text-brand transition-colors">
-                  {post.title}
-                </h3>
-              </a>
-            </li>
-          ))
-        }
+            </article>
+          </li>
+        ))}
       </ul>
-    </article>
+    </section>
+
+    <!-- Older posts (titles only) -->
+    {nextFive.length > 0 && (
+      <section class="mt-12 md:mt-16" aria-label="Older writing">
+        <h2 class="text-sm font-medium uppercase tracking-wider text-[var(--fg-subtle)] mb-6">Earlier</h2>
+        <ul class="space-y-4 stagger-children">
+          {nextFive.map((post) => (
+            <li class="animate-fade-in-up">
+              <a href={post.url} class="group flex items-baseline gap-3">
+                <time datetime={post.isoDate} class="text-sm text-[var(--fg-subtle)] tabular-nums shrink-0 w-24 md:w-28">
+                  {post.relativeTime}
+                </time>
+                <span class="text-[var(--fg-muted)] group-hover:text-[var(--color-brand)] transition-colors duration-200">
+                  {post.title}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- View all -->
+    <div class="mt-12 md:mt-16 text-center">
+      <a
+        href="/archive/"
+        class="inline-flex items-center gap-2 text-sm font-medium text-[var(--fg-muted)] hover:text-[var(--color-brand)] transition-colors duration-200"
+      >
+        View all posts
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
   </div>
 </BaseLayout>

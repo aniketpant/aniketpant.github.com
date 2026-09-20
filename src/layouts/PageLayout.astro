@@ -11,12 +11,14 @@ const { title, slug = '', description } = Astro.props;
 ---
 
 <BaseLayout title={title} slug={slug} description={description}>
-  <div class={`prose prose-slate ${slug} text-lg md:text-base mx-auto`}>
-    <header class="mb-8">
-      <h1 class="text-center">{title}</h1>
+  <div class="py-10 md:py-14 animate-fade-in">
+    <header class="mb-10 text-center">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight text-[var(--fg)]">
+        {title}
+      </h1>
     </header>
 
-    <article role="main" class="flex flex-col justify-center items-center text-center">
+    <article class="prose prose-slate prose-lg md:prose-base max-w-none">
       <slot />
     </article>
   </div>

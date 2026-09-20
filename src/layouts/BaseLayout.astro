@@ -18,21 +18,19 @@ const {
 
 const siteTitle = isHome
   ? 'Aniket Pant'
-  : `${title} | Aniket Pant's Website`;
+  : `${title} | Aniket Pant`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.aniketpant.com');
 const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpant.com');
 ---
 
 <!doctype html>
-<html lang="en" class="text-slate-900 bg-white">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="keywords" content="aniket, pant, noremap, weblog, css, php, html, javascript, web development, code" />
     <meta name="author" content="Aniket Pant" />
-    <meta name="twitter:site" content="@noremap" />
-    <meta name="twitter:creator" content="@noremap" />
 
     <title>{siteTitle}</title>
 
@@ -42,26 +40,60 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
-    <meta property="og:type" content={isHome ? 'blog' : 'article'} />
+    <meta property="og:type" content={isHome ? 'website' : 'article'} />
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:image" content={imageURL.href} />
     <meta property="og:site_name" content="Aniket Pant" />
+    <meta property="og:description" content={description} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@noremap" />
+    <meta name="twitter:creator" content="@noremap" />
+
+    <!-- Theme script — prevents flash of wrong theme -->
+    <script is:inline>
+      (function () {
+        const theme =
+          (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
 
     <!-- Google Fonts: Inter and Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="font-sans antialiased min-h-screen">
+  <body class="font-sans antialiased min-h-screen flex flex-col">
     <Header isHome={isHome} />
 
-    <main class="flex md:container md:mx-auto">
-      <div class="mx-8 md:mx-auto w-full">
+    <main class="flex-1 w-full">
+      <div class="mx-auto max-w-3xl px-6 md:px-8">
         <slot />
       </div>
     </main>
+
+    <footer class="mt-auto py-8 text-center text-sm text-[var(--fg-subtle)] border-t border-[var(--border)]">
+      <div class="mx-auto max-w-3xl px-6 md:px-8">
+        <p>
+          &copy; {new Date().getFullYear()} Aniket Pant. Built with{' '}
+          <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand)] hover:underline">Astro</a>{' '}
+          &{' '}
+          <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand)] hover:underline">Tailwind</a>.
+        </p>
+        <p class="mt-2">
+          <a href="/feed/index.xml" class="hover:text-[var(--fg-muted)] transition-colors">RSS</a>
+          <span class="mx-2 text-[var(--border)]">·</span>
+          <a href="/sitemap-index.xml" class="hover:text-[var(--fg-muted)] transition-colors">Sitemap</a>
+          <span class="mx-2 text-[var(--border)]">·</span>
+          <a href="https://x.com/noremap" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg-muted)] transition-colors">@noremap</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

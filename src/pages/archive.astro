@@ -5,35 +5,40 @@ import { processPost, sortPostsDesc } from '../utils/posts';
 
 const rawPosts = await getCollection('posts');
 const processed = rawPosts.map(processPost);
-// Include all writing posts (excluding talks which are on /speaking/)
 const archivePosts = sortPostsDesc(processed.filter((p) => p.category !== 'talk'));
+
+// Group by year
+const byYear = new Map<string, typeof archivePosts>();
+for (const post of archivePosts) {
+  const year = post.year;
+  if (!byYear.has(year)) byYear.set(year, []);
+  byYear.get(year)!.push(post);
+}
+const years = Array.from(byYear.keys()).sort((a, b) => Number(b) - Number(a));
 ---
 
 <PageLayout title="The preserved archives" slug="archive">
-  <div class="w-full max-w-2xl text-left overflow-x-auto my-6">
-    <table class="w-full border-collapse">
-      <thead>
-        <tr class="border-b border-gray-200">
-          <th class="py-3 px-4 text-left font-semibold text-slate-800">Title</th>
-          <th class="py-3 px-4 text-left font-semibold text-slate-800 whitespace-nowrap">Published On</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          archivePosts.map((post) => (
-            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-              <td class="py-3 px-4">
-                <a href={post.url} class="text-slate-900 font-medium hover:text-brand transition-colors no-underline">
+  <div class="space-y-12 md:space-y-16 stagger-children">
+    {years.map((year) => (
+      <section class="animate-fade-in-up">
+        <h2 class="text-sm font-medium uppercase tracking-wider text-[var(--fg-subtle)] mb-6 sticky top-14 bg-[var(--bg)]/80 backdrop-blur-md py-2 -mx-6 px-6 md:-mx-8 md:px-8">
+          {year}
+        </h2>
+        <ul class="space-y-4">
+          {byYear.get(year)!.map((post) => (
+            <li>
+              <a href={post.url} class="group flex items-baseline gap-4">
+                <time datetime={post.isoDate} class="text-sm text-[var(--fg-subtle)] tabular-nums shrink-0 w-24 md:w-32">
+                  {post.formattedDate}
+                </time>
+                <span class="text-[var(--fg)] group-hover:text-[var(--color-brand)] transition-colors duration-200">
                   {post.title}
-                </a>
-              </td>
-              <td class="py-3 px-4 text-sm text-gray-500 whitespace-nowrap">
-                {post.formattedDate}
-              </td>
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
   </div>
 </PageLayout>

@@ -1,48 +1,71 @@
 ---
 import { getCollection, render } from 'astro:content';
-import { processPost, type ProcessedPost } from '../../../utils/posts';
+import { processPost, sortPostsDesc, type ProcessedPost } from '../../../utils/posts';
 import PostLayout from '../../../layouts/PostLayout.astro';
 import PoetryLayout from '../../../layouts/PoetryLayout.astro';
 import TalkLayout from '../../../layouts/TalkLayout.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('posts');
-  return entries.map((entry) => {
+  const processed = entries.map(processPost);
+  const sorted = sortPostsDesc(processed);
+
+  return entries.map((entry, index) => {
     const post = processPost(entry);
+    const prev = sorted[index + 1] || null;
+    const next = sorted[index - 1] || null;
     return {
       params: {
         year: post.year,
         month: post.month,
         slug: post.slug,
       },
-      props: { post },
+      props: { post, prev, next },
     };
   });
 }
 
 interface Props {
   post: ProcessedPost;
+  prev: ProcessedPost | null;
+  next: ProcessedPost | null;
 }
 
-const { post } = Astro.props;
+const { post, prev, next } = Astro.props;
 const { Content } = await render(post.entry);
 
 const isPoetry = post.layout === 'poetry' || post.category === 'poetry';
 const isTalk = post.layout === 'talk' || post.category === 'talk';
+
+const Layout = isPoetry ? PoetryLayout : isTalk ? TalkLayout : PostLayout;
 ---
 
-{
-  isPoetry ? (
-    <PoetryLayout post={post}>
-      <Content />
-    </PoetryLayout>
-  ) : isTalk ? (
-    <TalkLayout post={post}>
-      <Content />
-    </TalkLayout>
-  ) : (
-    <PostLayout post={post}>
-      <Content />
-    </PostLayout>
-  )
-}
+<Layout post={post}>
+  <Content />
+
+  <!-- Prev / Next navigation -->
+  <nav class="mt-16 pt-8 border-t border-[var(--border)]" aria-label="Post navigation">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {prev ? (
+        <a href={prev.url} class="group flex flex-col p-4 -mx-4 rounded-xl hover:bg-[var(--bg-secondary)] transition-colors duration-200">
+          <span class="text-xs font-medium uppercase tracking-wider text-[var(--fg-subtle)] mb-1">Previous</span>
+          <span class="text-[var(--fg)] group-hover:text-[var(--color-brand)] transition-colors duration-200 font-medium line-clamp-2">
+            {prev.title}
+          </span>
+        </a>
+      ) : (
+        <div />
+      )}
+      {next ? (
+        <a href={next.url} class="group flex flex-col items-start md:items-end p-4 -mx-4 rounded-xl hover:bg-[var(--bg-secondary)] transition-colors duration-200 md:text-right">
+          <span class="text-xs font-medium uppercase tracking-wider text-[var(--fg-subtle)] mb-1">Next</span>
+          <span class="text-[var(--fg)] group-hover:text-[var(--color-brand)] transition-colors duration-200 font-medium line-clamp-2">
+            {next.title}
+          </span>
+        </a>
+      ) : (
+        <div />
+      )}
+    </div>
+  </nav>
+</Layout>

@@ -17,6 +17,7 @@ export interface ProcessedPost {
   isoDate: string;
   relativeTime: string;
   excerpt: string;
+  readingTime: string;
 }
 
 export function parsePostDate(entry: CollectionEntry<'posts'>): {
@@ -119,6 +120,8 @@ export function processPost(entry: CollectionEntry<'posts'>): ProcessedPost {
   const relativeTime = getRelativeTime(date);
   const excerpt = extractExcerpt(entry.body);
 
+  const readingTime = getReadingTime(entry.body);
+
   return {
     id: entry.id,
     entry,
@@ -136,7 +139,15 @@ export function processPost(entry: CollectionEntry<'posts'>): ProcessedPost {
     isoDate,
     relativeTime,
     excerpt,
+    readingTime,
   };
+}
+
+export function getReadingTime(body?: string): string {
+  if (!body) return '1 min read';
+  const words = body.trim().split(/\s+/).length;
+  const minutes = Math.ceil(words / 200);
+  return `${minutes} min read`;
 }
 
 export function sortPostsDesc(posts: ProcessedPost[]): ProcessedPost[] {

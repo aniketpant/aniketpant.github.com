@@ -3,20 +3,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Four-Oh-Four" slug="404">
-  <div class="flex flex-col items-center justify-center mx-auto py-12">
-    <div class="prose prose-slate text-center max-w-lg">
-      <h1 class="text-4xl font-serif font-bold text-slate-900">404</h1>
-      <p class="text-gray-600 my-4">Seems like I did something wrong.</p>
-      <blockquote class="border-l-4 border-brand pl-4 my-6 italic text-gray-700">
-        <p>
-          The tree<br />
-          Autumn it was<br />
-          Leaves floating, flying around
-        </p>
-        <cite class="block mt-2 font-normal not-italic text-sm text-gray-500">
-          &ndash; <a href="/2013/01/lights-and-sounds/" class="text-brand hover:underline font-semibold">Lights &amp; Sounds</a>
-        </cite>
-      </blockquote>
+  <div class="flex flex-col items-center justify-center py-20 md:py-28 text-center animate-fade-in">
+    <div class="mb-6">
+      <span class="text-7xl md:text-9xl font-serif font-bold text-[var(--border)] select-none" aria-hidden="true">404</span>
     </div>
+
+    <h1 class="text-2xl md:text-3xl font-serif font-semibold text-[var(--fg)] mb-3">
+      Page not found
+    </h1>
+    <p class="text-[var(--fg-muted)] mb-10 max-w-md">
+      Seems like I did something wrong. The page you're looking for doesn't exist or has been moved.
+    </p>
+
+    <blockquote class="border-l-2 border-[var(--color-brand)] pl-5 py-1 my-6 italic text-[var(--fg-muted)] text-left max-w-md">
+      <p class="font-serif text-lg leading-relaxed">
+        The tree<br />
+        Autumn it was<br />
+        Leaves floating, flying around
+      </p>
+      <cite class="block mt-3 text-sm not-italic text-[var(--fg-subtle)]">
+        &mdash; <a href="/2013/01/lights-and-sounds/" class="text-[var(--color-brand)] hover:underline underline-offset-4 font-medium">Lights &amp; Sounds</a>
+      </cite>
+    </blockquote>
+
+    <a
+      href="/"
+      class="mt-8 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[var(--color-brand)] text-white text-sm font-medium hover:bg-[var(--color-brand-hover)] transition-colors duration-200"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10" />
+      </svg>
+      Back home
+    </a>
   </div>
 </BaseLayout>
