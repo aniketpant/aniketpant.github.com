@@ -4,22 +4,21 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  /* Light mode: warm reds & oranges */
-  --color-brand: #dc2626;
-  --color-brand-hover: #b91c1c;
-  --color-brand-subtle: #fef2f2;
-  --color-brand-subtle-dark: #450a0a;
+  /* Light mode: warm reds & coral */
+  --color-brand: #e11d48;
+  --color-brand-hover: #be123c;
+  --color-brand-subtle: #fff1f2;
+  --color-brand-subtle-dark: #4c0519;
 
-  --color-secondary: #ea580c;
-  --color-secondary-hover: #c2410c;
-  --color-secondary-subtle: #fff7ed;
-  --color-secondary-subtle-dark: #431407;
+  --color-secondary: #c026d3;
+  --color-secondary-hover: #a21caf;
+  --color-secondary-subtle: #faf5ff;
+  --color-secondary-subtle-dark: #3b0764;
 
-  /* Synthwave neon — cyan/magenta for dark mode accents */
-  --color-tertiary: #0891b2;
-  --color-tertiary-hover: #0e7490;
-  --color-tertiary-subtle: #ecfeff;
-  --color-tertiary-subtle-dark: #083344;
+  --color-tertiary: #059669;
+  --color-tertiary-hover: #047857;
+  --color-tertiary-subtle: #ecfdf5;
+  --color-tertiary-subtle-dark: #022c22;
 
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-serif: "Playfair Display", "PT Serif", Georgia, serif;
@@ -75,33 +74,33 @@ html {
   --ring: #dc2626;
 }
 
-/* Dark theme — synthwave deep space */
+/* Dark theme — synthwave neon */
 [data-theme="dark"] {
-  --bg: #0c0a18;
-  --bg-secondary: #141025;
-  --surface: #1e1835;
-  --fg: #f0e6ff;
-  --fg-muted: #a89bb8;
-  --fg-subtle: #6b5b7d;
-  --border: #2d2244;
-  --border-subtle: #1a1430;
-  --ring: #ff2a6d;
+  --bg: #070514;
+  --bg-secondary: #0f0a24;
+  --surface: #1a1040;
+  --fg: #f5eeff;
+  --fg-muted: #a090cc;
+  --fg-subtle: #6b5b9a;
+  --border: #2a1a5a;
+  --border-subtle: #140c30;
+  --ring: #ff00a0;
 
-  /* Override for synthwave neon in dark */
-  --color-brand: #ff2a6d;
-  --color-brand-hover: #ff5c8d;
-  --color-brand-subtle: #2a0a18;
-  --color-brand-subtle-dark: #2a0a18;
+  /* Synthwave neon overrides */
+  --color-brand: #ff00a0;
+  --color-brand-hover: #ff33bb;
+  --color-brand-subtle: #2a0020;
+  --color-brand-subtle-dark: #2a0020;
 
-  --color-secondary: #ff8c42;
-  --color-secondary-hover: #ffaa6e;
-  --color-secondary-subtle: #2a1810;
-  --color-secondary-subtle-dark: #2a1810;
+  --color-secondary: #b829dd;
+  --color-secondary-hover: #d050ff;
+  --color-secondary-subtle: #1e0a30;
+  --color-secondary-subtle-dark: #1e0a30;
 
-  --color-tertiary: #05d9e8;
-  --color-tertiary-hover: #4ee8f2;
-  --color-tertiary-subtle: #0a2a2e;
-  --color-tertiary-subtle-dark: #0a2a2e;
+  --color-tertiary: #00ff9f;
+  --color-tertiary-hover: #4dffb8;
+  --color-tertiary-subtle: #002a1a;
+  --color-tertiary-subtle-dark: #002a1a;
 }
 
 body {
@@ -232,7 +231,7 @@ button:focus-visible {
 
 [data-theme="dark"] ::selection {
   background-color: var(--color-brand-subtle-dark);
-  color: #ff8fab;
+  color: #ff66cc;
 }
 
 /* Lead paragraph */
