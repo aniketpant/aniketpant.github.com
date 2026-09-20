@@ -65,7 +65,7 @@ const nextFive = sortedPosts.slice(5, 10);
 
         <ul class="space-y-0 stagger-children">
           {firstFive.map((post) => (
-            <li class="animate-fade-in-up border-t border-[var(--border)]">
+            <li class="animate-fade-in-up border-t border-[var(--border)] first:border-t-0">
               <article>
                 <a href={post.url} class="group block py-6 md:py-8">
                   <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6">
@@ -103,7 +103,7 @@ const nextFive = sortedPosts.slice(5, 10);
 
           <ul class="space-y-0 stagger-children">
             {nextFive.map((post) => (
-              <li class="animate-fade-in-up border-t border-[var(--border-subtle)]">
+              <li class="animate-fade-in-up border-t border-[var(--border-subtle)] first:border-t-0">
                 <a href={post.url} class="group flex items-baseline gap-4 md:gap-6 py-4 md:py-5">
                   <time datetime={post.isoDate} class="text-sm text-[var(--fg-subtle)] tabular-nums shrink-0 w-28">
                     {post.relativeTime}

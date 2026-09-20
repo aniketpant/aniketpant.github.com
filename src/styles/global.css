@@ -109,6 +109,34 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Display type: improved kerning, ligatures & optical sizing */
+.font-serif,
+.font-sans {
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-kerning: normal;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fine-tune tracking for large display serif at each breakpoint */
+@media (min-width: 768px) {
+  .text-6xl.font-serif,
+  .text-7xl.font-serif,
+  .text-8xl.font-serif {
+    letter-spacing: -0.03em;
+  }
+
+  .text-4xl.font-serif,
+  .text-5xl.font-serif {
+    letter-spacing: -0.02em;
+  }
+}
+
 /* Dramatic typography */
 .prose h1 {
   font-family: var(--font-serif);
