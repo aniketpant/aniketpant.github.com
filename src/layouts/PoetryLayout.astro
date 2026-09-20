@@ -1,0 +1,26 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Footer from '../components/Footer.astro';
+import type { ProcessedPost } from '../utils/posts';
+
+interface Props {
+  post: ProcessedPost;
+}
+
+const { post } = Astro.props;
+---
+
+<BaseLayout title={post.title} slug={post.slug}>
+  <div class="prose prose-slate text-lg md:text-base mx-auto">
+    <header class="mb-8">
+      <h1 class="text-center">{post.title}</h1>
+      <p class="text-center prose-sm text-gray-500">Written on {post.formattedDate}</p>
+    </header>
+
+    <article role="main" class="mx-auto text-center">
+      <slot />
+    </article>
+
+    <Footer />
+  </div>
+</BaseLayout>

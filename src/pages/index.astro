@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { processPost, sortPostsDesc } from '../utils/posts';
+
+const rawPosts = await getCollection('posts');
+const processed = rawPosts.map(processPost);
+const sortedPosts = sortPostsDesc(processed.filter((p) => p.category !== 'talk'));
+
+const firstFive = sortedPosts.slice(0, 5);
+const nextFive = sortedPosts.slice(5, 10);
+---
+
+<BaseLayout title="Aniket Pant" slug="home" isHome={true}>
+  <div class="prose prose-slate home text-lg md:text-base mx-auto">
+    <article role="main" class="flex flex-col justify-center items-center text-center">
+      <p class="lead font-serif text-xl md:text-2xl my-6">
+        Hello!<br />
+        I'm <a class="text-brand no-underline font-normal hover:underline" href="/about/" rel="nofollow">Aniket</a> and I love to <em>read</em>, <em>write</em> and <em>code</em>.
+      </p>
+
+      <ul class="list-none px-0 prose-li:px-0 prose-li:my-8 prose-a:no-underline prose-h3:mt-0 prose-h3:text-2xl text-left w-full max-w-xl">
+        {
+          firstFive.map((post) => (
+            <li class="my-8">
+              <span class="date prose-sm text-gray-400 text-sm block">
+                <time datetime={post.isoDate}>{post.relativeTime}</time>
+              </span>
+              <a href={post.url} class="group block no-underline">
+                <h3 class="text-2xl font-serif font-semibold mt-1 text-slate-900 group-hover:text-brand transition-colors">
+                  {post.title}
+                </h3>
+                {post.excerpt && <p class="font-light text-zinc-400 mt-1">{post.excerpt}</p>}
+              </a>
+            </li>
+          ))
+        }
+        {
+          nextFive.map((post) => (
+            <li class="my-8">
+              <span class="date prose-sm text-gray-400 text-sm block">
+                <time datetime={post.isoDate}>{post.relativeTime}</time>
+              </span>
+              <a href={post.url} class="group block no-underline">
+                <h3 class="text-2xl font-serif font-semibold mt-1 text-slate-900 group-hover:text-brand transition-colors">
+                  {post.title}
+                </h3>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </div>
+</BaseLayout>

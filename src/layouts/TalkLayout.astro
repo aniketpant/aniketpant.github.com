@@ -1,0 +1,37 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { ProcessedPost } from '../utils/posts';
+
+interface Props {
+  post: ProcessedPost;
+}
+
+const { post } = Astro.props;
+const event = post.entry.data.event;
+const link = post.entry.data.link;
+---
+
+<BaseLayout title={post.title} slug={post.slug}>
+  <div class={`prose prose-slate talk ${post.slug} mx-auto`} itemscope itemtype="http://schema.org/Event">
+    <header class="mb-8 text-center">
+      <h1 class="text-center" itemprop="name">{post.title}</h1>
+      {event && <h2 class="text-center text-xl font-normal text-gray-600">{event}</h2>}
+      <div class="text-center">
+        <p class="text-sm text-gray-500">
+          <meta itemprop="startDate" content={post.isoDate} />
+          <date class="date">{post.formattedDate}</date>
+          {link && (
+            <>
+              <br />
+              <a href={link} itemprop="url" target="_blank" rel="noopener noreferrer">Website</a>
+            </>
+          )}
+        </p>
+      </div>
+    </header>
+
+    <article role="main">
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import { processPost, sortPostsDesc } from '../utils/posts';
+
+const rawPosts = await getCollection('posts');
+const processed = rawPosts.map(processPost);
+const talkPosts = sortPostsDesc(processed.filter((p) => p.category === 'talk'));
+---
+
+<PageLayout title="Speaking Engagements" slug="speaking">
+  <div class="w-full max-w-2xl text-left overflow-x-auto my-6">
+    <table class="w-full border-collapse">
+      <thead>
+        <tr class="border-b border-gray-200">
+          <th class="py-3 px-4 text-left font-semibold text-slate-800">Talk Name</th>
+          <th class="py-3 px-4 text-left font-semibold text-slate-800 whitespace-nowrap">Presented On</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          talkPosts.map((post) => (
+            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+              <td class="py-3 px-4">
+                <a href={post.url} class="text-slate-900 font-medium hover:text-brand transition-colors no-underline">
+                  {post.title}
+                </a>
+              </td>
+              <td class="py-3 px-4 text-sm text-gray-500 whitespace-nowrap">
+                {post.formattedDate}
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <p class="my-6 text-base text-gray-700">
+    Take a look at the{' '}
+    <a href="https://speakerdeck.com/aniketpant" class="text-brand hover:underline" target="_blank" rel="noopener noreferrer">slides</a>{' '}
+    or see the{' '}
+    <a href="https://github.com/aniketpant/presentations" class="text-brand hover:underline" target="_blank" rel="noopener noreferrer">code</a>.
+  </p>
+</PageLayout>

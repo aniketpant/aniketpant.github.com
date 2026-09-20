@@ -1,0 +1,33 @@
+---
+interface Props {
+  isHome?: boolean;
+}
+
+const { isHome = false } = Astro.props;
+---
+
+<header class="flex flex-col justify-between items-center md:container md:mx-auto md:flex-row py-4" role="banner">
+  <div class="basis-2/5 text-2xl">
+    {isHome ? (
+      <h1>
+        <a href="/" rel="nofollow" class="group">
+          <span class="font-bold group-hover:text-brand">no</span><span>remap</span>
+        </a>
+      </h1>
+    ) : (
+      <div>
+        <a href="/" rel="nofollow" class="group">
+          <span class="font-bold group-hover:text-brand">no</span><span>remap</span>
+        </a>
+      </div>
+    )}
+  </div>
+  <nav class="basis-3/5 inline-flex items-center justify-end md:uppercase">
+    <ul class="flex flex-col text-center text-base md:text-sm md:flex-row">
+      <li><a class="block p-2 md:p-4 border-t-4 border-t-transparent hover:border-t-brand text-gray-700" href="/about/">About</a></li>
+      <li><a class="block p-2 md:p-4 border-t-4 border-t-transparent hover:border-t-brand text-gray-700" href="/speaking/">Speaking</a></li>
+      <li><a class="block p-2 md:p-4 border-t-4 border-t-transparent hover:border-t-brand text-gray-700" href="/archive/">Archive</a></li>
+    </ul>
+  </nav>
+  <p rel="google-authorship" class="invisible">By Aniket Pant</p>
+</header>

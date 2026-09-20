@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from 'astro:content';
+import { processPost, type ProcessedPost } from '../../../utils/posts';
+import PostLayout from '../../../layouts/PostLayout.astro';
+import PoetryLayout from '../../../layouts/PoetryLayout.astro';
+import TalkLayout from '../../../layouts/TalkLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('posts');
+  return entries.map((entry) => {
+    const post = processPost(entry);
+    return {
+      params: {
+        year: post.year,
+        month: post.month,
+        slug: post.slug,
+      },
+      props: { post },
+    };
+  });
+}
+
+interface Props {
+  post: ProcessedPost;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post.entry);
+
+const isPoetry = post.layout === 'poetry' || post.category === 'poetry';
+const isTalk = post.layout === 'talk' || post.category === 'talk';
+---
+
+{
+  isPoetry ? (
+    <PoetryLayout post={post}>
+      <Content />
+    </PoetryLayout>
+  ) : isTalk ? (
+    <TalkLayout post={post}>
+      <Content />
+    </TalkLayout>
+  ) : (
+    <PostLayout post={post}>
+      <Content />
+    </PostLayout>
+  )
+}

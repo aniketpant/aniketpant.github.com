@@ -1,0 +1,33 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout title="About" slug="about">
+  <img
+    class="drop-shadow-sm rounded-full animate-fadeInColor my-6"
+    src="https://www.gravatar.com/avatar/b6500b41998cd1ed4aa28464ec0118bb?s=160"
+    alt="Aniket Pant"
+    width="160"
+    height="160"
+  />
+
+  <p class="lead text-lg md:text-xl my-4">
+    Hey, I am <strong>Aniket</strong> and I have been around on the web since 2010. It's not long but it has been an{' '}
+    <a href="/archive/" class="text-brand hover:underline">adventure</a> since then.
+  </p>
+
+  <p class="my-4">
+    You can reach out to via a{' '}
+    <a href="https://twitter.com/intent/tweet?screen_name=noremap&text=Hey!" class="text-brand hover:underline" target="_blank" rel="noopener noreferrer">tweet</a>{' '}
+    or{' '}
+    <a href="mailto:me@aniketpant.com?subject=Hey!" class="text-brand hover:underline">drop an email</a>.
+  </p>
+
+  <hr class="my-8 w-full border-gray-200" />
+
+  <p class="text-sm text-gray-500">
+    The website is built via <a href="https://astro.build" class="text-brand hover:underline" target="_blank" rel="noopener noreferrer">Astro</a>,{' '}
+    <a href="https://tailwindcss.com" class="text-brand hover:underline" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> and hosted via{' '}
+    <a href="https://github.com" class="text-brand hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>.
+  </p>
+</PageLayout>

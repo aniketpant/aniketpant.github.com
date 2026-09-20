@@ -1,0 +1,106 @@
+---
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en" class="text-slate-900 bg-white">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aniket Pant's Resume</title>
+    <meta name="description" content="Resume of Aniket Pant" />
+    <meta name="author" content="Aniket Pant" />
+    <link rel="canonical" href="https://www.aniketpant.com/resume/" />
+
+    <!-- Google Fonts: Inter and Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans antialiased min-h-screen py-6 px-4">
+    <header class="container md:mx-auto flex flex-col md:flex-row justify-between items-center text-center pb-6 border-b border-gray-100">
+      <div class="flex basis-2/5 group mb-4 md:mb-0">
+        <h1 class="text-2xl">
+          <a class="no-underline text-slate-900" href="/" rel="nofollow">
+            <span class="font-bold group-hover:text-brand transition-colors">Aniket</span> <span>Pant</span>
+          </a>
+        </h1>
+      </div>
+      <nav class="basis-3/5 inline-flex justify-center md:justify-end">
+        <ul class="flex flex-col md:flex-row text-sm gap-2 md:gap-4 text-gray-600">
+          <li><a class="block p-2 hover:text-brand transition-colors" href="mailto:me@aniketpant.com">me@aniketpant.com</a></li>
+          <li><a class="block p-2 hover:text-brand transition-colors" href="https://www.aniketpant.com">aniketpant.com</a></li>
+          <li><a class="block p-2 hover:text-brand transition-colors" href="https://twitter.com/noremap" target="_blank" rel="noopener noreferrer">@noremap</a></li>
+          <li><a class="block p-2 hover:text-brand transition-colors" href="https://github.com/aniketpant" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container flex flex-col mx-auto md:flex-row gap-8 mt-8">
+      <div class="prose prose-slate basis-1/2">
+        <section>
+          <h2 class="text-xl font-serif font-semibold border-b border-gray-200 pb-2">Experience</h2>
+          <div class="my-4">
+            <div class="organization font-medium text-slate-900">
+              <a rel="nofollow" href="https://www.uber.com" class="text-brand hover:underline" target="_blank">Uber</a>
+            </div>
+            <p class="text-sm text-gray-500">Software Engineering | January, 2016 &ndash; Today</p>
+          </div>
+          <div class="my-4">
+            <div class="organization font-medium text-slate-900">
+              <a href="http://www.zomato.com" class="text-brand hover:underline" target="_blank">Zomato</a>
+            </div>
+            <p class="text-sm text-gray-500">Software Engineer | June, 2014 &ndash; December, 2015</p>
+          </div>
+          <div class="my-4">
+            <div class="organization font-medium text-slate-900">
+              <a rel="nofollow" href="https://www.instamojo.com" class="text-brand hover:underline" target="_blank">Instamojo</a>
+            </div>
+            <p class="text-sm text-gray-500">Front End Consultant | September, 2013 &ndash; March, 2014</p>
+          </div>
+          <div class="my-4">
+            <div class="organization font-medium text-slate-900">
+              <a rel="nofollow" href="http://webmutiny.in" class="text-brand hover:underline" target="_blank">Web Mutiny</a>
+            </div>
+            <p class="text-sm text-gray-500">Lead Front End Developer | Nov, 2012 &ndash; May, 2013</p>
+          </div>
+        </section>
+      </div>
+
+      <div class="prose prose-slate basis-1/2">
+        <section>
+          <h2 class="text-xl font-serif font-semibold border-b border-gray-200 pb-2">Technical Skills</h2>
+          <table class="w-full text-left my-4">
+            <tbody>
+              <tr class="border-b border-gray-100">
+                <td class="py-2 font-medium text-slate-900">Frontend</td>
+                <td class="py-2 text-gray-600">HTML, CSS, React, Redux</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="py-2 font-medium text-slate-900">Languages</td>
+                <td class="py-2 text-gray-600">Go, JavaScript (Node.js)</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="py-2 font-medium text-slate-900">Databases</td>
+                <td class="py-2 text-gray-600">MySQL, Redis, Cassandra</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="mt-8">
+          <h2 class="text-xl font-serif font-semibold border-b border-gray-200 pb-2">Education</h2>
+          <div class="my-4">
+            <div class="organization font-medium text-slate-900">B.E (Hons) Mechanical Engineering</div>
+            <p class="text-sm text-gray-500">
+              <a href="http://universe.bits-pilani.ac.in" class="text-brand hover:underline" target="_blank">BITS Pilani</a> | 2010 &ndash; 2014
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

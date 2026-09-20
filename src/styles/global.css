@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-bg: #ffffff;
+  --color-brand: #db2777;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Playfair Display", "PT Serif", Georgia, serif;
+  --animate-fade-in-color: grayscaleToColor 500ms ease-in-out 1;
+}
+
+@keyframes grayscaleToColor {
+  0% {
+    filter: grayscale(100%);
+  }
+  100% {
+    filter: grayscale(0%);
+  }
+}
+
+.animate-fadeInColor {
+  animation: grayscaleToColor 500ms ease-in-out 1;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.75;
+}
+
+.img--center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.img--medium {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+}
