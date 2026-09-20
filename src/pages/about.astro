@@ -1,40 +1,67 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<PageLayout title="About" slug="about">
-  <div class="flex flex-col items-center text-center">
-    <div class="gradient-border rounded-full p-[3px] my-8">
-      <img
-        class="rounded-full animate-fadeInColor shadow-lg"
-        src="https://www.gravatar.com/avatar/b6500b41998cd1ed4aa28464ec0118bb?s=160"
-        alt="Aniket Pant"
-        width="160"
-        height="160"
-        loading="eager"
-      />
+<BaseLayout title="About" slug="about">
+  <div class="animate-fade-in">
+    <header class="relative pt-16 md:pt-24 pb-12 md:pb-16 overflow-hidden">
+      <div class="deco-blob bg-[var(--color-brand)] w-[400px] h-[400px] -top-32 -right-32 opacity-[0.08]" aria-hidden="true"></div>
+
+      <div class="mx-auto max-w-5xl px-6 md:px-8 relative">
+        <div class="max-w-3xl">
+          <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight gradient-text">
+            About
+          </h1>
+          <div class="gradient-line mt-6 w-20" aria-hidden="true"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mx-auto max-w-5xl px-6 md:px-8 pb-16 md:pb-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="hidden md:block md:col-span-1">
+          <div class="gradient-line-vertical h-24 sticky top-24 mx-auto" aria-hidden="true"></div>
+        </div>
+        <div class="md:col-span-8">
+          <div class="flex flex-col items-center md:items-start text-center md:text-left">
+            <div class="gradient-border rounded-full p-[3px] mb-8">
+              <img
+                class="rounded-full animate-fadeInColor shadow-lg"
+                src="https://www.gravatar.com/avatar/b6500b41998cd1ed4aa28464ec0118bb?s=160"
+                alt="Aniket Pant"
+                width="160"
+                height="160"
+                loading="eager"
+              />
+            </div>
+
+            <div class="prose prose-slate prose-lg md:prose-base max-w-none">
+              <p class="lead">
+                Hey, I am <strong>Aniket</strong> and I have been around on the web since 2010. It's not long but it has been an{' '}
+                <a href="/archive/">adventure</a> since then.
+              </p>
+
+              <p>
+                You can reach out via a{' '}
+                <a href="https://x.com/noremap" target="_blank" rel="noopener noreferrer">message on X</a>{' '}
+                or{' '}
+                <a href="mailto:me@aniketpant.com?subject=Hey!">drop an email</a>.
+              </p>
+
+              <hr />
+
+              <p class="text-sm text-[var(--fg-subtle)]">
+                This site is built with{' '}
+                <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a>,{' '}
+                <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>,{' '}
+                and hosted on{' '}
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:block md:col-span-3"></div>
+      </div>
     </div>
-
-    <p class="lead text-lg md:text-xl my-4 max-w-xl">
-      Hey, I am <strong class="text-[var(--fg)]">Aniket</strong> and I have been around on the web since 2010. It's not long but it has been an{' '}
-      <a href="/archive/" class="text-[var(--color-brand)] hover:underline underline-offset-4">adventure</a> since then.
-    </p>
-
-    <p class="my-4 text-[var(--fg-muted)] max-w-xl">
-      You can reach out via a{' '}
-      <a href="https://x.com/noremap" class="text-[var(--color-brand)] hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">message on X</a>{' '}
-      or{' '}
-      <a href="mailto:me@aniketpant.com?subject=Hey!" class="text-[var(--color-brand)] hover:underline underline-offset-4">drop an email</a>.
-    </p>
-
-    <hr class="my-10 w-16 border-[var(--border)]" />
-
-    <p class="text-sm text-[var(--fg-subtle)]">
-      This site is built with{' '}
-      <a href="https://astro.build" class="text-[var(--color-brand)] hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">Astro</a>,{' '}
-      <a href="https://tailwindcss.com" class="text-[var(--color-brand)] hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>,{' '}
-      and hosted on{' '}
-      <a href="https://github.com" class="text-[var(--color-brand)] hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
-    </p>
   </div>
-</PageLayout>
+</BaseLayout>

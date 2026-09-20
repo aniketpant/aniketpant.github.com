@@ -30,7 +30,6 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="aniket, pant, noremap, weblog, css, php, html, javascript, web development, code" />
     <meta name="author" content="Aniket Pant" />
 
     <title>{siteTitle}</title>
@@ -39,7 +38,6 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
     <link rel="alternate" href="/feed/index.xml" title="Aniket Pant" type="application/rss+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" title="Sitemap" type="application/xml" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:type" content={isHome ? 'website' : 'article'} />
     <meta property="og:url" content={canonicalURL.href} />
@@ -47,14 +45,12 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
     <meta property="og:site_name" content="Aniket Pant" />
     <meta property="og:description" content={description} />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@noremap" />
     <meta name="twitter:creator" content="@noremap" />
 
     <ClientRouter />
 
-    <!-- Theme script — prevents flash of wrong theme -->
     <script is:inline>
       (function () {
         function applyTheme() {
@@ -68,7 +64,6 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
       })();
     </script>
 
-    <!-- Google Fonts: Inter and Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -80,28 +75,26 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
     <Header isHome={isHome} />
 
     <main class="flex-1 w-full">
-      <div class="mx-auto max-w-3xl px-6 md:px-8">
-        <slot />
-      </div>
+      <slot />
     </main>
 
     <footer class="mt-auto">
       <div class="gradient-line" aria-hidden="true"></div>
       <div class="py-8 text-center text-sm text-[var(--fg-subtle)]">
-        <div class="mx-auto max-w-3xl px-6 md:px-8">
-        <p>
-          &copy; {new Date().getFullYear()} Aniket Pant. Built with{' '}
-          <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand)] hover:underline">Astro</a>{' '}
-          &{' '}
-          <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand)] hover:underline">Tailwind</a>.
-        </p>
-        <p class="mt-2">
-          <a href="/feed/index.xml" class="hover:text-[var(--fg-muted)] transition-colors">RSS</a>
-          <span class="mx-2 text-[var(--border)]">·</span>
-          <a href="/sitemap-index.xml" class="hover:text-[var(--fg-muted)] transition-colors">Sitemap</a>
-          <span class="mx-2 text-[var(--border)]">·</span>
-          <a href="https://x.com/noremap" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg-muted)] transition-colors">@noremap</a>
-        </p>
+        <div class="mx-auto max-w-5xl px-6 md:px-8">
+          <p>
+            &copy; {new Date().getFullYear()} Aniket Pant. Built with{' '}
+            <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand)] hover:underline">Astro</a>{' '}
+            &{' '}
+            <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand)] hover:underline">Tailwind</a>.
+          </p>
+          <p class="mt-2">
+            <a href="/feed/index.xml" class="hover:text-[var(--fg-muted)] transition-colors">RSS</a>
+            <span class="mx-2 text-[var(--border)]">·</span>
+            <a href="/sitemap-index.xml" class="hover:text-[var(--fg-muted)] transition-colors">Sitemap</a>
+            <span class="mx-2 text-[var(--border)]">·</span>
+            <a href="https://x.com/noremap" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg-muted)] transition-colors">@noremap</a>
+          </p>
         </div>
       </div>
     </footer>
