@@ -221,3 +221,30 @@ button:focus-visible {
 .stagger-children > *:nth-child(8) { animation-delay: 280ms; }
 .stagger-children > *:nth-child(9) { animation-delay: 320ms; }
 .stagger-children > *:nth-child(10) { animation-delay: 360ms; }
+
+/* View Transitions */
+::view-transition-old(root) {
+  animation: fadeOut 0.2s ease-out both;
+}
+
+::view-transition-new(root) {
+  animation: fadeIn 0.3s ease-out both;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

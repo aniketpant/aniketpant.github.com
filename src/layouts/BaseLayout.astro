@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import '../styles/global.css';
 
@@ -51,13 +52,19 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
     <meta name="twitter:site" content="@noremap" />
     <meta name="twitter:creator" content="@noremap" />
 
+    <ClientRouter />
+
     <!-- Theme script — prevents flash of wrong theme -->
     <script is:inline>
       (function () {
-        const theme =
-          (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) ||
-          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
+        function applyTheme() {
+          const theme =
+            (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        }
+        applyTheme();
+        document.addEventListener('astro:after-swap', applyTheme);
       })();
     </script>
 
