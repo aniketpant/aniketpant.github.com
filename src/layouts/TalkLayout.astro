@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import ArticleShell from '../components/ArticleShell.astro';
 import type { ProcessedPost } from '../utils/posts';
 
 interface Props {
@@ -12,28 +13,28 @@ const link = post.entry.data.link;
 ---
 
 <BaseLayout title={post.title} description={post.excerpt} slug={post.slug}>
-  <article class="animate-fade-in" itemscope itemtype="http://schema.org/Event">
-    <header class="relative pt-16 md:pt-24 pb-12 md:pb-16 overflow-hidden">
-      <div class="deco-blob bg-[var(--color-secondary)] w-[400px] h-[400px] -top-32 -right-32 opacity-[0.08]" aria-hidden="true"></div>
+  <article itemscope itemtype="http://schema.org/Event">
+    <ArticleShell
+      title={post.title}
+      decoColor="var(--color-secondary)"
+      titleAttrs={{ itemprop: 'name' }}
+    >
+      <div slot="header-meta" class="flex items-center gap-3 text-sm text-[var(--fg-subtle)] mb-6">
+        <time datetime={post.isoDate} itemprop="startDate">{post.formattedDate}</time>
+        {
+          post.readingTime && (
+            <>
+              <span class="w-1 h-1 rounded-full bg-[var(--fg-subtle)]" aria-hidden="true" />
+              <span>{post.readingTime}</span>
+            </>
+          )
+        }
+      </div>
 
-      <div class="mx-auto max-w-5xl px-6 md:px-8 relative">
-        <div class="max-w-3xl">
-          <div class="flex items-center gap-3 text-sm text-[var(--fg-subtle)] mb-6">
-            <time datetime={post.isoDate} itemprop="startDate">{post.formattedDate}</time>
-            {post.readingTime && (
-              <>
-                <span class="w-1 h-1 rounded-full bg-[var(--fg-subtle)]" aria-hidden="true"></span>
-                <span>{post.readingTime}</span>
-              </>
-            )}
-          </div>
-          <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight gradient-text" itemprop="name">
-            {post.title}
-          </h1>
-          {event && (
-            <h2 class="mt-4 text-xl md:text-2xl font-normal text-[var(--fg-muted)]">{event}</h2>
-          )}
-          {link && (
+      <div slot="header-extra">
+        {event && <h2 class="mt-4 text-xl md:text-2xl font-normal text-[var(--fg-muted)]">{event}</h2>}
+        {
+          link && (
             <a
               href={link}
               itemprop="url"
@@ -42,27 +43,22 @@ const link = post.entry.data.link;
               class="inline-flex items-center gap-2 mt-4 text-[var(--color-brand)] hover:underline underline-offset-4 text-sm font-medium"
             >
               Event website
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <svg
+                class="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
                 <path d="M7 17L17 7M17 7H7M17 7v10" />
               </svg>
             </a>
-          )}
-        </div>
+          )
+        }
       </div>
-    </header>
 
-    <div class="mx-auto max-w-5xl px-6 md:px-8 pb-16 md:pb-24">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-        <div class="hidden md:block md:col-span-1">
-          <div class="gradient-line-vertical h-24 sticky top-24 mx-auto" aria-hidden="true"></div>
-        </div>
-        <div class="md:col-span-8">
-          <div class="prose prose-slate prose-lg md:prose-base max-w-none">
-            <slot />
-          </div>
-        </div>
-        <div class="hidden md:block md:col-span-3"></div>
-      </div>
-    </div>
+      <slot />
+    </ArticleShell>
   </article>
 </BaseLayout>

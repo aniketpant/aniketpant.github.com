@@ -74,7 +74,7 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
   <body class="font-sans antialiased min-h-screen flex flex-col">
     <Header isHome={isHome} />
 
-    <main class="flex-1 w-full">
+    <main class="flex-1 w-full overflow-x-hidden">
       <slot />
     </main>
 
