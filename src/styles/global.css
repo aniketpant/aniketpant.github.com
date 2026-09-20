@@ -4,20 +4,22 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  --color-brand: #db2777;
-  --color-brand-hover: #be185d;
-  --color-brand-subtle: #fdf2f8;
-  --color-brand-subtle-dark: #3b0a1e;
+  /* Light mode: warm reds & oranges */
+  --color-brand: #dc2626;
+  --color-brand-hover: #b91c1c;
+  --color-brand-subtle: #fef2f2;
+  --color-brand-subtle-dark: #450a0a;
 
-  --color-secondary: #14b8a6;
-  --color-secondary-hover: #0d9488;
-  --color-secondary-subtle: #f0fdfa;
-  --color-secondary-subtle-dark: #042f2e;
+  --color-secondary: #ea580c;
+  --color-secondary-hover: #c2410c;
+  --color-secondary-subtle: #fff7ed;
+  --color-secondary-subtle-dark: #431407;
 
-  --color-tertiary: #f59e0b;
-  --color-tertiary-hover: #d97706;
-  --color-tertiary-subtle: #fffbeb;
-  --color-tertiary-subtle-dark: #451a03;
+  /* Synthwave neon — cyan/magenta for dark mode accents */
+  --color-tertiary: #0891b2;
+  --color-tertiary-hover: #0e7490;
+  --color-tertiary-subtle: #ecfeff;
+  --color-tertiary-subtle-dark: #083344;
 
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-serif: "Playfair Display", "PT Serif", Georgia, serif;
@@ -26,8 +28,6 @@
   --animate-fade-in: fadeIn 0.6s ease-out both;
   --animate-fade-in-up: fadeInUp 0.5s ease-out both;
   --animate-fade-in-color: grayscaleToColor 500ms ease-in-out 1;
-  --animate-slide-in-left: slideInLeft 0.6s var(--ease-out-expo) both;
-  --animate-slide-in-right: slideInRight 0.6s var(--ease-out-expo) both;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -40,16 +40,6 @@
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(40px); }
-  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes grayscaleToColor {
@@ -72,29 +62,46 @@ html {
   }
 }
 
-/* Base theme colors */
+/* Light theme — warm paper tones */
 :root {
-  --bg: #faf9f7;
-  --bg-secondary: #f5f4f2;
+  --bg: #faf8f5;
+  --bg-secondary: #f5f0eb;
   --surface: #ffffff;
-  --fg: #1e293b;
-  --fg-muted: #64748b;
-  --fg-subtle: #94a3b8;
-  --border: #e2e8f0;
-  --border-subtle: #f1f5f9;
-  --ring: #db2777;
+  --fg: #1c1917;
+  --fg-muted: #78716c;
+  --fg-subtle: #a8a29e;
+  --border: #e7e5e4;
+  --border-subtle: #f5f5f4;
+  --ring: #dc2626;
 }
 
+/* Dark theme — synthwave deep space */
 [data-theme="dark"] {
-  --bg: #0b0f19;
-  --bg-secondary: #111827;
-  --surface: #1e293b;
-  --fg: #f1f5f9;
-  --fg-muted: #94a3b8;
-  --fg-subtle: #64748b;
-  --border: #334155;
-  --border-subtle: #1e293b;
-  --ring: #f472b6;
+  --bg: #0c0a18;
+  --bg-secondary: #141025;
+  --surface: #1e1835;
+  --fg: #f0e6ff;
+  --fg-muted: #a89bb8;
+  --fg-subtle: #6b5b7d;
+  --border: #2d2244;
+  --border-subtle: #1a1430;
+  --ring: #ff2a6d;
+
+  /* Override for synthwave neon in dark */
+  --color-brand: #ff2a6d;
+  --color-brand-hover: #ff5c8d;
+  --color-brand-subtle: #2a0a18;
+  --color-brand-subtle-dark: #2a0a18;
+
+  --color-secondary: #ff8c42;
+  --color-secondary-hover: #ffaa6e;
+  --color-secondary-subtle: #2a1810;
+  --color-secondary-subtle-dark: #2a1810;
+
+  --color-tertiary: #05d9e8;
+  --color-tertiary-hover: #4ee8f2;
+  --color-tertiary-subtle: #0a2a2e;
+  --color-tertiary-subtle-dark: #0a2a2e;
 }
 
 body {
@@ -103,7 +110,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dramatic typography scale */
+/* Dramatic typography */
 .prose h1 {
   font-family: var(--font-serif);
   font-weight: 700;
@@ -225,7 +232,7 @@ button:focus-visible {
 
 [data-theme="dark"] ::selection {
   background-color: var(--color-brand-subtle-dark);
-  color: #f9a8d4;
+  color: #ff8fab;
 }
 
 /* Lead paragraph */
@@ -318,20 +325,13 @@ button:focus-visible {
   border-radius: 1px;
 }
 
-/* Asymmetric decorative elements */
+/* Decorative elements */
 .deco-blob {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.15;
+  opacity: 0.12;
   pointer-events: none;
-}
-
-.deco-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-brand);
 }
 
 /* View Transitions */

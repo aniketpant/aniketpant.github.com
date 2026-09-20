@@ -12,50 +12,60 @@
     <circle cx="12" cy="12" r="5" />
     <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
   </svg>
-  <svg id="moon-icon" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+  <svg id="moon-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
   </svg>
 </button>
 
-<script>
-  function initThemeToggle() {
-    const toggle = document.getElementById('theme-toggle');
-    const sun = document.getElementById('sun-icon');
-    const moon = document.getElementById('moon-icon');
-    const root = document.documentElement;
+<script is:inline>
+  (function () {
+    var toggle = document.getElementById('theme-toggle');
+    var sun = document.getElementById('sun-icon');
+    var moon = document.getElementById('moon-icon');
+    var root = document.documentElement;
 
     function getTheme() {
-      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-        return localStorage.getItem('theme') as 'light' | 'dark';
-      }
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
-      }
+      var stored = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
+      if (stored) return stored;
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
       return 'light';
     }
 
-    function setTheme(theme: 'light' | 'dark') {
-      root.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      if (sun && moon) {
-        if (theme === 'dark') {
-          sun.classList.remove('hidden');
-          moon.classList.add('hidden');
-        } else {
-          sun.classList.add('hidden');
-          moon.classList.remove('hidden');
-        }
+    function setIcons(theme) {
+      if (!sun || !moon) return;
+      if (theme === 'dark') {
+        sun.classList.remove('hidden');
+        moon.classList.add('hidden');
+      } else {
+        sun.classList.add('hidden');
+        moon.classList.remove('hidden');
       }
     }
 
-    setTheme(getTheme());
+    function updateToggle() {
+      var theme = getTheme();
+      root.setAttribute('data-theme', theme);
+      setIcons(theme);
+    }
 
-    toggle?.addEventListener('click', () => {
-      const current = getTheme();
-      setTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  }
+    function handleClick() {
+      var current = getTheme();
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      setIcons(next);
+    }
 
-  initThemeToggle();
-  document.addEventListener('astro:page-load', initThemeToggle);
+    // Remove old listener to avoid duplicates
+    if (toggle) {
+      toggle.removeEventListener('click', handleClick);
+      toggle.addEventListener('click', handleClick);
+    }
+
+    updateToggle();
+
+    // Re-run after view transitions
+    document.removeEventListener('astro:page-load', updateToggle);
+    document.addEventListener('astro:page-load', updateToggle);
+  })();
 </script>
