@@ -85,8 +85,10 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
       </div>
     </main>
 
-    <footer class="mt-auto py-8 text-center text-sm text-[var(--fg-subtle)] border-t border-[var(--border)]">
-      <div class="mx-auto max-w-3xl px-6 md:px-8">
+    <footer class="mt-auto">
+      <div class="gradient-line" aria-hidden="true"></div>
+      <div class="py-8 text-center text-sm text-[var(--fg-subtle)]">
+        <div class="mx-auto max-w-3xl px-6 md:px-8">
         <p>
           &copy; {new Date().getFullYear()} Aniket Pant. Built with{' '}
           <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand)] hover:underline">Astro</a>{' '}
@@ -100,6 +102,7 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
           <span class="mx-2 text-[var(--border)]">·</span>
           <a href="https://x.com/noremap" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg-muted)] transition-colors">@noremap</a>
         </p>
+        </div>
       </div>
     </footer>
   </body>

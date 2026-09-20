@@ -13,9 +13,10 @@ const { title, slug = '', description } = Astro.props;
 <BaseLayout title={title} slug={slug} description={description}>
   <div class="py-10 md:py-14 animate-fade-in">
     <header class="mb-10 text-center">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight text-[var(--fg)]">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight gradient-text">
         {title}
       </h1>
+      <div class="gradient-line mt-4 mx-auto w-16" aria-hidden="true"></div>
     </header>
 
     <article class="prose prose-slate prose-lg md:prose-base max-w-none">

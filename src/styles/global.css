@@ -9,6 +9,16 @@
   --color-brand-subtle: #fdf2f8;
   --color-brand-subtle-dark: #3b0a1e;
 
+  --color-secondary: #14b8a6;
+  --color-secondary-hover: #0d9488;
+  --color-secondary-subtle: #f0fdfa;
+  --color-secondary-subtle-dark: #042f2e;
+
+  --color-tertiary: #f59e0b;
+  --color-tertiary-hover: #d97706;
+  --color-tertiary-subtle: #fffbeb;
+  --color-tertiary-subtle-dark: #451a03;
+
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-serif: "Playfair Display", "PT Serif", Georgia, serif;
   --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
@@ -221,6 +231,52 @@ button:focus-visible {
 .stagger-children > *:nth-child(8) { animation-delay: 280ms; }
 .stagger-children > *:nth-child(9) { animation-delay: 320ms; }
 .stagger-children > *:nth-child(10) { animation-delay: 360ms; }
+
+/* Gradient utilities */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-secondary) 50%, var(--color-tertiary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-subtle {
+  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, var(--color-brand), var(--color-secondary), var(--color-tertiary));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.gradient-bg-subtle {
+  background: linear-gradient(135deg, var(--color-brand-subtle) 0%, var(--color-secondary-subtle) 50%, var(--color-tertiary-subtle) 100%);
+}
+
+[data-theme="dark"] .gradient-bg-subtle {
+  background: linear-gradient(135deg, var(--color-brand-subtle-dark) 0%, var(--color-secondary-subtle-dark) 50%, var(--color-tertiary-subtle-dark) 100%);
+}
+
+.gradient-line {
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand) 0%, var(--color-secondary) 50%, var(--color-tertiary) 100%);
+  border-radius: 1px;
+}
 
 /* View Transitions */
 ::view-transition-old(root) {
