@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import ArticleShell from '../components/ArticleShell.astro';
+import PostFingerprint from '../components/PostFingerprint.astro';
 import type { ProcessedPost } from '../utils/posts';
 
 interface Props {
@@ -18,6 +19,11 @@ const { post } = Astro.props;
         <span class="w-1 h-1 rounded-full bg-[var(--fg-subtle)]" aria-hidden="true"></span>
         <span>{post.readingTime}</span>
       </div>
+
+      <div slot="header-extra" class="mt-6 md:mt-0 md:absolute md:-right-2 md:-top-2 lg:right-0 lg:top-0 opacity-80 md:opacity-70 hover:opacity-100 transition-opacity duration-300">
+        <PostFingerprint seed={post.slug} size={120} class="md:size-[160px]" />
+      </div>
+
       <slot />
     </ArticleShell>
   </article>

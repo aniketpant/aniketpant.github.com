@@ -1,0 +1,146 @@
+---
+import { hashFloats, hashValues } from '../utils/hash';
+
+interface Props {
+  seed: string;
+  size?: number;
+  class?: string;
+}
+
+const { seed, size = 120, class: className = '' } = Astro.props;
+
+const f = hashFloats(seed, 24);
+const styleIdx = hashValues(seed + ':style', 1, 4)[0];
+
+// Controlled 2-color pairings — harmonious, never clashing
+const pairs: [string, string][] = [
+  ['#e11d48', '#c026d3'], // rose → magenta
+  ['#c026d3', '#059669'], // magenta → emerald
+  ['#059669', '#e11d48'], // emerald → rose
+  ['#d946ef', '#e11d48'], // pink → rose
+  ['#e11d48', '#059669'], // rose → emerald
+  ['#c026d3', '#d946ef'], // magenta → pink
+];
+const pairIdx = hashValues(seed + ':pair', 1, pairs.length)[0];
+const [c1, c2] = pairs[pairIdx];
+const bg = hashValues(seed + ':bg', 1, 2)[0] === 0 ? c1 : c2;
+const fg = hashValues(seed + ':bg', 1, 2)[0] === 0 ? c2 : c1;
+
+const vb = 100;
+const c = vb / 2;
+
+let svg = '';
+
+// ── Style 0: Phase Overlap ────────────────────────────────────────────
+// Three large offset circles overlapping like moon phases
+if (styleIdx === 0) {
+  const r = 32 + f[0] * 10;
+  const offsets = [
+    { x: -8 + f[1] * 16, y: -6 + f[2] * 12 },
+    { x: -4 + f[3] * 20, y: 4 + f[4] * 10 },
+    { x: 6 + f[5] * 8,  y: -2 + f[6] * 14 },
+  ];
+  const opacities = [0.55, 0.45, 0.35];
+
+  for (let i = 0; i < 3; i++) {
+    svg += `<circle cx="${(c + offsets[i].x).toFixed(1)}" cy="${(c + offsets[i].y).toFixed(1)}" r="${r.toFixed(1)}" fill="${i === 0 ? bg : fg}" opacity="${opacities[i].toFixed(2)}"/>`;
+  }
+}
+
+// ── Style 1: Broken Ring ──────────────────────────────────────────────
+// Thick arc segments at 2-3 radii, creating a dynamic spinner-like form
+else if (styleIdx === 1) {
+  const rings = 2 + Math.floor(f[0] * 2);
+  for (let ring = 0; ring < rings; ring++) {
+    const r = 22 + ring * 16 + f[ring + 1] * 8;
+    const sw = 7 + f[ring + 3] * 5;
+    const segments = 2 + Math.floor(f[ring + 5] * 4);
+    const gap = 0.25 + f[ring + 7] * 0.6;
+    const sweep = (Math.PI * 2 - gap * segments) / segments;
+    const rot = f[ring + 9] * Math.PI * 2;
+    const color = ring % 2 === 0 ? bg : fg;
+    const op = 0.6 + f[ring + 11] * 0.35;
+
+    for (let seg = 0; seg < segments; seg++) {
+      const start = rot + seg * (sweep + gap);
+      const end = start + sweep;
+      const x1 = c + Math.cos(start) * r;
+      const y1 = c + Math.sin(start) * r;
+      const x2 = c + Math.cos(end) * r;
+      const y2 = c + Math.sin(end) * r;
+      const large = sweep > Math.PI ? 1 : 0;
+      svg += `<path d="M${x1.toFixed(1)} ${y1.toFixed(1)} A${r.toFixed(1)} ${r.toFixed(1)} 0 ${large} 1 ${x2.toFixed(1)} ${y2.toFixed(1)}" stroke="${color}" stroke-width="${sw.toFixed(1)}" stroke-linecap="round" fill="none" opacity="${op.toFixed(2)}"/>`;
+    }
+  }
+}
+
+// ── Style 2: Radial Petals ────────────────────────────────────────────
+// Thick teardrop/wedge shapes radiating from center
+else if (styleIdx === 2) {
+  const petals = 5 + Math.floor(f[0] * 6);
+  const innerR = 8 + f[1] * 10;
+  const outerR = 42 + f[2] * 8;
+  const spread = 0.25 + f[3] * 0.4;
+  const rot = f[4] * Math.PI * 2;
+
+  for (let i = 0; i < petals; i++) {
+    const a = (i / petals) * Math.PI * 2 + rot;
+    const x1 = c + Math.cos(a - spread) * innerR;
+    const y1 = c + Math.sin(a - spread) * innerR;
+    const x2 = c + Math.cos(a) * outerR;
+    const y2 = c + Math.sin(a) * outerR;
+    const x3 = c + Math.cos(a + spread) * innerR;
+    const y3 = c + Math.sin(a + spread) * innerR;
+    const color = i % 2 === 0 ? bg : fg;
+    const op = 0.5 + f[(i + 5) % 24] * 0.4;
+
+    svg += `<path d="M${x1.toFixed(1)} ${y1.toFixed(1)} Q${(c + Math.cos(a) * (outerR + 8)).toFixed(1)} ${(c + Math.sin(a) * (outerR + 8)).toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)} Q${(c + Math.cos(a) * (outerR + 8)).toFixed(1)} ${(c + Math.sin(a) * (outerR + 8)).toFixed(1)} ${x3.toFixed(1)} ${y3.toFixed(1)} Z" fill="${color}" opacity="${op.toFixed(2)}"/>`;
+  }
+
+  // Center cap
+  const capR = innerR - 2;
+  svg += `<circle cx="${c}" cy="${c}" r="${capR.toFixed(1)}" fill="${bg}" opacity="0.9"/>`;
+}
+
+// ── Style 3: Wave Stack ───────────────────────────────────────────────
+// Three thick sine-wave arcs stacked, creating an organic flowing form
+else {
+  const waves = 3 + Math.floor(f[0] * 3);
+  const amp = 10 + f[1] * 12;
+  const freq = 1.5 + f[2] * 2.5;
+  const yBase = 25 + f[3] * 10;
+  const yStep = 18 + f[4] * 8;
+
+  for (let w = 0; w < waves; w++) {
+    const y0 = yBase + w * yStep;
+    const phase = f[w + 5] * Math.PI * 2;
+    const color = w % 2 === 0 ? bg : fg;
+    const op = 0.45 + f[w + 8] * 0.4;
+    const sw = 5 + f[w + 11] * 5;
+
+    let d = '';
+    const steps = 60;
+    for (let i = 0; i <= steps; i++) {
+      const t = i / steps;
+      const x = 8 + t * 84;
+      const y = y0 + Math.sin(t * freq * Math.PI * 2 + phase) * amp;
+      d += (i === 0 ? 'M' : 'L') + `${x.toFixed(1)} ${y.toFixed(1)}`;
+    }
+
+    svg += `<path d="${d}" stroke="${color}" stroke-width="${sw.toFixed(1)}" stroke-linecap="round" fill="none" opacity="${op.toFixed(2)}"/>`;
+  }
+}
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox={`0 0 ${vb} ${vb}`}
+  width={size}
+  height={size}
+  class={`select-none ${className}`}
+  aria-hidden="true"
+  shape-rendering="geometricPrecision"
+>
+  <rect width="100" height="100" fill="var(--bg)" opacity="0" rx="12"/>
+  <Fragment set:html={svg} />
+</svg>
