@@ -10,8 +10,7 @@ export async function getStaticPaths() {
   const processed = entries.map(processPost);
   const sorted = sortPostsDesc(processed);
 
-  return entries.map((entry, index) => {
-    const post = processPost(entry);
+  return sorted.map((post, index) => {
     const prev = sorted[index + 1] || null;
     const next = sorted[index - 1] || null;
     return {
