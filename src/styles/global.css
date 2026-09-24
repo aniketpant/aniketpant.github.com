@@ -72,6 +72,22 @@ html {
   --border: #e7e5e4;
   --border-subtle: #f5f5f4;
   --ring: #dc2626;
+
+  /* Code syntax colors (Shiki css-variables theme) — light. Astro emits
+     these as --astro-code-* references in <pre>/<span> styles. */
+  --astro-code-foreground: #1c1917;
+  --astro-code-background: var(--bg-secondary);
+  --astro-code-token-comment: #a8a29e;
+  --astro-code-token-keyword: #7c3aed;
+  --astro-code-token-constant: #e11d48;
+  --astro-code-token-function: #0d9488;
+  --astro-code-token-string: #059669;
+  --astro-code-token-string-expression: #059669;
+  --astro-code-token-number: #b45309;
+  --astro-code-token-parameter: #1c1917;
+  --astro-code-token-punctuation: #78716c;
+  --astro-code-token-link: #e11d48;
+  --astro-code-token-type: #b45309;
 }
 
 /* Dark theme — synthwave neon */
@@ -101,6 +117,21 @@ html {
   --color-tertiary-hover: #4dffb8;
   --color-tertiary-subtle: #002a1a;
   --color-tertiary-subtle-dark: #002a1a;
+
+  /* Code syntax colors (Shiki css-variables theme) — dark: synthwave neon */
+  --astro-code-foreground: #f5eeff;
+  --astro-code-background: var(--bg-secondary);
+  --astro-code-token-comment: #6b5b9a;
+  --astro-code-token-keyword: #d050ff;
+  --astro-code-token-constant: #ff00a0;
+  --astro-code-token-function: #4dd0e1;
+  --astro-code-token-string: #00ff9f;
+  --astro-code-token-string-expression: #00ff9f;
+  --astro-code-token-number: #ffb44d;
+  --astro-code-token-parameter: #f5eeff;
+  --astro-code-token-punctuation: #a090cc;
+  --astro-code-token-link: #ff00a0;
+  --astro-code-token-type: #ffb44d;
 }
 
 body {
@@ -386,6 +417,43 @@ button:focus-visible {
   opacity: 0.12;
   pointer-events: none;
 }
+
+/* Dithered hero backdrop — fine speckled wash, faded toward the content */
+.deco-dither {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(180deg, black 0%, black 28%, rgba(0, 0, 0, 0.55) 52%, transparent 78%);
+  mask-image: linear-gradient(180deg, black 0%, black 28%, rgba(0, 0, 0, 0.55) 52%, transparent 78%);
+}
+
+[data-theme="dark"] .deco-dither {
+  opacity: 0.8;
+}
+
+/* Post fingerprints — one quantization per theme, revealed by CSS */
+.fingerprint-dither-dark {
+  display: none;
+}
+
+[data-theme="dark"] .fingerprint-dither {
+  display: none;
+}
+
+[data-theme="dark"] .fingerprint-dither-dark {
+  display: block;
+}
+
+/* Fingerprint palette classes (fills follow the active theme) */
+.d-bg { fill: var(--bg); }
+.d-fg { fill: var(--fg); }
+.d-muted { fill: var(--fg-muted); }
+.d-brand { fill: var(--color-brand); }
+.d-secondary { fill: var(--color-secondary); }
+.d-tertiary { fill: var(--color-tertiary); }
 
 /* View Transitions */
 ::view-transition-old(root) {

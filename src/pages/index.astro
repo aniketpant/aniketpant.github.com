@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import DitherBackdrop from '../components/DitherBackdrop.astro';
 import { processPost, sortPostsDesc } from '../utils/posts';
 
 const rawPosts = await getCollection('posts');
@@ -13,12 +14,12 @@ const nextFive = sortedPosts.slice(5, 10);
 
 <BaseLayout title="Aniket Pant" slug="home" isHome={true}>
   <div class="relative overflow-hidden">
-    <!-- Decorative background blobs -->
-    <div class="deco-blob bg-[var(--color-brand)] w-[500px] h-[500px] -top-40 -right-40" aria-hidden="true"></div>
-    <div class="deco-blob bg-[var(--color-secondary)] w-[300px] h-[300px] top-60 -left-20" aria-hidden="true"></div>
-    <div class="deco-blob bg-[var(--color-tertiary)] w-[250px] h-[250px] top-[32rem] -right-10 opacity-[0.06]" aria-hidden="true"></div>
+    <!-- Dithered backdrop — soft theme-tint wash, bounded to the hero -->
+    <div class="absolute inset-x-0 top-0 z-0 h-[540px] md:h-[640px]" aria-hidden="true">
+      <DitherBackdrop />
+    </div>
 
-    <div class="mx-auto max-w-5xl px-6 md:px-8">
+    <div class="relative z-10 mx-auto max-w-5xl px-6 md:px-8">
       <!-- Hero -->
       <section class="pt-20 md:pt-32 pb-16 md:pb-24 animate-fade-in">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">

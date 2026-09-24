@@ -1,0 +1,60 @@
+---
+// Full-bleed dithered backdrop for the homepage hero.
+//
+// Uses the canonical SVG-noise dither trick: a posterized gradient of soft
+// theme tints whose alpha channel is modulated by seeded turbulence, so
+// smooth fades turn into fine speckled bands (page background shows through
+// the "holes" — exactly how dithered terminal wallpapers are made). Payload
+// is nearly zero, and the stops reference CSS variables so the backdrop
+// re-renders automatically when the theme flips.
+const HOLES = 5; // alpha bias magnitude → speckle density / band contrast
+const GRAIN = 0.12; // turbulence frequency in user units → cell size
+---
+
+<svg
+  class="deco-dither"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1200 400"
+  preserveAspectRatio="xMidYMid slice"
+  width="100%"
+  height="100%"
+  aria-hidden="true"
+>
+  <defs>
+    <linearGradient id="hero-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color: var(--color-brand-subtle)" />
+      <stop offset="34%" style="stop-color: var(--color-secondary-subtle)" />
+      <stop offset="68%" style="stop-color: var(--color-tertiary-subtle)" />
+      <stop offset="100%" style="stop-color: var(--bg)" />
+    </linearGradient>
+    <filter id="hero-dither" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency={GRAIN}
+        numOctaves="2"
+        seed={1234}
+        stitchTiles="stitch"
+        result="noise"
+      />
+      <!-- Map the turbulence alpha (≈ the fractal value in [0,1]) into a
+           signed bias around zero, applied to the gradient's alpha. -->
+      <feColorMatrix
+        in="noise"
+        type="matrix"
+        values={`0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 ${HOLES} ${-HOLES / 2}`}
+        result="bias"
+      />
+      <feComposite
+        operator="arithmetic"
+        k1="0"
+        k2="1"
+        k3="1"
+        k4="0"
+        in="SourceGraphic"
+        in2="bias"
+        result="dithered"
+      />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#hero-grad)" filter="url(#hero-dither)" />
+</svg>
