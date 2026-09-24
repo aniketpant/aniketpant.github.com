@@ -21,7 +21,7 @@ const siteTitle = isHome
   ? 'Aniket Pant'
   : `${title} | Aniket Pant`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.aniketpant.com');
-const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpant.com');
+const imageURL = new URL('/og-default.png', Astro.site || 'https://www.aniketpant.com');
 ---
 
 <!doctype html>
@@ -47,6 +47,9 @@ const imageURL = new URL('/images/logo.jpg', Astro.site || 'https://www.aniketpa
     <meta property="og:type" content={isHome ? 'website' : 'article'} />
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:image" content={imageURL.href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:site_name" content="Aniket Pant" />
     <meta property="og:description" content={description} />
 
