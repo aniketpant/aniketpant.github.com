@@ -12,7 +12,7 @@ const event = post.entry.data.event;
 const link = post.entry.data.link;
 ---
 
-<BaseLayout title={post.title} description={post.excerpt} slug={post.slug}>
+<BaseLayout title={post.title} description={post.excerpt} slug={post.slug} publishedTime={post.isoDate}>
   <article itemscope itemtype="http://schema.org/Event">
     <ArticleShell
       title={post.title}

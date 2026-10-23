@@ -7,6 +7,7 @@ interface Props {
 
 const { isHome = false } = Astro.props;
 
+const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const navItems = [
   { label: 'About', href: '/about/' },
   { label: 'Speaking', href: '/speaking/' },
@@ -34,16 +35,25 @@ const navItems = [
       <div class="flex items-center gap-1">
         <nav aria-label="Main navigation">
           <ul class="flex items-center gap-0.5">
-            {navItems.map((item) => (
-              <li>
-                <a
-                  href={item.href}
-                  class="px-3 py-2 rounded-lg text-sm font-medium text-[var(--fg-muted)] hover:text-[var(--fg)] hover:bg-[var(--bg-secondary)] transition-all duration-200"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const isCurrent = pathname === item.href.replace(/\/$/, '');
+              return (
+                <li>
+                  <a
+                    href={item.href}
+                    aria-current={isCurrent ? 'page' : undefined}
+                    class:list={[
+                      'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+                      isCurrent
+                        ? 'text-[var(--fg)] bg-[var(--bg-secondary)]'
+                        : 'text-[var(--fg-muted)] hover:text-[var(--fg)] hover:bg-[var(--bg-secondary)]',
+                    ]}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </nav>
         <div class="ml-3 pl-3 border-l border-[var(--border)]">

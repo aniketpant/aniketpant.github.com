@@ -4,68 +4,47 @@
 <button
   type="button"
   id="theme-toggle"
-  aria-label="Toggle dark mode"
+  aria-label="Switch to dark theme"
   class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--fg-muted)] hover:text-[var(--fg)] hover:border-[var(--color-secondary)] transition-all duration-200"
   transition:persist
 >
-  <svg id="sun-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-    <circle cx="12" cy="12" r="5" />
-    <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+  <svg
+    id="sun-icon"
+    class="theme-icon w-4 h-4"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="5"></circle>
+    <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
   </svg>
-  <svg id="moon-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+  <svg
+    id="moon-icon"
+    class="theme-icon w-4 h-4"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
   </svg>
 </button>
 
 <script is:inline>
   (function () {
     var toggle = document.getElementById('theme-toggle');
-    var sun = document.getElementById('sun-icon');
-    var moon = document.getElementById('moon-icon');
-    var root = document.documentElement;
 
-    function getTheme() {
-      var stored = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
-      if (stored) return stored;
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
-      return 'light';
+    if (toggle && !toggle.dataset.themeBound) {
+      toggle.dataset.themeBound = 'true';
+      toggle.addEventListener('click', function () {
+        if (typeof window.__toggleTheme === 'function') window.__toggleTheme();
+      });
     }
 
-    function setIcons(theme) {
-      if (!sun || !moon) return;
-      if (theme === 'dark') {
-        sun.classList.remove('hidden');
-        moon.classList.add('hidden');
-      } else {
-        sun.classList.add('hidden');
-        moon.classList.remove('hidden');
-      }
-    }
-
-    function updateToggle() {
-      var theme = getTheme();
-      root.setAttribute('data-theme', theme);
-      setIcons(theme);
-    }
-
-    function handleClick() {
-      var current = getTheme();
-      var next = current === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      setIcons(next);
-    }
-
-    // Remove old listener to avoid duplicates
-    if (toggle) {
-      toggle.removeEventListener('click', handleClick);
-      toggle.addEventListener('click', handleClick);
-    }
-
-    updateToggle();
-
-    // Re-run after view transitions
-    document.removeEventListener('astro:page-load', updateToggle);
-    document.addEventListener('astro:page-load', updateToggle);
+    // The icon and label are driven by the shared theme logic in BaseLayout.
+    if (typeof window.__applyTheme === 'function') window.__applyTheme();
   })();
 </script>

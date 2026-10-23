@@ -4,21 +4,18 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  /* Light mode: warm reds & coral */
-  --color-brand: #e11d48;
+  /* Light mode: warm reds & coral. `:root` below makes these theme-aware. */
+  --color-brand: #de1b46;
   --color-brand-hover: #be123c;
   --color-brand-subtle: #fff1f2;
-  --color-brand-subtle-dark: #4c0519;
 
-  --color-secondary: #c026d3;
+  --color-secondary: #bd24cf;
   --color-secondary-hover: #a21caf;
   --color-secondary-subtle: #faf5ff;
-  --color-secondary-subtle-dark: #3b0764;
 
-  --color-tertiary: #059669;
+  --color-tertiary: #04805f;
   --color-tertiary-hover: #047857;
   --color-tertiary-subtle: #ecfdf5;
-  --color-tertiary-subtle-dark: #022c22;
 
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-serif: "Playfair Display", "PT Serif", Georgia, serif;
@@ -59,85 +56,187 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
 }
 
-/* Light theme — warm paper tones */
+/* Theme tokens. Light values come first as a fallback for browsers without
+   `light-dark()`; the @supports block below makes them theme-aware. Colours
+   are tuned so body text and small metadata meet WCAG AA (4.5:1) on their
+   own background. */
 :root {
+  /* Native UI (scrollbars, form controls, canvas) follows the theme. */
+  color-scheme: light dark;
+
   --bg: #faf8f5;
   --bg-secondary: #f5f0eb;
   --surface: #ffffff;
   --fg: #1c1917;
-  --fg-muted: #78716c;
-  --fg-subtle: #a8a29e;
+  --fg-muted: #57534e;
+  --fg-subtle: #75706a;
   --border: #e7e5e4;
   --border-subtle: #f5f5f4;
   --ring: #dc2626;
 
-  /* Code syntax colors (Shiki css-variables theme) — light. Astro emits
-     these as --astro-code-* references in <pre>/<span> styles. */
+  /* Brand palette — warm reds & coral. */
+  --color-brand: #de1b46;
+  --color-brand-hover: #be123c;
+  --color-brand-subtle: #fff1f2;
+
+  --color-secondary: #bd24cf;
+  --color-secondary-hover: #a21caf;
+  --color-secondary-subtle: #faf5ff;
+
+  --color-tertiary: #04805f;
+  --color-tertiary-hover: #047857;
+  --color-tertiary-subtle: #ecfdf5;
+
+  /* Code syntax colors (Shiki css-variables theme). Astro emits these as
+     --astro-code-* references in <pre>/<span> styles. */
   --astro-code-foreground: #1c1917;
   --astro-code-background: var(--bg-secondary);
-  --astro-code-token-comment: #a8a29e;
+  --astro-code-token-comment: #75706a;
   --astro-code-token-keyword: #7c3aed;
-  --astro-code-token-constant: #e11d48;
-  --astro-code-token-function: #0d9488;
-  --astro-code-token-string: #059669;
-  --astro-code-token-string-expression: #059669;
+  --astro-code-token-constant: #be123c;
+  --astro-code-token-function: #0f766e;
+  --astro-code-token-string: #047857;
+  --astro-code-token-string-expression: #047857;
   --astro-code-token-number: #b45309;
   --astro-code-token-parameter: #1c1917;
-  --astro-code-token-punctuation: #78716c;
-  --astro-code-token-link: #e11d48;
+  --astro-code-token-punctuation: #57534e;
+  --astro-code-token-link: #be123c;
   --astro-code-token-type: #b45309;
 }
 
-/* Dark theme — synthwave neon */
-[data-theme="dark"] {
-  --bg: #070514;
-  --bg-secondary: #0f0a24;
-  --surface: #1a1040;
-  --fg: #f5eeff;
-  --fg-muted: #a090cc;
-  --fg-subtle: #6b5b9a;
-  --border: #2a1a5a;
-  --border-subtle: #140c30;
-  --ring: #ff00a0;
+/* `light-dark()` resolves against the computed `color-scheme`: the site
+   follows the OS by default and an explicit choice pins a scheme. One
+   declaration per token, with synthwave neon as the dark half. */
+@supports (color: light-dark(#fff, #000)) {
+  :root {
+    --bg: light-dark(#faf8f5, #070514);
+    --bg-secondary: light-dark(#f5f0eb, #0f0a24);
+    --surface: light-dark(#ffffff, #1a1040);
+    --fg: light-dark(#1c1917, #f5eeff);
+    --fg-muted: light-dark(#57534e, #a090cc);
+    --fg-subtle: light-dark(#75706a, #8574b8);
+    --border: light-dark(#e7e5e4, #2a1a5a);
+    --border-subtle: light-dark(#f5f5f4, #140c30);
+    --ring: light-dark(#dc2626, #ff00a0);
 
-  /* Synthwave neon overrides */
-  --color-brand: #ff00a0;
-  --color-brand-hover: #ff33bb;
-  --color-brand-subtle: #2a0020;
-  --color-brand-subtle-dark: #2a0020;
+    --color-brand: light-dark(#de1b46, #ff00a0);
+    --color-brand-hover: light-dark(#be123c, #ff33bb);
+    --color-brand-subtle: light-dark(#fff1f2, #2a0020);
 
-  --color-secondary: #b829dd;
-  --color-secondary-hover: #d050ff;
-  --color-secondary-subtle: #1e0a30;
-  --color-secondary-subtle-dark: #1e0a30;
+    --color-secondary: light-dark(#bd24cf, #bd2fe4);
+    --color-secondary-hover: light-dark(#a21caf, #d050ff);
+    --color-secondary-subtle: light-dark(#faf5ff, #1e0a30);
 
-  --color-tertiary: #00ff9f;
-  --color-tertiary-hover: #4dffb8;
-  --color-tertiary-subtle: #002a1a;
-  --color-tertiary-subtle-dark: #002a1a;
+    --color-tertiary: light-dark(#04805f, #00ff9f);
+    --color-tertiary-hover: light-dark(#047857, #4dffb8);
+    --color-tertiary-subtle: light-dark(#ecfdf5, #002a1a);
 
-  /* Code syntax colors (Shiki css-variables theme) — dark: synthwave neon */
-  --astro-code-foreground: #f5eeff;
-  --astro-code-background: var(--bg-secondary);
-  --astro-code-token-comment: #6b5b9a;
-  --astro-code-token-keyword: #d050ff;
-  --astro-code-token-constant: #ff00a0;
-  --astro-code-token-function: #4dd0e1;
-  --astro-code-token-string: #00ff9f;
-  --astro-code-token-string-expression: #00ff9f;
-  --astro-code-token-number: #ffb44d;
-  --astro-code-token-parameter: #f5eeff;
-  --astro-code-token-punctuation: #a090cc;
-  --astro-code-token-link: #ff00a0;
-  --astro-code-token-type: #ffb44d;
+    --astro-code-foreground: light-dark(#1c1917, #f5eeff);
+    --astro-code-token-comment: light-dark(#75706a, #8574b8);
+    --astro-code-token-keyword: light-dark(#7c3aed, #d050ff);
+    --astro-code-token-constant: light-dark(#be123c, #ff00a0);
+    --astro-code-token-function: light-dark(#0f766e, #4dd0e1);
+    --astro-code-token-string: light-dark(#047857, #00ff9f);
+    --astro-code-token-string-expression: light-dark(#047857, #00ff9f);
+    --astro-code-token-number: light-dark(#b45309, #ffb44d);
+    --astro-code-token-parameter: light-dark(#1c1917, #f5eeff);
+    --astro-code-token-punctuation: light-dark(#57534e, #a090cc);
+    --astro-code-token-link: light-dark(#be123c, #ff00a0);
+    --astro-code-token-type: light-dark(#b45309, #ffb44d);
+  }
+}
+
+/* An explicit choice from the theme toggle pins `color-scheme`, which in turn
+   pins every `light-dark()` token above. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 body {
   background-color: var(--bg);
   color: var(--fg);
   transition: background-color 0.3s ease, color 0.3s ease;
+  /* Normalise the fallback font's x-height to the web font so the swap does
+     not shift layout or change apparent text size. */
+  font-size-adjust: from-font;
+}
+
+/* Balanced headings, prettier body wrapping (progressive enhancement). */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+.prose p,
+.prose li,
+.prose blockquote,
+.prose figcaption,
+.lead {
+  text-wrap: pretty;
+}
+
+/* Keep in-page anchors clear of the sticky header. */
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Skip link — hidden until it receives focus. */
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--fg);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  transform: translateY(-200%);
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* The skip link moves focus here; do not draw a ring around the whole page. */
+main:focus {
+  outline: none;
+}
+
+/* Theme toggle icons follow the resolved theme in CSS, not JavaScript. */
+.theme-icon {
+  display: none;
+}
+
+:root[data-theme="dark"] #sun-icon {
+  display: block;
+}
+
+:root:not([data-theme="dark"]) #moon-icon {
+  display: block;
 }
 
 /* Display type: improved kerning, ligatures & optical sizing */
@@ -285,12 +384,7 @@ button:focus-visible {
 /* Selection color */
 ::selection {
   background-color: var(--color-brand-subtle);
-  color: var(--color-brand);
-}
-
-[data-theme="dark"] ::selection {
-  background-color: var(--color-brand-subtle-dark);
-  color: #ff66cc;
+  color: light-dark(var(--color-brand), #ff66cc);
 }
 
 /* Lead paragraph */
@@ -393,10 +487,6 @@ button:focus-visible {
   background: linear-gradient(135deg, var(--color-brand-subtle) 0%, var(--color-secondary-subtle) 50%, var(--color-tertiary-subtle) 100%);
 }
 
-[data-theme="dark"] .gradient-bg-subtle {
-  background: linear-gradient(135deg, var(--color-brand-subtle-dark) 0%, var(--color-secondary-subtle-dark) 50%, var(--color-tertiary-subtle-dark) 100%);
-}
-
 .gradient-line {
   height: 2px;
   background: linear-gradient(90deg, var(--color-brand) 0%, var(--color-secondary) 50%, var(--color-tertiary) 100%);
@@ -447,6 +537,17 @@ button:focus-visible {
   display: block;
 }
 
+/* With JavaScript disabled there is no data-theme; follow the OS. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .fingerprint-dither {
+    display: none;
+  }
+
+  :root:not([data-theme]) .fingerprint-dither-dark {
+    display: block;
+  }
+}
+
 /* Fingerprint palette classes (fills follow the active theme) */
 .d-bg { fill: var(--bg); }
 .d-fg { fill: var(--fg); }
@@ -454,6 +555,14 @@ button:focus-visible {
 .d-brand { fill: var(--color-brand); }
 .d-secondary { fill: var(--color-secondary); }
 .d-tertiary { fill: var(--color-tertiary); }
+
+/* Long archive indexes: skip layout and paint for year blocks that start
+   below the fold. `contain-intrinsic-size` reserves space until the browser
+   renders (and then remembers) the real height, so the scrollbar stays put. */
+.archive-year:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto none auto 40rem;
+}
 
 /* View Transitions */
 ::view-transition-old(root) {

@@ -68,20 +68,27 @@ export function formatDateLong(date: Date): string {
   });
 }
 
+// Relative dates are rendered at build time. Intl handles pluralisation and
+// the natural forms ("yesterday", "last month"), so no string math is needed.
+const relativeFormatter = new Intl.RelativeTimeFormat('en', {
+  numeric: 'auto',
+});
+
 export function getRelativeTime(date: Date): string {
   const now = new Date();
-  const diffInMs = now.getTime() - date.getTime();
-  const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+  // Negative because the date is in the past.
+  const diffInDays = (date.getTime() - now.getTime()) / 86_400_000;
 
-  if (diffInDays < 30) {
-    return `${Math.max(1, diffInDays)} days ago`;
+  if (Math.abs(diffInDays) < 31) {
+    return relativeFormatter.format(Math.round(diffInDays), 'day');
   }
-  const diffInMonths = Math.floor(diffInDays / 30.4375);
-  if (diffInMonths < 12) {
-    return `${diffInMonths} months ago`;
+
+  const diffInMonths = diffInDays / 30.4375;
+  if (Math.abs(diffInMonths) < 12) {
+    return relativeFormatter.format(Math.round(diffInMonths), 'month');
   }
-  const diffInYears = Math.floor(diffInDays / 365.25);
-  return `${diffInYears} years ago`;
+
+  return relativeFormatter.format(Math.round(diffInDays / 365.25), 'year');
 }
 
 export function extractExcerpt(body?: string): string {

@@ -8,6 +8,8 @@ interface Props {
   description?: string;
   slug?: string;
   isHome?: boolean;
+  noindex?: boolean;
+  publishedTime?: string;
 }
 
 const {
@@ -15,22 +17,114 @@ const {
   description = 'Aniket is a full stack developer who loves Go and JavaScript.',
   slug = '',
   isHome = false,
+  noindex = false,
+  publishedTime,
 } = Astro.props;
 
-const siteTitle = isHome
-  ? 'Aniket Pant'
-  : `${title} | Aniket Pant`;
+const siteTitle = isHome ? 'Aniket Pant' : `${title} | Aniket Pant`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.aniketpant.com');
 const imageURL = new URL('/og-default.png', Astro.site || 'https://www.aniketpant.com');
+const ogType = publishedTime ? 'article' : 'website';
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+    <!-- Let the browser theme native UI and the initial canvas before paint.
+         The inline script below keeps both in sync with the stored choice. -->
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#faf8f5" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <meta name="author" content="Aniket Pant" />
+
+    <script is:inline>
+      (function () {
+        var KEY = 'theme';
+        var root = document.documentElement;
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function stored() {
+          try {
+            return localStorage.getItem(KEY);
+          } catch (e) {
+            return null;
+          }
+        }
+
+        function preference() {
+          var value = stored();
+          return value === 'light' || value === 'dark' ? value : null;
+        }
+
+        function resolved() {
+          return preference() || (mq.matches ? 'dark' : 'light');
+        }
+
+        function apply() {
+          var pref = preference();
+          var theme = pref || (mq.matches ? 'dark' : 'light');
+          root.setAttribute('data-theme', theme);
+
+          var scheme = document.querySelector('meta[name="color-scheme"]');
+          if (scheme) scheme.setAttribute('content', pref || 'light dark');
+
+          var bar = document.querySelector('meta[name="theme-color"]');
+          if (bar) bar.setAttribute('content', theme === 'dark' ? '#070514' : '#faf8f5');
+
+          var toggle = document.getElementById('theme-toggle');
+          if (toggle) {
+            toggle.setAttribute(
+              'aria-label',
+              theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+            );
+          }
+        }
+
+        window.__applyTheme = apply;
+
+        // Two visible states: follow the system (no stored value) or pin the
+        // opposite of what is currently rendered. Returning to the system
+        // preference removes the stored value instead of pinning it.
+        window.__toggleTheme = function () {
+          var next = resolved() === 'dark' ? 'light' : 'dark';
+          try {
+            if (next === (mq.matches ? 'dark' : 'light')) {
+              localStorage.removeItem(KEY);
+            } else {
+              localStorage.setItem(KEY, next);
+            }
+          } catch (e) {
+            /* Storage can be blocked; still apply the theme for this page. */
+          }
+
+          var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (document.startViewTransition && !reduce) {
+            try {
+              document.startViewTransition(apply);
+              return;
+            } catch (e) {
+              /* A transition is already running; apply directly instead. */
+            }
+          }
+          apply();
+        };
+
+        apply();
+        document.addEventListener('astro:after-swap', apply);
+        document.addEventListener('astro:page-load', apply);
+
+        // Keep the page in sync with OS changes while following the system.
+        mq.addEventListener('change', function () {
+          if (!preference()) apply();
+        });
+
+        // Keep other tabs in sync with an explicit choice.
+        window.addEventListener('storage', function (event) {
+          if (event.key === KEY) apply();
+        });
+      })();
+    </script>
 
     <title>{siteTitle}</title>
 
@@ -42,35 +136,30 @@ const imageURL = new URL('/og-default.png', Astro.site || 'https://www.aniketpan
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="alternate" href="/feed/index.xml" title="Aniket Pant" type="application/rss+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" title="Sitemap" type="application/xml" />
+    {noindex && <meta name="robots" content="noindex" />}
 
     <meta property="og:title" content={title} />
-    <meta property="og:type" content={isHome ? 'website' : 'article'} />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:image" content={imageURL.href} />
+    <meta property="og:image:alt" content="Aniket Pant" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:site_name" content="Aniket Pant" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:description" content={description} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@noremap" />
     <meta name="twitter:creator" content="@noremap" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL.href} />
+    <meta name="twitter:image:alt" content="Aniket Pant" />
 
     <ClientRouter />
-
-    <script is:inline>
-      (function () {
-        function applyTheme() {
-          const theme =
-            (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-          document.documentElement.setAttribute('data-theme', theme);
-        }
-        applyTheme();
-        document.addEventListener('astro:after-swap', applyTheme);
-      })();
-    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,10 +168,12 @@ const imageURL = new URL('/og-default.png', Astro.site || 'https://www.aniketpan
       rel="stylesheet"
     />
   </head>
-  <body class="font-sans antialiased min-h-screen flex flex-col">
+  <body class="font-sans antialiased min-h-dvh flex flex-col">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <Header isHome={isHome} />
 
-    <main class="flex-1 w-full overflow-x-hidden">
+    <main id="main" tabindex="-1" class="flex-1 w-full overflow-x-hidden">
       <slot />
     </main>
 

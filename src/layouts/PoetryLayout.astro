@@ -10,7 +10,7 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<BaseLayout title={post.title} description={post.excerpt} slug={post.slug}>
+<BaseLayout title={post.title} description={post.excerpt} slug={post.slug} publishedTime={post.isoDate}>
   <article>
     <ArticleShell title={post.title} decoColor="var(--color-tertiary)" center>
       <div slot="header-meta" class="flex items-center justify-center gap-3 text-sm text-[var(--fg-subtle)] mb-6">
