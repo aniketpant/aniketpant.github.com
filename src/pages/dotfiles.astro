@@ -1,0 +1,103 @@
+---
+import ProjectPage from '../components/ProjectPage.astro';
+import ProjectSection from '../components/ProjectSection.astro';
+import ProjectRows from '../components/ProjectRows.astro';
+import ProjectIdeas from '../components/ProjectIdeas.astro';
+
+const chips = [
+  { label: 'public', hot: true },
+  { label: 'zsh' },
+  { label: 'gnu stow' },
+  { label: 'ghostty' },
+  { label: 'keyd' },
+];
+
+const spec = [
+  { k: 'Role', v: 'Shell and terminal setup', note: 'the desktop half' },
+  { k: 'Runs on', v: 'Ubuntu, with a macOS key layer' },
+  { k: 'Built with', v: 'Zsh, GNU Stow, and a Makefile' },
+];
+
+const rows = [
+  { path: 'zsh/', text: 'The shell: options, aliases, functions, zinit in turbo mode' },
+  { path: 'ghostty/', text: 'Terminal config, plus light and dark themes matched to pi' },
+  { path: 'keyd/', text: 'A global Cmd layer and per-app masks, for the macOS muscle memory' },
+  { path: 'git/', text: 'Global config, ignore file, and commit message template' },
+  { path: 'bin/', text: 'Git helper scripts, stowed into ~/bin' },
+  { path: 'starship/', text: 'Prompt, shared by every shell that loads it' },
+  { path: 'pi/ opencode/', text: 'TUI settings, so a fresh machine starts familiar' },
+  { path: 'scripts/', text: 'Package, keybinding and keyd installers' },
+];
+
+const ideas = [
+  {
+    title: 'Stow, one folder per tool',
+    text: 'Every tool owns a folder that mirrors its place in the home directory. make install stows them, make clean unstows them, and nothing is written by hand. Dependencies and system packages live in scripts, not in the symlink farm.',
+  },
+  {
+    title: 'One palette across shell and TUI',
+    text: 'Moving between the prompt and a full-screen agent should not flash a different colour. Ghostty, pi, and opencode all follow the system theme, and the terminal themes are generated from pi\u2019s own bundled colours, so the hex values are identical.',
+  },
+  {
+    title: 'Cmd on Linux, with the cost written down',
+    text: 'A keyd layer makes Cmd behave as Ctrl everywhere, with a per-app mask so the terminal keeps its own shortcuts. Redefining Super takes GNOME\u2019s own chords with it. The README says which ones broke, and which Ghostty bindings still do not fire.',
+  },
+  {
+    title: 'Startup measured, not guessed',
+    text: 'Plugins load through zinit in turbo mode, deferred until first use. Shell startup holds around 0.6 seconds, which is the number that decides whether a new plugin is worth adding.',
+  },
+];
+---
+
+<ProjectPage
+  title="dotfiles"
+  repo="dotfiles"
+  lede="My shell and terminal setup, stowed onto a new machine."
+  description="A Zsh, Ghostty and keyd setup managed with GNU Stow: one palette across the shell and the TUI, and macOS muscle memory ported to Linux."
+  chips={chips}
+  spec={spec}
+>
+  <ProjectSection n="01" title="Background">
+    <p class="mt-2 text-[15px] text-[var(--fg-muted)]">
+      The shell is where the work actually happens, and it is the part of a machine that is easiest
+      to leave behind. A prompt tweak, an alias, a terminal colour that took an evening to like:
+      none of it survives a reinstall unless it is written down.
+    </p>
+    <p class="mt-3 text-[15px] text-[var(--fg-muted)]">
+      This repository is that shell. Zsh with a fast startup, a terminal configured the same way on
+      every machine, and a Cmd key layer that makes a Linux desktop behave like the laptop my hands
+      learned on. It is the desktop half of the setup;{' '}
+      <a
+        href="/droidfiles/"
+        class="text-[var(--color-tertiary)] hover:text-[var(--color-tertiary-hover)] hover:underline underline-offset-4 transition-colors"
+        >droidfiles</a
+      >
+      is the phone, and{' '}
+      <a
+        href="/botfiles/"
+        class="text-[var(--color-tertiary)] hover:text-[var(--color-tertiary-hover)] hover:underline underline-offset-4 transition-colors"
+        >botfiles</a
+      >
+      is the agent.
+    </p>
+  </ProjectSection>
+
+  <ProjectSection n="02" title="Shape">
+    <ProjectRows items={rows} />
+  </ProjectSection>
+
+  <ProjectSection n="03" title="Design ideas">
+    <ProjectIdeas items={ideas} />
+  </ProjectSection>
+
+  <p slot="note">
+    The repository is public:{' '}
+    <a
+      href="https://github.com/aniketpant/dotfiles"
+      class="text-[var(--color-tertiary)] hover:text-[var(--color-tertiary-hover)] hover:underline underline-offset-4 transition-colors"
+      target="_blank"
+      rel="noopener noreferrer">github.com/aniketpant/dotfiles</a
+    >. It installs with a Makefile and GNU Stow; the README carries the install steps and the
+    trade-offs.
+  </p>
+</ProjectPage>

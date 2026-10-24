@@ -31,6 +31,15 @@ export const projects: Project[] = [
     tags: ['android', 'shell', 'termux'],
     featured: true,
   },
+  {
+    slug: 'dotfiles',
+    name: 'dotfiles',
+    href: '/dotfiles/',
+    blurb:
+      'My Zsh, Ghostty and keyd setup, stowed onto a new machine: one palette across the shell and the TUI.',
+    tags: ['shell', 'zsh', 'stow'],
+    featured: true,
+  },
 ];
 
 export const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
