@@ -12,36 +12,36 @@ const chips = [
 ];
 
 const spec = [
-  { k: 'Role', v: 'Agent configuration', note: 'what every session loads' },
-  { k: 'Runs in', v: 'pi and OpenCode V2', note: 'one definition, two harnesses' },
+  { k: 'Role', v: 'Agent configuration', note: 'loaded by every session' },
+  { k: 'Runs in', v: 'pi and OpenCode V2' },
   { k: 'Built with', v: 'TypeScript and bun workspaces' },
 ];
 
 const rows = [
   { path: 'packages/', text: 'Shared logic as bun workspaces, each with tests' },
-  { path: 'extensions/', text: 'Portable definitions: tools, commands, hooks' },
-  { path: 'adapters/', text: 'The harness edge — pi, OpenCode, lane' },
-  { path: 'skills/', text: 'Agent Skills shared by every session' },
-  { path: 'prompts/', text: 'Prompt templates, reachable as /name in the editor' },
-  { path: 'themes/', text: 'TUI themes, so a new machine inherits them' },
+  { path: 'extensions/', text: 'Tools, commands and hooks, defined once' },
+  { path: 'adapters/', text: 'The harness edge: pi, OpenCode, lane' },
+  { path: 'skills/', text: 'Agent Skills for every session' },
+  { path: 'prompts/', text: 'Prompt templates, available as /name' },
+  { path: 'themes/', text: 'TUI themes' },
 ];
 
 const ideas = [
   {
     title: 'One definition per feature',
-    text: 'An extension describes what it does against a fixed port, and never names a harness. Adding a second harness means writing one adapter, not a second copy of the feature.',
+    text: 'An extension describes its behaviour without naming a harness. Adding a second harness takes one adapter, not a second copy of the feature.',
   },
   {
-    title: 'The adapter owns the difference',
-    text: 'pi runs one extension instance per session. OpenCode loads one plugin per location that serves many sessions. That mismatch lives in a map inside the adapter, so the extension code stays unaware of it.',
+    title: 'The adapter holds the difference',
+    text: 'pi runs one extension instance per session. OpenCode loads one plugin that serves many sessions. The adapter keeps a map from session to instance, so the extension code does not handle it.',
   },
   {
-    title: 'Skills travel with what needs them',
-    text: 'Anything every session may usefully see lives in the shared skills folder. A skill that only makes sense next to one extension lives inside that extension, so installing or removing it carries the knowledge along.',
+    title: 'Skills sit with what uses them',
+    text: 'Skills used by every session are in skills/. A skill that only applies to one extension lives in that extension\u2019s folder, so installing or removing the extension moves the skill too.',
   },
   {
     title: 'Small entries, cheap reloads',
-    text: 'The pi side of an extension is a single line that mounts the factory. Editing a file and calling /reload stays fast, which is what makes working on the harness itself tolerable.',
+    text: 'The pi entry of an extension is one line that mounts the factory. /reload after an edit stays fast.',
   },
 ];
 ---
@@ -49,27 +49,19 @@ const ideas = [
 <ProjectPage
   title="botfiles"
   repo="botfiles"
-  lede="My agent configuration, version-controlled like my dotfiles."
+  lede="Agent configuration for pi and OpenCode V2."
   description="My agent configuration as a pi package: extensions, skills, prompt templates, and themes, with adapters for OpenCode V2."
   chips={chips}
   spec={spec}
 >
   <ProjectSection n="01" title="Background">
     <p class="mt-2 text-[15px] text-[var(--fg-muted)]">
-      Agent setup rots quietly. A skill added for one task, a theme tuned at midnight, a prompt
-      template that only exists on the laptop where it was written. None of it looks like software
-      until the day a new machine needs it.
+      The configuration my coding agents load: extensions, skills, prompts and themes. It is one
+      native <strong class="text-[var(--fg)]">pi</strong> package, with tests and CI.
     </p>
     <p class="mt-3 text-[15px] text-[var(--fg-muted)]">
-      botfiles treats that configuration as a repository: one native{' '}
-      <strong class="text-[var(--fg)]">pi</strong> package holding extensions, skills, prompts and
-      themes, with tests and CI. The same extensions also run under{' '}
-      <strong class="text-[var(--fg)]">OpenCode V2</strong>, because the ideas should not be trapped
-      in one harness.
-    </p>
-    <p class="mt-3 text-[15px] text-[var(--fg-muted)]">
-      It is deliberately not a framework. Each piece is small, readable, and replaceable, and the
-      repository is where the trade-offs are written down next to the code that makes them.
+      The same extensions run under <strong class="text-[var(--fg)]">OpenCode V2</strong>. Each
+      feature is defined once, and a thin adapter connects it to the harness.
     </p>
   </ProjectSection>
 
@@ -82,11 +74,10 @@ const ideas = [
   </ProjectSection>
 
   <p slot="note">
-    The repository is private; this page is its public summary. The machine half of the setup is{' '}
-    <a
+    The repository is private; this page is its public summary. The phone setup is <a
       href="/droidfiles/"
       class="text-[var(--color-tertiary)] hover:text-[var(--color-tertiary-hover)] hover:underline underline-offset-4 transition-colors"
-      >droidfiles →</a
-    >
+      >droidfiles</a
+    >.
   </p>
 </ProjectPage>

@@ -12,37 +12,37 @@ const chips = [
 ];
 
 const spec = [
-  { k: 'Role', v: 'Machine setup', note: 'the phone I work from' },
+  { k: 'Role', v: 'Machine setup', note: 'for this phone' },
   { k: 'Runs on', v: 'Termux on Android' },
   { k: 'Built with', v: 'Bash, with shell tests' },
 ];
 
 const rows = [
-  { path: 'packages.txt', text: 'Packages installed on purpose, dependencies left out' },
-  { path: 'bootstrap.sh', text: 'Updates lists, installs packages.txt, then runs the installer' },
-  { path: 'install.sh', text: 'Links home/* into $HOME, with a backup first' },
-  { path: 'home/.bashrc', text: 'History, aliases, EDITOR, and a larger node heap' },
+  { path: 'packages.txt', text: 'Packages installed on purpose; dependencies are left out' },
+  { path: 'bootstrap.sh', text: 'Updates package lists, installs packages.txt, runs install.sh' },
+  { path: 'install.sh', text: 'Links home/* into $HOME, after a backup' },
+  { path: 'home/.bashrc', text: 'History, aliases, EDITOR, node heap size' },
   { path: 'home/bin/', text: 'Executables, including the Pi Pocket supervisor' },
-  { path: 'pi-pocket/extensions/', text: 'Drop-ins: wake lock, classifier, spec gate, research' },
+  { path: 'pi-pocket/extensions/', text: 'Wake lock, classifier, spec gate, research' },
   { path: 'test/run.sh', text: 'Shell tests, run in a temporary home directory' },
 ];
 
 const ideas = [
   {
-    title: 'Restore, then keep working',
-    text: 'The whole point is that a wiped phone costs minutes. bootstrap.sh installs the packages I chose on purpose, then the installer links the dotfiles back into place.',
+    title: 'Restore in one run',
+    text: 'bootstrap.sh installs the packages from packages.txt, then install.sh links the dotfiles back into place. A Termux reinstall takes minutes.',
   },
   {
-    title: 'A backup before every replacement',
-    text: 'A real file that differs from the repository copy is moved under a timestamped folder before it is replaced. Links and identical files are swapped silently, because nothing is lost there.',
+    title: 'Backup before replacing',
+    text: 'A real file that differs from the repository copy is moved to ~/.droidfiles-backup/ under a timestamp before it is replaced. An existing symlink, or a file that already matches, is replaced with no backup.',
   },
   {
     title: 'Symlinks, except where Android refuses them',
-    text: 'Termux:Widget and Termux:Boot resolve symlinks before running a script, and refuse one whose real path is outside their folders. Executables stay in home/bin, and the installer writes the two wrappers itself, so the setup keeps working without copies drifting.',
+    text: 'Termux:Widget and Termux:Boot resolve symlinks and refuse a script whose real path is outside their folders. Executables stay in home/bin, and install.sh writes the two wrappers as real files.',
   },
   {
-    title: 'A hand-kept package list',
-    text: 'pkg has no installed-on-purpose flag, so packages.txt is a list I maintain by hand. When something is worth keeping, it gets a line. Dependencies are deliberately absent.',
+    title: 'Hand-kept package list',
+    text: 'pkg has no installed-on-purpose flag, so packages.txt is maintained by hand. It lists what I chose to install, never dependencies.',
   },
 ];
 ---
@@ -50,22 +50,19 @@ const ideas = [
 <ProjectPage
   title="droidfiles"
   repo="droidfiles"
-  lede="My Termux setup on Android, restored by one script."
+  lede="My Termux setup on Android, rebuilt by one script."
   description="My Termux setup on Android: the packages I install on purpose and the dotfiles I care about, restored by one script."
   chips={chips}
   spec={spec}
 >
   <ProjectSection n="01" title="Background">
     <p class="mt-2 text-[15px] text-[var(--fg-muted)]">
-      This phone is my main machine, so its setup matters the way a laptop's would. A Termux
-      reinstall used to mean an evening of remembering: which packages, which aliases, which
-      settings I had grown used to without noticing.
+      This phone is my main machine. A Termux reinstall used to mean remembering which packages,
+      aliases and settings I had added.
     </p>
     <p class="mt-3 text-[15px] text-[var(--fg-muted)]">
-      droidfiles is that memory written down — the packages I install on purpose and the dotfiles I
-      care about, plus the drop-ins that make Pi Pocket behave on a phone. It is the machine half of
-      the setup; the agent half is{' '}
-      <a
+      This repository is that list: the packages I install on purpose, the dotfiles I want back, and
+      the Pi Pocket drop-ins. The agent configuration is in <a
         href="/botfiles/"
         class="text-[var(--color-tertiary)] hover:text-[var(--color-tertiary-hover)] hover:underline underline-offset-4 transition-colors"
         >botfiles</a
@@ -82,11 +79,11 @@ const ideas = [
   </ProjectSection>
 
   <p slot="note">
-    The repository is private; this page is its public summary. Skills, prompts and adapters are not
-    here: they live in <a
+    The repository is private; this page is its public summary. Skills, prompts and adapters are in{' '}
+    <a
       href="/botfiles/"
       class="text-[var(--color-tertiary)] hover:text-[var(--color-tertiary-hover)] hover:underline underline-offset-4 transition-colors"
-      >botfiles →</a
-    >. Secrets are never in this repo.
+      >botfiles</a
+    >. No secrets are in this repository.
   </p>
 </ProjectPage>
