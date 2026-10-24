@@ -1,16 +1,17 @@
 ---
+// This component renders no script on purpose. The header exists twice (one
+// for each breakpoint) and survives client-side navigation, so the click is
+// handled by one listener in BaseLayout, which also labels every instance.
 ---
 
 <button
   type="button"
-  id="theme-toggle"
+  data-theme-toggle
   aria-label="Switch to dark theme"
   class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--fg-muted)] hover:text-[var(--fg)] hover:border-[var(--color-secondary)] transition-all duration-200"
-  transition:persist
 >
   <svg
-    id="sun-icon"
-    class="theme-icon w-4 h-4"
+    class="theme-icon theme-sun w-4 h-4"
     fill="none"
     stroke="currentColor"
     stroke-width="2"
@@ -21,8 +22,7 @@
     <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
   </svg>
   <svg
-    id="moon-icon"
-    class="theme-icon w-4 h-4"
+    class="theme-icon theme-moon w-4 h-4"
     fill="none"
     stroke="currentColor"
     stroke-width="2"
@@ -32,19 +32,3 @@
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
   </svg>
 </button>
-
-<script is:inline>
-  (function () {
-    var toggle = document.getElementById('theme-toggle');
-
-    if (toggle && !toggle.dataset.themeBound) {
-      toggle.dataset.themeBound = 'true';
-      toggle.addEventListener('click', function () {
-        if (typeof window.__toggleTheme === 'function') window.__toggleTheme();
-      });
-    }
-
-    // The icon and label are driven by the shared theme logic in BaseLayout.
-    if (typeof window.__applyTheme === 'function') window.__applyTheme();
-  })();
-</script>

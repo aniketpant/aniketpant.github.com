@@ -72,13 +72,12 @@ const ogType = publishedTime ? 'article' : 'website';
           var bar = document.querySelector('meta[name="theme-color"]');
           if (bar) bar.setAttribute('content', theme === 'dark' ? '#070514' : '#faf8f5');
 
-          var toggle = document.getElementById('theme-toggle');
-          if (toggle) {
+          document.querySelectorAll('[data-theme-toggle]').forEach(function (toggle) {
             toggle.setAttribute(
               'aria-label',
               theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
             );
-          }
+          });
         }
 
         window.__applyTheme = apply;
@@ -110,6 +109,16 @@ const ogType = publishedTime ? 'article' : 'website';
           apply();
         };
 
+        // One delegated listener, registered once in the head. The header is
+        // swapped on client-side navigation and its own scripts do not re-run,
+        // so per-button listeners would die with the old header.
+        document.addEventListener('click', function (event) {
+          var target = event.target;
+          var toggle =
+            target && target.closest ? target.closest('[data-theme-toggle]') : null;
+          if (toggle) window.__toggleTheme();
+        });
+
         apply();
         document.addEventListener('astro:after-swap', apply);
         document.addEventListener('astro:page-load', apply);
@@ -122,6 +131,51 @@ const ogType = publishedTime ? 'article' : 'website';
         // Keep other tabs in sync with an explicit choice.
         window.addEventListener('storage', function (event) {
           if (event.key === KEY) apply();
+        });
+      })();
+    </script>
+
+    <script is:inline>
+      // The mobile Menu lives inside the swapped header, so its handler is
+      // delegated from the document and registered only once.
+      (function () {
+        function panel() {
+          return document.getElementById('mobile-nav');
+        }
+
+        function trigger() {
+          return document.getElementById('nav-toggle');
+        }
+
+        function setOpen(open) {
+          var p = panel();
+          var t = trigger();
+          if (!p || !t) return;
+          p.classList.toggle('hidden', !open);
+          p.dataset.open = String(open);
+          t.setAttribute('aria-expanded', String(open));
+        }
+
+        document.addEventListener('click', function (event) {
+          var target = event.target;
+          if (!target || !target.closest) return;
+
+          if (target.closest('#nav-toggle')) {
+            var p = panel();
+            setOpen(!p || p.dataset.open !== 'true');
+            return;
+          }
+
+          var open = panel();
+          if (open && open.dataset.open === 'true' && !open.contains(target)) setOpen(false);
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') setOpen(false);
+        });
+
+        document.addEventListener('astro:before-swap', function () {
+          setOpen(false);
         });
       })();
     </script>

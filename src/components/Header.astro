@@ -137,29 +137,3 @@ const isCurrent = (href: string) => pathname === href.replace(/\/$/, '');
   </div>
 </header>
 
-<script is:inline>
-  (function () {
-    var toggle = document.getElementById('nav-toggle');
-    var panel = document.getElementById('mobile-nav');
-    if (!toggle || !panel || toggle.dataset.navBound) return;
-    toggle.dataset.navBound = 'true';
-
-    function setOpen(open) {
-      panel.classList.toggle('hidden', !open);
-      panel.dataset.open = String(open);
-      toggle.setAttribute('aria-expanded', String(open));
-    }
-
-    toggle.addEventListener('click', function () {
-      setOpen(panel.dataset.open !== 'true');
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') setOpen(false);
-    });
-
-    document.addEventListener('click', function (event) {
-      if (!panel.contains(event.target) && !toggle.contains(event.target)) setOpen(false);
-    });
-  })();
-</script>

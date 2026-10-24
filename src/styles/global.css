@@ -226,16 +226,17 @@ main:focus {
   outline: none;
 }
 
-/* Theme toggle icons follow the resolved theme in CSS, not JavaScript. */
+/* Theme toggle icons follow the resolved theme in CSS, not JavaScript.
+   The header renders one toggle per breakpoint, so these are classes, not ids. */
 .theme-icon {
   display: none;
 }
 
-:root[data-theme="dark"] #sun-icon {
+:root[data-theme="dark"] .theme-sun {
   display: block;
 }
 
-:root:not([data-theme="dark"]) #moon-icon {
+:root:not([data-theme="dark"]) .theme-moon {
   display: block;
 }
 
