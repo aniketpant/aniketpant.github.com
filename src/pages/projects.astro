@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    name: 'botfiles',
+    href: '/botfiles/',
+    blurb: 'Agent configuration as one pi package, with adapters that run the same extensions under OpenCode V2.',
+    tags: ['config', 'typescript', 'pi'],
+  },
+  {
+    name: 'droidfiles',
+    href: '/droidfiles/',
+    blurb: 'My Termux setup on Android: the packages I install on purpose, the dotfiles I care about, one restore script.',
+    tags: ['android', 'shell', 'termux'],
+  },
+];
+---
+
+<BaseLayout
+  title="Projects"
+  slug="projects"
+  description="Things I build and keep running: agent configuration, machine setup, and the tools in between."
+>
+  <div class="animate-fade-in">
+    <header class="relative pt-16 md:pt-24 pb-10 md:pb-12 overflow-hidden">
+      <div
+        class="deco-blob bg-[var(--color-secondary)] w-[400px] h-[400px] -top-32 -right-32 opacity-[0.08]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="mx-auto max-w-3xl px-6 md:px-8 relative">
+        <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--fg-subtle)]">
+          Things I build
+        </p>
+        <h1
+          class="mt-2.5 font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.04] tracking-tight gradient-text"
+        >
+          Projects
+        </h1>
+        <p class="mt-3.5 text-lg text-[var(--fg-muted)] max-w-[52ch]">
+          The setup I run every day, and the parts of it I keep as repositories.
+        </p>
+        <div class="gradient-line mt-6 w-20" aria-hidden="true"></div>
+      </div>
+    </header>
+
+    <div class="mx-auto max-w-3xl px-6 md:px-8 pb-16 md:pb-24">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {
+          projects.map((project) => (
+            <a
+              href={project.href}
+              class="group flex flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-brand)]"
+            >
+              <h2 class="m-0 font-serif text-[19px] font-semibold text-[var(--fg)] group-hover:text-[var(--color-brand)] transition-colors duration-200">
+                {project.name}
+              </h2>
+              <p class="mt-1 flex-1 text-[13.5px] text-[var(--fg-muted)]">{project.blurb}</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                {project.tags.map((tag) => (
+                  <span class="font-mono text-[11px] font-medium px-2 py-0.5 rounded-md border border-[var(--border)] text-[var(--fg-subtle)] bg-[var(--bg-secondary)]">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </a>
+          ))
+        }
+      </div>
+
+      <p class="mt-9 pt-4 border-t border-[var(--border)] text-[12.5px] text-[var(--fg-subtle)]">
+        Each page is a public summary of a private repository. The rest of my work is on
+        <a
+          href="https://github.com/aniketpant"
+          class="text-[var(--color-tertiary)] hover:text-[var(--color-tertiary-hover)] hover:underline underline-offset-4 transition-colors"
+          target="_blank"
+          rel="noopener noreferrer">GitHub</a
+        >.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

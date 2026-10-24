@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Chip {
+  label: string;
+  hot?: boolean;
+}
+
+interface SpecRow {
+  k: string;
+  v: string;
+  note?: string;
+}
+
+interface Props {
+  title: string;
+  lede: string;
+  description?: string;
+  owner?: string;
+  repo?: string;
+  chips?: Chip[];
+  spec?: SpecRow[];
+}
+
+const {
+  title,
+  lede,
+  description,
+  owner = 'aniketpant',
+  repo = title,
+  chips = [],
+  spec = [],
+} = Astro.props;
+---
+
+<BaseLayout title={title} slug={repo} description={description}>
+  <div class="animate-fade-in">
+    <header class="relative pt-16 md:pt-24 pb-10 md:pb-12 overflow-hidden">
+      <div
+        class="deco-blob bg-[var(--color-brand)] w-[400px] h-[400px] -top-32 -right-32 opacity-[0.08]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="mx-auto max-w-3xl px-6 md:px-8 relative">
+        <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--fg-subtle)]">
+          <span class="text-[var(--color-brand)]">{owner}</span> / {repo}
+        </p>
+
+        <h1
+          class="mt-2.5 font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.04] tracking-tight gradient-text"
+        >
+          {title}
+        </h1>
+
+        <p class="mt-3.5 text-lg text-[var(--fg-muted)] max-w-[52ch]">{lede}</p>
+
+        {
+          chips.length > 0 && (
+            <div class="mt-5 flex flex-wrap gap-1.5">
+              {chips.map((chip) => (
+                <span
+                  class:list={[
+                    'font-mono text-[11px] font-medium px-2.5 py-1 rounded-md border',
+                    chip.hot
+                      ? 'border-transparent text-[var(--color-brand)] bg-[var(--color-brand-subtle)]'
+                      : 'border-[var(--border)] text-[var(--fg-muted)] bg-[var(--bg-secondary)]',
+                  ]}
+                >
+                  {chip.label}
+                </span>
+              ))}
+            </div>
+          )
+        }
+
+        <div class="gradient-line mt-6 w-20" aria-hidden="true"></div>
+      </div>
+    </header>
+
+    <div class="mx-auto max-w-3xl px-6 md:px-8 pb-16 md:pb-24">
+      {
+        spec.length > 0 && (
+          <dl class="border-t border-[var(--border)]">
+            {spec.map((row) => (
+              <div class="flex gap-4 py-3 border-b border-[var(--border)]">
+                <dt class="basis-24 shrink-0 pt-0.5 font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--fg-subtle)]">
+                  {row.k}
+                </dt>
+                <dd class="m-0 text-[15px] text-[var(--fg)]">
+                  {row.v}
+                  {row.note && <span class="text-[var(--fg-muted)]"> — {row.note}</span>}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        )
+      }
+
+      <slot />
+
+      <div class="mt-9 pt-4 border-t border-[var(--border)] text-[12.5px] text-[var(--fg-subtle)]">
+        <slot name="note" />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,92 @@
+---
+import ProjectPage from '../components/ProjectPage.astro';
+import ProjectSection from '../components/ProjectSection.astro';
+import ProjectRows from '../components/ProjectRows.astro';
+import ProjectIdeas from '../components/ProjectIdeas.astro';
+
+const chips = [
+  { label: 'private', hot: true },
+  { label: 'bun' },
+  { label: 'pi package' },
+  { label: 'OpenCode V2 adapters' },
+];
+
+const spec = [
+  { k: 'Role', v: 'Agent configuration', note: 'what every session loads' },
+  { k: 'Runs in', v: 'pi and OpenCode V2', note: 'one definition, two harnesses' },
+  { k: 'Built with', v: 'TypeScript and bun workspaces' },
+];
+
+const rows = [
+  { path: 'packages/', text: 'Shared logic as bun workspaces, each with tests' },
+  { path: 'extensions/', text: 'Portable definitions: tools, commands, hooks' },
+  { path: 'adapters/', text: 'The harness edge — pi, OpenCode, lane' },
+  { path: 'skills/', text: 'Agent Skills shared by every session' },
+  { path: 'prompts/', text: 'Prompt templates, reachable as /name in the editor' },
+  { path: 'themes/', text: 'TUI themes, so a new machine inherits them' },
+];
+
+const ideas = [
+  {
+    title: 'One definition per feature',
+    text: 'An extension describes what it does against a fixed port, and never names a harness. Adding a second harness means writing one adapter, not a second copy of the feature.',
+  },
+  {
+    title: 'The adapter owns the difference',
+    text: 'pi runs one extension instance per session. OpenCode loads one plugin per location that serves many sessions. That mismatch lives in a map inside the adapter, so the extension code stays unaware of it.',
+  },
+  {
+    title: 'Skills travel with what needs them',
+    text: 'Anything every session may usefully see lives in the shared skills folder. A skill that only makes sense next to one extension lives inside that extension, so installing or removing it carries the knowledge along.',
+  },
+  {
+    title: 'Small entries, cheap reloads',
+    text: 'The pi side of an extension is a single line that mounts the factory. Editing a file and calling /reload stays fast, which is what makes working on the harness itself tolerable.',
+  },
+];
+---
+
+<ProjectPage
+  title="botfiles"
+  repo="botfiles"
+  lede="My agent configuration, version-controlled like my dotfiles."
+  description="My agent configuration as a pi package: extensions, skills, prompt templates, and themes, with adapters for OpenCode V2."
+  chips={chips}
+  spec={spec}
+>
+  <ProjectSection n="01" title="Background">
+    <p class="mt-2 text-[15px] text-[var(--fg-muted)]">
+      Agent setup rots quietly. A skill added for one task, a theme tuned at midnight, a prompt
+      template that only exists on the laptop where it was written. None of it looks like software
+      until the day a new machine needs it.
+    </p>
+    <p class="mt-3 text-[15px] text-[var(--fg-muted)]">
+      botfiles treats that configuration as a repository: one native
+      <strong class="text-[var(--fg)]">pi</strong> package holding extensions, skills, prompts and
+      themes, with tests and CI. The same extensions also run under
+      <strong class="text-[var(--fg)]">OpenCode V2</strong>, because the ideas should not be trapped
+      in one harness.
+    </p>
+    <p class="mt-3 text-[15px] text-[var(--fg-muted)]">
+      It is deliberately not a framework. Each piece is small, readable, and replaceable, and the
+      repository is where the trade-offs are written down next to the code that makes them.
+    </p>
+  </ProjectSection>
+
+  <ProjectSection n="02" title="Shape">
+    <ProjectRows items={rows} />
+  </ProjectSection>
+
+  <ProjectSection n="03" title="Design ideas">
+    <ProjectIdeas items={ideas} />
+  </ProjectSection>
+
+  <p slot="note">
+    The repository is private; this page is its public summary. The machine half of the setup is
+    <a
+      href="/droidfiles/"
+      class="text-[var(--color-tertiary)] hover:text-[var(--color-tertiary-hover)] hover:underline underline-offset-4 transition-colors"
+      >droidfiles →</a
+    >
+  </p>
+</ProjectPage>
