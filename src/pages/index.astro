@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DitherBackdrop from '../components/DitherBackdrop.astro';
 import { processPost, sortPostsDesc } from '../utils/posts';
+import { featuredProjects } from '../data/projects';
 
 const rawPosts = await getCollection('posts');
 const processed = rawPosts.map(processPost);
@@ -55,6 +56,29 @@ const nextFive = sortedPosts.slice(5, 10);
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Projects — a compact strip of the things I keep as repositories -->
+      <section aria-label="Projects" class="pb-16 md:pb-24">
+        <div class="flex items-baseline gap-4 mb-8">
+          <h2 class="text-sm font-medium uppercase tracking-widest text-[var(--fg-subtle)]">Projects</h2>
+          <div class="flex-1 h-px bg-[var(--border)]"></div>
+          <a href="/projects/" class="text-sm font-medium text-[var(--color-brand)] hover:text-[var(--color-brand-hover)] transition-colors">All projects</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {featuredProjects.map((project) => (
+            <a href={project.href} class="group flex flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-brand)]">
+              <h3 class="m-0 font-serif text-[17px] font-semibold text-[var(--fg)] group-hover:text-[var(--color-brand)] transition-colors duration-200">{project.name}</h3>
+              <p class="mt-1 flex-1 text-[13px] leading-relaxed text-[var(--fg-muted)]">{project.blurb}</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                {project.tags.map((tag) => (
+                  <span class="font-mono text-[11px] font-medium px-2 py-0.5 rounded-md border border-[var(--border)] text-[var(--fg-subtle)] bg-[var(--bg-secondary)]">{tag}</span>
+                ))}
+              </div>
+            </a>
+          ))}
         </div>
       </section>
 

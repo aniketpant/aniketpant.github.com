@@ -9,6 +9,7 @@ const { isHome = false } = Astro.props;
 
 const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const navItems = [
+  { label: 'Projects', href: '/projects/' },
   { label: 'About', href: '/about/' },
   { label: 'Speaking', href: '/speaking/' },
   { label: 'Archive', href: '/archive/' },
@@ -43,7 +44,7 @@ const navItems = [
                     href={item.href}
                     aria-current={isCurrent ? 'page' : undefined}
                     class:list={[
-                      'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+                      'px-2 sm:px-3 py-2 rounded-lg text-[13px] sm:text-sm font-medium transition-all duration-200',
                       isCurrent
                         ? 'text-[var(--fg)] bg-[var(--bg-secondary)]'
                         : 'text-[var(--fg-muted)] hover:text-[var(--fg)] hover:bg-[var(--bg-secondary)]',
@@ -56,7 +57,7 @@ const navItems = [
             })}
           </ul>
         </nav>
-        <div class="ml-3 pl-3 border-l border-[var(--border)]">
+        <div class="ml-2 pl-2 sm:ml-3 sm:pl-3 border-l border-[var(--border)]">
           <ThemeToggle />
         </div>
       </div>
