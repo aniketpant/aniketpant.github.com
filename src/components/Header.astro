@@ -14,6 +14,8 @@ const navItems = [
   { label: 'Speaking', href: '/speaking/' },
   { label: 'Archive', href: '/archive/' },
 ];
+
+const isCurrent = (href: string) => pathname === href.replace(/\/$/, '');
 ---
 
 <header
@@ -21,10 +23,7 @@ const navItems = [
   role="banner"
 >
   <div class="mx-auto max-w-5xl px-5 sm:px-6 md:px-8">
-    <!-- Wraps on small screens: the wordmark and the toggle share the first
-         row, the links get a row of their own. Four links plus both controls
-         need about 412px on one line, which no phone has. -->
-    <div class="flex flex-wrap items-center justify-between gap-y-1 py-2 sm:h-16 sm:py-0">
+    <div class="flex items-center justify-between h-14 sm:h-16">
       <div class="flex-shrink-0">
         {isHome ? (
           <h1 class="text-base sm:text-lg font-semibold tracking-tight">
@@ -47,19 +46,19 @@ const navItems = [
         )}
       </div>
 
-      <nav aria-label="Main navigation" class="order-3 w-full sm:order-2 sm:w-auto">
-        <ul class="flex items-center gap-0.5 overflow-x-auto">
-          {
-            navItems.map((item) => {
-              const isCurrent = pathname === item.href.replace(/\/$/, '');
-              return (
+      <!-- Desktop: the links sit in the bar. -->
+      <div class="hidden sm:flex items-center gap-1">
+        <nav aria-label="Main navigation">
+          <ul class="flex items-center gap-0.5">
+            {
+              navItems.map((item) => (
                 <li>
                   <a
                     href={item.href}
-                    aria-current={isCurrent ? 'page' : undefined}
+                    aria-current={isCurrent(item.href) ? 'page' : undefined}
                     class:list={[
-                      'block px-2 sm:px-3 py-2 rounded-lg text-[13px] sm:text-sm font-medium whitespace-nowrap transition-all duration-200',
-                      isCurrent
+                      'block px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-200',
+                      isCurrent(item.href)
                         ? 'text-[var(--fg)] bg-[var(--bg-secondary)]'
                         : 'text-[var(--fg-muted)] hover:text-[var(--fg)] hover:bg-[var(--bg-secondary)]',
                     ]}
@@ -67,15 +66,100 @@ const navItems = [
                     {item.label}
                   </a>
                 </li>
-              );
-            })
-          }
-        </ul>
-      </nav>
+              ))
+            }
+          </ul>
+        </nav>
+        <div class="ml-3 pl-3 border-l border-[var(--border)]">
+          <ThemeToggle />
+        </div>
+      </div>
 
-      <div class="order-2 sm:order-3 flex items-center sm:ml-3 sm:pl-3 sm:border-l sm:border-[var(--border)]">
+      <!-- Mobile: the same links open from a named button, so the bar stays
+           one row tall and the trigger says what it does. -->
+      <div class="flex sm:hidden items-center gap-2">
         <ThemeToggle />
+        <button
+          type="button"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--surface)] text-[13px] font-medium text-[var(--fg)]"
+        >
+          Menu
+          <svg
+            class="w-3.5 h-3.5 text-[var(--fg-subtle)]"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
+
+  <div
+    id="mobile-nav"
+    class="hidden sm:hidden absolute left-0 right-0 top-full border-b border-[var(--border)] bg-[var(--surface)] shadow-lg"
+    data-open="false"
+  >
+    <nav aria-label="Main navigation">
+      <ul>
+        {
+          navItems.map((item) => (
+            <li class="border-b border-[var(--border-subtle)] last:border-b-0">
+              <a
+                href={item.href}
+                aria-current={isCurrent(item.href) ? 'page' : undefined}
+                class:list={[
+                  'flex items-center justify-between px-5 py-3 text-[15px] transition-colors duration-200',
+                  isCurrent(item.href)
+                    ? 'text-[var(--color-brand)] font-medium'
+                    : 'text-[var(--fg)] hover:bg-[var(--bg-secondary)]',
+                ]}
+              >
+                <span>{item.label}</span>
+                {isCurrent(item.href) && (
+                  <span class="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--fg-subtle)]">
+                    here
+                  </span>
+                )}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<script is:inline>
+  (function () {
+    var toggle = document.getElementById('nav-toggle');
+    var panel = document.getElementById('mobile-nav');
+    if (!toggle || !panel || toggle.dataset.navBound) return;
+    toggle.dataset.navBound = 'true';
+
+    function setOpen(open) {
+      panel.classList.toggle('hidden', !open);
+      panel.dataset.open = String(open);
+      toggle.setAttribute('aria-expanded', String(open));
+    }
+
+    toggle.addEventListener('click', function () {
+      setOpen(panel.dataset.open !== 'true');
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') setOpen(false);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!panel.contains(event.target) && !toggle.contains(event.target)) setOpen(false);
+    });
+  })();
+</script>
