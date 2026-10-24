@@ -41,15 +41,21 @@ const nextFive = sortedPosts.slice(5, 10);
               <em class="text-[var(--fg)] not-italic font-medium">write</em> and{' '}
               <em class="text-[var(--fg)] not-italic font-medium">code</em>.
             </p>
-            <div class="mt-6 flex items-center gap-4">
-              <a href="/about/" class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-brand)] hover:text-[var(--color-brand-hover)] transition-colors group">
+            <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
+              <a href="/about/" data-hero-link class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-brand)] hover:text-[var(--color-brand-hover)] transition-colors group">
                 About me
                 <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
-              <a href="/archive/" class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-secondary)] hover:text-[var(--color-secondary-hover)] transition-colors group">
+              <a href="/archive/" data-hero-link class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-brand)] hover:text-[var(--color-brand-hover)] transition-colors group">
                 All posts
+                <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="/projects/" data-hero-link class="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-brand)] hover:text-[var(--color-brand-hover)] transition-colors group">
+                All projects
                 <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
@@ -64,7 +70,6 @@ const nextFive = sortedPosts.slice(5, 10);
         <div class="flex items-baseline gap-4 mb-8">
           <h2 class="text-sm font-medium uppercase tracking-widest text-[var(--fg-subtle)]">Projects</h2>
           <div class="flex-1 h-px bg-[var(--border)]"></div>
-          <a href="/projects/" class="text-sm font-medium text-[var(--color-brand)] hover:text-[var(--color-brand-hover)] transition-colors">All projects</a>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
