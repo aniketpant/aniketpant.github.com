@@ -81,7 +81,21 @@ export const SWATCHES_DARK: Swatch[] = [
 // Fields map a normalized coordinate (u, v) in [0,1]² to a scalar in [0,1]
 // that is then painted through a gradient of palette stops.
 
-export type FieldName = 'dusk' | 'core' | 'plaid' | 'swell' | 'hero' | 'stripes' | 'dots' | 'waves' | 'spiral' | 'checker';
+export type FieldName =
+  | 'dusk'
+  | 'core'
+  | 'plaid'
+  | 'swell'
+  | 'hero'
+  | 'stripes'
+  | 'dots'
+  | 'waves'
+  | 'spiral'
+  | 'checker'
+  | 'flow'
+  | 'moire'
+  | 'ridge'
+  | 'bloom';
 
 const TAU = Math.PI * 2;
 
@@ -263,6 +277,70 @@ export function makeField(field: FieldName, seed: string): (u: number, v: number
         return clamp01(parity * (1 - soft + soft * blend) + (1 - parity) * (soft * (1 - blend)));
       };
     }
+    case 'flow': {
+      // Domain-warped bands: the stripes are bent by a noise field, so they
+      // curl like a topographic map instead of running straight.
+      const [freqF, warpF, angleF] = hashFloats(seed + ':flow', 3);
+      const freq = 3 + freqF * 5;
+      const warp = 0.25 + warpF * 0.8;
+      const angle = angleF * TAU;
+      const ca = Math.cos(angle);
+      const sa = Math.sin(angle);
+      const s = seed.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) % 100000;
+      return (u, v) => {
+        const n = fbm(u * 2.4, v * 2.4, s, 3) - 0.5;
+        const p = (u - 0.5) * ca + (v - 0.5) * sa + n * warp;
+        return clamp01(0.5 + 0.5 * Math.sin(p * TAU * freq));
+      };
+    }
+    case 'moire': {
+      // Two off-centre radial wavefronts multiplied: the interference reads as
+      // moiré rings with a hyperbola where the centres meet.
+      const [n1F, n2F, cxF] = hashFloats(seed + ':moire', 3);
+      const n1 = 5 + n1F * 5;
+      const n2 = 5 + n2F * 5;
+      const cx = 0.3 + cxF * 0.4;
+      return (u, v) => {
+        const d1 = Math.hypot(u - cx, v - 0.5);
+        const d2 = Math.hypot(u - (1 - cx), v - 0.5);
+        const a = 0.5 + 0.5 * Math.sin(d1 * TAU * n1);
+        const b = 0.5 + 0.5 * Math.sin(d2 * TAU * n2);
+        return clamp01(a * b);
+      };
+    }
+    case 'ridge': {
+      // Contour terraces: noise folded through |sin| gives thin ridges that
+      // read as elevation lines rather than soft clouds.
+      const [scaleF, bandsF] = hashFloats(seed + ':ridge', 2);
+      const scale = 1.6 + scaleF * 2.2;
+      const bands = 4 + Math.floor(bandsF * 6);
+      const s = seed.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) % 100000;
+      return (u, v) => {
+        const n = fbm(u * scale, v * scale, s, 4);
+        // Thin lines sit where the folded noise crosses zero, so the tile
+        // reads as contour lines drawn on the page, not a filled blob.
+        const line = 1 - Math.pow(Math.abs(Math.sin(n * Math.PI * bands)), 0.9);
+        return clamp01(line);
+      };
+    }
+    case 'bloom': {
+      // Seeded petal bloom: rings pinched by an angular cosine, so the bands
+      // open and close like a flower instead of a plain target.
+      const [petalF, ringsF, offF] = hashFloats(seed + ':bloom', 3);
+      const petals = 3 + Math.floor(petalF * 5);
+      const rings = 3 + ringsF * 4;
+      const ox = 0.42 + offF * 0.16;
+      return (u, v) => {
+        const dx = u - ox;
+        const dy = v - 0.5;
+        const r = Math.hypot(dx, dy);
+        const a = Math.atan2(dy, dx);
+        const petal = 0.5 + 0.5 * Math.cos(a * petals);
+        const band = 0.5 + 0.5 * Math.sin(r * TAU * rings + petal * 2.2);
+        const falloff = 1 - clamp01(r * 1.25);
+        return clamp01(band * falloff + (1 - falloff) * 0.08);
+      };
+    }
   }
 }
 
@@ -357,6 +435,19 @@ export interface DitherOptions {
    * cells — no CSS mask involved.
    */
   edgeFade?: number;
+  /**
+   * Contrast exponent applied to the field before the palette ramp
+   * (default 1). Values above 1 pull the bright centre of a field back
+   * toward the background, so a pattern reads as sparse marks instead of a
+   * solid slab. ~1.1–1.7 suits small tiles.
+   */
+  gamma?: number;
+  /**
+   * Fold the field back through `sin` this many times before the ramp, so a
+   * smooth field (a blob, a noise cloud) becomes nested contour bands. This is
+   * what turns a plain gradient tile into drawn-looking artwork; 1 = off.
+   */
+  bands?: number;
 }
 
 export interface Run {
@@ -371,7 +462,7 @@ export interface Run {
  * small.
  */
 export function ditherRuns(opts: DitherOptions): Run[][] {
-  const { cols, rows, field, stops, seed, palette = SWATCHES, edgeFade = 0 } = opts;
+  const { cols, rows, field, stops, seed, palette = SWATCHES, edgeFade = 0, gamma = 1, bands = 1 } = opts;
   const f = makeField(field, seed);
   const out: Run[][] = [];
   for (let y = 0; y < rows; y++) {
@@ -381,6 +472,8 @@ export function ditherRuns(opts: DitherOptions): Run[][] {
     for (let x = 0; x < cols; x++) {
       const rx = (x + 0.5) / cols;
       let t = f(rx, ry);
+      if (gamma !== 1) t = Math.pow(clamp01(t), gamma);
+      if (bands > 1) t = 0.5 + 0.5 * Math.sin(t * TAU * bands);
       if (edgeFade > 0) {
         // Normalized distance to the nearest edge (0 at the border →
         // 0.5 at the centre); scale t down near the rim so those cells
@@ -427,6 +520,19 @@ export function runsMarkup(runs: Run[][], opts?: { skipBg?: boolean }): string {
     s += `<path class="d-${key}" d="${segs.join('')}"/>`;
   }
   return s;
+}
+
+/** Share of cells that carry a colour other than `bg` (0–1). */
+export function inkRatio(runs: Run[][]): number {
+  let ink = 0;
+  let total = 0;
+  for (const line of runs) {
+    for (const run of line) {
+      total += run.w;
+      if (run.key !== 'bg') ink += run.w;
+    }
+  }
+  return total === 0 ? 0 : ink / total;
 }
 
 /** Cell count of a run grid (useful for estimating markup weight). */

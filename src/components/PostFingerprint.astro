@@ -1,5 +1,12 @@
 ---
-import { ditherRuns, runsMarkup, SWATCHES, SWATCHES_DARK, type Swatch } from '../utils/dither';
+import {
+  ditherRuns,
+  inkRatio,
+  runsMarkup,
+  SWATCHES,
+  SWATCHES_DARK,
+  type Swatch,
+} from '../utils/dither';
 import { hashValues } from '../utils/hash';
 import type { FieldName, PaletteKey } from '../utils/dither';
 
@@ -10,20 +17,31 @@ interface Props {
 }
 
 const { seed } = Astro.props;
-const size = Astro.props.size ?? 64;
+const size = Astro.props.size ?? 96;
 const className = Astro.props.class ?? '';
 
 // Deterministic choices per post: a field flavor and a ramp of palette stops.
-const FIELD_NAMES: FieldName[] = ['swell', 'plaid', 'core', 'stripes', 'dots', 'waves', 'spiral', 'checker'];
+const FIELD_NAMES: FieldName[] = [
+  'swell', 'plaid', 'core', 'stripes', 'dots', 'waves', 'spiral', 'checker',
+  'flow', 'moire', 'ridge', 'bloom',
+];
 const field = FIELD_NAMES[hashValues(seed + ':field', 1, FIELD_NAMES.length)[0]]!;
 
 // Every ramp starts (and mostly ends) at `bg` so each tile grounds itself in
 // the site's own background and sweeps toward a hue — the pattern merges with
 // the page instead of stacking a second background color on top of it.
+// Every ramp begins and ends at `bg`: the hue only survives in the middle of
+// the range, so no field can flood the tile with colour. A high region fades
+// back into the page instead of turning into a solid slab.
+// Two hues only sit next to each other when they harmonise (brand red into
+// secondary magenta); green is never blended into pink, which turned the tile
+// into a muddy wash.
 const STOP_SETS: PaletteKey[][] = [
   ['bg', 'brand', 'bg'],
   ['bg', 'secondary', 'bg'],
-  ['bg', 'tertiary', 'brand'],
+  ['bg', 'tertiary', 'bg'],
+  ['bg', 'brand', 'secondary', 'bg'],
+  ['bg', 'secondary', 'brand', 'bg'],
 ];
 const stops = STOP_SETS[hashValues(seed + ':stops', 1, STOP_SETS.length)[0]]!;
 
@@ -36,8 +54,30 @@ const huesOnly = (list: Swatch[]) => list.filter((s) => FP_KEYS.includes(s.key))
 const fpLight = huesOnly(SWATCHES);
 const fpDark = huesOnly(SWATCHES_DARK);
 
-const GRID = 32;
-const opts = { cols: GRID, rows: GRID, field, stops, seed, edgeFade: 0.4 };
+// A finer grid keeps the cells sharp at the small sizes used on phones. The
+// exact cell count varies per post so tiles do not all share one texture.
+const GRID_CHOICES = [36, 40, 44];
+const GRID = GRID_CHOICES[hashValues(seed + ':grid', 1, GRID_CHOICES.length)[0]]!;
+// Pull the saturated centre of a field back toward the page so the tile reads
+// as marks rather than a filled square; the exact amount varies per post.
+const GAMMAS = [1.25, 1.4, 1.55];
+const gamma = GAMMAS[hashValues(seed + ':gamma', 1, GAMMAS.length)[0]]!;
+// Smooth fields (blobs, clouds) are folded into nested contour bands so they
+// read as drawn lines; inherently rhythmic fields (stripes, checker, plaid)
+// are left alone, because they already carry their own structure.
+const SMOOTH: FieldName[] = ['swell', 'core', 'bloom', 'ridge', 'hero', 'dusk'];
+const BANDS = [3, 4, 5];
+const bands = SMOOTH.includes(field)
+  ? BANDS[hashValues(seed + ':bands', 1, BANDS.length)[0]]!
+  : 1;
+const base = { cols: GRID, rows: GRID, field, stops, seed, edgeFade: 0.4, bands };
+// A heavy gamma can leave a tile almost empty. Measure the ink and lift the
+// gamma back down when too little of the tile is drawn, so every post keeps a
+// mark of its own without hand-tuning any seed.
+let opts = { ...base, gamma };
+if (inkRatio(ditherRuns({ ...opts, palette: fpLight })) < 0.18) {
+  opts = { ...base, gamma: Math.max(1, gamma - 0.45) };
+}
 
 // Quantize once per theme so the pattern stays perceptually aligned under
 // both the light and dark palettes; fills are emitted as var() so colors
