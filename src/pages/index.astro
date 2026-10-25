@@ -26,7 +26,7 @@ const nextFive = sortedPosts.slice(5, 10);
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <!-- Left: large display type -->
           <div class="md:col-span-7">
-            <p class="text-sm font-medium uppercase tracking-widest text-[var(--fg-subtle)] mb-6">
+            <p class="eyebrow mb-6">
               Personal weblog
             </p>
             <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.0] md:leading-[0.95] tracking-tight">
@@ -62,9 +62,9 @@ const nextFive = sortedPosts.slice(5, 10);
       <!-- Projects — a compact strip of the things I keep as repositories -->
       <section aria-label="Projects" class="pb-16 md:pb-24">
         <div class="flex items-baseline gap-4 mb-8">
-          <h2 class="text-sm font-medium uppercase tracking-widest text-[var(--fg-subtle)]">Projects</h2>
+          <h2 class="eyebrow">Projects</h2>
           <div class="flex-1 h-px bg-[var(--border)]"></div>
-          <a href="/projects/" class="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--fg-subtle)] hover:text-[var(--color-brand)] transition-colors">All projects</a>
+          <a href="/projects/" class="eyebrow hover:text-[var(--color-brand)] transition-colors">All projects</a>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -85,7 +85,7 @@ const nextFive = sortedPosts.slice(5, 10);
       <!-- Recent posts — clean aligned list -->
       <section aria-label="Recent writing" class="pb-16 md:pb-24">
         <div class="flex items-baseline gap-4 mb-10">
-          <h2 class="text-sm font-medium uppercase tracking-widest text-[var(--fg-subtle)]">Latest</h2>
+          <h2 class="eyebrow">Latest</h2>
           <div class="flex-1 h-px bg-[var(--border)]"></div>
         </div>
 
@@ -123,7 +123,7 @@ const nextFive = sortedPosts.slice(5, 10);
       {nextFive.length > 0 && (
         <section class="pb-16 md:pb-24" aria-label="Older writing">
           <div class="flex items-baseline gap-4 mb-8">
-            <h2 class="text-sm font-medium uppercase tracking-widest text-[var(--fg-subtle)]">Earlier</h2>
+            <h2 class="eyebrow">Earlier</h2>
             <div class="flex-1 h-px bg-[var(--border)]"></div>
           </div>
 

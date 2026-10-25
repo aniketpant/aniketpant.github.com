@@ -292,9 +292,10 @@ main:focus {
   font-weight: 600;
   font-size: 1.75rem;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
   color: var(--fg);
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
+  margin-bottom: 0.7em;
 }
 
 .prose h3 {
@@ -302,8 +303,10 @@ main:focus {
   font-weight: 600;
   font-size: 1.35rem;
   line-height: 1.3;
+  letter-spacing: -0.005em;
   color: var(--fg);
-  margin-top: 2rem;
+  margin-top: 2.25rem;
+  margin-bottom: 0.6em;
 }
 
 .prose h4 {
@@ -312,12 +315,63 @@ main:focus {
   color: var(--fg);
 }
 
+/* Reading text: 17px with a looser leading and a little air after each
+   paragraph. The measure is capped on the article column (see ArticleShell),
+   so lines stay around 65-70 characters instead of running the full grid. */
+.prose {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--fg-muted);
+}
+
 .prose p,
 .prose li,
 .prose td,
 .prose th {
   color: var(--fg-muted);
-  line-height: 1.75;
+  line-height: 1.7;
+}
+
+.prose p {
+  margin-top: 0;
+  margin-bottom: 1.35em;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose li {
+  margin-bottom: 0.35em;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.3em;
+}
+
+.prose li::marker {
+  color: var(--fg-subtle);
+}
+
+/* Labels: one small mono voice for every section marker on the site. */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+}
+
+/* Meta rows (dates, reading time, tags) keep their columns aligned. */
+.meta {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--fg-subtle);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
 }
 
 .prose strong {
@@ -325,45 +379,67 @@ main:focus {
   font-weight: 600;
 }
 
+/* Always underlined, so a link is visible without hover; the underline sits
+   low enough not to cut the descenders. */
 .prose a {
   color: var(--color-brand);
-  text-decoration: none;
-  transition: color 0.2s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, var(--color-brand) 45%, transparent);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .prose a:hover {
   color: var(--color-brand-hover);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration-color: currentColor;
 }
 
 .prose blockquote {
-  border-left: 3px solid var(--color-brand);
-  padding-left: 1.5rem;
+  border-left: 2px solid var(--color-brand);
+  padding-left: 1.25rem;
+  margin: 2rem 0;
   font-style: italic;
   color: var(--fg-muted);
 }
 
 .prose blockquote p {
   font-family: var(--font-serif);
-  font-size: 1.125rem;
-  line-height: 1.7;
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+  margin-bottom: 0.6em;
+}
+
+.prose blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.prose figcaption {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--fg-subtle);
+  margin-top: 0.75em;
 }
 
 .prose code {
   background-color: var(--bg-secondary);
   color: var(--fg);
-  padding: 0.15em 0.4em;
-  border-radius: 4px;
-  font-size: 0.85em;
+  padding: 0.12em 0.36em;
+  border-radius: 5px;
+  font-size: 0.88em;
   font-family: var(--font-mono);
+  font-feature-settings: "liga" 0;
 }
 
 .prose pre {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: 10px;
+  padding: 1.15rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  tab-size: 2;
 }
 
 .prose pre code {

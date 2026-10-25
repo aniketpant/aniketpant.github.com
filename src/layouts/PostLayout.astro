@@ -14,7 +14,7 @@ const { post } = Astro.props;
 <BaseLayout title={post.title} description={post.excerpt} slug={post.slug} publishedTime={post.isoDate}>
   <article>
     <ArticleShell title={post.title} decoColor="var(--color-brand)" wideHeader>
-      <div slot="header-meta" class="flex items-center gap-3 text-sm text-[var(--fg-subtle)] mb-6">
+      <div slot="header-meta" class="meta flex items-center gap-3 mb-6">
         <time datetime={post.isoDate}>{post.formattedDate}</time>
         <span class="w-1 h-1 rounded-full bg-[var(--fg-subtle)]" aria-hidden="true"></span>
         <span>{post.readingTime}</span>
