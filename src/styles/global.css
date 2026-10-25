@@ -518,6 +518,33 @@ button:focus-visible {
   pointer-events: none;
 }
 
+/* Full-viewport colour wash behind an article. Fixed so the tint stays put
+   while the page scrolls, and masked away before the footer. Sits at a
+   negative z-index so the page background and the text both stay on top. */
+.deco-wash {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      72% 58% at 92% -6%,
+      color-mix(in srgb, var(--deco, var(--color-brand)) 20%, transparent) 0%,
+      transparent 66%
+    ),
+    radial-gradient(
+      60% 48% at 2% 58%,
+      color-mix(in srgb, var(--deco, var(--color-brand)) 9%, transparent) 0%,
+      transparent 72%
+    );
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 58%, transparent 96%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 58%, transparent 96%);
+}
+
+[data-theme="dark"] .deco-wash {
+  opacity: 0.9;
+}
+
 /* Dithered hero backdrop — fine speckled wash, faded toward the content */
 .deco-dither {
   position: absolute;

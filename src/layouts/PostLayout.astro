@@ -13,7 +13,7 @@ const { post } = Astro.props;
 
 <BaseLayout title={post.title} description={post.excerpt} slug={post.slug} publishedTime={post.isoDate}>
   <article>
-    <ArticleShell title={post.title} decoColor="var(--color-brand)">
+    <ArticleShell title={post.title} decoColor="var(--color-brand)" wideHeader>
       <div slot="header-meta" class="flex items-center gap-3 text-sm text-[var(--fg-subtle)] mb-6">
         <time datetime={post.isoDate}>{post.formattedDate}</time>
         <span class="w-1 h-1 rounded-full bg-[var(--fg-subtle)]" aria-hidden="true"></span>
@@ -22,12 +22,12 @@ const { post } = Astro.props;
 
       <div
         slot="header-aside"
-        class="pt-1 md:pt-2 opacity-90 md:opacity-70 hover:opacity-100 transition-opacity duration-300"
+        class="opacity-90 md:opacity-75 hover:opacity-100 transition-opacity duration-300"
       >
         <PostFingerprint
           seed={post.id}
-          size={136}
-          class="size-[64px] sm:size-[80px] md:size-[128px]"
+          size={176}
+          class="size-[80px] sm:size-[104px] md:size-[176px]"
         />
       </div>
 
