@@ -81,7 +81,7 @@ export const SWATCHES_DARK: Swatch[] = [
 // Fields map a normalized coordinate (u, v) in [0,1]² to a scalar in [0,1]
 // that is then painted through a gradient of palette stops.
 
-export type FieldName = 'dusk' | 'core' | 'plaid' | 'swell' | 'hero';
+export type FieldName = 'dusk' | 'core' | 'plaid' | 'swell' | 'hero' | 'stripes' | 'dots' | 'waves' | 'spiral' | 'checker';
 
 const TAU = Math.PI * 2;
 
@@ -193,6 +193,74 @@ export function makeField(field: FieldName, seed: string): (u: number, v: number
           if (d < 1) t = Math.max(t, Math.pow(1 - d, 1.8));
         }
         return clamp01(t);
+      };
+    }
+    case 'stripes': {
+      const [freqF, angleF, widthF] = hashFloats(seed + ':stripes', 3);
+      const freq = 4 + freqF * 12;
+      const angle = angleF * Math.PI;
+      const width = 0.15 + widthF * 0.35;
+      const ca = Math.cos(angle);
+      const sa = Math.sin(angle);
+      return (u, v) => {
+        const p = (u - 0.5) * ca + (v - 0.5) * sa;
+        const band = Math.sin(p * Math.PI * 2 * freq);
+        return clamp01((band + 1) / 2 * (1 - width) + (p + 0.5) * width);
+      };
+    }
+    case 'dots': {
+      const [scaleF, sizeF] = hashFloats(seed + ':dots', 2);
+      const scale = 6 + scaleF * 10;
+      const dotSize = 0.25 + sizeF * 0.25;
+      return (u, v) => {
+        const x = u * scale;
+        const y = v * scale;
+        const cx = Math.round(x);
+        const cy = Math.round(y);
+        const d = Math.hypot(x - cx, y - cy);
+        const val = 1 - clamp01(d / dotSize);
+        return clamp01(val * 0.9 + 0.05);
+      };
+    }
+    case 'waves': {
+      const [freqF, ampF, phaseF] = hashFloats(seed + ':waves', 3);
+      const freq = 3 + freqF * 6;
+      const amp = 0.05 + ampF * 0.15;
+      const phase = phaseF * TAU;
+      return (u, v) => {
+        const t = u * 0.5 + v * 0.5;
+        const w = Math.sin(v * TAU * freq + u * 2 + phase) * amp;
+        return clamp01(t + w);
+      };
+    }
+    case 'spiral': {
+      const [twistF, armsF] = hashFloats(seed + ':spiral', 2);
+      const twist = 2 + twistF * 4;
+      const arms = 2 + Math.floor(armsF * 4);
+      return (u, v) => {
+        const dx = u - 0.5;
+        const dy = v - 0.5;
+        const r = Math.hypot(dx, dy);
+        const a = Math.atan2(dy, dx);
+        const spiral = (a + r * twist * TAU) / TAU;
+        const band = 0.5 + 0.5 * Math.sin(spiral * TAU * arms);
+        const fade = 1 - clamp01(r * 1.4);
+        return clamp01(band * fade + (1 - fade) * 0.1);
+      };
+    }
+    case 'checker': {
+      const [scaleF, softF] = hashFloats(seed + ':checker', 2);
+      const scale = 4 + Math.floor(scaleF * 8);
+      const soft = softF * 0.4;
+      return (u, v) => {
+        const cx = Math.floor(u * scale);
+        const cy = Math.floor(v * scale);
+        const parity = (cx + cy) % 2 === 0 ? 1 : 0;
+        const fx = u * scale - cx;
+        const fy = v * scale - cy;
+        const edge = Math.min(fx, 1 - fx, fy, 1 - fy);
+        const blend = clamp01(edge / Math.max(soft, 0.001));
+        return clamp01(parity * (1 - soft + soft * blend) + (1 - parity) * (soft * (1 - blend)));
       };
     }
   }

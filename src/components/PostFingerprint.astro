@@ -14,7 +14,7 @@ const size = Astro.props.size ?? 64;
 const className = Astro.props.class ?? '';
 
 // Deterministic choices per post: a field flavor and a ramp of palette stops.
-const FIELD_NAMES: FieldName[] = ['swell', 'plaid', 'core'];
+const FIELD_NAMES: FieldName[] = ['swell', 'plaid', 'core', 'stripes', 'dots', 'waves', 'spiral', 'checker'];
 const field = FIELD_NAMES[hashValues(seed + ':field', 1, FIELD_NAMES.length)[0]]!;
 
 // Every ramp starts (and mostly ends) at `bg` so each tile grounds itself in
