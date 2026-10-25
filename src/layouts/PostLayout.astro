@@ -21,7 +21,7 @@ const { post } = Astro.props;
       </div>
 
       <div slot="header-extra" class="mt-6 md:mt-0 md:absolute md:-right-2 md:-top-2 lg:right-0 lg:top-0 opacity-80 md:opacity-70 hover:opacity-100 transition-opacity duration-300">
-        <PostFingerprint seed={post.slug} size={120} class="md:size-[160px]" />
+        <PostFingerprint seed={post.id} size={120} class="md:size-[160px]" />
       </div>
 
       <slot />
