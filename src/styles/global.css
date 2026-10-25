@@ -436,44 +436,23 @@ button:focus-visible {
 .stagger-children > *:nth-child(10) { animation-delay: 540ms; }
 
 /* Gradient utilities */
+/* Headings carry one solid ink colour. The accent colours stay in the rules,
+   the dithered artwork and the links, where they read as punctuation rather
+   than a rainbow running through the type. */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-secondary) 50%, var(--color-tertiary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  padding-bottom: 0.1em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  color: var(--fg);
 }
 
 .gradient-text-subtle {
-  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  padding-bottom: 0.1em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  color: var(--color-brand);
 }
 
 .gradient-text-secondary {
-  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-tertiary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  padding-bottom: 0.1em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  color: var(--fg-muted);
 }
 
 .gradient-text-tertiary {
-  background: linear-gradient(135deg, var(--color-tertiary) 0%, var(--color-brand) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  padding-bottom: 0.1em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  color: var(--color-tertiary);
 }
 
 .gradient-border {
