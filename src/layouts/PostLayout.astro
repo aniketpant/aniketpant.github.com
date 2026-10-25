@@ -21,13 +21,13 @@ const { post } = Astro.props;
       </div>
 
       <div
-        slot="header-extra"
-        class="mt-4 flex justify-end md:mt-0 md:absolute md:right-0 md:top-0 md:block opacity-90 md:opacity-70 hover:opacity-100 transition-opacity duration-300"
+        slot="header-aside"
+        class="pt-1 md:pt-2 opacity-90 md:opacity-70 hover:opacity-100 transition-opacity duration-300"
       >
         <PostFingerprint
           seed={post.id}
           size={136}
-          class="size-[64px] sm:size-[80px] md:size-[136px]"
+          class="size-[64px] sm:size-[80px] md:size-[128px]"
         />
       </div>
 
