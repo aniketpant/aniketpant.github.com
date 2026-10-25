@@ -10,23 +10,19 @@ interface Props {
 }
 
 const { seed } = Astro.props;
-const size = Astro.props.size ?? 120;
+const size = Astro.props.size ?? 64;
 const className = Astro.props.class ?? '';
 
 // Deterministic choices per post: a field flavor and a ramp of palette stops.
-const FIELD_NAMES: FieldName[] = ['swell', 'plaid', 'core', 'dusk'];
+const FIELD_NAMES: FieldName[] = ['swell', 'plaid'];
 const field = FIELD_NAMES[hashValues(seed + ':field', 1, FIELD_NAMES.length)[0]]!;
 
 // Every ramp starts (and mostly ends) at `bg` so each tile grounds itself in
 // the site's own background and sweeps toward a hue — the pattern merges with
 // the page instead of stacking a second background color on top of it.
 const STOP_SETS: PaletteKey[][] = [
-  ['bg', 'brand'],
-  ['bg', 'secondary'],
-  ['bg', 'tertiary'],
   ['bg', 'brand', 'bg'],
   ['bg', 'secondary', 'bg'],
-  ['bg', 'tertiary', 'bg'],
 ];
 const stops = STOP_SETS[hashValues(seed + ':stops', 1, STOP_SETS.length)[0]]!;
 
