@@ -4,11 +4,12 @@ import {
   fingerprintTraits,
   inkRatio,
   runsMarkup,
+  swatchesForRamp,
   SWATCHES,
   SWATCHES_DARK,
   type Swatch,
 } from '../utils/dither';
-import { hashValues } from '../utils/hash';
+import { djb2, hashValues } from '../utils/hash';
 import type { FieldName, PaletteKey } from '../utils/dither';
 
 interface Props {
@@ -17,30 +18,36 @@ interface Props {
   class?: string;
   /** Override the grid: fewer cells stay legible at small display sizes. */
   grid?: number;
+  /** Silhouette the marks are cut to. A row of three reads better as circle,
+      triangle, rectangle than as three identical squares. */
+  shape?: 'square' | 'circle' | 'triangle';
 }
 
-const { seed } = Astro.props;
+const { seed, shape = 'square' } = Astro.props;
 const size = Astro.props.size ?? 96;
 const className = Astro.props.class ?? '';
 
 // Deterministic choices per post. The traits live in utils/dither so a row of
 // marks can be checked for repeats before anything renders.
 const traits = fingerprintTraits(seed);
+const clipId = `mark-${shape}-${djb2(seed).toString(36)}`;
 const field = traits.field;
 const stops = traits.stops;
 const GRID = Astro.props.grid ?? traits.grid;
-// Quantize against the colourful swatches only (bg + the three accents) —
-// never against fg/muted. Without this, desaturated mid-blends between two
-// hues snap to the gray muted swatch and lay dark slabs over the page.
-const FP_KEYS: PaletteKey[] = ['bg', 'brand', 'secondary', 'tertiary'];
-const huesOnly = (list: Swatch[]) => list.filter((s) => FP_KEYS.includes(s.key));
-const fpLight = huesOnly(SWATCHES);
-const fpDark = huesOnly(SWATCHES_DARK);
+// Quantize against the swatches this mark's ramp names, and nothing else.
+// Offering the whole palette to every ramp let desaturated mid-blends snap to
+// the grey swatch and lay dark slabs over the page; naming them keeps a colour
+// ramp clean and lets an ink or grey ramp be chosen on purpose.
+const fpLight = swatchesForRamp(stops, SWATCHES);
+const fpDark = swatchesForRamp(stops, SWATCHES_DARK);
 
 // Pull the saturated centre of a field back toward the page so the tile reads
 // as marks rather than a filled square; the exact amount varies per post.
 const GAMMAS = [1.25, 1.4, 1.55];
 const gamma = GAMMAS[hashValues(seed + ':gamma', 1, GAMMAS.length)[0]]!;
+// The triangle silhouette loses its corners to the clip, so it takes a little
+// more ink than the square to read at the same weight.
+const shapeInk = shape === 'triangle' ? -0.45 : 0;
 // Smooth fields (blobs, clouds) are folded into nested contour bands so they
 // read as drawn lines; inherently rhythmic fields (stripes, checker, plaid)
 // are left alone, because they already carry their own structure.
@@ -61,9 +68,9 @@ const base = {
 // A heavy gamma can leave a tile almost empty. Measure the ink and lift the
 // gamma back down when too little of the tile is drawn, so every post keeps a
 // mark of its own without hand-tuning any seed.
-let opts = { ...base, gamma };
+let opts = { ...base, gamma: gamma + shapeInk };
 if (inkRatio(ditherRuns({ ...opts, palette: fpLight })) < 0.18) {
-  opts = { ...base, gamma: Math.max(1, gamma - 0.45) };
+  opts = { ...base, gamma: Math.max(1, gamma + shapeInk - 0.45) };
 }
 
 // Quantize once per theme so the pattern stays perceptually aligned under
@@ -88,10 +95,31 @@ const markupDark = runsMarkup(ditherRuns({ ...opts, palette: fpDark }), {
   aria-hidden="true"
   shape-rendering="crispEdges"
 >
-  <g class="fingerprint-dither">
+  {
+    shape !== 'square' && (
+      <defs>
+        <clipPath id={clipId}>
+          {shape === 'circle' ? (
+            <circle cx={GRID / 2} cy={GRID / 2} r={GRID / 2} />
+          ) : (
+            <polygon
+              points={`${GRID / 2},0.5 ${GRID - 0.5},${GRID - 1} 0.5,${GRID - 1}`}
+            />
+          )}
+        </clipPath>
+      </defs>
+    )
+  }
+  <g
+    class="fingerprint-dither"
+    clip-path={shape === 'square' ? undefined : `url(#${clipId})`}
+  >
     <Fragment set:html={markupLight} />
   </g>
-  <g class="fingerprint-dither-dark">
+  <g
+    class="fingerprint-dither-dark"
+    clip-path={shape === 'square' ? undefined : `url(#${clipId})`}
+  >
     <Fragment set:html={markupDark} />
   </g>
 </svg>

@@ -606,16 +606,32 @@ export const FINGERPRINT_FIELDS: FieldName[] = [
 // no field floods the tile with colour. Two hues sit next to each other only
 // where they harmonise (brand red into secondary magenta); green never blends
 // into pink, which turned the tile into a muddy wash.
+//
+// The list covers the whole palette, including ink and grey, so a row of marks
+// can differ in colour and not only in texture.
 export const FINGERPRINT_STOP_SETS: PaletteKey[][] = [
   ['bg', 'brand', 'bg'],
   ['bg', 'secondary', 'bg'],
   ['bg', 'tertiary', 'bg'],
+  ['bg', 'fg', 'bg'],
+  ['bg', 'muted', 'bg'],
   ['bg', 'brand', 'secondary', 'bg'],
   ['bg', 'secondary', 'brand', 'bg'],
+  ['bg', 'fg', 'brand', 'bg'],
+  ['bg', 'tertiary', 'muted', 'bg'],
 ];
 
 // A finer grid keeps cells sharp at the small sizes used on phones.
 export const FINGERPRINT_GRIDS = [36, 40, 44];
+
+/** The swatches a ramp is allowed to quantize to: its own stops, plus bg. */
+export function swatchesForRamp(
+  stops: PaletteKey[],
+  palette: Swatch[],
+): Swatch[] {
+  const allowed = new Set<PaletteKey>([...stops, 'bg']);
+  return palette.filter((swatch) => allowed.has(swatch.key));
+}
 
 export interface FingerprintTraits {
   field: FieldName;
@@ -637,6 +653,39 @@ export function fingerprintTraits(seed: string): FingerprintTraits {
       hashValues(seed + ':grid', 1, FINGERPRINT_GRIDS.length)[0]
     ]!,
   };
+}
+
+/** Ramps that draw with ink or grey instead of a hue. */
+export const FINGERPRINT_INK_RAMPS: PaletteKey[][] = [
+  ['bg', 'fg', 'bg'],
+  ['bg', 'muted', 'bg'],
+];
+
+/**
+ * Seeds for a row of marks: colour, ink, colour. Three accents side by side
+ * turn the header into a colour chart, so one mark in the row is drawn in ink
+ * or grey and only two hues ever meet. Field and ramp stay unique.
+ */
+export function fingerprintRowSeeds(base: string): string[] {
+  const ink = new Set(FINGERPRINT_INK_RAMPS.map((ramp) => ramp.join(',')));
+  const families = ['colour', 'ink', 'colour'];
+  const seeds: string[] = [];
+  const fields = new Set<string>();
+  const ramps = new Set<string>();
+
+  for (let i = 1; seeds.length < families.length && i <= 400; i++) {
+    const seed = i === 1 ? base : `${base}:mark-${i}`;
+    const traits = fingerprintTraits(seed);
+    const ramp = traits.stops.join(',');
+    const family = ink.has(ramp) ? 'ink' : 'colour';
+    if (family !== families[seeds.length]) continue;
+    if (fields.has(traits.field) || ramps.has(ramp)) continue;
+    fields.add(traits.field);
+    ramps.add(ramp);
+    seeds.push(seed);
+  }
+
+  return seeds;
 }
 
 /**

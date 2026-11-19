@@ -2,7 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import ArticleShell from '../components/ArticleShell.astro';
 import PostFingerprint from '../components/PostFingerprint.astro';
-import { distinctFingerprintSeeds } from '../utils/dither';
+import { fingerprintRowSeeds } from '../utils/dither';
 import type { ProcessedPost } from '../utils/posts';
 
 interface Props {
@@ -11,8 +11,18 @@ interface Props {
 
 const { post } = Astro.props;
 
-// Three marks for this post, guaranteed to differ from one another.
-const marks = distinctFingerprintSeeds(post.id, 3);
+// Three marks for this post: different fields, different ramps, and one of them
+// in ink so two hues never edge out a third. Each is cut to its own silhouette.
+const marks = fingerprintRowSeeds(post.id);
+const SHAPES = ['circle', 'triangle', 'square'] as const;
+
+// Small enough to sit inside one line of the title. The triangle runs a shade
+// larger because the clip removes its corners.
+const MARK_SIZE = {
+  circle: 'size-[20px] sm:size-[22px] md:size-[24px]',
+  square: 'size-[20px] sm:size-[22px] md:size-[24px]',
+  triangle: 'size-[22px] sm:size-[24px] md:size-[26px]',
+} as const;
 ---
 
 <BaseLayout
@@ -33,21 +43,28 @@ const marks = distinctFingerprintSeeds(post.id, 3);
 
       <div
         slot="header-aside"
-        class="flex items-center gap-1.5 md:gap-2 opacity-90 md:opacity-75 hover:opacity-100 transition-opacity duration-300"
+        class="order-first flex flex-col items-center gap-1 shrink-0 opacity-90 md:opacity-75 hover:opacity-100 transition-opacity duration-300"
       >
         {
-          /* Three marks from one seed, checked against each other so no two are
-            the same field, ramp and grid. Together they take the space the
-            single mark used to. */
+          /* Three marks for this post, in the column left of the title:
+             different fields, different ramps, one of them in ink. */
         }
         {
-          marks.map((seed) => (
-            <PostFingerprint
-              seed={seed}
-              size={56}
-              class="size-[34px] sm:size-[44px] md:size-[56px]"
-            />
-          ))
+          marks.map((seed, index) => {
+            const shape = SHAPES[index % SHAPES.length];
+            // A triangle loses its corners to the clip, so it is a shade larger
+            // than the square to sit at the same weight.
+            const size = MARK_SIZE[shape];
+            return (
+              <PostFingerprint
+                seed={seed}
+                size={56}
+                grid={16}
+                shape={shape}
+                class={size}
+              />
+            );
+          })
         }
       </div>
 
