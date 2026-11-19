@@ -136,18 +136,18 @@ html {
     --bg-secondary: light-dark(#f5f0eb, #0f0a24);
     --surface: light-dark(#ffffff, #1a1040);
     --fg: light-dark(#1c1917, #f5eeff);
-    --fg-muted: light-dark(#57534e, #a090cc);
-    --fg-subtle: light-dark(#75706a, #8574b8);
-    --border: light-dark(#e7e5e4, #2a1a5a);
-    --border-subtle: light-dark(#f5f5f4, #140c30);
-    --ring: light-dark(#dc2626, #ff00a0);
+    --fg-muted: light-dark(#57534e, #b3a4dd);
+    --fg-subtle: light-dark(#75706a, #a99ae0);
+    --border: light-dark(#e7e5e4, #453383);
+    --border-subtle: light-dark(#f5f5f4, #2b2154);
+    --ring: light-dark(#dc2626, #ff3fbc);
 
-    --color-brand: light-dark(#de1b46, #ff00a0);
-    --color-brand-hover: light-dark(#be123c, #ff33bb);
+    --color-brand: light-dark(#de1b46, #ff3fbc);
+    --color-brand-hover: light-dark(#be123c, #ff5cc4);
     --color-brand-subtle: light-dark(#fff1f2, #2a0020);
 
-    --color-secondary: light-dark(#bd24cf, #bd2fe4);
-    --color-secondary-hover: light-dark(#a21caf, #d050ff);
+    --color-secondary: light-dark(#bd24cf, #cf5cff);
+    --color-secondary-hover: light-dark(#a21caf, #d97bff);
     --color-secondary-subtle: light-dark(#faf5ff, #1e0a30);
 
     --color-tertiary: light-dark(#04805f, #00ff9f);
@@ -155,16 +155,16 @@ html {
     --color-tertiary-subtle: light-dark(#ecfdf5, #002a1a);
 
     --astro-code-foreground: light-dark(#1c1917, #f5eeff);
-    --astro-code-token-comment: light-dark(#75706a, #8574b8);
-    --astro-code-token-keyword: light-dark(#7c3aed, #d050ff);
-    --astro-code-token-constant: light-dark(#be123c, #ff00a0);
+    --astro-code-token-comment: light-dark(#75706a, #a99ae0);
+    --astro-code-token-keyword: light-dark(#7c3aed, #d97bff);
+    --astro-code-token-constant: light-dark(#be123c, #ff3fbc);
     --astro-code-token-function: light-dark(#0f766e, #4dd0e1);
     --astro-code-token-string: light-dark(#047857, #00ff9f);
     --astro-code-token-string-expression: light-dark(#047857, #00ff9f);
     --astro-code-token-number: light-dark(#b45309, #ffb44d);
     --astro-code-token-parameter: light-dark(#1c1917, #f5eeff);
-    --astro-code-token-punctuation: light-dark(#57534e, #a090cc);
-    --astro-code-token-link: light-dark(#be123c, #ff00a0);
+    --astro-code-token-punctuation: light-dark(#57534e, #b3a4dd);
+    --astro-code-token-link: light-dark(#be123c, #ff3fbc);
     --astro-code-token-type: light-dark(#b45309, #ffb44d);
   }
 }
