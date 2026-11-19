@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import DitherBackdrop from '../components/DitherBackdrop.astro';
 import { processPost, sortPostsDesc } from '../utils/posts';
 import { featuredProjects } from '../data/projects';
+import ReadingList from '../components/ReadingList.astro';
 
 const rawPosts = await getCollection('posts');
 const processed = rawPosts.map(processPost);
@@ -44,12 +45,8 @@ const nextFive = sortedPosts.slice(5, 10);
             <p
               class="text-lg md:text-xl text-[var(--fg-muted)] leading-relaxed"
             >
-              I love to <em class="text-[var(--fg)] italic"
-                >read</em
-              >,{' '}
-              <em class="text-[var(--fg)] italic">write</em> and{
-                ' '
-              }
+              I love to <em class="text-[var(--fg)] italic">read</em>,{' '}
+              <em class="text-[var(--fg)] italic">write</em> and{' '}
               <em class="text-[var(--fg)] italic">code</em>.
             </p>
             <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
@@ -173,6 +170,8 @@ const nextFive = sortedPosts.slice(5, 10);
           </section>
         )
       }
+
+      <ReadingList />
 
       <!-- Tooling — one page for the three repositories -->
       <section aria-label="Tooling" class="pb-16 md:pb-24">
