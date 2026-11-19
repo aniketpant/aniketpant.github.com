@@ -17,15 +17,18 @@ const nextFive = sortedPosts.slice(5, 10);
 
 <BaseLayout title="Aniket Pant" slug="home" isHome={true}>
   <div class="relative overflow-hidden">
-    <!-- Dithered backdrop — soft theme-tint wash, bounded to the hero -->
-    <div
-      class="absolute inset-x-0 top-0 z-0 h-[540px] md:h-[640px]"
-      aria-hidden="true"
-    >
-      <DitherBackdrop />
-    </div>
+    <div class="relative">
+      <!-- Dithered backdrop — the wash takes the hero's height, so it never
+           stops behind the title on a narrow screen. It reaches a little past
+           the hero into the gap above the first section and fades out there. -->
+      <div
+        class="absolute inset-x-0 top-0 -bottom-10 md:-bottom-16 z-0"
+        aria-hidden="true"
+      >
+        <DitherBackdrop />
+      </div>
 
-    <div class="relative z-10 mx-auto max-w-5xl px-6 md:px-8">
+      <div class="relative z-10 mx-auto max-w-5xl px-6 md:px-8">
       <!-- Hero -->
       <section class="pt-20 md:pt-32 pb-16 md:pb-24 animate-fade-in">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
@@ -91,7 +94,10 @@ const nextFive = sortedPosts.slice(5, 10);
           </div>
         </div>
       </section>
+      </div>
+    </div>
 
+      <div class="relative z-10 mx-auto max-w-5xl px-6 md:px-8">
       <!-- Recent posts — clean aligned list -->
       <section aria-label="Recent writing" class="pb-16 md:pb-24">
         <div class="flex items-baseline gap-4 mb-10">

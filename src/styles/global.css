@@ -703,8 +703,8 @@ button:focus-visible {
   height: 100%;
   opacity: 0.85;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(180deg, black 0%, black 28%, rgba(0, 0, 0, 0.55) 52%, transparent 78%);
-  mask-image: linear-gradient(180deg, black 0%, black 28%, rgba(0, 0, 0, 0.55) 52%, transparent 78%);
+  -webkit-mask-image: linear-gradient(180deg, black 0%, black 58%, rgba(0, 0, 0, 0.55) 82%, transparent 100%);
+  mask-image: linear-gradient(180deg, black 0%, black 58%, rgba(0, 0, 0, 0.55) 82%, transparent 100%);
 }
 
 [data-theme="dark"] .deco-dither {
