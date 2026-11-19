@@ -29,10 +29,7 @@ ASTRO_BIN="node_modules/astro/bin/astro.mjs"
 CONFIG="astro.preview.config.mjs"
 PAGES=(
   "/::Aniket Pant"
-  "/projects/::Projects | Aniket Pant"
-  "/botfiles/::botfiles | Aniket Pant"
-  "/droidfiles/::droidfiles | Aniket Pant"
-  "/dotfiles/::dotfiles | Aniket Pant"
+  "/dev-tooling/::Dev tooling | Aniket Pant"
 )
 
 port_is_free() {

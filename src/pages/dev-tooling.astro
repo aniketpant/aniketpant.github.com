@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectSection from '../components/ProjectSection.astro';
+import ProjectIdeas from '../components/ProjectIdeas.astro';
+import MermaidFigure from '../components/MermaidFigure.astro';
+
+// One page for the three repositories that rebuild this machine.
+//
+// Editorial rule for this page: every section states the intent behind the
+// repository and what it does now. A constraint earns a place only where it
+// explains a decision that is already visible in the result. No numbers
+// without a machine, a command and a run.
+
+const tools = [
+  {
+    id: 'botfiles',
+    intent:
+      'Agent tooling should not belong to one harness. Every harness has its own plugin API, and configuration written against one of them is lost when the next one arrives.',
+    now: 'Extensions, skills, prompts and themes are written once and mount in both pi and OpenCode V2. Where the two harnesses are not equivalent, the capability table records it, so a gap is a documented no-op instead of a fork.',
+    wide: `flowchart LR
+  E["extensions/"] --> A["adapters/"]
+  A --> P["pi"]
+  A --> O["OpenCode V2"]`,
+    narrow: `flowchart TB
+  E["extensions/"] --> A["adapters/"]
+  A --> P["pi"]
+  A --> O["OpenCode V2"]`,
+    label: 'botfiles: extensions reach two harnesses through adapters',
+    caption:
+      'One extension definition, two mounts. adapters/ is the only code that knows which harness is on the other side.',
+    ideas: [
+      {
+        title: 'The adapter absorbs the difference',
+        text: 'pi runs one extension per session; OpenCode loads one plugin and calls the factory per session, keeping a map from session to instance. Tools and commands register once and carry their own session id, so the extension code never learns which harness it is in.',
+      },
+      {
+        title: 'Skills move with their extension',
+        text: 'Skills every session needs live in skills/. A skill that only applies to one extension lives in that extension\u2019s folder, so installing or removing the extension moves the skill with it instead of leaving a dead entry behind.',
+      },
+    ],
+  },
+  {
+    id: 'droidfiles',
+    intent:
+      'A phone should be rebuildable from a bare Termux, not remembered. Every change that matters lives in the repository, so a reinstall is a command and not an afternoon.',
+    now: 'bootstrap.sh installs the package list and calls install.sh, which relinks the dotfiles; both also run alone. Shell tests run in a temporary home, so a restore is checked before it touches mine.',
+    wide: `flowchart LR
+  P["packages.txt"] --> B["bootstrap.sh"]
+  B --> I["install.sh"]
+  I --> H["$HOME"]
+  I --> D["~/.droidfiles-backup/"]`,
+    narrow: `flowchart TB
+  P["packages.txt"] --> B["bootstrap.sh"]
+  B --> I["install.sh"]
+  I --> H["$HOME"]
+  I --> D["~/.droidfiles-backup/"]`,
+    label: 'droidfiles: one script from packages to home',
+    caption:
+      'A file that differs from the repository copy is moved to ~/.droidfiles-backup/ before install.sh replaces it. A symlink, or a file that already matches, is replaced without a backup.',
+    ideas: [
+      {
+        title: 'Symlinks, except where Android refuses them',
+        text: 'Termux:Widget and Termux:Boot resolve symlinks and refuse a script whose real path is outside their folders. Executables stay in home/bin, and install.sh writes the two wrappers as real files instead of links.',
+      },
+      {
+        title: 'A hand-kept package list',
+        text: 'pkg has no installed-on-purpose flag, so packages.txt is maintained by hand and lists what I chose to install, never dependencies. An upgrade that pulls something in does not enter the file, so a restore brings back the system I asked for, not the last one.',
+      },
+    ],
+  },
+  {
+    id: 'dotfiles',
+    intent:
+      'Muscle memory should move between machines: the same shell, terminal and key map wherever I sit down.',
+    now: 'One palette across the shell and the TUI, a Cmd layer on Linux with per-app masks, and stow folders that mirror their home paths, so a new machine takes the same make install.',
+    wide: `flowchart LR
+  R["zsh/ ghostty/ keyd/"] --> M["make install"]
+  M --> H["$HOME"]`,
+    narrow: `flowchart TB
+  R["zsh/ ghostty/ keyd/"] --> M["make install"]
+  M --> H["$HOME"]`,
+    label: 'dotfiles: stow folders into home',
+    caption:
+      'Each folder mirrors its path in the home directory, so stow resolves the target without a mapping file. make clean is a separate target that unstows them.',
+    ideas: [
+      {
+        title: 'Cmd on Linux, and what breaks',
+        text: 'A keyd layer maps Cmd to Ctrl globally, with a per-app mask so the terminal keeps its own shortcuts. Redefining Super replaces GNOME\u2019s chords, and the README lists the bindings that do not fire rather than pretending the layer is complete.',
+      },
+      {
+        title: 'Deferred until first use',
+        text: 'Plugins load through zinit in turbo mode and are deferred until first use. A plugin that cannot be deferred is removed rather than paid for in every shell.',
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Dev tooling"
+  slug="dev-tooling"
+  description="botfiles, droidfiles and dotfiles: the three repositories that rebuild my machine, with the intent behind each and what it does now."
+>
+  <div class="animate-fade-in">
+    <header class="relative pt-16 md:pt-24 pb-10 md:pb-12 overflow-hidden">
+      <div
+        class="deco-blob bg-[var(--color-brand)] w-[400px] h-[400px] -top-32 -right-32 opacity-[0.08]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="mx-auto max-w-3xl px-6 md:px-8 relative">
+        <p
+          class="font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--fg-subtle)]"
+        >
+          <span class="text-[var(--color-brand)]">aniketpant</span> / tooling
+        </p>
+
+        <h1
+          class="mt-2.5 font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.04] tracking-tight gradient-text"
+        >
+          Dev tooling
+        </h1>
+
+        <p class="mt-3.5 text-lg text-[var(--fg-muted)] max-w-[52ch]">
+          The agent, the phone and the shell, each built so it outlasts the
+          thing it runs on.
+        </p>
+
+        <div class="gradient-line mt-6 w-20" aria-hidden="true"></div>
+      </div>
+    </header>
+
+    <div class="mx-auto max-w-3xl px-6 md:px-8 pb-16 md:pb-24">
+      {
+        tools.map((tool, index) => (
+          <section id={tool.id} class="scroll-mt-24">
+            <ProjectSection
+              n={String(index + 1).padStart(2, '0')}
+              title={tool.id}
+            />
+
+            <dl class="mt-3 mb-0 border-t border-[var(--border)]">
+              <div class="flex flex-col sm:flex-row gap-1 sm:gap-4 py-2.5 border-b border-[var(--border)]">
+                <dt class="eyebrow sm:basis-14 shrink-0 pt-1 m-0">Intent</dt>
+                <dd class="m-0 text-[15px] text-[var(--fg)]">{tool.intent}</dd>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-1 sm:gap-4 py-2.5 border-b border-[var(--border)]">
+                <dt class="eyebrow sm:basis-14 shrink-0 pt-1 m-0">Now</dt>
+                <dd class="m-0 text-[15px] text-[var(--fg-muted)]">
+                  {tool.now}
+                </dd>
+              </div>
+            </dl>
+
+            <MermaidFigure
+              label={tool.label}
+              source={tool.wide}
+              narrowSource={tool.narrow}
+              caption={tool.caption}
+            />
+
+            <ProjectIdeas items={tool.ideas} />
+          </section>
+        ))
+      }
+
+      <p
+        class="mt-9 pt-4 border-t border-[var(--border)] text-[12.5px] text-[var(--fg-subtle)]"
+      >
+        The repositories are private; each section is its public summary.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

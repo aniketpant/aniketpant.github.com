@@ -1,0 +1,114 @@
+---
+// A build-time diagram: Mermaid source in the page, themeable SVG out.
+//
+// pele (https://pele.run) renders the Mermaid text to SVG with no browser and
+// no client script. Every colour in the output is a `--pele-*` variable with a
+// fallback, so the wrapper below maps them onto the site's tokens and the same
+// SVG follows light, dark and synthwave without a second render.
+//
+// A build-time render cannot measure the reader's screen, so the narrow layout
+// is rendered separately and swapped with CSS. That keeps labels at full size
+// on a phone instead of shrinking the whole diagram to half scale.
+import { register, render } from 'pele';
+import flowchart from 'pele/diagrams/flowchart';
+
+// Pele ships one module per diagram type; register only what this site uses.
+register(flowchart);
+
+interface Props {
+  /** Names the figure for assistive tech; no visible heading is drawn. */
+  label: string;
+  /** One sentence under the figure. */
+  caption?: string;
+  /** Mermaid source for the wide layout. */
+  source: string;
+  /** Mermaid source for narrow screens; falls back to `source`. */
+  narrowSource?: string;
+}
+
+const { label, caption, source, narrowSource = source } = Astro.props;
+
+const idPrefix =
+  'd-' +
+  label
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
+function draw(text: string, prefix: string) {
+  const { svg } = render(text, {
+    fontFamily: 'Allo, sans-serif',
+    fontFamilyMono: 'JetBrains Mono, monospace',
+    // Layout at 16px and draw labels at 12px: pele reserves about 0.53em per
+    // character, so the extra layout size is the breathing room that keeps a
+    // web font from spilling past a node border.
+    fontSize: 16,
+    padding: 0,
+    responsive: true,
+    // Orthogonal connectors, in keeping with the page's hairline rules.
+    config: { flowchart: { curve: 'step' } },
+    idPrefix: prefix,
+  });
+  return svg;
+}
+
+const wide = draw(source, idPrefix);
+const narrow = draw(narrowSource, idPrefix + '-narrow');
+---
+
+<figure class="my-6" aria-label={label}>
+  <div class="pele-figure">
+    <div class="hidden sm:block" set:html={wide} />
+    <div class="sm:hidden" set:html={narrow} />
+  </div>
+
+  {
+    caption && (
+      <figcaption class="mt-3.5 max-w-[62ch] text-[13px] leading-relaxed text-[var(--fg-muted)]">
+        {caption}
+      </figcaption>
+    )
+  }
+</figure>
+
+<style>
+  /* Map pele's variables onto the site's tokens. Inline SVG inherits custom
+     properties, so one block covers every theme. */
+  .pele-figure {
+    --pele-bg: transparent;
+    --pele-fg: var(--fg);
+    --pele-muted: var(--fg-muted);
+    --pele-line: var(--fg-subtle);
+    --pele-surface: transparent;
+    --pele-surface-alt: var(--bg-secondary);
+    --pele-border: color-mix(in srgb, var(--fg) 20%, transparent);
+    --pele-accent: var(--color-brand);
+    --pele-radius: 6px;
+    --pele-font: var(--font-mono);
+    --pele-font-mono: var(--font-mono);
+  }
+
+  /* Labels are mono and small, like every other marker on the site. They are
+     drawn at 12px while pele laid the nodes out for 16px: the web font runs
+     wider than pele's built-in measurement, and that slack keeps every label
+     inside its border. No letter-spacing either, for the same reason. */
+  .pele-figure :global(.pele-label) {
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+
+  .pele-figure :global(.pele) {
+    display: block;
+    margin: 0;
+    overflow: visible;
+  }
+
+  /* Nodes are outlines, not chips: the page already uses hairlines for
+     structure, so the diagram joins that language instead of adding a surface. */
+  .pele-figure :global(.pele-node rect),
+  .pele-figure :global(.pele-node polygon),
+  .pele-figure :global(.pele-node circle) {
+    fill: var(--bg);
+    stroke-width: 1;
+  }
+</style>

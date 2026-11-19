@@ -1,45 +1,48 @@
-// The project pages, in one place: the /projects/ index, the home page strip,
-// and anything else that needs to link to them.
-//
-// `featured` puts a project on the home page (the first three are shown).
+// The home page strip. Everything lives on one page now — /dev-tooling/ — so
+// there is one entry to keep, plus one row per repository inside it.
+
+export interface Tool {
+  name: string;
+  href: string;
+  blurb: string;
+}
 
 export interface Project {
   slug: string;
   name: string;
   href: string;
   blurb: string;
-  tags: string[];
+  entries: Tool[];
   featured?: boolean;
 }
 
 export const projects: Project[] = [
   {
-    slug: 'botfiles',
-    name: 'botfiles',
-    href: '/botfiles/',
+    slug: 'dev-tooling',
+    name: 'Dev tooling',
+    href: '/dev-tooling/',
     blurb:
-      'Agent configuration as one pi package, with adapters that run the same extensions under OpenCode V2.',
-    tags: ['config', 'typescript', 'pi'],
-    featured: true,
-  },
-  {
-    slug: 'droidfiles',
-    name: 'droidfiles',
-    href: '/droidfiles/',
-    blurb:
-      'My Termux setup on Android: the packages I install on purpose, the dotfiles I care about, one restore script.',
-    tags: ['android', 'shell', 'termux'],
-    featured: true,
-  },
-  {
-    slug: 'dotfiles',
-    name: 'dotfiles',
-    href: '/dotfiles/',
-    blurb:
-      'My Zsh, Ghostty and keyd setup, stowed onto a new machine: one palette across the shell and the TUI.',
-    tags: ['shell', 'zsh', 'stow'],
+      'Three repositories that rebuild my machine: the agent configuration every session loads, the Termux setup on my phone, and the shell I stow onto every machine. Each section keeps the constraint that shaped it.',
+    entries: [
+      {
+        name: 'botfiles',
+        href: '/dev-tooling/#botfiles',
+        blurb: 'Agent configuration for pi and OpenCode V2.',
+      },
+      {
+        name: 'droidfiles',
+        href: '/dev-tooling/#droidfiles',
+        blurb:
+          'The Termux setup: packages installed on purpose, dotfiles, one restore script.',
+      },
+      {
+        name: 'dotfiles',
+        href: '/dev-tooling/#dotfiles',
+        blurb: 'Zsh, Ghostty and keyd, stowed into the home directory.',
+      },
+    ],
     featured: true,
   },
 ];
 
-export const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
+export const featuredProjects = projects.filter((project) => project.featured);
