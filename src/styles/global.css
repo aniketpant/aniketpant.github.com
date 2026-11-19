@@ -11,6 +11,33 @@
   font-display: swap;
 }
 
+/* Allo's oblique is a real cut, not a synthetic slant, so emphasis gets the
+   drawn letterforms. Three weights are enough: 400 for prose, 600 for
+   emphasis, 700 for display. They load only on a page that uses them. */
+@font-face {
+  font-family: "Allo";
+  src: url("/fonts/Allo-Oblique.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Allo";
+  src: url("/fonts/Allo-SemiBoldOblique.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Allo";
+  src: url("/fonts/Allo-BoldOblique.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 @theme {
   /* Light mode: warm reds & coral. `:root` below makes these theme-aware. */
   --color-brand: #de1b46;

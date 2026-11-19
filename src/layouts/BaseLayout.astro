@@ -181,6 +181,44 @@ const ogType = publishedTime ? 'article' : 'website';
     </script>
 
     <title>{siteTitle}</title>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="alternate" href="/feed/index.xml" title="Aniket Pant" type="application/rss+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" title="Sitemap" type="application/xml" />
+    {noindex && <meta name="robots" content="noindex" />}
+
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:image" content={imageURL.href} />
+    <meta property="og:image:alt" content="Aniket Pant" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:site_name" content="Aniket Pant" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:description" content={description} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@noremap" />
+    <meta name="twitter:creator" content="@noremap" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL.href} />
+    <meta name="twitter:image:alt" content="Aniket Pant" />
+
+    <ClientRouter />
+
+    <link rel="preload" href="/fonts/AlloVariable.woff2" as="font" type="font/woff2" crossorigin />
+    {isHome && (
+      <link rel="preload" href="/fonts/Allo-BoldOblique.woff2" as="font" type="font/woff2" crossorigin />
+    )}
   </head>
   <body class="font-sans antialiased min-h-dvh flex flex-col">
     <a href="#main" class="skip-link">Skip to main content</a>
