@@ -16,8 +16,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write .",
-    "reading": "node scripts/goodreads.mjs"
+    "format": "prettier --write ."
   },
   "packageManager": "bun@1.4.2",
   "dependencies": {
