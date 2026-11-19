@@ -14,7 +14,7 @@
  * light and dark themes at runtime.
  */
 
-import { hashFloats } from './hash';
+import { hashFloats, hashValues } from './hash';
 
 // ─── Color primitives ────────────────────────────────────────────────────
 
@@ -25,12 +25,24 @@ export const clamp01 = (n: number): number => (n < 0 ? 0 : n > 1 ? 1 : n);
 /** '#rrggbb' -> [r, g, b] (0-255) */
 export function hexToRgb(hex: string): Rgb {
   const h = hex.replace('#', '');
-  const n = Number.parseInt(h.length === 3 ? h.split('').map((c) => c + c).join('') : h, 16);
+  const n = Number.parseInt(
+    h.length === 3
+      ? h
+          .split('')
+          .map((c) => c + c)
+          .join('')
+      : h,
+    16,
+  );
   return [(n >> 16) & 0xff, (n >> 8) & 0xff, n & 0xff];
 }
 
 export function mixRgb(a: Rgb, b: Rgb, t: number): Rgb {
-  return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t];
+  return [
+    a[0] + (b[0] - a[0]) * t,
+    a[1] + (b[1] - a[1]) * t,
+    a[2] + (b[2] - a[2]) * t,
+  ];
 }
 
 /** Weighted RGB distance — slightly green-weighted, closer to perception. */
@@ -45,7 +57,8 @@ function dist(a: Rgb, b: Rgb): number {
 // Concrete RGB values are only used for distance math at build time; the
 // emitted fills reference the CSS variables so themes stay in charge.
 
-export type PaletteKey = 'bg' | 'fg' | 'muted' | 'brand' | 'secondary' | 'tertiary';
+export type PaletteKey =
+  'bg' | 'fg' | 'muted' | 'brand' | 'secondary' | 'tertiary';
 
 export interface Swatch {
   key: PaletteKey;
@@ -134,7 +147,10 @@ function fbm(x: number, y: number, seed: number, octaves = 3): number {
  * Build a deterministic field function. `seed` is a string; every parameter
  * of the field is derived from it, so the field is fully reproducible.
  */
-export function makeField(field: FieldName, seed: string): (u: number, v: number) => number {
+export function makeField(
+  field: FieldName,
+  seed: string,
+): (u: number, v: number) => number {
   switch (field) {
     case 'dusk': {
       // One diagonal sweep with a faint band modulation — gentle wallpaper.
@@ -172,8 +188,12 @@ export function makeField(field: FieldName, seed: string): (u: number, v: number
       return (u, v) => {
         const a = 0.5 + 0.5 * Math.sin(u * a1(fx1) + ph1);
         const b = 0.5 + 0.5 * Math.sin(v * a1(fy1) + ph2);
-        const c = 0.5 + 0.5 * Math.sin(Math.cos(v * 0.8 + ph1) * u * a1(fx) * TAU + ph2);
-        const d = 0.5 + 0.5 * Math.sin(Math.sin(u * 0.8 + ph2) * v * a1(fy) * TAU + ph1);
+        const c =
+          0.5 +
+          0.5 * Math.sin(Math.cos(v * 0.8 + ph1) * u * a1(fx) * TAU + ph2);
+        const d =
+          0.5 +
+          0.5 * Math.sin(Math.sin(u * 0.8 + ph2) * v * a1(fy) * TAU + ph1);
         return clamp01((a + b + c + d) / 4);
       };
       function a1(s: number): number {
@@ -185,7 +205,8 @@ export function makeField(field: FieldName, seed: string): (u: number, v: number
       const [scaleF, mixF] = hashFloats(seed + ':swell', 2);
       const scale = 1.5 + scaleF * 2.5;
       const mix = 0.35 + mixF * 0.3;
-      const s = seed.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) % 100000;
+      const s =
+        seed.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) % 100000;
       return (u, v) => {
         const noise = fbm(u * scale, v * scale, s, 3);
         const radial = 1 - Math.hypot(u - 0.5, v - 0.5) * 1.15;
@@ -219,7 +240,7 @@ export function makeField(field: FieldName, seed: string): (u: number, v: number
       return (u, v) => {
         const p = (u - 0.5) * ca + (v - 0.5) * sa;
         const band = Math.sin(p * Math.PI * 2 * freq);
-        return clamp01((band + 1) / 2 * (1 - width) + (p + 0.5) * width);
+        return clamp01(((band + 1) / 2) * (1 - width) + (p + 0.5) * width);
       };
     }
     case 'dots': {
@@ -274,7 +295,10 @@ export function makeField(field: FieldName, seed: string): (u: number, v: number
         const fy = v * scale - cy;
         const edge = Math.min(fx, 1 - fx, fy, 1 - fy);
         const blend = clamp01(edge / Math.max(soft, 0.001));
-        return clamp01(parity * (1 - soft + soft * blend) + (1 - parity) * (soft * (1 - blend)));
+        return clamp01(
+          parity * (1 - soft + soft * blend) +
+            (1 - parity) * (soft * (1 - blend)),
+        );
       };
     }
     case 'flow': {
@@ -286,7 +310,8 @@ export function makeField(field: FieldName, seed: string): (u: number, v: number
       const angle = angleF * TAU;
       const ca = Math.cos(angle);
       const sa = Math.sin(angle);
-      const s = seed.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) % 100000;
+      const s =
+        seed.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) % 100000;
       return (u, v) => {
         const n = fbm(u * 2.4, v * 2.4, s, 3) - 0.5;
         const p = (u - 0.5) * ca + (v - 0.5) * sa + n * warp;
@@ -314,7 +339,8 @@ export function makeField(field: FieldName, seed: string): (u: number, v: number
       const [scaleF, bandsF] = hashFloats(seed + ':ridge', 2);
       const scale = 1.6 + scaleF * 2.2;
       const bands = 4 + Math.floor(bandsF * 6);
-      const s = seed.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) % 100000;
+      const s =
+        seed.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) % 100000;
       return (u, v) => {
         const n = fbm(u * scale, v * scale, s, 4);
         // Thin lines sit where the folded noise crosses zero, so the tile
@@ -355,7 +381,11 @@ export function makeField(field: FieldName, seed: string): (u: number, v: number
  * targets and the gradient share the same color space (a pattern built for
  * the dark theme must not blend against light-theme RGB values).
  */
-export function sampleGradient(t: number, stops: PaletteKey[], palette: Swatch[] = SWATCHES): Rgb {
+export function sampleGradient(
+  t: number,
+  stops: PaletteKey[],
+  palette: Swatch[] = SWATCHES,
+): Rgb {
   const n = stops.length;
   if (n === 0) return palette[0].rgb;
   const s = clamp01(t) * (n - 1);
@@ -370,12 +400,7 @@ export function sampleGradient(t: number, stops: PaletteKey[], palette: Swatch[]
 // ─── Ordered dithering (Bayer 4×4) ────────────────────────────────────────
 // Standard threshold matrix; the +0.5 keeps thresholds strictly in (0,1).
 
-const BAYER4 = [
-  0, 8, 2, 10,
-  12, 4, 14, 6,
-  3, 11, 1, 9,
-  15, 7, 13, 5,
-];
+const BAYER4 = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
 
 export function bayerThreshold(x: number, y: number): number {
   return (BAYER4[((y & 3) << 2) | (x & 3)] + 0.5) / 16;
@@ -407,7 +432,12 @@ export function nearestSwatches(rgb: Rgb, palette: Swatch[]): [number, number] {
  * return a palette swatch. The residual distance between the two nearest
  * swatches is traded against the Bayer threshold, producing the graduations.
  */
-export function orderedQuantize(rgb: Rgb, x: number, y: number, palette: Swatch[]): PaletteKey {
+export function orderedQuantize(
+  rgb: Rgb,
+  x: number,
+  y: number,
+  palette: Swatch[],
+): PaletteKey {
   const [i0, i1] = nearestSwatches(rgb, palette);
   const d0 = Math.sqrt(dist(rgb, palette[i0].rgb));
   const d1 = Math.sqrt(dist(rgb, palette[i1].rgb));
@@ -462,7 +492,17 @@ export interface Run {
  * small.
  */
 export function ditherRuns(opts: DitherOptions): Run[][] {
-  const { cols, rows, field, stops, seed, palette = SWATCHES, edgeFade = 0, gamma = 1, bands = 1 } = opts;
+  const {
+    cols,
+    rows,
+    field,
+    stops,
+    seed,
+    palette = SWATCHES,
+    edgeFade = 0,
+    gamma = 1,
+    bands = 1,
+  } = opts;
   const f = makeField(field, seed);
   const out: Run[][] = [];
   for (let y = 0; y < rows; y++) {
@@ -538,4 +578,86 @@ export function inkRatio(runs: Run[][]): number {
 /** Cell count of a run grid (useful for estimating markup weight). */
 export function runCellCount(runs: Run[][]): number {
   return runs.reduce((acc, line) => acc + line.length, 0);
+}
+/* ---------------------------------------------------------------------------
+   Fingerprint traits
+
+   The per-post mark picks a field, a ramp of palette stops and a grid from the
+   seed. Those choices live here rather than in the component so a row of marks
+   can be checked for repeats before anything renders.
+   ------------------------------------------------------------------------- */
+
+export const FINGERPRINT_FIELDS: FieldName[] = [
+  'swell',
+  'plaid',
+  'core',
+  'stripes',
+  'dots',
+  'waves',
+  'spiral',
+  'checker',
+  'flow',
+  'moire',
+  'ridge',
+  'bloom',
+];
+
+// Every ramp begins and ends at `bg`: the hue only survives in the middle, so
+// no field floods the tile with colour. Two hues sit next to each other only
+// where they harmonise (brand red into secondary magenta); green never blends
+// into pink, which turned the tile into a muddy wash.
+export const FINGERPRINT_STOP_SETS: PaletteKey[][] = [
+  ['bg', 'brand', 'bg'],
+  ['bg', 'secondary', 'bg'],
+  ['bg', 'tertiary', 'bg'],
+  ['bg', 'brand', 'secondary', 'bg'],
+  ['bg', 'secondary', 'brand', 'bg'],
+];
+
+// A finer grid keeps cells sharp at the small sizes used on phones.
+export const FINGERPRINT_GRIDS = [36, 40, 44];
+
+export interface FingerprintTraits {
+  field: FieldName;
+  stops: PaletteKey[];
+  grid: number;
+}
+
+export function fingerprintTraits(seed: string): FingerprintTraits {
+  return {
+    field:
+      FINGERPRINT_FIELDS[
+        hashValues(seed + ':field', 1, FINGERPRINT_FIELDS.length)[0]
+      ]!,
+    stops:
+      FINGERPRINT_STOP_SETS[
+        hashValues(seed + ':stops', 1, FINGERPRINT_STOP_SETS.length)[0]
+      ]!,
+    grid: FINGERPRINT_GRIDS[
+      hashValues(seed + ':grid', 1, FINGERPRINT_GRIDS.length)[0]
+    ]!,
+  };
+}
+
+/**
+ * Seeds for `count` marks that cannot look alike: each keeps the base seed
+ * unchanged for the first mark, then walks `:mark-2`, `:mark-3` … and skips any
+ * whose field and ramp match one already taken. The grid is left out on
+ * purpose, because callers may override it.
+ */
+export function distinctFingerprintSeeds(
+  base: string,
+  count: number,
+): string[] {
+  const seeds: string[] = [];
+  const seen = new Set<string>();
+  for (let i = 1; seeds.length < count && i <= 200; i++) {
+    const seed = i === 1 ? base : `${base}:mark-${i}`;
+    const traits = fingerprintTraits(seed);
+    const key = `${traits.field}|${traits.stops.join(',')}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    seeds.push(seed);
+  }
+  return seeds;
 }

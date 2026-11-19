@@ -1,6 +1,7 @@
 ---
 import {
   ditherRuns,
+  fingerprintTraits,
   inkRatio,
   runsMarkup,
   SWATCHES,
@@ -14,50 +15,28 @@ interface Props {
   seed: string;
   size?: number;
   class?: string;
+  /** Override the grid: fewer cells stay legible at small display sizes. */
+  grid?: number;
 }
 
 const { seed } = Astro.props;
 const size = Astro.props.size ?? 96;
 const className = Astro.props.class ?? '';
 
-// Deterministic choices per post: a field flavor and a ramp of palette stops.
-const FIELD_NAMES: FieldName[] = [
-  'swell', 'plaid', 'core', 'stripes', 'dots', 'waves', 'spiral', 'checker',
-  'flow', 'moire', 'ridge', 'bloom',
-];
-const field = FIELD_NAMES[hashValues(seed + ':field', 1, FIELD_NAMES.length)[0]]!;
-
-// Every ramp starts (and mostly ends) at `bg` so each tile grounds itself in
-// the site's own background and sweeps toward a hue — the pattern merges with
-// the page instead of stacking a second background color on top of it.
-// Every ramp begins and ends at `bg`: the hue only survives in the middle of
-// the range, so no field can flood the tile with colour. A high region fades
-// back into the page instead of turning into a solid slab.
-// Two hues only sit next to each other when they harmonise (brand red into
-// secondary magenta); green is never blended into pink, which turned the tile
-// into a muddy wash.
-const STOP_SETS: PaletteKey[][] = [
-  ['bg', 'brand', 'bg'],
-  ['bg', 'secondary', 'bg'],
-  ['bg', 'tertiary', 'bg'],
-  ['bg', 'brand', 'secondary', 'bg'],
-  ['bg', 'secondary', 'brand', 'bg'],
-];
-const stops = STOP_SETS[hashValues(seed + ':stops', 1, STOP_SETS.length)[0]]!;
-
-// Quantize against the colorful swatches only (bg + the three accents) —
-// never against `fg`/`muted`. Without this, desaturated mid-blends between
-// two hues snap to the gray `muted` swatch and lay dark slabs over the page
-// (the "dark background that fights the light theme").
+// Deterministic choices per post. The traits live in utils/dither so a row of
+// marks can be checked for repeats before anything renders.
+const traits = fingerprintTraits(seed);
+const field = traits.field;
+const stops = traits.stops;
+const GRID = Astro.props.grid ?? traits.grid;
+// Quantize against the colourful swatches only (bg + the three accents) —
+// never against fg/muted. Without this, desaturated mid-blends between two
+// hues snap to the gray muted swatch and lay dark slabs over the page.
 const FP_KEYS: PaletteKey[] = ['bg', 'brand', 'secondary', 'tertiary'];
 const huesOnly = (list: Swatch[]) => list.filter((s) => FP_KEYS.includes(s.key));
 const fpLight = huesOnly(SWATCHES);
 const fpDark = huesOnly(SWATCHES_DARK);
 
-// A finer grid keeps the cells sharp at the small sizes used on phones. The
-// exact cell count varies per post so tiles do not all share one texture.
-const GRID_CHOICES = [36, 40, 44];
-const GRID = GRID_CHOICES[hashValues(seed + ':grid', 1, GRID_CHOICES.length)[0]]!;
 // Pull the saturated centre of a field back toward the page so the tile reads
 // as marks rather than a filled square; the exact amount varies per post.
 const GAMMAS = [1.25, 1.4, 1.55];
@@ -70,7 +49,15 @@ const BANDS = [3, 4, 5];
 const bands = SMOOTH.includes(field)
   ? BANDS[hashValues(seed + ':bands', 1, BANDS.length)[0]]!
   : 1;
-const base = { cols: GRID, rows: GRID, field, stops, seed, edgeFade: 0.4, bands };
+const base = {
+  cols: GRID,
+  rows: GRID,
+  field,
+  stops,
+  seed,
+  edgeFade: 0.4,
+  bands,
+};
 // A heavy gamma can leave a tile almost empty. Measure the ink and lift the
 // gamma back down when too little of the tile is drawn, so every post keeps a
 // mark of its own without hand-tuning any seed.
@@ -84,8 +71,12 @@ if (inkRatio(ditherRuns({ ...opts, palette: fpLight })) < 0.18) {
 // follow whichever theme is active. A single <g> is revealed via CSS.
 // `bg` cells are skipped entirely — there is no background rect, so the
 // site's own background shows through and the tile's edge naturally dissolves.
-const markupLight = runsMarkup(ditherRuns({ ...opts, palette: fpLight }), { skipBg: true });
-const markupDark = runsMarkup(ditherRuns({ ...opts, palette: fpDark }), { skipBg: true });
+const markupLight = runsMarkup(ditherRuns({ ...opts, palette: fpLight }), {
+  skipBg: true,
+});
+const markupDark = runsMarkup(ditherRuns({ ...opts, palette: fpDark }), {
+  skipBg: true,
+});
 ---
 
 <svg
