@@ -1,0 +1,70 @@
+---
+// A capability table: what one harness offers, what the other one does instead.
+// Tables beat boxes when the story is a mismatch rather than a flow, so this is
+// the figure for the adapter section. One accent marks the cell that is worse.
+
+interface Row {
+  surface: string;
+  first: string;
+  second: string;
+  /** Marks the second value as a degradation, not an alternative. */
+  degraded?: boolean;
+}
+
+interface Props {
+  firstLabel: string;
+  secondLabel: string;
+  rows: Row[];
+  caption?: string;
+  label?: string;
+}
+
+const { firstLabel, secondLabel, rows, caption, label } = Astro.props;
+---
+
+<figure class="my-6" aria-label={label}>
+  <table class="w-full border-collapse text-left">
+    <thead>
+      <tr class="border-t border-[var(--border)]">
+        <th class="eyebrow py-2 pr-3 font-medium">surface</th>
+        <th class="eyebrow py-2 pr-3 font-medium">{firstLabel}</th>
+        <th class="eyebrow py-2 font-medium">{secondLabel}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((row) => (
+          <tr class="border-t border-[var(--border)] align-baseline">
+            <th
+              scope="row"
+              class="py-2.5 pr-3 font-mono text-[12.5px] font-normal text-[var(--fg)]"
+            >
+              {row.surface}
+            </th>
+            <td class="py-2.5 pr-3 text-[13px] text-[var(--fg-muted)]">
+              {row.first}
+            </td>
+            <td
+              class:list={[
+                'py-2.5 text-[13px]',
+                row.degraded
+                  ? 'text-[var(--color-brand)]'
+                  : 'text-[var(--fg-muted)]',
+              ]}
+            >
+              {row.second}
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+
+  {
+    caption && (
+      <figcaption class="mt-3.5 max-w-[62ch] text-[13px] leading-relaxed text-[var(--fg-muted)]">
+        {caption}
+      </figcaption>
+    )
+  }
+</figure>

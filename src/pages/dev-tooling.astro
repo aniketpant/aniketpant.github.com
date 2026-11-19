@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectSection from '../components/ProjectSection.astro';
 import ProjectIdeas from '../components/ProjectIdeas.astro';
 import MermaidFigure from '../components/MermaidFigure.astro';
+import CapabilityTable from '../components/CapabilityTable.astro';
+import PaletteStrip from '../components/PaletteStrip.astro';
 
 // One page for the three repositories that rebuild this machine.
 //
@@ -11,23 +13,50 @@ import MermaidFigure from '../components/MermaidFigure.astro';
 // explains a decision that is already visible in the result. No numbers
 // without a machine, a command and a run.
 
-const tools = [
+interface Tool {
+  id: string;
+  intent: string;
+  now: string;
+  figure: 'table' | 'flow';
+  label: string;
+  caption?: string;
+  table?: {
+    surface: string;
+    first: string;
+    second: string;
+    degraded?: boolean;
+  }[];
+  wide?: string;
+  narrow?: string;
+  palette?: boolean;
+  paletteCaption?: string;
+  ideas: { title: string; text: string }[];
+}
+
+const tools: Tool[] = [
   {
     id: 'botfiles',
     intent:
       'Agent tooling should not belong to one harness. Every harness has its own plugin API, and configuration written against one of them is lost when the next one arrives.',
     now: 'Extensions, skills, prompts and themes are written once and mount in both pi and OpenCode V2. Where the two harnesses are not equivalent, the capability table records it, so a gap is a documented no-op instead of a fork.',
-    wide: `flowchart LR
-  E["extensions/"] --> A["adapters/"]
-  A --> P["pi"]
-  A --> O["OpenCode V2"]`,
-    narrow: `flowchart TB
-  E["extensions/"] --> A["adapters/"]
-  A --> P["pi"]
-  A --> O["OpenCode V2"]`,
-    label: 'botfiles: extensions reach two harnesses through adapters',
+    figure: 'table',
+    table: [
+      {
+        surface: 'ctx.ui',
+        first: 'status bar, notify',
+        second: 'absent, no-ops',
+        degraded: true,
+      },
+      { surface: 'flags', first: 'pi.getFlag', second: 'BOTFILES_* env' },
+      {
+        surface: 'transcripts',
+        first: 'filesystem walk',
+        second: 'observed sessions',
+      },
+    ],
+    label: 'botfiles: where the two harnesses are not equivalent',
     caption:
-      'One extension definition, two mounts. adapters/ is the only code that knows which harness is on the other side.',
+      'Three surfaces cannot be shared, so they degrade instead of forking the extension: a missing one becomes a no-op, an env fallback, or a smaller set of sessions.',
     ideas: [
       {
         title: 'The adapter absorbs the difference',
@@ -44,19 +73,18 @@ const tools = [
     intent:
       'A phone should be rebuildable from a bare Termux, not remembered. Every change that matters lives in the repository, so a reinstall is a command and not an afternoon.',
     now: 'bootstrap.sh installs the package list and calls install.sh, which relinks the dotfiles; both also run alone. Shell tests run in a temporary home, so a restore is checked before it touches mine.',
+    figure: 'flow',
     wide: `flowchart LR
-  P["packages.txt"] --> B["bootstrap.sh"]
-  B --> I["install.sh"]
-  I --> H["$HOME"]
-  I --> D["~/.droidfiles-backup/"]`,
+  I["install.sh"] --> Q{"real file differs?"}
+  Q -->|yes| D["~/.droidfiles-backup/"]
+  Q -->|no| H["$HOME"]`,
     narrow: `flowchart TB
-  P["packages.txt"] --> B["bootstrap.sh"]
-  B --> I["install.sh"]
-  I --> H["$HOME"]
-  I --> D["~/.droidfiles-backup/"]`,
-    label: 'droidfiles: one script from packages to home',
+  I["install.sh"] --> Q{"real file differs?"}
+  Q -->|yes| D["~/.droidfiles-backup/"]
+  Q -->|no| H["$HOME"]`,
+    label: 'droidfiles: what install.sh does with an existing file',
     caption:
-      'A file that differs from the repository copy is moved to ~/.droidfiles-backup/ before install.sh replaces it. A symlink, or a file that already matches, is replaced without a backup.',
+      'A symlink, or a file that already matches the repository copy, is replaced with no backup. Only a real file that differs is kept.',
     ideas: [
       {
         title: 'Symlinks, except where Android refuses them',
@@ -73,6 +101,10 @@ const tools = [
     intent:
       'Muscle memory should move between machines: the same shell, terminal and key map wherever I sit down.',
     now: 'One palette across the shell and the TUI, a Cmd layer on Linux with per-app masks, and stow folders that mirror their home paths, so a new machine takes the same make install.',
+    figure: 'flow',
+    palette: true,
+    paletteCaption:
+      'Ghostty, pi and opencode read the same theme values, so a colour looks the same in the terminal, the prompt and the agent. The chips show this page\u2019s palette; the terminal values live in the repository.',
     wide: `flowchart LR
   R["zsh/ ghostty/ keyd/"] --> M["make install"]
   M --> H["$HOME"]`,
@@ -153,12 +185,25 @@ const tools = [
               </div>
             </dl>
 
-            <MermaidFigure
-              label={tool.label}
-              source={tool.wide}
-              narrowSource={tool.narrow}
-              caption={tool.caption}
-            />
+            {tool.figure === 'table' ? (
+              <CapabilityTable
+                firstLabel="pi"
+                secondLabel="opencode v2"
+                rows={tool.table ?? []}
+                label={tool.label}
+                caption={tool.caption}
+              />
+            ) : (
+              <>
+                {tool.palette && <PaletteStrip caption={tool.paletteCaption} />}
+                <MermaidFigure
+                  label={tool.label}
+                  source={tool.wide ?? ''}
+                  narrowSource={tool.narrow}
+                  caption={tool.caption}
+                />
+              </>
+            )}
 
             <ProjectIdeas items={tool.ideas} />
           </section>

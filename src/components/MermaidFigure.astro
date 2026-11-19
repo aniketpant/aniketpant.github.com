@@ -103,6 +103,16 @@ const narrow = draw(narrowSource, idPrefix + '-narrow');
     overflow: visible;
   }
 
+  /* A decision is the one coloured shape: brand tint and border, so the eye
+     finds the branch without a legend. pele writes the classDef colours inline,
+     hence the !important. */
+  .pele-figure :global(.pele-shape-diam polygon),
+  .pele-figure :global(.pele-shape-diam path),
+  .pele-figure :global(.pele-shape-diam rect) {
+    fill: var(--color-brand-subtle) !important;
+    stroke: var(--color-brand) !important;
+  }
+
   /* Nodes are outlines, not chips: the page already uses hairlines for
      structure, so the diagram joins that language instead of adding a surface. */
   .pele-figure :global(.pele-node rect),

@@ -1,0 +1,62 @@
+---
+// A palette strip: the colours one theme file defines, and the programs that
+// read them. Values are CSS variables, so the strip follows the page theme and
+// a change to the tokens changes the figure.
+//
+// The dotfiles repository is not on this machine, so the chips currently name
+// the site's own tokens. When the terminal values are known, pass `colors`.
+
+interface Props {
+  /** CSS custom properties to show, in order. */
+  colors?: string[];
+  /** Programs that read these values. */
+  consumers?: string[];
+  caption?: string;
+}
+
+const {
+  colors = [
+    'var(--bg)',
+    'var(--fg)',
+    'var(--color-brand)',
+    'var(--color-secondary)',
+    'var(--color-tertiary)',
+    'var(--border)',
+  ],
+  consumers = ['ghostty', 'pi', 'opencode'],
+  caption = 'One palette definition, read by the shell, the terminal and the agent: the same values, so a colour looks the same in all three.',
+} = Astro.props;
+---
+
+<figure class="my-6">
+  <div
+    class="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 md:p-5"
+  >
+    <div class="flex gap-1.5" role="list" aria-label="Palette">
+      {
+        colors.map((color) => (
+          <span
+            class="block h-9 flex-1 rounded-[3px] border border-[var(--border)]"
+            style={`background: ${color}`}
+            role="listitem"
+          />
+        ))
+      }
+    </div>
+
+    <div class="mt-3 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+      <p class="eyebrow m-0">one palette</p>
+      <p class="m-0 font-mono text-[12px] text-[var(--fg-muted)]">
+        {consumers.join(' · ')}
+      </p>
+    </div>
+  </div>
+
+  {
+    caption && (
+      <figcaption class="mt-3.5 max-w-[62ch] text-[13px] leading-relaxed text-[var(--fg-muted)]">
+        {caption}
+      </figcaption>
+    )
+  }
+</figure>
