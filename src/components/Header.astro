@@ -31,7 +31,7 @@ const isCurrent = (href: string) => pathname === href.replace(/\/$/, '');
               <a
                 href="/"
                 rel="nofollow"
-                class="group flex items-baseline gap-0.5 text-[var(--fg)] hover:opacity-70 transition-opacity duration-200"
+                class="wght-hover group flex items-baseline gap-0.5 text-[var(--fg)]"
               >
                 <>
                   <span class="gradient-text-subtle">no</span>
@@ -43,7 +43,7 @@ const isCurrent = (href: string) => pathname === href.replace(/\/$/, '');
             <a
               href="/"
               rel="nofollow"
-              class="group flex items-baseline gap-0.5 text-base sm:text-lg font-semibold tracking-tight text-[var(--fg)] hover:opacity-70 transition-opacity duration-200"
+              class="wght-hover group flex items-baseline gap-0.5 text-base sm:text-lg font-semibold tracking-tight text-[var(--fg)]"
             >
               <>
                 <span class="gradient-text-subtle">no</span>
@@ -66,6 +66,7 @@ const isCurrent = (href: string) => pathname === href.replace(/\/$/, '');
                     aria-current={isCurrent(item.href) ? 'page' : undefined}
                     class:list={[
                       'block px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-200',
+                      isCurrent(item.href) ? 'nav-current' : '',
                       isCurrent(item.href)
                         ? 'text-[var(--fg)] bg-[var(--bg-secondary)]'
                         : 'text-[var(--fg-muted)] hover:text-[var(--fg)] hover:bg-[var(--bg-secondary)]',

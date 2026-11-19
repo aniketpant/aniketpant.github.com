@@ -257,6 +257,66 @@ main:focus {
   display: block;
 }
 
+/* Allo carries two axes: wght 100-900 and opsz 14-32. There is no italic or
+   slant axis, so emphasis uses weight. Optical size is already automatic; the
+   work below is weight only. */
+
+/* Light on dark reads thinner than dark on light, so the dark theme gets a
+   little more weight and the two themes look like the same typeface. */
+:root[data-theme="dark"] body {
+  font-weight: 450;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body {
+    font-weight: 450;
+  }
+}
+
+/* The wordmark thickens on hover: an isolated element, so the gain in width
+   moves nothing else. */
+.wght-hover {
+  transition: font-weight 160ms ease;
+}
+
+.wght-hover:hover,
+.wght-hover:focus-visible {
+  font-weight: 720;
+}
+
+/* The current page in the nav is heavier as well as tinted. */
+.nav-current {
+  font-weight: 620;
+}
+
+/* The hero name lightens as it scrolls away. Scroll-driven animations are
+   Chromium-only, so everywhere else the name simply keeps its weight. */
+@keyframes hero-weight {
+  from {
+    font-variation-settings: 'opsz' 32, 'wght' 720;
+  }
+  to {
+    font-variation-settings: 'opsz' 32, 'wght' 470;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-weight {
+      font-variation-settings: 'opsz' 32, 'wght' 720;
+      animation: hero-weight linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 45vh;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wght-hover {
+    transition: none;
+  }
+}
+
 /* Display type: improved kerning, ligatures & optical sizing */
 .font-serif,
 .font-sans {
